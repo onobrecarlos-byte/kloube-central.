@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.env
+.env*
+
+# Vercel
+.vercel
+
+# Browser profile & logs
+whatsapp_browser_profile/
+*.log
+wa_status.json
+
+# OS
+Thumbs.db
+.DS_Store
+
+.session-secret

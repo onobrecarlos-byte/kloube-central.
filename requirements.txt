@@ -1,0 +1,2 @@
+# Kloube Bloqueios — Vercel Python Runtime
+# Utiliza exclusivamente a biblioteca padrão do Python (sem dependências externas)

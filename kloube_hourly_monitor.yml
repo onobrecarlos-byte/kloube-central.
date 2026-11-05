@@ -1,0 +1,26 @@
+name: Kloube Monitor Integrado
+on:
+  schedule:
+    - cron: '7,22,37,52 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: kloube-monitor-integrado
+  cancel-in-progress: false
+jobs:
+  verify-domains:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verificar intervalo e pausa; atualizar domínios e registros sem e-mail
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          KLOUBE_GITHUB_REPO: ${{ github.repository }}
+          KLOUBE_GITHUB_BRANCH: ${{ github.ref_name }}
+          KLOUBE_ENABLE_PC_MONITOR: '0'
+        run: python check_cli.py

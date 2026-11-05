@@ -1,0 +1,2338 @@
+{
+  "schema_version": 2,
+  "months_config": {
+    "2026-10": {
+      "is_closed": true,
+      "start_stores_list": [
+        "Body & Bra",
+        "Haloring",
+        "Dogshood",
+        "Soya Paris",
+        "Havie",
+        "Ionix Labs",
+        "Luveon",
+        "ParoPet",
+        "Donnea Milano",
+        "Softari",
+        "Epoch",
+        "Scarlette",
+        "Breeze",
+        "Orre Naturals"
+      ],
+      "end_active_stores_list": [
+        "Body & Bra",
+        "Haloring",
+        "Dogshood",
+        "Ionix Labs",
+        "Luveon",
+        "ParoPet",
+        "Donnea Milano",
+        "Softari",
+        "Scarlette",
+        "Breeze",
+        "Orre Naturals",
+        "Lush Essence",
+        "Evolv",
+        "Sivara",
+        "Nesti",
+        "Maggie's Tanks",
+        "SleepSake",
+        "Grace & Ease",
+        "LongWell",
+        "Krakatoa"
+      ]
+    },
+    "2026-11": {
+      "is_closed": false,
+      "start_stores_list": [
+        "Body & Bra",
+        "Haloring",
+        "Dogshood",
+        "Ionix Labs",
+        "Luveon",
+        "ParoPet",
+        "Donnea Milano",
+        "Softari",
+        "Scarlette",
+        "Breeze",
+        "Orre Naturals",
+        "Lush Essence",
+        "Evolv",
+        "Sivara",
+        "Nesti",
+        "Maggie's Tanks",
+        "SleepSake",
+        "Grace & Ease",
+        "LongWell",
+        "Krakatoa",
+        "VivaCuerpo"
+      ]
+    }
+  },
+  "whatsapp_config": {
+    "target_group_name": "EQUIPE KLOUBE ECOM",
+    "read_only_mode": true,
+    "allowed_phones": []
+  },
+  "records": [
+    {
+      "id": "rec_512c31fe5e",
+      "event_type": "store_inactive",
+      "store_name": "ParoPet",
+      "domain": "paropetuk.com",
+      "account_number": "—",
+      "inactive_category": "dmca",
+      "reason": "DMCA",
+      "created_at": "2026-11-05 14:40:12",
+      "month_key": "2026-11",
+      "source": "domain_monitor",
+      "monitor_domain_id": "dom_paropet",
+      "monitor_diagnostic": "Loja bloqueada ou inativa na plataforma (HTTP 423 · This store is unavailable)"
+    },
+    {
+      "event_type": "store_inactive",
+      "store_name": "LongWell",
+      "domain": "",
+      "account_number": "Google Ads 81",
+      "inactive_category": "dmca",
+      "reason": "DMCA (Loja caiu)",
+      "created_at": "2026-11-04 19:02:28",
+      "month_key": "2026-11",
+      "source": "whatsapp_group",
+      "id": "rec_b3e3369000"
+    },
+    {
+      "event_type": "store_published",
+      "store_name": "Sleepsake",
+      "domain": "sleepsakeshop.com",
+      "account_number": "Google Ads 68",
+      "inactive_category": "",
+      "reason": "Loja publicada",
+      "created_at": "2026-11-04 13:01:18",
+      "month_key": "2026-11",
+      "source": "whatsapp_group",
+      "id": "rec_da54341cdc"
+    },
+    {
+      "event_type": "store_inactive",
+      "store_name": "Nesti",
+      "domain": "",
+      "account_number": "Google Ads 41",
+      "inactive_category": "dmca",
+      "reason": "DMCA",
+      "created_at": "2026-11-04 12:24:24",
+      "month_key": "2026-11",
+      "source": "whatsapp_group",
+      "id": "rec_75fcdbd68b"
+    },
+    {
+      "event_type": "store_published",
+      "store_name": "Nesti 2",
+      "domain": "shopnesti.com",
+      "account_number": "Googla Ads 41",
+      "inactive_category": "",
+      "reason": "Loja publicada",
+      "created_at": "2026-11-03 23:54:42",
+      "month_key": "2026-11",
+      "source": "whatsapp_group",
+      "id": "rec_d7e646ff8c"
+    },
+    {
+      "event_type": "store_published",
+      "store_name": "Longwell",
+      "domain": "longwelltitanium.com",
+      "account_number": "Google Ads 81",
+      "inactive_category": "",
+      "reason": "Loja publicada",
+      "created_at": "2026-11-03 23:45:22",
+      "month_key": "2026-11",
+      "source": "whatsapp_group",
+      "id": "rec_ad994b5d77"
+    },
+    {
+      "event_type": "store_published",
+      "store_name": "Ionix",
+      "domain": "",
+      "account_number": "Google Ads 24",
+      "inactive_category": "",
+      "reason": "Loja publicada",
+      "created_at": "2026-11-03 22:40:38",
+      "month_key": "2026-11",
+      "source": "whatsapp_group",
+      "id": "rec_94e346e82b"
+    },
+    {
+      "event_type": "store_inactive",
+      "store_name": "Ionix",
+      "domain": "",
+      "account_number": "Google Ads 24",
+      "inactive_category": "dmca",
+      "reason": "DMCA (Loja caiu)",
+      "created_at": "2026-11-03 18:48:53",
+      "month_key": "2026-11",
+      "source": "whatsapp_group",
+      "id": "rec_791fecae12"
+    },
+    {
+      "event_type": "store_inactive",
+      "store_name": "Evolv",
+      "domain": "",
+      "account_number": "Google Ads 88",
+      "inactive_category": "ads_block",
+      "reason": "Suspensão / bloqueio no Google Ads (Google Ads 88)",
+      "created_at": "2026-11-03 01:08:16",
+      "month_key": "2026-11",
+      "source": "whatsapp_group",
+      "id": "rec_b48e540918"
+    },
+    {
+      "event_type": "ads_suspended",
+      "store_name": "Evolv",
+      "domain": "",
+      "account_number": "Google Ads 88",
+      "inactive_category": "",
+      "reason": "Sua conta violou a política sobre Práticas comerciais inaceitáveis: phishing. (Bloqueios constantes.)",
+      "created_at": "2026-11-03 01:08:16",
+      "month_key": "2026-11",
+      "source": "whatsapp_group",
+      "id": "rec_a163f8f006"
+    },
+    {
+      "event_type": "store_inactive",
+      "store_name": "Maggie",
+      "domain": "",
+      "account_number": "Google Ads 79",
+      "inactive_category": "ads_block",
+      "reason": "Suspensão / bloqueio no Google Ads (Google Ads 79)",
+      "created_at": "2026-11-03 01:01:24",
+      "month_key": "2026-11",
+      "source": "whatsapp_group",
+      "id": "rec_9c600acf66"
+    },
+    {
+      "event_type": "ads_suspended",
+      "store_name": "Maggie",
+      "domain": "",
+      "account_number": "Google Ads 79",
+      "inactive_category": "",
+      "reason": "Sua conta foi suspensaSua conta violou a política sobre Práticas comerciais inaceitáveis: phishing. (Bloqueios constantes, loja não se mantem rodando mais de 24h)",
+      "created_at": "2026-11-03 01:01:24",
+      "month_key": "2026-11",
+      "source": "whatsapp_group",
+      "id": "rec_ab0736917e"
+    },
+    {
+      "id": "1e8219d5-2f90-4e4c-8bd1-c8147aba68a0",
+      "event_type": "ads_suspended",
+      "store_name": "Lush Essence",
+      "domain": "lushessence.com",
+      "account_number": "Google Ads 46",
+      "inactive_category": "",
+      "reason": "Suspensão inicial / Práticas comerciais",
+      "created_at": "2026-10-06 10:57:00",
+      "month_key": "2026-10",
+      "source": "whatsapp_import"
+    },
+    {
+      "id": "dafdc84f-38a9-4455-bda4-75b0a8bd2e0d",
+      "event_type": "ads_suspended",
+      "store_name": "Havie",
+      "domain": "havieshop.com",
+      "account_number": "Google Ads 49",
+      "inactive_category": "",
+      "reason": "Pagamentos e Phishing",
+      "created_at": "2026-10-06 21:01:00",
+      "month_key": "2026-10",
+      "source": "whatsapp_import"
+    },
+    {
+      "id": "fdaa3ddb-b1a6-4ea3-ac85-5879e50105f5",
+      "event_type": "ads_suspended",
+      "store_name": "Haloring",
+      "domain": "tryhalorings.com",
+      "account_number": "Google Ads 18",
+      "inactive_category": "",
+      "reason": "Suspensão temporária / Verificação",
+      "created_at": "2026-10-07 10:57:00",
+      "month_key": "2026-10",
+      "source": "whatsapp_import"
+    },
+    {
+      "id": "0f146234-fce8-417f-8296-eb59e7728c36",
+      "event_type": "ads_suspended",
+      "store_name": "Body & Bra",
+      "domain": "bodyandbra.com",
+      "account_number": "Google Ads 40",
+      "inactive_category": "",
+      "reason": "Práticas comerciais inaceitáveis: phishing",
+      "created_at": "2026-10-08 10:57:00",
+      "month_key": "2026-10",
+      "source": "whatsapp_import"
+    },
+    {
+      "id": "41b21c26-cff2-4ced-8513-160b650a5915",
+      "event_type": "ads_suspended",
+      "store_name": "Body & Bra",
+      "domain": "bodyandbra.com",
+      "account_number": "Google Ads 52",
+      "inactive_category": "",
+      "reason": "Práticas comerciais inaceitáveis: phishing",
+      "created_at": "2026-10-09 10:35:00",
+      "month_key": "2026-10",
+      "source": "whatsapp_import"
+    },
+    {
+      "id": "4331a77c-af8f-485a-9b08-5f5247d5ad0a",
+      "event_type": "ads_suspended",
+      "store_name": "Dogshood",
+      "domain": "dogshoodpet.com",
+      "account_number": "Google Ads 22",
+      "inactive_category": "",
+      "reason": "Práticas comerciais inaceitáveis: phishing",
+      "created_at": "2026-10-11 11:32:00",
+      "month_key": "2026-10",
+      "source": "whatsapp_import"
+    },
+    {
+      "id": "7c4f9f64-2d1e-4843-9012-4fabd8e08ffa",
+      "event_type": "ads_suspended",
+      "store_name": "Havie",
+      "domain": "havieshop.com",
+      "account_number": "Google Ads 60",
+      "inactive_category": "",
+      "reason": "Práticas comerciais inaceitáveis: phishing (bloqueios frequentes)",
+      "created_at": "2026-10-12 00:40:00",
+      "month_key": "2026-10",
+      "source": "whatsapp_import"
+    },
+    {
+      "id": "72a93c36-1976-4053-9fa3-db82176cc85c",
+      "event_type": "ads_suspended",
+      "store_name": "Soya Paris",
+      "domain": "soyaparisshop.com",
+      "account_number": "Google Ads 43",
+      "inactive_category": "",
+      "reason": "Práticas comerciais inaceitáveis: phishing",
+      "created_at": "2026-10-12 11:38:00",
+      "month_key": "2026-10",
+      "source": "whatsapp_import"
+    },
+    {
+      "id": "ac762fa9-e454-46bc-aa8f-8cc7563f08cd",
+      "event_type": "ads_suspended",
+      "store_name": "Dogshood",
+      "domain": "dogshoodpet.com",
+      "account_number": "Google Ads 61",
+      "inactive_category": "",
+      "reason": "Práticas comerciais inaceitáveis: phishing",
+      "created_at": "2026-10-12 11:51:00",
+      "month_key": "2026-10",
+      "source": "whatsapp_import"
+    },
+    {
+      "id": "f8d6ce39-354f-4e7b-9dff-286d6a578b9a",
+      "event_type": "ads_suspended",
+      "store_name": "Soya Paris",
+      "domain": "soyaparisshop.com",
+      "account_number": "Google Ads 65",
+      "inactive_category": "",
+      "reason": "Práticas comerciais inaceitáveis: phishing",
+      "created_at": "2026-10-12 23:37:00",
+      "month_key": "2026-10",
+      "source": "whatsapp_import"
+    },
+    {
+      "id": "d0826959-7b05-46a0-b6e5-2b1d2f6d6534",
+      "event_type": "ads_suspended",
+      "store_name": "Dogshood",
+      "domain": "dogshoodpet.com",
+      "account_number": "Google Ads 66",
+      "inactive_category": "",
+      "reason": "Práticas comerciais inaceitáveis: phishing",
+      "created_at": "2026-10-13 10:18:00",
+      "month_key": "2026-10",
+      "source": "whatsapp_import"
+    },
+    {
+      "id": "3599fe24-30db-4ebe-a774-759f75fcb74f",
+      "event_type": "ads_suspended",
+      "store_name": "Dogshood",
+      "domain": "usedogshood.com",
+      "account_number": "Google Ads 64",
+      "inactive_category": "",
+      "reason": "Práticas comerciais inaceitáveis: phishing",
+      "created_at": "2026-10-14 11:48:00",
+      "month_key": "2026-10",
+      "source": "whatsapp_import"
+    },
+    {
+      "id": "447aa482-68d7-4208-ae57-a72b3897e356",
+      "event_type": "ads_suspended",
+      "store_name": "Blushe",
+      "domain": "blusheshop.com",
+      "account_number": "Google Ads 48",
+      "inactive_category": "",
+      "reason": "Práticas comerciais inaceitáveis: phishing",
+      "created_at": "2026-10-17 00:24:00",
+      "month_key": "2026-10",
+      "source": "whatsapp_import"
+    },
+    {
+      "id": "00ddf5f8-9914-40c7-b227-d283c3910869",
+      "event_type": "ads_suspended",
+      "store_name": "Haloring",
+      "domain": "tryhalorings.com",
+      "account_number": "Google Ads 54",
+      "inactive_category": "",
+      "reason": "Práticas comerciais inaceitáveis",
+      "created_at": "2026-10-17 11:44:00",
+      "month_key": "2026-10",
+      "source": "whatsapp_import"
+    },
+    {
+      "id": "2c01c283-57ae-4f94-8f03-b179219a31f5",
+      "event_type": "ads_suspended",
+      "store_name": "Soya Paris",
+      "domain": "soyaparisshop.com",
+      "account_number": "Google Ads 72",
+      "inactive_category": "",
+      "reason": "Práticas comerciais inaceitáveis: phishing",
+      "created_at": "2026-10-18 00:25:00",
+      "month_key": "2026-10",
+      "source": "whatsapp_import"
+    },
+    {
+      "id": "4ff8a52a-5417-484d-88de-f93aa6bb6580",
+      "event_type": "ads_suspended",
+      "store_name": "Dogshood",
+      "domain": "usedogshood.com",
+      "account_number": "Google Ads 73",
+      "inactive_category": "",
+      "reason": "Práticas comerciais inaceitáveis: phishing",
+      "created_at": "2026-10-18 10:45:00",
+      "month_key": "2026-10",
+      "source": "whatsapp_import"
+    },
+    {
+      "id": "07a4879a-8e85-4a0e-8dc7-b8ebcb5706c5",
+      "event_type": "ads_suspended",
+      "store_name": "Haloring",
+      "domain": "tryhalorings.com",
+      "account_number": "Google Ads 74",
+      "inactive_category": "",
+      "reason": "Práticas comerciais inaceitáveis: phishing",
+      "created_at": "2026-10-18 10:48:00",
+      "month_key": "2026-10",
+      "source": "whatsapp_import"
+    },
+    {
+      "id": "768d3141-c42c-4baf-b2ba-a82e939cbf0c",
+      "event_type": "ads_suspended",
+      "store_name": "Blushe",
+      "domain": "blusheshop.com",
+      "account_number": "Google Ads 75",
+      "inactive_category": "",
+      "reason": "Práticas comerciais inaceitáveis: phishing",
+      "created_at": "2026-10-18 23:39:00",
+      "month_key": "2026-10",
+      "source": "whatsapp_import"
+    },
+    {
+      "id": "b407f065-1aa2-4084-827d-f64faf0e317f",
+      "event_type": "ads_suspended",
+      "store_name": "Haloring",
+      "domain": "tryhalorings.com",
+      "account_number": "Google Ads 58",
+      "inactive_category": "",
+      "reason": "Práticas comerciais inaceitáveis: phishing",
+      "created_at": "2026-10-23 09:43:00",
+      "month_key": "2026-10",
+      "source": "whatsapp_import"
+    },
+    {
+      "id": "2614cf70-d1ec-4d49-a2ca-00127243a425",
+      "event_type": "store_inactive",
+      "store_name": "Blushe",
+      "domain": "blusheshop.com",
+      "account_number": "â€”",
+      "inactive_category": "dmca",
+      "reason": "Blushe que estava parada tomou DMCA",
+      "created_at": "2026-10-30 11:57:00",
+      "month_key": "2026-10",
+      "source": "whatsapp_import"
+    },
+    {
+      "id": "9cec7ca6-0781-4814-a7e2-344c23815beb",
+      "event_type": "store_inactive",
+      "store_name": "Softari",
+      "domain": "softarishop.com",
+      "account_number": "â€”",
+      "inactive_category": "dmca",
+      "reason": "Sofitari tomou DMCA - subir no lugar da Havie",
+      "created_at": "2026-10-31 00:37:00",
+      "month_key": "2026-10",
+      "source": "whatsapp_import"
+    },
+    {
+      "id": "040c7681-2a36-4a8c-9e21-edfcbd6bc81d",
+      "event_type": "store_inactive",
+      "store_name": "Sivara",
+      "domain": "sivarabody.com",
+      "account_number": "â€”",
+      "inactive_category": "dmca",
+      "reason": "Loja caiu (DMCA)",
+      "created_at": "2026-10-29 21:22:00",
+      "month_key": "2026-10",
+      "source": "whatsapp_import"
+    },
+    {
+      "id": "f309a990-5095-4a9d-8dff-1c406a46f1e9",
+      "event_type": "store_inactive",
+      "store_name": "Nesti",
+      "domain": "nestishop.com",
+      "account_number": "â€”",
+      "inactive_category": "dmca",
+      "reason": "Loja caiu (DMCA)",
+      "created_at": "2026-10-29 21:22:00",
+      "month_key": "2026-10",
+      "source": "whatsapp_import"
+    },
+    {
+      "id": "92731b62-dcaf-4368-90ad-b06bcdcb11b3",
+      "event_type": "store_inactive",
+      "store_name": "Digifeel",
+      "domain": "digifeel.io",
+      "account_number": "â€”",
+      "inactive_category": "dmca",
+      "reason": "Inativa / Pausada por fornecedor e disputa",
+      "created_at": "2026-10-15 22:50:00",
+      "month_key": "2026-10",
+      "source": "whatsapp_import"
+    },
+    {
+      "id": "4289f631-76c9-459b-87d0-9ddc1c20076f",
+      "event_type": "store_inactive",
+      "store_name": "Havie",
+      "domain": "havieshop.com",
+      "account_number": "Google Ads 60",
+      "inactive_category": "ads_block",
+      "reason": "Bloqueios frequentes no Google Ads",
+      "created_at": "2026-10-12 00:40:00",
+      "month_key": "2026-10",
+      "source": "whatsapp_import"
+    },
+    {
+      "id": "6ec093d0-72c3-47b8-ad67-380fe96adcc7",
+      "event_type": "store_inactive",
+      "store_name": "Soya Paris",
+      "domain": "soyaparisshop.com",
+      "account_number": "Google Ads 72",
+      "inactive_category": "ads_block",
+      "reason": "Bloqueios frequentes de Phishing no Google",
+      "created_at": "2026-10-18 00:25:00",
+      "month_key": "2026-10",
+      "source": "whatsapp_import"
+    },
+    {
+      "id": "5e3a082a-9336-408d-8bc8-09ef266fcf22",
+      "event_type": "store_inactive",
+      "store_name": "Mielle",
+      "domain": "mielleshop.com",
+      "account_number": "Google Ads",
+      "inactive_category": "ads_block",
+      "reason": "Pausar Mielle, margem baixa de 7%",
+      "created_at": "2026-10-21 18:31:00",
+      "month_key": "2026-10",
+      "source": "whatsapp_import"
+    },
+    {
+      "id": "bd695948-0d74-46bf-ad71-4d867efe2507",
+      "event_type": "store_inactive",
+      "store_name": "Epoch",
+      "domain": "epochshop.com",
+      "account_number": "Google Ads 48",
+      "inactive_category": "ads_block",
+      "reason": "Pausar loja Epoch e disponibilizar conta Google Ads",
+      "created_at": "2026-10-14 02:36:00",
+      "month_key": "2026-10",
+      "source": "whatsapp_import"
+    },
+    {
+      "id": "a31bac2a-8acb-48e9-986e-ebdb3e5c65ec",
+      "event_type": "store_inactive",
+      "store_name": "Breeze",
+      "domain": "breezeshop.com",
+      "account_number": "Google Ads 21",
+      "inactive_category": "domain_down",
+      "reason": "Campanha pausada devido ao domínio fora do ar",
+      "created_at": "2026-10-10 01:46:00",
+      "month_key": "2026-10",
+      "source": "whatsapp_import"
+    },
+    {
+      "id": "1dce2e7f-4961-4acf-8ae6-29fc12d7f750",
+      "event_type": "store_inactive",
+      "store_name": "Epoch",
+      "domain": "epochshop.com",
+      "account_number": "Google Ads 48",
+      "inactive_category": "domain_down",
+      "reason": "Pausar Google Ads 48 - domínio fora do ar",
+      "created_at": "2026-10-11 11:20:00",
+      "month_key": "2026-10",
+      "source": "whatsapp_import"
+    },
+    {
+      "id": "4584f315-dde3-4ab2-916a-b087baf6a1ea",
+      "event_type": "store_published",
+      "store_name": "Lush Essence",
+      "domain": "lushessence.com",
+      "account_number": "Google Ads 30",
+      "inactive_category": "",
+      "reason": "Loja concluída e Payments setada",
+      "created_at": "2026-10-06 01:18:00",
+      "month_key": "2026-10",
+      "source": "whatsapp_import"
+    },
+    {
+      "id": "16147bbf-6e3e-4abd-a972-470f486e9f15",
+      "event_type": "store_published",
+      "store_name": "Evolv",
+      "domain": "wearevolv.com",
+      "account_number": "Google Ads 57",
+      "inactive_category": "",
+      "reason": "Loja Evolv concluída",
+      "created_at": "2026-10-09 03:53:00",
+      "month_key": "2026-10",
+      "source": "whatsapp_import"
+    },
+    {
+      "id": "9ab9180f-ae45-4924-9744-6d2f312aeafa",
+      "event_type": "store_published",
+      "store_name": "Sivara",
+      "domain": "sivarabody.com",
+      "account_number": "Google Ads 59",
+      "inactive_category": "",
+      "reason": "Loja Sivara concluída",
+      "created_at": "2026-10-09 22:26:00",
+      "month_key": "2026-10",
+      "source": "whatsapp_import"
+    },
+    {
+      "id": "dfbafc5f-8e79-497e-a008-f0ae2ec86d3d",
+      "event_type": "store_published",
+      "store_name": "Maggie's Tanks",
+      "domain": "wearmaggies.com",
+      "account_number": "Google Ads 67",
+      "inactive_category": "",
+      "reason": "Loja Maggie's Tanks concluída",
+      "created_at": "2026-10-13 23:08:00",
+      "month_key": "2026-10",
+      "source": "whatsapp_import"
+    },
+    {
+      "id": "4356de94-2109-4519-9839-0ae2b993933b",
+      "event_type": "store_published",
+      "store_name": "SleepSake",
+      "domain": "sleepsakeshop.com",
+      "account_number": "Google Ads 68",
+      "inactive_category": "",
+      "reason": "Payments Sleepsake setada e publicada",
+      "created_at": "2026-10-15 02:09:00",
+      "month_key": "2026-10",
+      "source": "whatsapp_import"
+    },
+    {
+      "id": "ce48cca4-282b-41bd-b219-d98b3c0119fa",
+      "event_type": "store_published",
+      "store_name": "Grace & Ease",
+      "domain": "graceandease.com",
+      "account_number": "Google Ads 63",
+      "inactive_category": "",
+      "reason": "Payments Grace & Ease setada e publicada",
+      "created_at": "2026-10-15 02:09:00",
+      "month_key": "2026-10",
+      "source": "whatsapp_import"
+    },
+    {
+      "id": "0a76eb88-26ec-42a6-872c-0feb91dfbafd",
+      "event_type": "store_published",
+      "store_name": "LongWell",
+      "domain": "longwelltitanium.com",
+      "account_number": "Google Ads 42",
+      "inactive_category": "",
+      "reason": "Loja LongWell publicada",
+      "created_at": "2026-10-19 13:27:00",
+      "month_key": "2026-10",
+      "source": "whatsapp_import"
+    },
+    {
+      "id": "5a650bdd-9334-43d9-906e-5a9ffcaba91c",
+      "event_type": "store_published",
+      "store_name": "Eversock",
+      "domain": "eversockshop.com",
+      "account_number": "Google Ads",
+      "inactive_category": "",
+      "reason": "Eversock publicada",
+      "created_at": "2026-10-21 02:16:00",
+      "month_key": "2026-10",
+      "source": "whatsapp_import"
+    },
+    {
+      "id": "9c550662-d80d-4d9d-a2dc-8a69574a088d",
+      "event_type": "store_published",
+      "store_name": "Belluna",
+      "domain": "bellunashop.com",
+      "account_number": "Google Ads",
+      "inactive_category": "",
+      "reason": "Belluna publicada",
+      "created_at": "2026-10-21 02:16:00",
+      "month_key": "2026-10",
+      "source": "whatsapp_import"
+    },
+    {
+      "id": "39110b34-3d28-4fb4-b743-f312b22add26",
+      "event_type": "store_published",
+      "store_name": "Snuggi Sandals",
+      "domain": "snuggisandals.com",
+      "account_number": "Google Ads 62",
+      "inactive_category": "",
+      "reason": "Snuggi Sandals publicada",
+      "created_at": "2026-10-21 02:16:00",
+      "month_key": "2026-10",
+      "source": "whatsapp_import"
+    },
+    {
+      "id": "b84142db-bc56-499a-acf6-3f1215bd9426",
+      "event_type": "store_published",
+      "store_name": "Sondur Travel",
+      "domain": "sondurtravel.com",
+      "account_number": "Google Ads",
+      "inactive_category": "",
+      "reason": "Sondur Travel publicada",
+      "created_at": "2026-10-21 02:16:00",
+      "month_key": "2026-10",
+      "source": "whatsapp_import"
+    },
+    {
+      "id": "0e4e87e3-53ab-4435-9d4a-740815d90f57",
+      "event_type": "store_published",
+      "store_name": "Krakatoa",
+      "domain": "krakatoashop.com",
+      "account_number": "Google Ads",
+      "inactive_category": "",
+      "reason": "Loja Krakatoa publicada",
+      "created_at": "2026-10-28 01:26:00",
+      "month_key": "2026-10",
+      "source": "whatsapp_import"
+    },
+    {
+      "id": "d10252ef-e11e-4756-9338-5b154c472968",
+      "event_type": "store_published",
+      "store_name": "VivaCuerpo",
+      "domain": "vivacuerpo.com",
+      "account_number": "Google Ads",
+      "inactive_category": "",
+      "reason": "VivaCuerpo México publicada",
+      "created_at": "2026-10-24 01:37:00",
+      "month_key": "2026-10",
+      "source": "whatsapp_import"
+    },
+    {
+      "id": "3df650e7-2b1e-41cc-9108-098526cf47d8",
+      "event_type": "ads_suspended",
+      "store_name": "Maggie's Tanks",
+      "domain": "wearmaggies.com",
+      "account_number": "Google Ads 87",
+      "inactive_category": "",
+      "reason": "Práticas comerciais inaceitáveis: phishing (2Âº bloqueio)",
+      "created_at": "2026-11-01 00:32:00",
+      "month_key": "2026-11",
+      "source": "whatsapp_import"
+    },
+    {
+      "id": "53cb020a-349c-4346-b4dd-2c39a4c53e84",
+      "event_type": "ads_suspended",
+      "store_name": "Evolv",
+      "domain": "wearevolv.com",
+      "account_number": "Google Ads 57",
+      "inactive_category": "",
+      "reason": "Práticas inaceitáveis: Phishing",
+      "created_at": "2026-11-02 10:56:00",
+      "month_key": "2026-11",
+      "source": "whatsapp_import"
+    },
+    {
+      "id": "5a56ce0a-41fb-4777-9cfb-c808ee7b2835",
+      "event_type": "store_inactive",
+      "store_name": "SleepSake",
+      "domain": "sleepsakeshop.com",
+      "account_number": "Google Ads 68",
+      "inactive_category": "dmca",
+      "reason": "Loja caiu na Shopify (DMCA) - Carlos: 'Tropa Sleepsake a loja caiu'",
+      "created_at": "2026-11-02 21:14:00",
+      "month_key": "2026-11",
+      "source": "whatsapp_import"
+    },
+    {
+      "id": "edfe2abc-5603-4ce5-9a5c-c678c3ce6462",
+      "event_type": "ads_suspended",
+      "store_name": "Maggie's Tanks",
+      "domain": "wearmaggies.com",
+      "account_number": "Google Ads 79",
+      "inactive_category": "",
+      "reason": "Práticas comerciais inaceitáveis: phishing (não se mantém >24h)",
+      "created_at": "2026-11-03 01:01:00",
+      "month_key": "2026-11",
+      "source": "whatsapp_import"
+    },
+    {
+      "id": "e06562af-ec29-4351-9d48-b856d0ab6185",
+      "event_type": "store_inactive",
+      "store_name": "Maggie's Tanks",
+      "domain": "wearmaggies.com",
+      "account_number": "Google Ads 79",
+      "inactive_category": "ads_block",
+      "reason": "Bloqueios constantes Google Ads (87, 79), não se mantém >24h",
+      "created_at": "2026-11-03 01:01:00",
+      "month_key": "2026-11",
+      "source": "whatsapp_import"
+    },
+    {
+      "id": "b0e01817-a29b-4367-a15a-0934972142a3",
+      "event_type": "ads_suspended",
+      "store_name": "Evolv",
+      "domain": "wearevolv.com",
+      "account_number": "Google Ads 88",
+      "inactive_category": "",
+      "reason": "Práticas comerciais inaceitáveis: phishing (bloqueios constantes)",
+      "created_at": "2026-11-03 01:08:00",
+      "month_key": "2026-11",
+      "source": "whatsapp_import"
+    },
+    {
+      "id": "85ec2427-5895-430f-bf64-5cac963091d4",
+      "event_type": "ads_suspended",
+      "store_name": "Dr. Dent",
+      "domain": "drdentshop.com",
+      "account_number": "Google Ads 85",
+      "inactive_category": "",
+      "reason": "Burlar sistemas (abuso de múltiplas contas)",
+      "created_at": "2026-10-31 09:36:00",
+      "month_key": "2026-11",
+      "source": "whatsapp_import"
+    }
+  ],
+  "updated_at": "2026-11-05 14:40:31",
+  "stores_catalog": {
+    "Maggie's Tanks": {
+      "name": "Maggie's Tanks",
+      "current_domain": "wearmaggies.com",
+      "domain_swaps_count": 2,
+      "status": "Inativa",
+      "domain_history": [
+        {
+          "domain": "wearmaggies.com",
+          "date": "02/11/2026",
+          "status": "atual",
+          "reason": "Domínio corrigido por Victor após queda"
+        },
+        {
+          "domain": "usemagiestanks.com",
+          "date": "30/10/2026",
+          "status": "anterior",
+          "reason": "Domínio alterado por Marcos Junior"
+        },
+        {
+          "domain": "maggieestanks.com",
+          "date": "13/10/2026",
+          "status": "inicial",
+          "reason": "Domínio de lançamento"
+        }
+      ],
+      "publications": [
+        {
+          "date": "13/10/2026 23:08",
+          "event": "Lançamento inicial",
+          "notes": "Loja Maggie's Tanks concluída e payments setada"
+        },
+        {
+          "date": "15/10/2026 02:09",
+          "event": "Republicada",
+          "notes": "Publicada nos anúncios"
+        },
+        {
+          "date": "30/10/2026 21:13",
+          "event": "Republicada",
+          "notes": "Publicada após alteração de domínio para usemagiestanks.com"
+        },
+        {
+          "date": "31/10/2026 11:38",
+          "event": "Republicada",
+          "notes": "Publicada novamente por Carlos Nobre"
+        },
+        {
+          "date": "02/11/2026 12:35",
+          "event": "Republicada",
+          "notes": "Publicada com novo domínio wearmaggies.com"
+        }
+      ],
+      "suspensions": [
+        {
+          "account": "Google Ads 67",
+          "date": "31/10/2026 10:34",
+          "reason": "Práticas comerciais inaceitáveis: phishing"
+        },
+        {
+          "account": "Google Ads 87",
+          "date": "01/11/2026 00:32",
+          "reason": "Práticas comerciais inaceitáveis: phishing (2Âº bloqueio em <24h)"
+        },
+        {
+          "account": "Google Ads 79",
+          "date": "03/11/2026 01:01",
+          "reason": "Práticas comerciais inaceitáveis: phishing (não se mantém >24h)"
+        }
+      ],
+      "status_history": [
+        {
+          "status": "Inativa (Google Ads / Phishing)",
+          "changed_at": "2026-11-05 12:16:19",
+          "source": "before_user_screenshot_verification"
+        }
+      ],
+      "status_verified_at": "2026-11-05 12:16:19",
+      "status_source": "user_screenshots_2026-11-05"
+    },
+    "LongWell": {
+      "name": "LongWell",
+      "current_domain": "longwelltitanium.com",
+      "domain_swaps_count": 3,
+      "status": "Inativa",
+      "domain_history": [
+        {
+          "domain": "longwelltitanium.com",
+          "date": "02/11/2026",
+          "status": "atual",
+          "reason": "Domínio corrigido por Victor"
+        },
+        {
+          "domain": "uselongwellco.com",
+          "date": "30/10/2026",
+          "status": "anterior",
+          "reason": "Comprado por Marcos Junior após queda do Google 42"
+        },
+        {
+          "domain": "longwellkitchen.com",
+          "date": "29/10/2026",
+          "status": "anterior",
+          "reason": "Comprado por Victor"
+        },
+        {
+          "domain": "longwellshop.com",
+          "date": "19/10/2026",
+          "status": "inicial",
+          "reason": "Domínio inicial"
+        }
+      ],
+      "publications": [
+        {
+          "date": "19/10/2026 13:27",
+          "event": "Lançamento inicial",
+          "notes": "LongWell publicada nos anúncios"
+        },
+        {
+          "date": "29/10/2026 12:19",
+          "event": "Republicada",
+          "notes": "Publicada após queda de domínio"
+        },
+        {
+          "date": "30/10/2026 03:09",
+          "event": "Republicada",
+          "notes": "Publicada com uselongwellco.com"
+        },
+        {
+          "date": "02/11/2026 12:35",
+          "event": "Republicada",
+          "notes": "Publicada com longwelltitanium.com"
+        }
+      ],
+      "suspensions": [
+        {
+          "account": "Google Ads 42",
+          "date": "30/10/2026 00:49",
+          "reason": "Práticas comerciais (caiu domínio e conta)"
+        }
+      ],
+      "status_history": [
+        {
+          "status": "Ativa",
+          "changed_at": "2026-11-05 12:16:19",
+          "source": "before_user_screenshot_verification"
+        }
+      ],
+      "status_verified_at": "2026-11-05 12:16:19",
+      "status_source": "user_screenshots_2026-11-05"
+    },
+    "Dogshood": {
+      "name": "Dogshood",
+      "current_domain": "usedogshood.com",
+      "domain_swaps_count": 1,
+      "status": "Inativa",
+      "domain_history": [
+        {
+          "domain": "usedogshood.com",
+          "date": "11/10/2026",
+          "status": "atual",
+          "reason": "Troca de domínio urgente por Samuel"
+        },
+        {
+          "domain": "dogshoodpet.com",
+          "date": "01/10/2026",
+          "status": "anterior",
+          "reason": "Domínio original"
+        }
+      ],
+      "publications": [
+        {
+          "date": "01/10/2026 00:00",
+          "event": "Ativa no início",
+          "notes": "Operação ativa"
+        },
+        {
+          "date": "11/10/2026 13:08",
+          "event": "Republicada",
+          "notes": "Publicada após troca de domínio"
+        },
+        {
+          "date": "12/10/2026 15:49",
+          "event": "Republicada",
+          "notes": "Manutenção concluída e publicada"
+        },
+        {
+          "date": "17/10/2026 00:52",
+          "event": "Republicada",
+          "notes": "Publicada novamente"
+        }
+      ],
+      "suspensions": [
+        {
+          "account": "Google Ads 22",
+          "date": "11/10/2026 11:32",
+          "reason": "Práticas comerciais inaceitáveis: phishing"
+        },
+        {
+          "account": "Google Ads 61",
+          "date": "12/10/2026 11:51",
+          "reason": "Práticas comerciais inaceitáveis: phishing"
+        },
+        {
+          "account": "Google Ads 66",
+          "date": "13/10/2026 10:18",
+          "reason": "Práticas comerciais inaceitáveis: phishing"
+        },
+        {
+          "account": "Google Ads 64",
+          "date": "14/10/2026 11:48",
+          "reason": "Práticas comerciais inaceitáveis: phishing"
+        },
+        {
+          "account": "Google Ads 73",
+          "date": "18/10/2026 10:45",
+          "reason": "Práticas comerciais inaceitáveis: phishing"
+        },
+        {
+          "account": "Google Ads 76",
+          "date": "25/10/2026 01:53",
+          "reason": "Práticas comerciais inaceitáveis: phishing"
+        }
+      ],
+      "status_history": [
+        {
+          "status": "Ativa",
+          "changed_at": "2026-11-05 12:16:19",
+          "source": "before_user_screenshot_verification"
+        }
+      ],
+      "status_verified_at": "2026-11-05 12:16:19",
+      "status_source": "user_screenshots_2026-11-05"
+    },
+    "Haloring": {
+      "name": "Haloring",
+      "current_domain": "tryhalorings.com",
+      "domain_swaps_count": 1,
+      "status": "Inativa",
+      "domain_history": [
+        {
+          "domain": "tryhalorings.com",
+          "date": "23/10/2026",
+          "status": "atual",
+          "reason": "Domínio mais distante do original para evitar phishing"
+        },
+        {
+          "domain": "haloring.com",
+          "date": "01/10/2026",
+          "status": "anterior",
+          "reason": "Domínio inicial"
+        }
+      ],
+      "publications": [
+        {
+          "date": "01/10/2026 00:00",
+          "event": "Ativa no início",
+          "notes": "Operação ativa"
+        },
+        {
+          "date": "17/10/2026 13:26",
+          "event": "Republicada",
+          "notes": "Halo ring publicada"
+        },
+        {
+          "date": "22/10/2026 03:04",
+          "event": "Republicada",
+          "notes": "Ads on sem sitelink"
+        }
+      ],
+      "suspensions": [
+        {
+          "account": "Google Ads 18",
+          "date": "07/10/2026 10:57",
+          "reason": "Suspensão temporária / Phishing"
+        },
+        {
+          "account": "Google Ads 54",
+          "date": "17/10/2026 11:44",
+          "reason": "Práticas comerciais inaceitáveis"
+        },
+        {
+          "account": "Google Ads 74",
+          "date": "18/10/2026 10:48",
+          "reason": "Práticas comerciais inaceitáveis: phishing"
+        },
+        {
+          "account": "Google Ads 58",
+          "date": "23/10/2026 09:43",
+          "reason": "Práticas comerciais inaceitáveis: phishing"
+        }
+      ],
+      "status_history": [
+        {
+          "status": "Ativa",
+          "changed_at": "2026-11-05 12:16:19",
+          "source": "before_user_screenshot_verification"
+        }
+      ],
+      "status_verified_at": "2026-11-05 12:16:19",
+      "status_source": "user_screenshots_2026-11-05"
+    },
+    "Evolv": {
+      "name": "Evolv",
+      "current_domain": "wearevolv.com",
+      "domain_swaps_count": 1,
+      "status": "Inativa",
+      "domain_history": [
+        {
+          "domain": "wearevolv.com",
+          "date": "02/11/2026",
+          "status": "atual",
+          "reason": "Domínio corrigido por Victor"
+        },
+        {
+          "domain": "evolvshop.com",
+          "date": "07/10/2026",
+          "status": "anterior",
+          "reason": "Domínio inicial"
+        }
+      ],
+      "publications": [
+        {
+          "date": "09/10/2026 03:53",
+          "event": "Lançamento inicial",
+          "notes": "Loja Evolv concluída"
+        },
+        {
+          "date": "02/11/2026 12:35",
+          "event": "Republicada",
+          "notes": "Publicada com wearevolv.com"
+        }
+      ],
+      "suspensions": [
+        {
+          "account": "Google Ads 57",
+          "date": "02/11/2026 10:56",
+          "reason": "Práticas inaceitáveis: Phishing"
+        },
+        {
+          "account": "Google Ads 88",
+          "date": "03/11/2026 01:08",
+          "reason": "Práticas comerciais inaceitáveis: phishing"
+        }
+      ],
+      "status_history": [
+        {
+          "status": "Ativa",
+          "changed_at": "2026-11-05 12:16:19",
+          "source": "before_user_screenshot_verification"
+        }
+      ],
+      "status_verified_at": "2026-11-05 12:16:19",
+      "status_source": "user_screenshots_2026-11-05"
+    },
+    "Libra Cases": {
+      "name": "Libra Cases",
+      "current_domain": "libracaseshop.com",
+      "domain_swaps_count": 0,
+      "status": "Inativa",
+      "domain_history": [
+        {
+          "domain": "libracaseshop.com",
+          "date": "28/10/2026",
+          "status": "atual",
+          "reason": "Domínio original"
+        }
+      ],
+      "publications": [
+        {
+          "date": "28/10/2026 01:26",
+          "event": "Lançamento inicial",
+          "notes": "Loja Libra publicada"
+        }
+      ],
+      "suspensions": [
+        {
+          "account": "Google Ads 79",
+          "date": "03/11/2026 01:01",
+          "reason": "Notificada no Google Ads 79 / DMCA na Shopify"
+        }
+      ],
+      "status_history": [
+        {
+          "status": "Inativa (DMCA / Notificada Ads 79)",
+          "changed_at": "2026-11-05 12:16:19",
+          "source": "before_user_screenshot_verification"
+        }
+      ],
+      "status_verified_at": "2026-11-05 12:16:19",
+      "status_source": "user_screenshots_2026-11-05"
+    },
+    "SleepSake": {
+      "name": "SleepSake",
+      "current_domain": "sleepsakeshop.com",
+      "domain_swaps_count": 0,
+      "status": "Ativa",
+      "domain_history": [
+        {
+          "domain": "sleepsakeshop.com",
+          "date": "14/10/2026",
+          "status": "atual",
+          "reason": "Domínio original"
+        }
+      ],
+      "publications": [
+        {
+          "date": "15/10/2026 02:09",
+          "event": "Lançamento inicial",
+          "notes": "Payments Sleepsake setada e publicada"
+        }
+      ],
+      "suspensions": [
+        {
+          "account": "Google Ads 68",
+          "date": "02/11/2026 21:14",
+          "reason": "Loja caiu na Shopify (DMCA)"
+        }
+      ],
+      "status_history": [
+        {
+          "status": "Inativa (DMCA 02/11)",
+          "changed_at": "2026-11-05 12:16:19",
+          "source": "before_user_screenshot_verification"
+        }
+      ],
+      "status_verified_at": "2026-11-05 12:16:19",
+      "status_source": "user_screenshots_2026-11-05"
+    },
+    "Body & Bra": {
+      "name": "Body & Bra",
+      "current_domain": "bodyandbra.com",
+      "domain_swaps_count": 0,
+      "status": "Inativa",
+      "domain_history": [
+        {
+          "domain": "bodyandbra.com",
+          "date": "01/10/2026",
+          "status": "atual",
+          "reason": "Domínio original"
+        }
+      ],
+      "publications": [
+        {
+          "date": "01/10/2026 00:00",
+          "event": "Ativa no início",
+          "notes": "Operação ativa"
+        },
+        {
+          "date": "09/10/2026 00:20",
+          "event": "Republicada",
+          "notes": "Publicada após manutenção"
+        }
+      ],
+      "suspensions": [
+        {
+          "account": "Google Ads 40",
+          "date": "08/10/2026 10:57",
+          "reason": "Práticas comerciais inaceitáveis: phishing"
+        },
+        {
+          "account": "Google Ads 52",
+          "date": "09/10/2026 10:35",
+          "reason": "Práticas comerciais inaceitáveis: phishing"
+        }
+      ],
+      "status_history": [
+        {
+          "status": "Ativa",
+          "changed_at": "2026-11-05 12:16:19",
+          "source": "before_user_screenshot_verification"
+        }
+      ],
+      "status_verified_at": "2026-11-05 12:16:19",
+      "status_source": "user_screenshots_2026-11-05"
+    },
+    "Ionix Labs": {
+      "name": "Ionix Labs",
+      "current_domain": "ionixlabs.com",
+      "domain_swaps_count": 1,
+      "status": "Ativa",
+      "domain_history": [
+        {
+          "domain": "ionixlabsshop.com",
+          "date": "20/10/2026",
+          "status": "atual",
+          "reason": "Ionix Labs 2"
+        },
+        {
+          "domain": "ionixlabs.com",
+          "date": "01/10/2026",
+          "status": "anterior",
+          "reason": "Domínio original"
+        }
+      ],
+      "publications": [
+        {
+          "date": "01/10/2026 00:00",
+          "event": "Ativa no início",
+          "notes": "Operação ativa"
+        }
+      ],
+      "suspensions": [],
+      "status_history": [
+        {
+          "status": "Ativa",
+          "changed_at": "2026-11-05 12:16:19",
+          "source": "before_user_screenshot_verification"
+        }
+      ],
+      "status_verified_at": "2026-11-05 12:37:11",
+      "status_source": "manual"
+    },
+    "Luveon": {
+      "name": "Luveon",
+      "current_domain": "useluveon.com",
+      "domain_swaps_count": 0,
+      "status": "Ativa",
+      "domain_history": [
+        {
+          "domain": "useluveon.com",
+          "date": "01/10/2026",
+          "status": "atual",
+          "reason": "Domínio original"
+        }
+      ],
+      "publications": [
+        {
+          "date": "01/10/2026 00:00",
+          "event": "Ativa no início",
+          "notes": "Operação ativa"
+        }
+      ],
+      "suspensions": [],
+      "status_history": [
+        {
+          "status": "Ativa",
+          "changed_at": "2026-11-05 12:16:19",
+          "source": "before_user_screenshot_verification"
+        }
+      ],
+      "status_verified_at": "2026-11-05 12:16:19",
+      "status_source": "user_screenshots_2026-11-05"
+    },
+    "ParoPet": {
+      "name": "ParoPet",
+      "current_domain": "paropetuk.com",
+      "domain_swaps_count": 0,
+      "status": "Inativa",
+      "domain_history": [
+        {
+          "domain": "paropetuk.com",
+          "date": "01/10/2026",
+          "status": "atual",
+          "reason": "Domínio original"
+        }
+      ],
+      "publications": [
+        {
+          "date": "01/10/2026 00:00",
+          "event": "Ativa no início",
+          "notes": "Operação ativa"
+        }
+      ],
+      "suspensions": [],
+      "status_history": [
+        {
+          "status": "Ativa",
+          "changed_at": "2026-11-05 12:16:19",
+          "source": "before_user_screenshot_verification"
+        }
+      ],
+      "status_verified_at": "2026-11-05 14:40:12",
+      "status_source": "domain_monitor"
+    },
+    "Donnea Milano": {
+      "name": "Donnea Milano",
+      "current_domain": "donnea-milanoit.com",
+      "domain_swaps_count": 0,
+      "status": "Ativa",
+      "domain_history": [
+        {
+          "domain": "donnea-milanoit.com",
+          "date": "01/10/2026",
+          "status": "atual",
+          "reason": "Domínio original"
+        }
+      ],
+      "publications": [
+        {
+          "date": "01/10/2026 00:00",
+          "event": "Ativa no início",
+          "notes": "Operação ativa"
+        }
+      ],
+      "suspensions": [],
+      "status_history": [
+        {
+          "status": "Ativa",
+          "changed_at": "2026-11-05 12:16:19",
+          "source": "before_user_screenshot_verification"
+        }
+      ],
+      "status_verified_at": "2026-11-05 12:16:19",
+      "status_source": "user_screenshots_2026-11-05"
+    },
+    "Softari": {
+      "name": "Softari",
+      "current_domain": "shopsoftari.com",
+      "domain_swaps_count": 1,
+      "status": "Ativa",
+      "domain_history": [
+        {
+          "domain": "shopsoftari.com",
+          "date": "02/11/2026",
+          "status": "atual",
+          "reason": "Softari 2"
+        },
+        {
+          "domain": "softarishop.com",
+          "date": "01/10/2026",
+          "status": "anterior",
+          "reason": "Domínio inicial"
+        }
+      ],
+      "publications": [
+        {
+          "date": "01/10/2026 00:00",
+          "event": "Ativa no início",
+          "notes": "Operação ativa"
+        },
+        {
+          "date": "02/11/2026 12:35",
+          "event": "Republicada",
+          "notes": "Publicada com Softari 2"
+        }
+      ],
+      "suspensions": [],
+      "status_history": [
+        {
+          "status": "Ativa",
+          "changed_at": "2026-11-05 12:16:19",
+          "source": "before_user_screenshot_verification"
+        }
+      ],
+      "status_verified_at": "2026-11-05 12:16:19",
+      "status_source": "user_screenshots_2026-11-05"
+    },
+    "Scarlette": {
+      "name": "Scarlette",
+      "current_domain": "scarletteshop.com",
+      "domain_swaps_count": 0,
+      "status": "Ativa",
+      "domain_history": [
+        {
+          "domain": "scarletteshop.com",
+          "date": "01/10/2026",
+          "status": "atual",
+          "reason": "Domínio original"
+        }
+      ],
+      "publications": [
+        {
+          "date": "01/10/2026 00:00",
+          "event": "Ativa no início",
+          "notes": "Operação ativa"
+        }
+      ],
+      "suspensions": [],
+      "status_history": [
+        {
+          "status": "Ativa",
+          "changed_at": "2026-11-05 12:16:19",
+          "source": "before_user_screenshot_verification"
+        }
+      ],
+      "status_verified_at": "2026-11-05 12:16:19",
+      "status_source": "user_screenshots_2026-11-05"
+    },
+    "Breeze": {
+      "name": "Breeze",
+      "current_domain": "breezewearco.com",
+      "domain_swaps_count": 1,
+      "status": "Ativa",
+      "domain_history": [
+        {
+          "domain": "breezewearco.com",
+          "date": "10/10/2026",
+          "status": "atual",
+          "reason": "Breeze 2 após queda de domínio"
+        },
+        {
+          "domain": "breezeshop.com",
+          "date": "01/10/2026",
+          "status": "anterior",
+          "reason": "Domínio inicial"
+        }
+      ],
+      "publications": [
+        {
+          "date": "01/10/2026 00:00",
+          "event": "Ativa no início",
+          "notes": "Operação ativa"
+        },
+        {
+          "date": "10/10/2026 13:14",
+          "event": "Republicada",
+          "notes": "Campanha reativada"
+        }
+      ],
+      "suspensions": [
+        {
+          "account": "Google Ads 21",
+          "date": "10/10/2026 01:46",
+          "reason": "Campanha pausada devido ao domínio fora do ar"
+        }
+      ],
+      "status_history": [
+        {
+          "status": "Ativa",
+          "changed_at": "2026-11-05 12:16:19",
+          "source": "before_user_screenshot_verification"
+        }
+      ],
+      "status_verified_at": "2026-11-05 12:16:19",
+      "status_source": "user_screenshots_2026-11-05"
+    },
+    "Orre Naturals": {
+      "name": "Orre Naturals",
+      "current_domain": "orrenaturalsus.com",
+      "domain_swaps_count": 0,
+      "status": "Ativa",
+      "domain_history": [
+        {
+          "domain": "orrenaturalsus.com",
+          "date": "01/10/2026",
+          "status": "atual",
+          "reason": "Domínio original"
+        }
+      ],
+      "publications": [
+        {
+          "date": "01/10/2026 00:00",
+          "event": "Ativa no início",
+          "notes": "Operação ativa"
+        }
+      ],
+      "suspensions": [],
+      "status_history": [
+        {
+          "status": "Ativa",
+          "changed_at": "2026-11-05 12:16:19",
+          "source": "before_user_screenshot_verification"
+        }
+      ],
+      "status_verified_at": "2026-11-05 12:16:19",
+      "status_source": "user_screenshots_2026-11-05"
+    },
+    "Lush Essence": {
+      "name": "Lush Essence",
+      "current_domain": "uselushessence.com",
+      "domain_swaps_count": 0,
+      "status": "Ativa",
+      "domain_history": [
+        {
+          "domain": "uselushessence.com",
+          "date": "06/10/2026",
+          "status": "atual",
+          "reason": "Domínio original"
+        }
+      ],
+      "publications": [
+        {
+          "date": "06/10/2026 01:18",
+          "event": "Lançamento inicial",
+          "notes": "Loja concluída e Payments setada"
+        }
+      ],
+      "suspensions": [
+        {
+          "account": "Google Ads 46",
+          "date": "06/10/2026 10:57",
+          "reason": "Suspensão inicial / Práticas comerciais"
+        }
+      ],
+      "status_history": [
+        {
+          "status": "Ativa",
+          "changed_at": "2026-11-05 12:16:19",
+          "source": "before_user_screenshot_verification"
+        }
+      ],
+      "status_verified_at": "2026-11-05 12:16:19",
+      "status_source": "user_screenshots_2026-11-05"
+    },
+    "Sivara": {
+      "name": "Sivara",
+      "current_domain": "sivarabody.com",
+      "domain_swaps_count": 0,
+      "status": "Inativa",
+      "domain_history": [
+        {
+          "domain": "sivarabody.com",
+          "date": "09/10/2026",
+          "status": "atual",
+          "reason": "Domínio original"
+        }
+      ],
+      "publications": [
+        {
+          "date": "09/10/2026 22:26",
+          "event": "Lançamento inicial",
+          "notes": "Loja concluída"
+        },
+        {
+          "date": "27/10/2026 02:04",
+          "event": "Republicada",
+          "notes": "Publicado"
+        }
+      ],
+      "suspensions": [
+        {
+          "account": "Google Ads 59",
+          "date": "27/10/2026 01:16",
+          "reason": "Práticas comerciais inaceitáveis"
+        }
+      ],
+      "status_history": [
+        {
+          "status": "Inativa (DMCA 29/10)",
+          "changed_at": "2026-11-05 12:16:19",
+          "source": "before_user_screenshot_verification"
+        }
+      ],
+      "status_verified_at": "2026-11-05 12:16:19",
+      "status_source": "user_screenshots_2026-11-05"
+    },
+    "Nesti": {
+      "name": "Nesti",
+      "current_domain": "shopnesti.com",
+      "domain_swaps_count": 1,
+      "status": "Inativa",
+      "domain_history": [
+        {
+          "domain": "shopnesti.com",
+          "date": "02/11/2026",
+          "status": "atual",
+          "reason": "Nesti 2 após manutenção"
+        },
+        {
+          "domain": "nestishop.com",
+          "date": "01/10/2026",
+          "status": "anterior",
+          "reason": "Domínio inicial"
+        }
+      ],
+      "publications": [
+        {
+          "date": "09/10/2026 02:56",
+          "event": "Lançamento inicial",
+          "notes": "Domínio alterado e pronta para rodar"
+        },
+        {
+          "date": "02/11/2026 15:56",
+          "event": "Republicada",
+          "notes": "Manutenção concluída e reativada"
+        }
+      ],
+      "suspensions": [],
+      "status_history": [
+        {
+          "status": "Ativa",
+          "changed_at": "2026-11-05 12:16:19",
+          "source": "before_user_screenshot_verification"
+        }
+      ],
+      "status_verified_at": "2026-11-05 12:16:19",
+      "status_source": "user_screenshots_2026-11-05"
+    },
+    "Grace & Ease": {
+      "name": "Grace & Ease",
+      "current_domain": "usegraceease.com",
+      "domain_swaps_count": 0,
+      "status": "Ativa",
+      "domain_history": [
+        {
+          "domain": "usegraceease.com",
+          "date": "14/10/2026",
+          "status": "atual",
+          "reason": "Domínio original"
+        }
+      ],
+      "publications": [
+        {
+          "date": "15/10/2026 02:09",
+          "event": "Lançamento inicial",
+          "notes": "Payments setada e publicada"
+        }
+      ],
+      "suspensions": [],
+      "status_history": [
+        {
+          "status": "Ativa",
+          "changed_at": "2026-11-05 12:16:19",
+          "source": "before_user_screenshot_verification"
+        }
+      ],
+      "status_verified_at": "2026-11-05 12:16:19",
+      "status_source": "user_screenshots_2026-11-05"
+    },
+    "Krakatoa": {
+      "name": "Krakatoa",
+      "current_domain": "wearkrakatoa.com",
+      "domain_swaps_count": 0,
+      "status": "Ativa",
+      "domain_history": [
+        {
+          "domain": "wearkrakatoa.com",
+          "date": "27/10/2026",
+          "status": "atual",
+          "reason": "Domínio original"
+        }
+      ],
+      "publications": [
+        {
+          "date": "28/10/2026 01:26",
+          "event": "Lançamento inicial",
+          "notes": "Loja Krakatoa publicada"
+        }
+      ],
+      "suspensions": [],
+      "status_history": [
+        {
+          "status": "Ativa",
+          "changed_at": "2026-11-05 12:16:19",
+          "source": "before_user_screenshot_verification"
+        }
+      ],
+      "status_verified_at": "2026-11-05 12:16:19",
+      "status_source": "user_screenshots_2026-11-05"
+    },
+    "VivaCuerpo": {
+      "name": "VivaCuerpo",
+      "current_domain": "vivacuerpomx.com",
+      "domain_swaps_count": 0,
+      "status": "Ativa",
+      "domain_history": [
+        {
+          "domain": "vivacuerpomx.com",
+          "date": "23/10/2026",
+          "status": "atual",
+          "reason": "Domínio original"
+        }
+      ],
+      "publications": [
+        {
+          "date": "24/10/2026 01:37",
+          "event": "Lançamento inicial",
+          "notes": "VivaCuerpo México publicada"
+        }
+      ],
+      "suspensions": [],
+      "status_history": [
+        {
+          "status": "Ativa",
+          "changed_at": "2026-11-05 12:16:19",
+          "source": "before_user_screenshot_verification"
+        }
+      ],
+      "status_verified_at": "2026-11-05 12:16:19",
+      "status_source": "user_screenshots_2026-11-05"
+    },
+    "Dr. Dent": {
+      "name": "Dr. Dent",
+      "current_domain": "drdentpro.com",
+      "domain_swaps_count": 0,
+      "status": "Inativa",
+      "domain_history": [
+        {
+          "domain": "drdentpro.com",
+          "date": "30/10/2026",
+          "status": "atual",
+          "reason": "Domínio original"
+        }
+      ],
+      "publications": [
+        {
+          "date": "03/11/2026 19:00",
+          "event": "Conta Ads Atual",
+          "notes": "Atualmente no Google Ads 78, mesmo domínio (drdentpro.com)"
+        },
+        {
+          "date": "31/10/2026 10:07",
+          "event": "Lançamento inicial",
+          "notes": "DR DENT publicado"
+        }
+      ],
+      "suspensions": [
+        {
+          "account": "Google Ads 85",
+          "date": "31/10/2026 09:36",
+          "reason": "Burlar sistemas (abuso de múltiplas contas)"
+        }
+      ],
+      "current_ads_account": "Google Ads 78",
+      "status_history": [
+        {
+          "status": "Ativa",
+          "changed_at": "2026-11-05 12:16:19",
+          "source": "before_user_screenshot_verification"
+        }
+      ],
+      "status_verified_at": "2026-11-05 14:40:07",
+      "status_source": "domain_monitor"
+    },
+    "Belluna": {
+      "name": "Belluna",
+      "current_domain": "bellunamode.com",
+      "domain_swaps_count": 0,
+      "status": "Ativa",
+      "domain_history": [
+        {
+          "domain": "bellunamode.com",
+          "date": "21/10/2026",
+          "status": "atual",
+          "reason": "Domínio original"
+        }
+      ],
+      "publications": [
+        {
+          "date": "21/10/2026 02:16",
+          "event": "Lançamento inicial",
+          "notes": "Belluna publicada"
+        }
+      ],
+      "suspensions": [],
+      "status_history": [
+        {
+          "status": "Ativa",
+          "changed_at": "2026-11-05 12:16:19",
+          "source": "before_user_screenshot_verification"
+        }
+      ],
+      "status_verified_at": "2026-11-05 12:16:19",
+      "status_source": "user_screenshots_2026-11-05"
+    },
+    "EverSock": {
+      "name": "EverSock",
+      "current_domain": "myeversock.com",
+      "domain_swaps_count": 0,
+      "status": "Ativa",
+      "domain_history": [
+        {
+          "domain": "myeversock.com",
+          "date": "20/10/2026",
+          "status": "atual",
+          "reason": "Domínio original"
+        }
+      ],
+      "publications": [
+        {
+          "date": "21/10/2026 02:16",
+          "event": "Lançamento inicial",
+          "notes": "Eversock publicada"
+        }
+      ],
+      "suspensions": [],
+      "status_history": [
+        {
+          "status": "Ativa",
+          "changed_at": "2026-11-05 12:16:19",
+          "source": "before_user_screenshot_verification"
+        }
+      ],
+      "status_verified_at": "2026-11-05 12:16:19",
+      "status_source": "user_screenshots_2026-11-05"
+    },
+    "Snuggi Sandals": {
+      "name": "Snuggi Sandals",
+      "current_domain": "getsnuggisandals.com",
+      "domain_swaps_count": 0,
+      "status": "Ativa",
+      "domain_history": [
+        {
+          "domain": "getsnuggisandals.com",
+          "date": "20/10/2026",
+          "status": "atual",
+          "reason": "Domínio original"
+        }
+      ],
+      "publications": [
+        {
+          "date": "21/10/2026 02:16",
+          "event": "Lançamento inicial",
+          "notes": "Snuggi publicada"
+        }
+      ],
+      "suspensions": [],
+      "status_history": [
+        {
+          "status": "Ativa",
+          "changed_at": "2026-11-05 12:16:19",
+          "source": "before_user_screenshot_verification"
+        }
+      ],
+      "status_verified_at": "2026-11-05 12:16:19",
+      "status_source": "user_screenshots_2026-11-05"
+    },
+    "Sondur Travel": {
+      "name": "Sondur Travel",
+      "current_domain": "sondurtravelus.com",
+      "domain_swaps_count": 0,
+      "status": "Ativa",
+      "domain_history": [
+        {
+          "domain": "sondurtravelus.com",
+          "date": "20/10/2026",
+          "status": "atual",
+          "reason": "Domínio original"
+        }
+      ],
+      "publications": [
+        {
+          "date": "21/10/2026 02:16",
+          "event": "Lançamento inicial",
+          "notes": "Sondur Travel publicada"
+        }
+      ],
+      "suspensions": [],
+      "status_history": [
+        {
+          "status": "Ativa",
+          "changed_at": "2026-11-05 12:16:19",
+          "source": "before_user_screenshot_verification"
+        }
+      ],
+      "status_verified_at": "2026-11-05 12:16:19",
+      "status_source": "user_screenshots_2026-11-05"
+    },
+    "Havie": {
+      "name": "Havie",
+      "current_domain": "havieshop.com",
+      "domain_swaps_count": 0,
+      "status": "Inativa",
+      "domain_history": [
+        {
+          "domain": "havieshop.com",
+          "date": "01/10/2026",
+          "status": "atual",
+          "reason": "Domínio original"
+        }
+      ],
+      "publications": [
+        {
+          "date": "01/10/2026 00:00",
+          "event": "Ativa no início",
+          "notes": "Operação ativa"
+        },
+        {
+          "date": "10/10/2026 23:24",
+          "event": "Republicada",
+          "notes": "Havie publicada"
+        }
+      ],
+      "suspensions": [
+        {
+          "account": "Google Ads 49",
+          "date": "06/10/2026 21:01",
+          "reason": "Pagamentos e Phishing"
+        },
+        {
+          "account": "Google Ads 60",
+          "date": "12/10/2026 00:40",
+          "reason": "Práticas comerciais inaceitáveis: phishing"
+        }
+      ],
+      "status_history": [
+        {
+          "status": "Inativa (Google Ads recorrente)",
+          "changed_at": "2026-11-05 12:16:19",
+          "source": "before_user_screenshot_verification"
+        }
+      ],
+      "status_verified_at": "2026-11-05 12:16:19",
+      "status_source": "user_screenshots_2026-11-05"
+    },
+    "Soya Paris": {
+      "name": "Soya Paris",
+      "current_domain": "soyaparisshop.com",
+      "domain_swaps_count": 0,
+      "status": "Inativa",
+      "domain_history": [
+        {
+          "domain": "soyaparisshop.com",
+          "date": "01/10/2026",
+          "status": "atual",
+          "reason": "Domínio original"
+        }
+      ],
+      "publications": [
+        {
+          "date": "01/10/2026 00:00",
+          "event": "Ativa no início",
+          "notes": "Operação ativa"
+        },
+        {
+          "date": "12/10/2026 13:04",
+          "event": "Republicada",
+          "notes": "Soya Paris publicada"
+        },
+        {
+          "date": "17/10/2026 01:05",
+          "event": "Republicada",
+          "notes": "Soya Paris publicada"
+        }
+      ],
+      "suspensions": [
+        {
+          "account": "Google Ads 43",
+          "date": "12/10/2026 11:38",
+          "reason": "Práticas comerciais inaceitáveis: phishing"
+        },
+        {
+          "account": "Google Ads 65",
+          "date": "12/10/2026 23:37",
+          "reason": "Práticas comerciais inaceitáveis: phishing"
+        },
+        {
+          "account": "Google Ads 72",
+          "date": "18/10/2026 00:25",
+          "reason": "Práticas comerciais inaceitáveis: phishing"
+        }
+      ],
+      "status_history": [
+        {
+          "status": "Inativa (Google Ads recorrente)",
+          "changed_at": "2026-11-05 12:16:19",
+          "source": "before_user_screenshot_verification"
+        }
+      ],
+      "status_verified_at": "2026-11-05 12:16:19",
+      "status_source": "user_screenshots_2026-11-05"
+    },
+    "Blushe": {
+      "name": "Blushe",
+      "current_domain": "blusheshop.com",
+      "domain_swaps_count": 0,
+      "status": "Inativa",
+      "domain_history": [
+        {
+          "domain": "blusheshop.com",
+          "date": "15/10/2026",
+          "status": "atual",
+          "reason": "Domínio original"
+        }
+      ],
+      "publications": [
+        {
+          "date": "16/10/2026 00:39",
+          "event": "Lançamento inicial",
+          "notes": "Campanha no ar"
+        },
+        {
+          "date": "17/10/2026 14:08",
+          "event": "Republicada",
+          "notes": "Loja Blushe publicada"
+        }
+      ],
+      "suspensions": [
+        {
+          "account": "Google Ads 48",
+          "date": "17/10/2026 00:24",
+          "reason": "Práticas comerciais inaceitáveis: phishing"
+        },
+        {
+          "account": "Google Ads 75",
+          "date": "18/10/2026 23:39",
+          "reason": "Práticas comerciais inaceitáveis: phishing"
+        }
+      ],
+      "status_history": [
+        {
+          "status": "Inativa (DMCA 30/10)",
+          "changed_at": "2026-11-05 12:16:19",
+          "source": "before_user_screenshot_verification"
+        }
+      ],
+      "status_verified_at": "2026-11-05 12:16:19",
+      "status_source": "user_screenshots_2026-11-05"
+    },
+    "Mielle": {
+      "name": "Mielle",
+      "current_domain": "mielleshop.com",
+      "domain_swaps_count": 0,
+      "status": "Inativa",
+      "domain_history": [
+        {
+          "domain": "mielleshop.com",
+          "date": "06/10/2026",
+          "status": "atual",
+          "reason": "Domínio original"
+        }
+      ],
+      "publications": [
+        {
+          "date": "06/10/2026 15:03",
+          "event": "Lançamento inicial",
+          "notes": "Loja Mielle concluída"
+        }
+      ],
+      "suspensions": [],
+      "status_history": [
+        {
+          "status": "Inativa (Margem baixa 7%)",
+          "changed_at": "2026-11-05 12:16:19",
+          "source": "before_user_screenshot_verification"
+        }
+      ],
+      "status_verified_at": "2026-11-05 12:16:19",
+      "status_source": "user_screenshots_2026-11-05"
+    },
+    "Epoch": {
+      "name": "Epoch",
+      "current_domain": "epochshop.com",
+      "domain_swaps_count": 0,
+      "status": "Inativa",
+      "domain_history": [
+        {
+          "domain": "epochshop.com",
+          "date": "01/10/2026",
+          "status": "atual",
+          "reason": "Domínio original"
+        }
+      ],
+      "publications": [
+        {
+          "date": "01/10/2026 00:00",
+          "event": "Ativa no início",
+          "notes": "Operação ativa"
+        }
+      ],
+      "suspensions": [
+        {
+          "account": "Google Ads 48",
+          "date": "11/10/2026 11:20",
+          "reason": "Domínio fora do ar pausou campanha"
+        }
+      ],
+      "status_history": [
+        {
+          "status": "Inativa (Domínio caiu / Ads liberado)",
+          "changed_at": "2026-11-05 12:16:19",
+          "source": "before_user_screenshot_verification"
+        }
+      ],
+      "status_verified_at": "2026-11-05 12:16:19",
+      "status_source": "user_screenshots_2026-11-05"
+    },
+    "Digifeel": {
+      "name": "Digifeel",
+      "current_domain": "digifeel.io",
+      "domain_swaps_count": 0,
+      "status": "Inativa",
+      "domain_history": [
+        {
+          "domain": "digifeel.io",
+          "date": "11/10/2026",
+          "status": "atual",
+          "reason": "Domínio original"
+        }
+      ],
+      "publications": [
+        {
+          "date": "11/10/2026 01:34",
+          "event": "Lançamento inicial",
+          "notes": "Digifeel concluída"
+        }
+      ],
+      "suspensions": [],
+      "status_history": [
+        {
+          "status": "Inativa (Fornecedor)",
+          "changed_at": "2026-11-05 12:16:19",
+          "source": "before_user_screenshot_verification"
+        }
+      ],
+      "status_verified_at": "2026-11-05 12:16:19",
+      "status_source": "user_screenshots_2026-11-05"
+    }
+  },
+  "operational_snapshot": {
+    "verified_at": "2026-11-05 12:16:19",
+    "source": "Lista ADS ATIVO nas três imagens fornecidas pelo usuário em 05/11/2026",
+    "active_stores": [
+      "Krakatoa",
+      "VivaCuerpo",
+      "Sondur Travel",
+      "Belluna",
+      "EverSock",
+      "SleepSake",
+      "Grace & Ease",
+      "Snuggi Sandals",
+      "Softari",
+      "Orre Naturals",
+      "Donnea Milano",
+      "Lush Essence",
+      "Scarlette",
+      "ParoPet",
+      "Ionix Labs",
+      "Luveon",
+      "Breeze"
+    ],
+    "active_count": 17
+  },
+  "monitor_registration_started_at": "2026-11-05 13:28:50",
+  "monitor_registration_state": {
+    "dom_drdent": {
+      "checked_at": "2026-11-05 14:40:07",
+      "category": "dmca",
+      "record_id": "rec_ac11a900a1",
+      "store_name": "Dr. Dent"
+    },
+    "dom_krakatoa": {
+      "checked_at": "2026-11-05 14:40:07",
+      "category": "",
+      "record_id": "",
+      "store_name": "Krakatoa"
+    },
+    "dom_lushessence": {
+      "checked_at": "2026-11-05 14:40:08",
+      "category": "",
+      "record_id": "",
+      "store_name": "Lush Essence"
+    },
+    "dom_breeze2": {
+      "checked_at": "2026-11-05 14:40:09",
+      "category": "",
+      "record_id": "",
+      "store_name": "Breeze"
+    },
+    "dom_scarlette": {
+      "checked_at": "2026-11-05 14:40:09",
+      "category": "",
+      "record_id": "",
+      "store_name": "Scarlette"
+    },
+    "dom_belluna": {
+      "checked_at": "2026-11-05 14:40:09",
+      "category": "",
+      "record_id": "",
+      "store_name": "Belluna"
+    },
+    "dom_eversock": {
+      "checked_at": "2026-11-05 14:40:10",
+      "category": "",
+      "record_id": "",
+      "store_name": "EverSock"
+    },
+    "dom_snuggi": {
+      "checked_at": "2026-11-05 14:40:10",
+      "category": "",
+      "record_id": "",
+      "store_name": "Snuggi Sandals"
+    },
+    "dom_graceease": {
+      "checked_at": "2026-11-05 14:40:10",
+      "category": "",
+      "record_id": "",
+      "store_name": "Grace & Ease"
+    },
+    "dom_softari": {
+      "checked_at": "2026-11-05 14:40:11",
+      "category": "",
+      "record_id": "",
+      "store_name": "Softari"
+    },
+    "dom_luveon": {
+      "checked_at": "2026-11-05 14:40:11",
+      "category": "",
+      "record_id": "",
+      "store_name": "Luveon"
+    },
+    "dom_paropet": {
+      "checked_at": "2026-11-05 14:40:12",
+      "category": "dmca",
+      "record_id": "rec_512c31fe5e",
+      "store_name": "ParoPet"
+    },
+    "dom_donnea": {
+      "checked_at": "2026-11-05 14:40:12",
+      "category": "",
+      "record_id": "",
+      "store_name": "Donnea Milano"
+    },
+    "dom_vivacuerpo": {
+      "checked_at": "2026-11-05 14:40:12",
+      "category": "",
+      "record_id": "",
+      "store_name": "VivaCuerpo"
+    },
+    "dom_sondur": {
+      "checked_at": "2026-11-05 14:40:13",
+      "category": "",
+      "record_id": "",
+      "store_name": "Sondur Travel"
+    },
+    "dom_orrenaturals": {
+      "checked_at": "2026-11-05 14:40:13",
+      "category": "",
+      "record_id": "",
+      "store_name": "Orre Naturals"
+    }
+  }
+}

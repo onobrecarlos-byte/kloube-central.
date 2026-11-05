@@ -1,0 +1,5 @@
+[tool.vercel]
+entrypoint = "server:app"
+
+[tool.vercel.scripts]
+build = "python validate_release.py"

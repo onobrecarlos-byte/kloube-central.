@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "buildCommand": "python validate_release.py",
+  "functions": {
+    "server.py": {
+      "includeFiles": "{domain_monitor/**,public/**,*.py,*.json}"
+    }
+  }
+}
