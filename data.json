@@ -2,7 +2,7 @@
   "settings": {
     "notify_email": "onobrecarlos@gmail.com",
     "desktop_notifications": false,
-    "email_notifications": false,
+    "email_notifications": true,
     "check_interval_seconds": 900,
     "smtp_host": "smtp.gmail.com",
     "smtp_port": 587,
