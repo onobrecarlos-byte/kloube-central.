@@ -822,7 +822,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-05 19:29:21",
+  "updated_at": "2026-11-05 19:29:40",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -2345,6 +2345,12 @@
       "category": "",
       "record_id": "",
       "store_name": "Ionix Labs"
+    },
+    "dom_b0a86e6168": {
+      "checked_at": "2026-11-05 19:29:38",
+      "category": "",
+      "record_id": "",
+      "store_name": "Softari"
     }
   }
 }
