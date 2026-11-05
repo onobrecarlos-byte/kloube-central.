@@ -286,6 +286,17 @@
   ],
   "alerts": [
     {
+      "id": "al_1793916792325",
+      "domain": "exemplo-teste.com.br",
+      "name": "Teste de Alerta Kloube",
+      "reason": "Disparo de teste solicitado no painel Kloube (Computador + E-mail)",
+      "timestamp": "2026-11-05 19:13:12",
+      "desktop_sent": false,
+      "email_sent": false,
+      "email_recipient": "onobrecarlos@gmail.com",
+      "email_info": "Envios de e-mail desativados a pedido do usuário."
+    },
+    {
       "id": "al_1793899421943",
       "domain": "paropetuk.com",
       "name": "Paropet",
