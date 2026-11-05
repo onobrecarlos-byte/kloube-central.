@@ -1,0 +1,85 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Kloube — Acessar painel</title><link rel="stylesheet" href="/monitoramento/styles.css"></head><body>    <!-- Tela de Login e Redefinição de Senha -->
+    <div id="auth-screen" class="auth-screen">
+        <div class="auth-glow-circle" aria-hidden="true"></div>
+        <div class="auth-card">
+            <div class="auth-brand">
+                <span class="brand-mark" aria-hidden="true">
+                    <svg width="32" height="32" viewBox="0 0 28 28" fill="none">
+                        <rect width="28" height="28" rx="6" fill="#FFFFFF"/>
+                        <path d="M6.5 7.8H11.6V12.9L21.8 6.2L6.5 21.2V7.8Z" fill="#061647"/>
+                        <path d="M15.7 13.9L12.1 17.4L15.7 21.2H21.4L15.7 13.9Z" fill="#061647"/>
+                    </svg>
+                </span>
+                <span class="brand-wordmark">Kloube</span>
+            </div>
+
+            <!-- Visão 1: Login -->
+            <div id="auth-login-view">
+                <h2 class="auth-title">Acessar painel</h2>
+                <p class="auth-subtitle">Entre com seu e-mail e senha para acessar o painel Kloube.</p>
+
+                <form id="login-form" novalidate>
+                    <div id="login-error-box" class="form-error-box" style="display:none;" role="alert"></div>
+
+                    <div class="form-field">
+                        <label for="login-email">E-mail</label>
+                        <input type="email" id="login-email" placeholder="" required autocomplete="username" />
+                    </div>
+
+                    <div class="form-field">
+                        <div class="auth-label-row">
+                            <label for="login-password">Senha</label>
+                            <button type="button" id="btn-forgot-password" class="link-btn auth-forgot-link">Esqueceu ou quer trocar a senha?</button>
+                        </div>
+                        <input type="password" id="login-password" placeholder="" required autocomplete="current-password" />
+                    </div>
+
+                    <button type="submit" id="btn-login-submit" class="btn btn-primary auth-submit-btn">
+                        <span>Entrar no painel</span>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Visão 2: Trocar / Redefinir Senha -->
+            <div id="auth-reset-view" style="display:none;">
+                <h2 class="auth-title">Trocar senha</h2>
+                <p class="auth-subtitle" id="auth-reset-subtitle">Receba um código no seu e-mail cadastrado para definir uma nova senha.</p>
+
+                <form id="reset-password-form" novalidate>
+                    <div id="reset-error-box" class="form-error-box" style="display:none;" role="alert"></div>
+
+                    <div class="form-field">
+                        <label for="reset-email">E-mail da conta</label>
+                        <div class="auth-inline-row">
+                            <input type="email" id="reset-email" placeholder="" required autocomplete="username" />
+                            <button type="button" id="btn-send-reset-code" class="btn btn-secondary btn-sm">Enviar código</button>
+                        </div>
+                    </div>
+
+                    <div class="form-field" id="reset-code-group">
+                        <label for="reset-code">Código de 6 dígitos (enviado no e-mail)</label>
+                        <input type="text" id="reset-code" placeholder="Ex: 123456" maxlength="6" autocomplete="one-time-code" />
+                    </div>
+
+                    <div class="form-field">
+                        <label for="reset-new-password">Nova senha</label>
+                        <input type="password" id="reset-new-password" placeholder="" required autocomplete="new-password" />
+                    </div>
+
+                    <div class="form-field">
+                        <label for="reset-confirm-password">Confirmar nova senha</label>
+                        <input type="password" id="reset-confirm-password" placeholder="" required autocomplete="new-password" />
+                    </div>
+
+                    <div class="auth-reset-actions">
+                        <button type="button" id="btn-back-to-login" class="btn btn-secondary">Voltar</button>
+                        <button type="submit" id="btn-reset-submit" class="btn btn-primary" style="flex:1;">
+                            <span>Salvar nova senha</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+<script src="/login.js?v=2"></script></body></html>

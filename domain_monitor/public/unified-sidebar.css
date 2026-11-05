@@ -1,0 +1,13 @@
+
+.unified-sidebar{position:fixed;inset:0 auto 0 0;width:240px;background:#070e18;border-right:1px solid #172235;padding:24px 16px;box-sizing:border-box;z-index:90;font-family:Inter,sans-serif;overflow:auto}
+.unified-brand{display:flex;align-items:center;gap:12px;color:#fff;font-size:23px;font-weight:700;text-decoration:none;margin:0 8px 26px}.unified-logo{display:grid;place-items:center;width:32px;height:32px;border-radius:8px;background:white;color:#061647;font-style:italic}
+.unified-nav{display:flex;align-items:center;gap:12px;padding:12px 14px;margin-bottom:6px;border:0;border-radius:8px;background:transparent;color:#a8bbd1;text-decoration:none;font-size:13px;line-height:1.5;box-sizing:border-box;width:100%;text-align:left;cursor:pointer}.unified-nav.active{background:#1765e8;color:white}.unified-nav:hover{background:#152744;color:white}.unified-nav.active:hover{background:#1765e8}
+.topbar{margin-left:240px}.topbar-left{visibility:hidden}.topbar .container{max-width:none}.main-layout{margin-left:240px;width:calc(100% - 240px);max-width:none;box-sizing:border-box;padding:28px 32px}
+#btn-open-create-account,#btn-header-change-pass,#btn-logout{display:none!important}
+@media(max-width:760px){.unified-sidebar{width:180px;padding:20px 8px}.unified-nav{font-size:12px;padding:10px 8px}.topbar{margin-left:180px}.main-layout{margin-left:180px;width:calc(100% - 180px);padding:20px 14px}}
+
+/* The server validates the shared session before serving this page. */
+#auth-screen{display:none!important}
+.monitor-controls{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.monitor-controls select{padding:10px 12px;border:1px solid #25334a;border-radius:8px;background:#0b1321;color:#e2e8f0;color-scheme:dark}
+
+.monitor-store-accounts{display:flex;flex-wrap:wrap;gap:4px;margin:5px 0}.monitor-account-tag{font-size:11px;padding:3px 6px;border:1px solid #263953;border-radius:4px;color:#b9d6ff;background:#122038}.monitor-account-unknown{font-size:11px;color:#94a3b8}
