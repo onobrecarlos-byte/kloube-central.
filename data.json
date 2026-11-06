@@ -12,6 +12,22 @@
   },
   "domains": [
     {
+      "id": "dom_dedfadd507",
+      "domain": "honeycloudzshop.com",
+      "url": "https://honeycloudzshop.com/",
+      "name": "Honey Cloudz",
+      "expected_redirect": "",
+      "status": "checking",
+      "status_label": "Verificando...",
+      "reason": "Conferindo apontamento e direcionamento...",
+      "http_code": null,
+      "final_url": "",
+      "ip_address": "",
+      "response_time_ms": 0,
+      "checked_at": "2026-11-06 11:23:10",
+      "created_at": "2026-11-06 11:23:10"
+    },
+    {
       "id": "dom_d4669030be",
       "domain": "usemasonclothing.com",
       "url": "https://usemasonclothing.com/",
