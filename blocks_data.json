@@ -76,18 +76,6 @@
   },
   "records": [
     {
-      "id": "rec_bca9672ce3",
-      "event_type": "ads_suspended",
-      "store_name": "Rework Gear",
-      "domain": "https://reworkgearstore.com/",
-      "account_number": "Google Ads 92",
-      "inactive_category": "",
-      "reason": "Conta suspensa",
-      "created_at": "2026-11-06 12:00:00",
-      "month_key": "2026-11",
-      "source": "manual"
-    },
-    {
       "id": "rec_35abfc4134",
       "event_type": "store_published",
       "store_name": "KOJEVA",
@@ -871,7 +859,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-06 11:18:59",
+  "updated_at": "2026-11-06 11:19:13",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -2404,6 +2392,21 @@
   },
   "deleted_records": [
     {
+      "id": "rec_bca9672ce3",
+      "event_type": "ads_suspended",
+      "store_name": "Rework Gear",
+      "domain": "https://reworkgearstore.com/",
+      "account_number": "Google Ads 92",
+      "inactive_category": "",
+      "reason": "Conta suspensa",
+      "created_at": "2026-11-06 12:00:00",
+      "month_key": "2026-11",
+      "source": "manual",
+      "_deleted_at": "2026-11-06 11:19:13",
+      "_deleted_by": "onobrecarlos@gmail.com",
+      "_trash_id": "trash_3ed5aeb06226"
+    },
+    {
       "id": "rec_fe17120546",
       "event_type": "ads_suspended",
       "store_name": "Rework Gear",
@@ -2435,6 +2438,13 @@
     }
   ],
   "deletion_audit": [
+    {
+      "action": "Movido para a lixeira",
+      "record_id": "rec_bca9672ce3",
+      "store_name": "Rework Gear",
+      "at": "2026-11-06 11:19:13",
+      "by": "onobrecarlos@gmail.com"
+    },
     {
       "action": "Movido para a lixeira",
       "record_id": "rec_fe17120546",
