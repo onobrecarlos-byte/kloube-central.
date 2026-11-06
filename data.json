@@ -12,6 +12,22 @@
   },
   "domains": [
     {
+      "id": "dom_d4669030be",
+      "domain": "usemasonclothing.com",
+      "url": "https://usemasonclothing.com/",
+      "name": "Mason",
+      "expected_redirect": "",
+      "status": "checking",
+      "status_label": "Verificando...",
+      "reason": "Conferindo apontamento e direcionamento...",
+      "http_code": null,
+      "final_url": "",
+      "ip_address": "",
+      "response_time_ms": 0,
+      "checked_at": "2026-11-06 11:22:28",
+      "created_at": "2026-11-06 11:22:28"
+    },
+    {
       "id": "dom_b0a86e6168",
       "domain": "shopsoftari.com",
       "url": "https://shopsoftari.com/",
