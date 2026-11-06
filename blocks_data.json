@@ -76,18 +76,6 @@
   },
   "records": [
     {
-      "event_type": "store_inactive",
-      "store_name": "Dr. Dent",
-      "domain": "",
-      "account_number": "—",
-      "inactive_category": "dmca",
-      "reason": "DMCA (Loja caiu)",
-      "created_at": "2026-11-05 17:46:43",
-      "month_key": "2026-11",
-      "source": "whatsapp_group",
-      "id": "rec_53a85e41a7"
-    },
-    {
       "id": "rec_512c31fe5e",
       "event_type": "store_inactive",
       "store_name": "ParoPet",
@@ -835,7 +823,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-06 11:13:04",
+  "updated_at": "2026-11-06 11:13:31",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -2365,5 +2353,31 @@
       "record_id": "",
       "store_name": "Softari"
     }
-  }
+  },
+  "deleted_records": [
+    {
+      "event_type": "store_inactive",
+      "store_name": "Dr. Dent",
+      "domain": "",
+      "account_number": "—",
+      "inactive_category": "dmca",
+      "reason": "DMCA (Loja caiu)",
+      "created_at": "2026-11-05 17:46:43",
+      "month_key": "2026-11",
+      "source": "whatsapp_group",
+      "id": "rec_53a85e41a7",
+      "_deleted_at": "2026-11-06 11:13:31",
+      "_deleted_by": "onobrecarlos@gmail.com",
+      "_trash_id": "trash_e3b0faac63d1"
+    }
+  ],
+  "deletion_audit": [
+    {
+      "action": "Movido para a lixeira",
+      "record_id": "rec_53a85e41a7",
+      "store_name": "Dr. Dent",
+      "at": "2026-11-06 11:13:31",
+      "by": "onobrecarlos@gmail.com"
+    }
+  ]
 }
