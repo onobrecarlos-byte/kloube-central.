@@ -88,18 +88,6 @@
       "source": "manual"
     },
     {
-      "id": "rec_5e73982857",
-      "event_type": "store_published",
-      "store_name": "Mason",
-      "domain": "https://usemasonclothing.com/",
-      "account_number": "—",
-      "inactive_category": "",
-      "reason": "Loja nova publicada",
-      "created_at": "2026-11-06 12:00:00",
-      "month_key": "2026-11",
-      "source": "manual"
-    },
-    {
       "id": "rec_2a6488ea7b",
       "event_type": "store_published",
       "store_name": "Rework Gear",
@@ -883,7 +871,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-06 11:26:59",
+  "updated_at": "2026-11-06 11:27:13",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -2416,6 +2404,21 @@
   },
   "deleted_records": [
     {
+      "id": "rec_5e73982857",
+      "event_type": "store_published",
+      "store_name": "Mason",
+      "domain": "https://usemasonclothing.com/",
+      "account_number": "—",
+      "inactive_category": "",
+      "reason": "Loja nova publicada",
+      "created_at": "2026-11-06 12:00:00",
+      "month_key": "2026-11",
+      "source": "manual",
+      "_deleted_at": "2026-11-06 11:27:13",
+      "_deleted_by": "onobrecarlos@gmail.com",
+      "_trash_id": "trash_a754088293a6"
+    },
+    {
       "id": "rec_54cd9eeed6",
       "event_type": "store_published",
       "store_name": "KOJEVA",
@@ -2477,6 +2480,13 @@
     }
   ],
   "deletion_audit": [
+    {
+      "action": "Movido para a lixeira",
+      "record_id": "rec_5e73982857",
+      "store_name": "Mason",
+      "at": "2026-11-06 11:27:13",
+      "by": "onobrecarlos@gmail.com"
+    },
     {
       "action": "Movido para a lixeira",
       "record_id": "rec_54cd9eeed6",
