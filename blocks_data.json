@@ -76,6 +76,18 @@
   },
   "records": [
     {
+      "id": "rec_35abfc4134",
+      "event_type": "store_published",
+      "store_name": "KOJEVA",
+      "domain": "https://usekojeva.com/",
+      "account_number": "—",
+      "inactive_category": "",
+      "reason": "Loja nova publicada",
+      "created_at": "2026-11-06 12:00:00",
+      "month_key": "2026-11",
+      "source": "manual"
+    },
+    {
       "id": "rec_54cd9eeed6",
       "event_type": "store_published",
       "store_name": "KOJEVA",
@@ -847,7 +859,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-06 11:16:35",
+  "updated_at": "2026-11-06 11:16:37",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
