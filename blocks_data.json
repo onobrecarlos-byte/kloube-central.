@@ -76,6 +76,18 @@
   },
   "records": [
     {
+      "id": "rec_fe17120546",
+      "event_type": "ads_suspended",
+      "store_name": "Rework Gear",
+      "domain": "https://reworkgearstore.com/",
+      "account_number": "Google Ads 92",
+      "inactive_category": "",
+      "reason": "Conta suspensa",
+      "created_at": "2026-11-06 12:00:00",
+      "month_key": "2026-11",
+      "source": "manual"
+    },
+    {
       "id": "rec_35abfc4134",
       "event_type": "store_published",
       "store_name": "KOJEVA",
@@ -859,7 +871,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-06 11:16:37",
+  "updated_at": "2026-11-06 11:17:53",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
