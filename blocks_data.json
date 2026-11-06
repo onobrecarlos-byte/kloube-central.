@@ -765,7 +765,7 @@
     {
       "id": "0e4e87e3-53ab-4435-9d4a-740815d90f57",
       "event_type": "store_published",
-      "store_name": "Krakatoa",
+      "store_name": "Krokata",
       "domain": "krakatoashop.com",
       "account_number": "Google Ads",
       "inactive_category": "",
@@ -871,7 +871,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-06 11:28:01",
+  "updated_at": "2026-11-06 11:28:39",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
