@@ -76,6 +76,18 @@
   },
   "records": [
     {
+      "event_type": "store_inactive",
+      "store_name": "Dr. Dent",
+      "domain": "",
+      "account_number": "—",
+      "inactive_category": "dmca",
+      "reason": "DMCA (Loja caiu)",
+      "created_at": "2026-11-05 17:46:43",
+      "month_key": "2026-11",
+      "source": "whatsapp_group",
+      "id": "rec_53a85e41a7"
+    },
+    {
       "id": "rec_512c31fe5e",
       "event_type": "store_inactive",
       "store_name": "ParoPet",
@@ -823,7 +835,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-06 10:56:17",
+  "updated_at": "2026-11-06 11:13:04",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -1835,8 +1847,8 @@
           "source": "before_user_screenshot_verification"
         }
       ],
-      "status_verified_at": "2026-11-05 14:40:07",
-      "status_source": "domain_monitor"
+      "status_verified_at": "2026-11-05 17:46:43",
+      "status_source": "whatsapp_group"
     },
     "Belluna": {
       "name": "Belluna",
