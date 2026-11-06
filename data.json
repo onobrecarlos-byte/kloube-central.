@@ -200,8 +200,8 @@
     },
     {
       "id": "dom_paropet",
-      "domain": "paropetuk.com",
-      "url": "https://paropetuk.com",
+      "domain": "getparopet.com",
+      "url": "https://getparopet.com/",
       "name": "Paropet",
       "expected_redirect": "",
       "status": "offline",
