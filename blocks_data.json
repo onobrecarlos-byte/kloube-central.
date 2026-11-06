@@ -80,7 +80,7 @@
       "event_type": "store_published",
       "store_name": "Mason",
       "domain": "https://usemasonclothing.com/",
-      "account_number": "—",
+      "account_number": "Google Ads 93",
       "inactive_category": "",
       "reason": "Loja nova publicada",
       "created_at": "2026-11-06 12:00:00",
@@ -895,7 +895,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-06 11:21:44",
+  "updated_at": "2026-11-06 11:26:00",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
