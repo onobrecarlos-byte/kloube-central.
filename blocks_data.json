@@ -87,7 +87,8 @@
       "month_key": "2026-11",
       "source": "domain_monitor",
       "monitor_domain_id": "dom_paropet",
-      "monitor_diagnostic": "Loja bloqueada ou inativa na plataforma (HTTP 423 · This store is unavailable)"
+      "monitor_diagnostic": "Loja bloqueada ou inativa na plataforma (HTTP 423 · This store is unavailable)",
+      "monitor_closed_at": "2026-11-06 10:55:27"
     },
     {
       "event_type": "store_inactive",
@@ -822,7 +823,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-06 10:54:35",
+  "updated_at": "2026-11-06 10:55:29",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -2305,9 +2306,9 @@
       "store_name": "Luveon"
     },
     "dom_paropet": {
-      "checked_at": "2026-11-06 10:54:32",
-      "category": "dmca",
-      "record_id": "rec_512c31fe5e",
+      "checked_at": "2026-11-06 10:55:27",
+      "category": "",
+      "record_id": "",
       "store_name": "ParoPet"
     },
     "dom_donnea": {
