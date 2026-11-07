@@ -76,6 +76,48 @@
   },
   "records": [
     {
+      "id": "rec_15180dffb9",
+      "event_type": "store_inactive",
+      "store_name": "Ionix Labs",
+      "domain": "ionixlabs.com",
+      "account_number": "—",
+      "inactive_category": "domain_down",
+      "reason": "Domínio fora do ar",
+      "created_at": "2026-11-07 10:49:56",
+      "month_key": "2026-11",
+      "source": "domain_monitor",
+      "monitor_domain_id": "dom_cadd8743b2",
+      "monitor_diagnostic": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)"
+    },
+    {
+      "id": "rec_ae87e9b818",
+      "event_type": "store_inactive",
+      "store_name": "LongWell",
+      "domain": "longwelltitanium.com",
+      "account_number": "—",
+      "inactive_category": "domain_down",
+      "reason": "Domínio fora do ar",
+      "created_at": "2026-11-07 10:49:55",
+      "month_key": "2026-11",
+      "source": "domain_monitor",
+      "monitor_domain_id": "dom_d80bfffce5",
+      "monitor_diagnostic": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)"
+    },
+    {
+      "id": "rec_8c888c3a02",
+      "event_type": "store_inactive",
+      "store_name": "Nesti 2",
+      "domain": "shopnesti.com",
+      "account_number": "—",
+      "inactive_category": "domain_down",
+      "reason": "Domínio fora do ar",
+      "created_at": "2026-11-07 10:49:55",
+      "month_key": "2026-11",
+      "source": "domain_monitor",
+      "monitor_domain_id": "dom_9ce8b39846",
+      "monitor_diagnostic": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)"
+    },
+    {
       "id": "rec_3d8110148a",
       "event_type": "store_inactive",
       "store_name": "SleepSake",
@@ -885,7 +927,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-07 10:50:32",
+  "updated_at": "2026-11-07 10:50:38",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -1033,8 +1075,8 @@
           "source": "before_user_screenshot_verification"
         }
       ],
-      "status_verified_at": "2026-11-05 12:16:19",
-      "status_source": "user_screenshots_2026-11-05"
+      "status_verified_at": "2026-11-07 10:49:55",
+      "status_source": "domain_monitor"
     },
     "Dogshood": {
       "name": "Dogshood",
@@ -1365,7 +1407,7 @@
       "name": "Ionix Labs",
       "current_domain": "ionixlabs.com",
       "domain_swaps_count": 1,
-      "status": "Ativa",
+      "status": "Inativa",
       "domain_history": [
         {
           "domain": "ionixlabsshop.com",
@@ -1395,8 +1437,8 @@
           "source": "before_user_screenshot_verification"
         }
       ],
-      "status_verified_at": "2026-11-05 12:37:11",
-      "status_source": "manual"
+      "status_verified_at": "2026-11-07 10:49:56",
+      "status_source": "domain_monitor"
     },
     "Luveon": {
       "name": "Luveon",
@@ -2292,9 +2334,9 @@
       "domain_history": [],
       "publications": [],
       "suspensions": [],
-      "status": "Ativa",
-      "status_verified_at": "2026-11-03 23:54:42",
-      "status_source": "whatsapp_group"
+      "status": "Inativa",
+      "status_verified_at": "2026-11-07 10:49:55",
+      "status_source": "domain_monitor"
     },
     "HONEY CLOUDZ": {
       "name": "HONEY CLOUDZ",
@@ -2374,49 +2416,49 @@
       "store_name": "Dr. Dent"
     },
     "dom_krakatoa": {
-      "checked_at": "2026-11-07 00:44:33",
+      "checked_at": "2026-11-07 10:49:59",
       "category": "",
       "record_id": "",
       "store_name": "Krakatoa"
     },
     "dom_lushessence": {
-      "checked_at": "2026-11-07 00:44:33",
+      "checked_at": "2026-11-07 10:50:00",
       "category": "",
       "record_id": "",
       "store_name": "Lush Essence"
     },
     "dom_breeze2": {
-      "checked_at": "2026-11-07 00:44:33",
+      "checked_at": "2026-11-07 10:50:01",
       "category": "",
       "record_id": "",
       "store_name": "Breeze"
     },
     "dom_scarlette": {
-      "checked_at": "2026-11-07 00:44:33",
+      "checked_at": "2026-11-07 10:50:01",
       "category": "",
       "record_id": "",
       "store_name": "Scarlette"
     },
     "dom_belluna": {
-      "checked_at": "2026-11-07 00:44:34",
+      "checked_at": "2026-11-07 10:50:01",
       "category": "",
       "record_id": "",
       "store_name": "Belluna"
     },
     "dom_eversock": {
-      "checked_at": "2026-11-07 00:44:34",
+      "checked_at": "2026-11-07 10:50:02",
       "category": "",
       "record_id": "",
       "store_name": "EverSock"
     },
     "dom_snuggi": {
-      "checked_at": "2026-11-07 00:44:34",
+      "checked_at": "2026-11-07 10:50:02",
       "category": "",
       "record_id": "",
       "store_name": "Snuggi Sandals"
     },
     "dom_graceease": {
-      "checked_at": "2026-11-07 00:44:35",
+      "checked_at": "2026-11-07 10:50:03",
       "category": "",
       "record_id": "",
       "store_name": "Grace & Ease"
@@ -2428,43 +2470,43 @@
       "store_name": "Softari"
     },
     "dom_luveon": {
-      "checked_at": "2026-11-07 00:44:35",
+      "checked_at": "2026-11-07 10:50:04",
       "category": "",
       "record_id": "",
       "store_name": "Luveon"
     },
     "dom_paropet": {
-      "checked_at": "2026-11-07 00:44:35",
+      "checked_at": "2026-11-07 10:50:04",
       "category": "",
       "record_id": "",
       "store_name": "ParoPet"
     },
     "dom_donnea": {
-      "checked_at": "2026-11-07 00:44:35",
+      "checked_at": "2026-11-07 10:50:05",
       "category": "",
       "record_id": "",
       "store_name": "Donnea Milano"
     },
     "dom_vivacuerpo": {
-      "checked_at": "2026-11-07 00:44:35",
+      "checked_at": "2026-11-07 10:50:05",
       "category": "",
       "record_id": "",
       "store_name": "VivaCuerpo"
     },
     "dom_sondur": {
-      "checked_at": "2026-11-07 00:44:36",
+      "checked_at": "2026-11-07 10:50:06",
       "category": "",
       "record_id": "",
       "store_name": "Sondur Travel"
     },
     "dom_orrenaturals": {
-      "checked_at": "2026-11-07 00:44:36",
+      "checked_at": "2026-11-07 10:50:07",
       "category": "",
       "record_id": "",
       "store_name": "Orre Naturals"
     },
     "dom_21f5cdb565": {
-      "checked_at": "2026-11-07 00:44:33",
+      "checked_at": "2026-11-07 10:49:58",
       "category": "",
       "record_id": "",
       "store_name": "SleepSake"
@@ -2476,31 +2518,31 @@
       "store_name": "Ionix Labs"
     },
     "dom_b0a86e6168": {
-      "checked_at": "2026-11-07 00:44:33",
+      "checked_at": "2026-11-07 10:49:58",
       "category": "",
       "record_id": "",
       "store_name": "Softari"
     },
     "dom_9c9a6dc329": {
-      "checked_at": "2026-11-07 00:44:32",
+      "checked_at": "2026-11-07 10:49:56",
       "category": "",
       "record_id": "",
       "store_name": "Rework Gear"
     },
     "dom_6c22b475bf": {
-      "checked_at": "2026-11-07 00:44:32",
+      "checked_at": "2026-11-07 10:49:56",
       "category": "",
       "record_id": "",
       "store_name": "KOJEVA"
     },
     "dom_dedfadd507": {
-      "checked_at": "2026-11-07 00:44:32",
+      "checked_at": "2026-11-07 10:49:57",
       "category": "",
       "record_id": "",
       "store_name": "HONEY CLOUDZ"
     },
     "dom_d4669030be": {
-      "checked_at": "2026-11-07 00:44:32",
+      "checked_at": "2026-11-07 10:49:57",
       "category": "",
       "record_id": "",
       "store_name": "Mason"
@@ -2510,6 +2552,24 @@
       "category": "dmca",
       "record_id": "rec_3d8110148a",
       "store_name": "SleepSake"
+    },
+    "dom_9ce8b39846": {
+      "checked_at": "2026-11-07 10:49:55",
+      "category": "domain_down",
+      "record_id": "rec_8c888c3a02",
+      "store_name": "Nesti 2"
+    },
+    "dom_d80bfffce5": {
+      "checked_at": "2026-11-07 10:49:55",
+      "category": "domain_down",
+      "record_id": "rec_ae87e9b818",
+      "store_name": "LongWell"
+    },
+    "dom_cadd8743b2": {
+      "checked_at": "2026-11-07 10:49:56",
+      "category": "domain_down",
+      "record_id": "rec_15180dffb9",
+      "store_name": "Ionix Labs"
     }
   },
   "deleted_records": [
