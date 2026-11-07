@@ -87,7 +87,8 @@
       "month_key": "2026-11",
       "source": "domain_monitor",
       "monitor_domain_id": "dom_cadd8743b2",
-      "monitor_diagnostic": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)"
+      "monitor_diagnostic": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)",
+      "monitor_closed_at": "2026-11-07 11:02:05"
     },
     {
       "id": "rec_ae87e9b818",
@@ -129,7 +130,8 @@
       "month_key": "2026-11",
       "source": "domain_monitor",
       "monitor_domain_id": "dom_085bd0375d",
-      "monitor_diagnostic": "Loja bloqueada ou inativa na plataforma (HTTP 423 · This store is unavailable)"
+      "monitor_diagnostic": "Loja bloqueada ou inativa na plataforma (HTTP 423 · This store is unavailable)",
+      "monitor_closed_at": "2026-11-07 11:02:05"
     },
     {
       "id": "rec_c70f18adaf",
@@ -1320,15 +1322,21 @@
       "status_source": "user_screenshots_2026-11-05"
     },
     "SleepSake": {
-      "name": "SleepSake",
-      "current_domain": "sleepsakeshop.com",
+      "name": "Sleepsake 2",
+      "current_domain": "sleepsakeco.com",
       "domain_swaps_count": 0,
-      "status": "Inativa",
+      "status": "Ativa",
       "domain_history": [
+        {
+          "domain": "sleepsakeco.com",
+          "date": "2026-11-07",
+          "status": "atual",
+          "reason": "Dominio atual confirmado pelo responsavel"
+        },
         {
           "domain": "sleepsakeshop.com",
           "date": "14/10/2026",
-          "status": "atual",
+          "status": "anterior",
           "reason": "Domínio original"
         }
       ],
@@ -1353,8 +1361,9 @@
           "source": "before_user_screenshot_verification"
         }
       ],
-      "status_verified_at": "2026-11-07 10:50:30",
-      "status_source": "domain_monitor"
+      "status_verified_at": "2026-11-07 11:02:05",
+      "status_source": "manual",
+      "current_ads_account": "Google Ads 68"
     },
     "Body & Bra": {
       "name": "Body & Bra",
@@ -1404,15 +1413,21 @@
       "status_source": "user_screenshots_2026-11-05"
     },
     "Ionix Labs": {
-      "name": "Ionix Labs",
-      "current_domain": "ionixlabs.com",
+      "name": "Ionix Labs 3",
+      "current_domain": "ionixco.com",
       "domain_swaps_count": 1,
-      "status": "Inativa",
+      "status": "Ativa",
       "domain_history": [
+        {
+          "domain": "ionixco.com",
+          "date": "2026-11-07",
+          "status": "atual",
+          "reason": "Dominio atual confirmado pelo responsavel"
+        },
         {
           "domain": "ionixlabsshop.com",
           "date": "20/10/2026",
-          "status": "atual",
+          "status": "anterior",
           "reason": "Ionix Labs 2"
         },
         {
@@ -1437,8 +1452,9 @@
           "source": "before_user_screenshot_verification"
         }
       ],
-      "status_verified_at": "2026-11-07 10:49:56",
-      "status_source": "domain_monitor"
+      "status_verified_at": "2026-11-07 11:02:05",
+      "status_source": "manual",
+      "current_ads_account": "Google Ads 24"
     },
     "Luveon": {
       "name": "Luveon",

@@ -17,9 +17,9 @@
       "url": "https://sleepsakeshop.com",
       "name": "Sleepsake",
       "expected_redirect": "",
-      "status": "offline",
-      "status_label": "Fora do Ar",
-      "reason": "Loja bloqueada ou inativa na plataforma (HTTP 423 · This store is unavailable)",
+      "status": "draft",
+      "status_label": "Loja inativa",
+      "reason": "Dominio anterior. A loja usa sleepsakeco.com.",
       "http_code": 423,
       "final_url": "https://sleepsakeshop.com",
       "ip_address": "23.227.38.65",
@@ -27,25 +27,8 @@
       "checked_at": "2026-11-07 10:49:55",
       "created_at": "2026-11-07 10:49:52",
       "source": "store_publication",
-      "page_title": "This store is unavailable"
-    },
-    {
-      "id": "dom_9ce8b39846",
-      "domain": "shopnesti.com",
-      "url": "https://shopnesti.com",
-      "name": "Nesti 2",
-      "expected_redirect": "",
-      "status": "offline",
-      "status_label": "Fora do Ar",
-      "reason": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)",
-      "http_code": null,
-      "final_url": "",
-      "ip_address": "",
-      "response_time_ms": 0,
-      "checked_at": "2026-11-07 10:49:55",
-      "created_at": "2026-11-07 10:49:52",
-      "source": "store_publication",
-      "page_title": ""
+      "page_title": "This store is unavailable",
+      "operational_active": false
     },
     {
       "id": "dom_d80bfffce5",
@@ -53,9 +36,9 @@
       "url": "https://longwelltitanium.com",
       "name": "LongWell",
       "expected_redirect": "",
-      "status": "offline",
-      "status_label": "Fora do Ar",
-      "reason": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)",
+      "status": "draft",
+      "status_label": "Loja inativa",
+      "reason": "Loja fora de operacao, conforme informado pelo responsavel.",
       "http_code": null,
       "final_url": "",
       "ip_address": "",
@@ -63,7 +46,8 @@
       "checked_at": "2026-11-07 10:49:55",
       "created_at": "2026-11-07 10:49:52",
       "source": "store_publication",
-      "page_title": ""
+      "page_title": "",
+      "operational_active": false
     },
     {
       "id": "dom_cadd8743b2",
@@ -71,9 +55,9 @@
       "url": "https://ionixlabs.com",
       "name": "Ionix Labs",
       "expected_redirect": "",
-      "status": "offline",
-      "status_label": "Fora do Ar",
-      "reason": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)",
+      "status": "draft",
+      "status_label": "Loja inativa",
+      "reason": "Dominio anterior. A loja usa ionixco.com.",
       "http_code": null,
       "final_url": "",
       "ip_address": "",
@@ -81,7 +65,8 @@
       "checked_at": "2026-11-07 10:49:56",
       "created_at": "2026-11-07 10:49:52",
       "source": "store_publication",
-      "page_title": ""
+      "page_title": "",
+      "operational_active": false
     },
     {
       "id": "dom_9c9a6dc329",
@@ -172,7 +157,7 @@
       "id": "dom_21f5cdb565",
       "domain": "sleepsakeco.com",
       "url": "https://sleepsakeco.com/",
-      "name": "Sleepsake",
+      "name": "Sleepsake 2",
       "expected_redirect": "",
       "status": "online",
       "status_label": "Ativo",
@@ -183,7 +168,9 @@
       "response_time_ms": 941,
       "checked_at": "2026-11-07 10:49:58",
       "created_at": "2026-11-04 15:59:21",
-      "page_title": "Sleepsake | Butterfly Pillow: Wake Up Pain-Free"
+      "page_title": "Sleepsake | Butterfly Pillow: Wake Up Pain-Free",
+      "operational_active": true,
+      "current_ads_account": "Google Ads 68"
     },
     {
       "id": "dom_krakatoa",
@@ -410,7 +397,7 @@
       "id": "dom_ionix2",
       "domain": "ionixco.com",
       "url": "https://ionixco.com",
-      "name": "Ionix Labs 2",
+      "name": "Ionix Labs 3",
       "expected_redirect": "",
       "status": "online",
       "status_label": "Ativo",
@@ -421,7 +408,9 @@
       "response_time_ms": 429,
       "checked_at": "2026-11-07 10:50:07",
       "created_at": "2026-10-30 11:16:20",
-      "page_title": "Ionix Labs"
+      "page_title": "Ionix Labs",
+      "operational_active": true,
+      "current_ads_account": "Google Ads 24"
     },
     {
       "id": "dom_orrenaturals",
