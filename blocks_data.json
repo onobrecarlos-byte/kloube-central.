@@ -953,7 +953,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-07 10:51:16",
+  "updated_at": "2026-11-07 11:13:08",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -2576,7 +2576,7 @@
       "store_name": "SleepSake"
     },
     "dom_ionix2": {
-      "checked_at": "2026-11-07 00:44:36",
+      "checked_at": "2026-11-07 10:50:07",
       "category": "",
       "record_id": "",
       "store_name": "Ionix Labs"
@@ -2634,6 +2634,18 @@
       "category": "domain_down",
       "record_id": "rec_15180dffb9",
       "store_name": "Ionix Labs"
+    },
+    "dom_32b8d65c05": {
+      "checked_at": "2026-11-07 11:11:20",
+      "category": "",
+      "record_id": "",
+      "store_name": "Silix"
+    },
+    "dom_9d549ea3a5": {
+      "checked_at": "2026-11-07 11:11:20",
+      "category": "",
+      "record_id": "",
+      "store_name": "Titanex"
     }
   },
   "deleted_records": [
