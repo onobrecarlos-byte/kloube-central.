@@ -143,21 +143,6 @@
       "monitor_diagnostic": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)"
     },
     {
-      "id": "rec_3d8110148a",
-      "event_type": "store_inactive",
-      "store_name": "SleepSake",
-      "domain": "sleepsakeshop.com",
-      "account_number": "—",
-      "inactive_category": "dmca",
-      "reason": "DMCA",
-      "created_at": "2026-11-07 10:50:30",
-      "month_key": "2026-11",
-      "source": "domain_monitor",
-      "monitor_domain_id": "dom_085bd0375d",
-      "monitor_diagnostic": "Loja bloqueada ou inativa na plataforma (HTTP 423 · This store is unavailable)",
-      "monitor_closed_at": "2026-11-07 11:02:05"
-    },
-    {
       "id": "rec_c70f18adaf",
       "event_type": "store_published",
       "store_name": "Mason",
@@ -953,7 +938,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-07 11:13:08",
+  "updated_at": "2026-11-07 11:16:37",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -2650,6 +2635,24 @@
   },
   "deleted_records": [
     {
+      "id": "rec_3d8110148a",
+      "event_type": "store_inactive",
+      "store_name": "SleepSake",
+      "domain": "sleepsakeshop.com",
+      "account_number": "—",
+      "inactive_category": "dmca",
+      "reason": "DMCA",
+      "created_at": "2026-11-07 10:50:30",
+      "month_key": "2026-11",
+      "source": "domain_monitor",
+      "monitor_domain_id": "dom_085bd0375d",
+      "monitor_diagnostic": "Loja bloqueada ou inativa na plataforma (HTTP 423 · This store is unavailable)",
+      "monitor_closed_at": "2026-11-07 11:02:05",
+      "_deleted_at": "2026-11-07 11:16:37",
+      "_deleted_by": "onobrecarlos@gmail.com",
+      "_trash_id": "trash_54bf3c957836"
+    },
+    {
       "id": "rec_5e73982857",
       "event_type": "store_published",
       "store_name": "Mason",
@@ -2726,6 +2729,13 @@
     }
   ],
   "deletion_audit": [
+    {
+      "action": "Movido para a lixeira",
+      "record_id": "rec_3d8110148a",
+      "store_name": "SleepSake",
+      "at": "2026-11-07 11:16:37",
+      "by": "onobrecarlos@gmail.com"
+    },
     {
       "action": "Movido para a lixeira",
       "record_id": "rec_5e73982857",
