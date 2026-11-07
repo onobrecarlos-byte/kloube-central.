@@ -1086,16 +1086,17 @@ def _build_state(month_key: str = "", period_filter: str = "month", day_str: str
 
 class BlocksHandler(BaseHTTPRequestHandler):
     def _dispatch_domain_monitor(self, method):
-        if not urllib.parse.urlparse(self.path).path.startswith("/monitoramento"):
+        path = urllib.parse.urlparse(self.path).path
+        if not path.startswith("/monitoramento"):
             return False
         from domain_monitor.server import KloubeHandler
-        if method == "GET":
-            monitor_bridge.sync_publications(store.load())
         original_class, original_path = self.__class__, self.path
         self.path = self.path[len("/monitoramento"):] or "/"
         if self.path.startswith("?"):
             self.path = "/" + self.path
         try:
+            if method == "GET" and path == "/monitoramento/api/state":
+                monitor_bridge.sync_publications(store.load())
             # Bind the existing handler so all of its helper methods and login routes remain unchanged.
             self.__class__ = KloubeHandler
             handler = getattr(self, "do_" + method, None)
