@@ -195,42 +195,6 @@ function buildDiagnosisDisplay(d) {
     };
 }
 
-async function dispatchBrowserEmailFallback(alertObj) {
-    return {ok:false,message:"Envios de e-mail desativados."};
-    if (state.settings.smtp_pass) return { ok: true, mode: 'smtp' };
-    if (!state.settings.email_notifications) return { ok: false, message: 'Notificações por e-mail desativadas.' };
-    const rawRecipients = state.settings.notify_email || 'onobrecarlos@gmail.com, alertas.kloube@gmail.com';
-    const recipients = rawRecipients.split(/[,;]+/).map(s => s.trim()).filter(Boolean);
-    const messages = [];
-    let anySuccess = false;
-    for (const recipient of recipients) {
-        try {
-            const resp = await fetch(`https://formsubmit.co/ajax/${encodeURIComponent(recipient)}`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json',
-                },
-                body: JSON.stringify({
-                    _subject: `[Kloube] Alerta de Domínio: ${alertObj.domain}`,
-                    Loja: alertObj.name || alertObj.domain,
-                    Dominio: alertObj.domain,
-                    Status: 'Com problemas / Fora do ar',
-                    Diagnostico: alertObj.reason,
-                    Horario: alertObj.timestamp,
-                }),
-            });
-            const resJson = await resp.json().catch(() => ({}));
-            if (String(resJson.success).toLowerCase() === 'true') {
-                anySuccess = true;
-            } else if (resJson.message) {
-                messages.push(`${recipient}: ${resJson.message}`);
-            }
-        } catch (_) {}
-    }
-    return { ok: anySuccess, messages };
-}
-
 function handleIncomingAlerts(alerts) {
     if (!Array.isArray(alerts)) return;
 
@@ -251,10 +215,9 @@ function handleIncomingAlerts(alerts) {
             );
             if ('Notification' in window && Notification.permission === 'granted') {
                 new Notification(`Kloube: ${a.name || a.domain} fora do ar`, {
-                    body: `${a.reason}\nAlerta enviado para ${a.email_recipient}`,
+                    body: a.email_sent ? `${a.reason}\nAlerta enviado para ${a.email_recipient}` : a.reason,
                 });
             }
-            dispatchBrowserEmailFallback(a);
         }
     }
 }
@@ -929,7 +892,7 @@ document.getElementById('btn-open-settings').addEventListener('click', () => {
     document.getElementById('set-desktop').checked = state.settings.desktop_notifications !== false;
     document.getElementById('set-email-toggle').checked = state.settings.email_notifications !== false;
     document.getElementById('set-smtp-user').value = state.settings.smtp_user || 'growthnobre@gmail.com';
-    document.getElementById('set-smtp-pass').value = state.settings.smtp_pass || '';
+    document.getElementById('set-smtp-pass').value = '';
     openModal('settings-modal', '#set-email');
 });
 
@@ -985,15 +948,10 @@ async function triggerTestNotification(btnEl) {
             if (alertObj && alertObj.email_sent) {
                 showToast('Alerta de teste enviado!', `${alertObj.email_info}`, 'success');
             } else if (alertObj) {
-                const fb = await dispatchBrowserEmailFallback(alertObj);
-                if (fb && fb.ok) {
-                    showToast('Alerta de teste disparado!', `Notificação no PC + e-mail enviado para ${state.settings.notify_email}.`, 'success');
-                } else if (fb && fb.messages && fb.messages.length > 0) {
-                    showToast('Ação necessária no e-mail', fb.messages.join(' | '), 'info');
-                } else {
-                    showToast('Falta Senha de App SMTP', 'O alerta no PC funcionou! Para envio direto no Gmail, configure a Senha de App (16 letras) em Configurações.', 'info');
-                }
+                showToast('E-mail de teste falhou', alertObj.email_info, 'error');
             }
+        } else {
+            showToast('Erro', data.error || 'Falha ao enviar notificação de teste.', 'error');
         }
     } catch (_) {
         showToast('Erro', 'Falha ao enviar notificação de teste.', 'error');
