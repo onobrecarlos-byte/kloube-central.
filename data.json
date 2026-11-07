@@ -443,6 +443,17 @@
   ],
   "alerts": [
     {
+      "id": "al_1794059442480",
+      "domain": "ionixlabs.com",
+      "name": "Ionix Labs",
+      "reason": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)",
+      "timestamp": "2026-11-07 10:49:56",
+      "desktop_sent": false,
+      "email_sent": false,
+      "email_recipient": "onobrecarlos@gmail.com",
+      "email_info": "Envios de e-mail desativados a pedido do usuário."
+    },
+    {
       "id": "al_1794059440955",
       "domain": "longwelltitanium.com",
       "name": "LongWell",
