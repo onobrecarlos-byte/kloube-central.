@@ -472,6 +472,17 @@
   ],
   "alerts": [
     {
+      "id": "al_1794061394014",
+      "domain": "exemplo-teste.com.br",
+      "name": "Teste de Alerta Kloube",
+      "reason": "Disparo de teste solicitado no painel Kloube (Computador + E-mail)",
+      "timestamp": "2026-11-07 11:23:13",
+      "desktop_sent": false,
+      "email_sent": true,
+      "email_recipient": "onobrecarlos@gmail.com",
+      "email_info": "E-mail enviado via SMTP para onobrecarlos@gmail.com"
+    },
+    {
       "id": "al_1794060787227",
       "domain": "exemplo-teste.com.br",
       "name": "Teste de Alerta Kloube",
