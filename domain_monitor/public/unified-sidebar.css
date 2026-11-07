@@ -11,3 +11,92 @@
 .monitor-controls{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.monitor-controls select{padding:10px 12px;border:1px solid #25334a;border-radius:8px;background:#0b1321;color:#e2e8f0;color-scheme:dark}
 
 .monitor-store-accounts{display:flex;flex-wrap:wrap;gap:4px;margin:5px 0}.monitor-account-tag{font-size:11px;padding:3px 6px;border:1px solid #263953;border-radius:4px;color:#b9d6ff;background:#122038}.monitor-account-unknown{font-size:11px;color:#94a3b8}
+
+/* Shared sidebar copied from main panel. */
+.sidebar {
+    width: 240px;
+    min-width: 240px;
+    min-height: 100vh;
+    background-color: #070D18;
+    border-right: 1px solid #121C2E;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 16px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    z-index: 30;
+}
+
+.sidebar-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 8px 24px 8px;
+}
+
+.brand-logo-badge {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.brand-logo-text {
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 11px 14px;
+    border-radius: 8px;
+    background: transparent;
+    border: none;
+    color: #94A3B8;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    width: 100%;
+}
+
+.nav-item:hover:not(.active) {
+    background: rgba(255, 255, 255, 0.05);
+    color: #FFFFFF;
+}
+
+.nav-item.active {
+    background: #1668E3;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+.nav-icon {
+    width: 19px;
+    height: 19px;
+    flex-shrink: 0;
+}
+
+
+.sidebar.unified-sidebar {position:fixed;inset:0 auto 0 0;box-sizing:border-box;font-family:Inter,sans-serif;line-height:normal}
+.sidebar .sidebar-brand,.sidebar .sidebar-nav,.sidebar .nav-item {margin:0;box-sizing:border-box}
+.sidebar .nav-item {font-family:inherit;line-height:normal;text-decoration:none}
+.sidebar .brand-logo-badge svg {display:block}
+@media(max-width:768px){.sidebar.unified-sidebar{position:relative;width:100%;height:auto;min-height:auto;border-right:none;border-bottom:1px solid #121C2E}.topbar{margin-left:0}.main-layout{margin-left:0;width:100%}}

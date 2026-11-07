@@ -17,7 +17,7 @@ BRT_TZ = timezone(timedelta(hours=-3))
 BASE_DIR = Path(__file__).resolve().parent
 PUBLIC_DIR = BASE_DIR / "public"
 DATA_FILE = BASE_DIR / "blocks_data.json"
-DOMAINS_DATA_FILE = BASE_DIR / "domain_monitor" / "data.json"
+DOMAINS_DATA_FILE = BASE_DIR / "data.json"
 PORT = int(os.environ.get("KLOUBE_BLOCKS_PORT", "8766"))
 
 MONTH_NAMES_PT = {
@@ -36,13 +36,25 @@ MONTH_NAMES_PT = {
 }
 
 
+def canonical_domain_url(value: str) -> str:
+    value = (value or "").strip()
+    if not value or value == "—":return ""
+    parsed = urllib.parse.urlparse(value if "://" in value else "https://" + value)
+    hostname = (parsed.hostname or "").lower().removeprefix("www.")
+    return "https://" + hostname if hostname else ""
+
+
 def now_iso() -> str:
     return datetime.now(BRT_TZ).strftime("%Y-%m-%d %H:%M:%S")
 
 
-def normalize_store_name(s_name: str) -> str:
+STORE_IDENTITY_CUTOFF = "2026-11"
+
+
+def normalize_store_name(s_name: str, month_key: str = STORE_IDENTITY_CUTOFF) -> str:
     clean = (s_name or "").strip()
-    clean = re.sub(r"\s*(?:[-–—#]\s*|\s+)\d+\s*$", "", clean).strip()
+    if month_key and month_key < STORE_IDENTITY_CUTOFF:
+        clean = re.sub(r"\s*(?:[-–—#]\s*|\s+)\d+\s*$", "", clean).strip()
     low = clean.lower()
     if low in ("paro pet / pt pet", "paro pet", "pt pet", "paropet"):
         return "ParoPet"
@@ -57,6 +69,55 @@ def normalize_store_name(s_name: str) -> str:
     if low in ("dr dent", "dr. dent", "drdent", "dr.dent", "dr-dent"):
         return "Dr. Dent"
     return clean
+
+
+def record_store_name(record):
+    month = record.get("month_key") or record.get("created_at", "")[:7]
+    return normalize_store_name(record.get("store_name", ""), month or STORE_IDENTITY_CUTOFF)
+
+
+def update_catalog_from_event(data: dict, event: dict):
+    """Keep operational status in sync with publications and store closures."""
+    event_type = event.get("event_type")
+    if event_type not in ("store_published", "store_reactivated", "store_inactive"):
+        return
+    name = record_store_name(event)
+    if not name:
+        return
+    catalog = data.setdefault("stores_catalog", {})
+    key = next((key for key in catalog
+                if _name_words(normalize_store_name(key)) == _name_words(name)), name)
+    entry = catalog.setdefault(key, {
+        "name": name, "current_domain": "", "domain_swaps_count": 0,
+        "domain_history": [], "publications": [], "suspensions": [],
+    })
+    timestamp = event.get("created_at", "")
+    if timestamp < entry.get("status_verified_at", ""):
+        return
+    entry["status"] = "Inativa" if event_type == "store_inactive" else "Ativa"
+    entry["status_verified_at"] = timestamp
+    entry["status_source"] = event.get("source") or "manual"
+    if event.get("domain") and event["domain"] != "—":
+        entry["current_domain"] = event["domain"]
+
+
+def reconcile_catalog(data: dict) -> dict:
+    """Recover lifecycle events saved before catalog synchronization existed."""
+    baseline = data.get("operational_snapshot", {}).get("verified_at", "")
+    for entry in data.get("stores_catalog", {}).values():
+        if baseline and not entry.get("status_verified_at"):
+            entry["status_verified_at"] = baseline
+    now = now_iso()
+    # Records are newest first; reversing keeps their insertion order for ties.
+    events = sorted(reversed(data.get("records", [])), key=lambda r: r.get("created_at", ""))
+    for event in events:
+        # The operational snapshot is authoritative for everything before it.
+        stamp = event.get("created_at", "")
+        missing = not any(_name_words(normalize_store_name(k)) == _name_words(record_store_name(event))
+                          for k in data.get("stores_catalog", {}))
+        if stamp <= now and (baseline < stamp or (stamp[:7] >= STORE_IDENTITY_CUTOFF and missing)):
+            update_catalog_from_event(data, event)
+    return data
 
 
 def normalize_google_ads_account(raw: str) -> str:
@@ -114,13 +175,13 @@ def publication_type(record, data):
     words = _name_words(record.get("reason", ""))
     if re.search(r"\b(reativad[ao]|republicad[ao]|novamente|voltou|retornou)\b", words):
         return "store_reactivated"
-    name = _name_words(normalize_store_name(record.get("store_name", "")))
+    name = _name_words(record_store_name(record))
     stamp = record.get("created_at", "")
     for previous in data.get("records", []):
-        if previous.get("id") != record.get("id") and _name_words(normalize_store_name(previous.get("store_name", ""))) == name and previous.get("created_at", "") < stamp:
+        if previous.get("id") != record.get("id") and _name_words(record_store_name(previous)) == name and previous.get("created_at", "") < stamp:
             return "store_reactivated"
     for month, config in data.get("months_config", {}).items():
-        if month <= stamp[:7] and any(_name_words(normalize_store_name(n)) == name for n in config.get("start_stores_list", [])):
+        if month <= stamp[:7] and any(_name_words(normalize_store_name(n, month)) == name for n in config.get("start_stores_list", [])):
             return "store_reactivated"
     return "store_published"
 
@@ -457,6 +518,9 @@ class BlocksStore:
         return data
 
     def load(self) -> dict:
+        return reconcile_catalog(self._load())
+
+    def _load(self) -> dict:
         with self.lock:
             creds = self.get_cloud_credentials()
             if creds:
@@ -552,7 +616,7 @@ def _filter_records_by_period(records: list[dict], month_key: str, period_filter
 def compute_summary_with_details(data: dict, month_key: str, period_filter: str = "month", day_str: str = "", start_date: str = "", end_date: str = "") -> dict:
     # Canonical presentation only: persisted records retain their original names and IDs.
     data = dict(data)
-    data["records"] = [dict(r, store_name=normalize_store_name(r.get("store_name", ""))) for r in data.get("records", [])]
+    data["records"] = [dict(r, store_name=record_store_name(r)) for r in data.get("records", [])]
     try:
         year_int, month_int = [int(x) for x in month_key.split("-")]
     except Exception:
@@ -1015,14 +1079,15 @@ def _build_state(month_key: str = "", period_filter: str = "month", day_str: str
         "deletion_audit": data.get("deletion_audit", []),
         "stores_catalog": data.get("stores_catalog", {}),
         "whatsapp_config": data.get("whatsapp_config", {}),
-        "records": [dict(r, store_name=normalize_store_name(r.get("store_name", "")), display_event_type=publication_type(r, data)) for r in data.get("records", [])],
+        "records": [dict(r, store_name=record_store_name(r), display_event_type=publication_type(r, data)) for r in data.get("records", [])],
         "known_stores": store.get_monitor_domains_stores(),
     }
 
 
 class BlocksHandler(BaseHTTPRequestHandler):
     def _dispatch_domain_monitor(self, method):
-        if not urllib.parse.urlparse(self.path).path.startswith("/monitoramento"):
+        path = urllib.parse.urlparse(self.path).path
+        if not path.startswith("/monitoramento"):
             return False
         from domain_monitor.server import KloubeHandler
         original_class, original_path = self.__class__, self.path
@@ -1030,6 +1095,8 @@ class BlocksHandler(BaseHTTPRequestHandler):
         if self.path.startswith("?"):
             self.path = "/" + self.path
         try:
+            if method == "GET" and path == "/monitoramento/api/state":
+                monitor_bridge.sync_publications(store.load())
             # Bind the existing handler so all of its helper methods and login routes remain unchanged.
             self.__class__ = KloubeHandler
             handler = getattr(self, "do_" + method, None)
@@ -1126,7 +1193,11 @@ class BlocksHandler(BaseHTTPRequestHandler):
                 day = (qs.get("day", [""])[0] or "").strip()
                 start_date = (qs.get("start_date", [""])[0] or "").strip()
                 end_date = (qs.get("end_date", [""])[0] or "").strip()
-                return self._send_json(_build_state(month, period, day, start_date, end_date))
+                payload = _build_state(month, period, day, start_date, end_date)
+                from shared_auth import current_user
+                from domain_monitor.monitor_engine import MASTER_EMAILS
+                payload["can_purge_trash"] = (current_user(self) or "").casefold() in MASTER_EMAILS
+                return self._send_json(payload)
 
             if path == "/api/store-detail":
                 store_name = (qs.get("name", [""])[0] or "").strip()
@@ -1245,7 +1316,7 @@ class BlocksHandler(BaseHTTPRequestHandler):
                             cat_entry = v
                             break
 
-                current_dom = cat_entry.get("current_domain", "")
+                current_dom = canonical_domain_url(cat_entry.get("current_domain", ""))
                 current_ads = cat_entry.get("current_ads_account", "")
                 store_status = cat_entry.get("status", "Ativa")
 
@@ -1253,12 +1324,12 @@ class BlocksHandler(BaseHTTPRequestHandler):
                 if current_dom and current_dom not in distinct_domains:
                     distinct_domains.append(current_dom)
                 for dh in cat_entry.get("domain_history", []):
-                    d_val = (dh.get("domain") or "").strip()
+                    d_val = canonical_domain_url(dh.get("domain"))
                     if d_val and d_val not in distinct_domains:
                         distinct_domains.append(d_val)
                 for r in all_records:
                     if normalize_store_name(r.get("store_name", "")).lower() == norm_name.lower():
-                        d_val = (r.get("domain") or "").strip()
+                        d_val = canonical_domain_url(r.get("domain"))
                         if d_val and d_val not in distinct_domains:
                             distinct_domains.append(d_val)
 
@@ -1515,10 +1586,13 @@ class BlocksHandler(BaseHTTPRequestHandler):
                     "source": "manual",
                 }
                 data["records"].insert(0, inact_entry)
+                update_catalog_from_event(data, inact_entry)
 
+            update_catalog_from_event(data, entry)
             store.save(data)
+            monitor_sync = monitor_bridge.sync_publications(data) if event_type == "store_published" else None
             return self._send_json(
-                {"ok": True, "record": entry, "state": _build_state(month_key)}
+                {"ok": True, "record": entry, "state": _build_state(month_key), "monitor_sync": monitor_sync}
             )
 
         if path == "/api/records/delete":
@@ -1539,6 +1613,26 @@ class BlocksHandler(BaseHTTPRequestHandler):
             data["records"] = [r for r in records if r.get("id") != rec_id]
             store.save(data)
             return self._send_json({"ok": True, "records_count": len(data["records"])})
+
+        if path == "/api/records/purge":
+            from shared_auth import current_user
+            from domain_monitor.monitor_engine import MASTER_EMAILS
+            actor = current_user(self)
+            if not actor or actor.casefold() not in MASTER_EMAILS:
+                return self._send_json({"ok": False, "error": "Somente usuários master podem excluir definitivamente."}, status=403)
+            trash_id = str(body.get("trash_id") or "").strip()
+            if not trash_id or body.get("confirm") is not True:
+                return self._send_json({"ok": False, "error": "Informe o registro e confirme a exclusão definitiva."}, status=400)
+            data = store.load()
+            entry = next((r for r in data.get("deleted_records", []) if r.get("_trash_id") == trash_id), None)
+            if entry is None:
+                return self._send_json({"ok": False, "error": "Registro não encontrado na lixeira."}, status=404)
+            data["deleted_records"] = [r for r in data["deleted_records"] if r.get("_trash_id") != trash_id]
+            data.setdefault("deletion_audit", []).insert(0, {
+                "action": "Excluído definitivamente", "record_id": entry.get("id"),
+                "store_name": entry.get("store_name", ""), "at": now_iso(), "by": actor})
+            store.save(data)
+            return self._send_json({"ok": True})
 
         if path == "/api/records/restore":
             trash_id = (body.get("trash_id") or "").strip()
@@ -1700,16 +1794,12 @@ class BlocksHandler(BaseHTTPRequestHandler):
                 ev_id = f"rec_{uuid.uuid4().hex[:10]}"
                 ev["id"] = ev_id
                 records.insert(0, ev)
-                if ev.get("event_type") in ("store_published", "store_reactivated", "store_inactive"):
-                    entry = data.get("stores_catalog", {}).get(ev.get("store_name"))
-                    if entry is not None and ev.get("created_at", "") >= entry.get("status_verified_at", ""):
-                        entry["status"] = "Inativa" if ev["event_type"] == "store_inactive" else "Ativa"
-                        entry["status_verified_at"] = ev["created_at"]
-                        entry["status_source"] = "whatsapp_group"
+                update_catalog_from_event(data, ev)
                 imported_count += 1
 
             if imported_count:
                 store.save(data)
+            monitor_sync = monitor_bridge.sync_publications(data) if imported_count else None
             first_month = parsed_events[0].get("month_key", "")
             return self._send_json(
                 {
@@ -1717,6 +1807,7 @@ class BlocksHandler(BaseHTTPRequestHandler):
                     "events_imported": imported_count,
                     "imported_count": imported_count,
                     "duplicates_count": duplicates_count,
+                    "monitor_sync": monitor_sync,
                     "state": _build_state(first_month),
                 }
             )

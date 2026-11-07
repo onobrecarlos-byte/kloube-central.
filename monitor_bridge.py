@@ -25,6 +25,7 @@ def identify(domain,data):
     name={'krakotaunderwear':'krakatoa','vivacuerpomexico':'vivacuerpo','longwellco':'longwell'}.get(name,name)
     hostname=host(domain.get('domain',''))
     candidates=set()
+    active_candidates=set()
     for catalog_name,entry in data.get('stores_catalog',{}).items():
         names={key(catalog_name),key(entry.get('name',''))}
         domains={host(entry.get('current_domain',''))}
@@ -32,6 +33,9 @@ def identify(domain,data):
         # Match a complete canonical name or an explicitly catalogued domain, never a guessed substring.
         if (name and name in names) or (hostname and hostname in domains):
             candidates.add(_normalize(catalog_name))
+            if str(entry.get('status', '')).casefold() == 'ativa':
+                active_candidates.add(_normalize(catalog_name))
+    if len(active_candidates)==1:return next(iter(active_candidates))
     return next(iter(candidates)) if len(candidates)==1 else ''
 
 def category(domain):
@@ -101,6 +105,60 @@ def sync(domains):
             states[domain_id]={'checked_at':stamp,'category':cat,'record_id':record_id,'store_name':name}
             changed=True
         if changed:_store.save(data)
+
+def register_publications(data):
+    """Register published stores; safely retry after a cross-file storage failure."""
+    from domain_monitor.server import store as domain_store
+    from domain_monitor.monitor_engine import normalize_domain_input, now_iso
+    with lock:
+        monitoring = domain_store.load()
+        seen = set(monitoring.get('publication_registrations', []))
+        domains = monitoring.setdefault('domains', [])
+        changed = False
+        added = 0
+        skipped = 0
+        for event in reversed(data.get('records', [])):
+            if event.get('event_type') != 'store_published':continue
+            if (event.get('month_key') or event.get('created_at', '')[:7]) < '2026-11':continue
+            event_id = event.get('id')
+            if not event_id or event_id in seen:continue
+            raw = event.get('domain', '')
+            if not raw or raw == '—':
+                name = key(event.get('store_name', ''))
+                entry = next((v for k,v in data.get('stores_catalog', {}).items() if key(k) == name), {})
+                raw = entry.get('current_domain', '')
+            try:
+                clean_host, clean_url = normalize_domain_input(raw)
+            except ValueError:
+                skipped += 1
+                continue
+            if not any(host(d.get('domain', '')) == host(clean_host) for d in domains):
+                domains.insert(0, {
+                    'id': 'dom_' + uuid.uuid4().hex[:10], 'domain': clean_host,
+                    'url': clean_url, 'name': _normalize(event.get('store_name', '')) if _normalize else event.get('store_name', clean_host),
+                    'expected_redirect': '', 'status': 'unknown', 'status_label': 'Aguardando verificação',
+                    'reason': 'Cadastrado automaticamente com a publicação da loja.',
+                    'http_code': None, 'final_url': '', 'ip_address': '', 'response_time_ms': 0,
+                    'checked_at': '', 'created_at': now_iso(), 'source': 'store_publication',
+                })
+                added += 1
+            seen.add(event_id)
+            changed = True
+        if changed:
+            monitoring['publication_registrations'] = sorted(seen)
+            domain_store.save(monitoring)
+        return {'ok': True, 'added': added, 'missing_domain': skipped}
+
+
+def sync_publications(data):
+    # The store record has already been committed. A monitor failure must be
+    # reported separately so callers do not repeat the store registration.
+    try:
+        return register_publications(data)
+    except (OSError, RuntimeError):
+        return {'ok': False, 'pending': True,
+                'message': 'Loja salva. O domínio será sincronizado ao abrir o monitoramento.'}
+
 
 def enrich_accounts(domains):
     if _store is None:return domains

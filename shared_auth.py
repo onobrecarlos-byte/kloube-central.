@@ -66,6 +66,8 @@ def send(handler,payload,status=200,token=None,clear=False):
     handler.end_headers();handler.wfile.write(raw)
 
 def gate(handler,method):
+    from integrations_api import dispatch
+    if dispatch(handler, method):return True
     from urllib.parse import urlparse
     path=urlparse(handler.path).path
     if path == '/health' and method == 'GET':
@@ -136,7 +138,7 @@ def gate(handler,method):
         return True
     if path in ('/login','/login.html') and method=='GET':
         if user:
-            handler.send_response(302);handler.send_header('Location','/');handler.end_headers()
+            handler.send_response(302);handler.send_header('Content-Length','0');handler.send_header('Location','/');handler.end_headers()
         else:
             raw=(ROOT/'public/login.html').read_bytes()
             handler.send_response(200);handler.send_header('Content-Type','text/html; charset=utf-8');handler.send_header('Content-Length',str(len(raw)));handler.send_header('Cache-Control','no-store');handler.end_headers();handler.wfile.write(raw)
@@ -146,7 +148,7 @@ def gate(handler,method):
         if path.startswith('/api/') or path.startswith('/monitoramento/api/'):
             send(handler,{'ok':False,'error':'Faça login para continuar.'},401)
         else:
-            handler.send_response(302);handler.send_header('Location','/login');handler.send_header('Cache-Control','no-store');handler.end_headers()
+            handler.send_response(302);handler.send_header('Content-Length','0');handler.send_header('Location','/login');handler.send_header('Cache-Control','no-store');handler.end_headers()
         return True
     if path.endswith('/api/auth/reset-password') and user:
         # The legacy handler may only bypass the reset code for the authenticated user.

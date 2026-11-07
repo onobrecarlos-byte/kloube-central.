@@ -664,6 +664,11 @@ select:focus-visible {
     flex-shrink: 0;
 }
 
+.diag-dot-pending { background: #94a3b8; }
+.diag-primary.pending { color: #94a3b8; }
+.status-badge-pending { background: rgba(148, 163, 184, .12); color: #94a3b8; }
+.status-badge-pending .badge-dot { background: #94a3b8; }
+
 .diag-dot-online {
     background-color: var(--green-fg);
 }

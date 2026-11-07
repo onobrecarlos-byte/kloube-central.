@@ -1,3 +1,4 @@
+function displayDomain(value) { if (!value || value === "—") return value || ""; try { return "https://" + new URL(String(value).includes("://") ? value : "https://" + value).hostname.toLowerCase().replace(/^www\./, ""); } catch { return value; } }
 const state = {
     selectedPreset: 'this_month',
     selectedMonth: '2026-11',
@@ -404,7 +405,7 @@ function renderStoresView() {
                         ${escapeHtml(st.name)}
                     </strong>
                 </td>
-                <td>${st.domain ? `<span class="tag-mono">${escapeHtml(st.domain)}</span>` : '—'}</td>
+                <td>${st.domain ? `<span class="tag-mono">${escapeHtml(displayDomain(st.domain))}</span>` : '—'}</td>
                 <td>${statusBadge}</td>
                 <td>${st.swaps > 0 ? `${st.swaps} troca(s)` : '0'}</td>
                 <td>
@@ -512,7 +513,7 @@ function renderRecordsView() {
                         ${escapeHtml(r.store_name)}
                     </strong>
                 </td>
-                <td>${r.domain ? `<span class="tag-mono">${escapeHtml(r.domain)}</span>` : '—'}</td>
+                <td>${r.domain ? `<span class="tag-mono">${escapeHtml(displayDomain(r.domain))}</span>` : '—'}</td>
                 <td>${r.account_number && r.account_number !== '—' ? `<span class="tag-mono">${escapeHtml(r.account_number)}</span>` : '—'}</td>
                 <td style="color:#CBD5E1;">${escapeHtml(r.reason)}</td>
                 <td><span class="date-text-muted">${escapeHtml(formatPtDate(r.created_at))}</span></td>
@@ -634,6 +635,7 @@ async function fetchState() {
             state.monthlySummary = data.monthly_summary;
             state.records = data.records || [];
             state.deletedRecords = data.deleted_records || [];
+            state.canPurgeTrash = data.can_purge_trash === true;
             state.deletionAudit = data.deletion_audit || [];
             renderTrash();
             state.storesCatalog = data.stores_catalog || {};
@@ -912,7 +914,8 @@ document.addEventListener('DOMContentLoaded', () => {
             });
             const data = await res.json();
             if (data.ok) {
-                showToast('Sucesso', 'Registro gravado com sucesso.');
+                const monitor = data.monitor_sync;
+                showToast('Sucesso', monitor && !monitor.ok ? monitor.message : monitor && monitor.missing_domain ? 'Registro salvo. Informe um domínio válido para incluir a loja no monitoramento.' : eventType === 'store_published' ? 'Loja salva e domínio incluído no monitoramento.' : 'Registro gravado com sucesso.');
                 addModal.style.display = 'none';
                 document.getElementById('add-record-form').reset();
                 await fetchState();
@@ -1215,18 +1218,20 @@ function renderTrash() {
     const body = document.getElementById('trash-records-body');
     const audit = document.getElementById('trash-audit-body');
     if (!body || !audit) return;
-    body.innerHTML = state.deletedRecords.length ? state.deletedRecords.map(record => `<tr><td>${escapeHtml(record.store_name)}</td><td>${escapeHtml(record.reason || record.event_type)}</td><td>${escapeHtml(formatPtDate(record.created_at))}</td><td>${escapeHtml(formatPtDate(record._deleted_at))}</td><td>${escapeHtml(record._deleted_by)}</td><td><button type="button" class="btn btn-secondary btn-sm" data-restore-id="${escapeHtml(record._trash_id)}">Restaurar</button></td></tr>`).join('') : '<tr><td colspan="6" class="table-empty-box">Lixeira vazia.</td></tr>';
+    body.innerHTML = state.deletedRecords.length ? state.deletedRecords.map(record => `<tr><td>${escapeHtml(record.store_name)}</td><td>${escapeHtml(record.reason || record.event_type)}</td><td>${escapeHtml(formatPtDate(record.created_at))}</td><td>${escapeHtml(formatPtDate(record._deleted_at))}</td><td>${escapeHtml(record._deleted_by)}</td><td><button type="button" class="btn btn-secondary btn-sm" data-restore-id="${escapeHtml(record._trash_id)}">Restaurar</button>${state.canPurgeTrash ? `<button type="button" class="btn btn-secondary btn-sm" style="color:#f87171;margin-left:8px" data-purge-id="${escapeHtml(record._trash_id)}">Excluir definitivamente</button>` : ''}</td></tr>`).join('') : '<tr><td colspan="6" class="table-empty-box">Lixeira vazia.</td></tr>';
     audit.innerHTML = state.deletionAudit.length ? state.deletionAudit.map(entry => `<tr><td>${escapeHtml(entry.action)}</td><td>${escapeHtml(entry.store_name)}</td><td>${escapeHtml(formatPtDate(entry.at))}</td><td>${escapeHtml(entry.by)}</td></tr>`).join('') : '<tr><td colspan="4" class="table-empty-box">Nenhuma exclusão registrada.</td></tr>';
 }
 document.getElementById('trash-records-body').addEventListener('click', async event => {
-    const button = event.target.closest('[data-restore-id]');
+    const button = event.target.closest('[data-restore-id], [data-purge-id]');
     if (!button) return;
+    const purge = !!button.dataset.purgeId;
+    if (purge && (!state.canPurgeTrash || !confirm('Excluir definitivamente este registro da lixeira? Essa ação não pode ser desfeita pelo app.'))) return;
     button.disabled = true;
     try {
-        const response = await fetch('/api/records/restore', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({trash_id:button.dataset.restoreId})});
+        const response = await fetch(purge ? '/api/records/purge' : '/api/records/restore', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({trash_id:purge ? button.dataset.purgeId : button.dataset.restoreId, confirm:purge})});
         const data = await response.json();
         if (!data.ok) throw new Error(data.error || 'Não foi possível restaurar.');
-        showToast('Restaurado', 'Registro devolvido ao histórico.');
+        showToast(purge ? 'Excluído definitivamente' : 'Restaurado', purge ? 'Registro removido da lixeira. A ação ficou no histórico.' : 'Registro devolvido ao histórico.');
         await fetchState();
     } catch(error) { alert(error.message); }
     finally {button.disabled = false;}
