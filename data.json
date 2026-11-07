@@ -440,6 +440,17 @@
   ],
   "alerts": [
     {
+      "id": "al_1794059433765",
+      "domain": "sleepsakeshop.com",
+      "name": "Sleepsake",
+      "reason": "Loja bloqueada ou inativa na plataforma (HTTP 423 · This store is unavailable)",
+      "timestamp": "2026-11-07 10:50:30",
+      "desktop_sent": false,
+      "email_sent": false,
+      "email_recipient": "onobrecarlos@gmail.com",
+      "email_info": "Envios de e-mail desativados a pedido do usuário."
+    },
+    {
       "id": "al_1793916866128",
       "domain": "exemplo-teste.com.br",
       "name": "Teste de Alerta Kloube",
