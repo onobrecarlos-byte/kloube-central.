@@ -76,6 +76,30 @@
   },
   "records": [
     {
+      "id": "rec_7361a45f34",
+      "event_type": "store_reactivated",
+      "store_name": "Silix",
+      "domain": "usesilixwear.com",
+      "account_number": "Google Ads 90",
+      "inactive_category": "",
+      "reason": "Loja reativada",
+      "created_at": "2026-11-07 02:51:31",
+      "month_key": "2026-11",
+      "source": "manual"
+    },
+    {
+      "id": "rec_9906cd734f",
+      "event_type": "store_published",
+      "store_name": "Titanex",
+      "domain": "titanexstore.com",
+      "account_number": "Google Ads 78",
+      "inactive_category": "",
+      "reason": "Loja nova publicada",
+      "created_at": "2026-11-07 02:51:31",
+      "month_key": "2026-11",
+      "source": "manual"
+    },
+    {
       "id": "rec_15180dffb9",
       "event_type": "store_inactive",
       "store_name": "Ionix Labs",
@@ -2397,6 +2421,30 @@
       "status": "Ativa",
       "status_verified_at": "2026-11-06 12:00:00",
       "status_source": "manual"
+    },
+    "Titanex": {
+      "name": "Titanex",
+      "current_domain": "titanexstore.com",
+      "domain_swaps_count": 0,
+      "domain_history": [],
+      "publications": [],
+      "suspensions": [],
+      "status": "Ativa",
+      "status_verified_at": "2026-11-07 02:51:31",
+      "status_source": "manual",
+      "current_ads_account": "Google Ads 78"
+    },
+    "Silix": {
+      "name": "Silix",
+      "current_domain": "usesilixwear.com",
+      "domain_swaps_count": 0,
+      "domain_history": [],
+      "publications": [],
+      "suspensions": [],
+      "status": "Ativa",
+      "status_verified_at": "2026-11-07 02:51:31",
+      "status_source": "manual",
+      "current_ads_account": "Google Ads 90"
     }
   },
   "operational_snapshot": {
