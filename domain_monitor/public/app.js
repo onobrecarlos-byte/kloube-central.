@@ -103,6 +103,19 @@ function formatIntervalCompact(seconds) {
  * Organiza diagnóstico e destino com hierarquia clara a partir dos dados reais da verificação
  */
 function buildDiagnosisDisplay(d) {
+    if (d.operational_active === false) {
+        return {dotClass:'diag-dot-pending', textClass:'pending', primary:'Loja inativa',
+            secondary:'Domínio preservado no histórico; fora das checagens automáticas.',
+            tooltip:'Loja fora da lista de ativas confirmada pelo responsável.'};
+    }
+    if (d.status === 'unknown' || (!d.checked_at && d.status !== 'checking' && d.status !== 'draft')) {
+        return {
+            dotClass: 'diag-dot-pending', textClass: 'pending',
+            primary: 'Aguardando verificação',
+            secondary: 'Incluído no monitoramento. Aguarda a primeira checagem.',
+            tooltip: 'O domínio ainda não foi verificado. Use Verificar agora ou aguarde a próxima checagem.',
+        };
+    }
     if (d.status === 'checking') {
         return {
             dotClass: 'diag-dot-checking',
@@ -425,9 +438,10 @@ function renderAll() {
 }
 
 function renderSummary() {
-    const total = state.domains.length;
-    const online = state.domains.filter(d => d.status === 'online').length;
-    const offline = state.domains.filter(d => d.status === 'offline').length;
+    const monitored = state.domains.filter(d => d.operational_active !== false && d.status !== 'draft');
+    const total = monitored.length;
+    const online = monitored.filter(d => d.status === 'online').length;
+    const offline = monitored.filter(d => d.status === 'offline').length;
 
     document.getElementById('stat-total').textContent = total;
     document.getElementById('stat-online').textContent = online;
@@ -463,6 +477,8 @@ function renderDomainsTable() {
     emptyState.style.display = 'none';
 
     const filtered = state.domains.filter(d => {
+        const inactive = d.operational_active === false;
+        if (state.filter === 'inactive' ? !inactive : inactive) return false;
         if (state.filter === 'online' && d.status !== 'online') return false;
         if (state.filter === 'offline' && d.status !== 'offline') return false;
         if (state.search) {
@@ -489,21 +505,28 @@ function renderDomainsTable() {
     tbody.innerHTML = filtered.map(d => {
         const isOnline = d.status === 'online';
         const isChecking = d.status === 'checking';
+        const isPending = d.status === 'unknown' || (!d.checked_at && !isChecking && d.status !== 'draft');
 
         let badgeClass = 'status-badge-offline';
         let badgeLabel = 'Fora do ar';
-        if (isOnline) {
+        if (d.operational_active === false) {
+            badgeClass = 'status-badge-pending';
+            badgeLabel = 'Loja inativa';
+        } else if (isOnline) {
             badgeClass = 'status-badge-online';
             badgeLabel = 'Online';
         } else if (isChecking) {
             badgeClass = 'status-badge-checking';
             badgeLabel = 'Verificando';
+        } else if (isPending) {
+            badgeClass = 'status-badge-pending';
+            badgeLabel = 'Aguardando';
         }
 
         const diag = buildDiagnosisDisplay(d);
-        const checkedLabel = isChecking
+        const checkedLabel = d.operational_active === false ? 'Checagens desativadas' : isChecking
             ? 'Verificando...'
-            : (d.checked_at ? formatPtDate(d.checked_at) : 'Verificado');
+            : (d.checked_at ? formatPtDate(d.checked_at) : 'Ainda não verificado');
         const href = d.url || `https://${d.domain}`;
         const storeTitle = d.name && d.name.trim() ? d.name.trim() : d.domain;
         const adsAccounts = d.ads_accounts || [];
@@ -517,7 +540,7 @@ function renderDomainsTable() {
                     <div class="store-cell">
                         <span class="store-name" title="${escapeHtml(storeTitle)}">${escapeHtml(storeTitle)}</span><div class="monitor-store-accounts" aria-label="Contas Google Ads da loja">${adsMarkup}${adsUnknown}${!adsMarkup && !adsUnknown ? '<span class="monitor-account-unknown">Conta não cadastrada</span>' : ''}</div>
                         <a href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer" class="store-domain-link" title="Abrir ${escapeHtml( href )} em nova aba">
-                            <span>${escapeHtml(d.domain)}</span>
+                            <span>${escapeHtml(`https://${String(d.domain).replace(/^https?:\/\//i, '').replace(/\/$/, '')}`)}</span>
                             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                                 <polyline points="15 3 21 3 21 9"></polyline>

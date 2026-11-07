@@ -21,7 +21,9 @@ from pathlib import Path
 BRT_TZ = timezone(timedelta(hours=-3))
 
 BASE_DIR = Path(__file__).resolve().parent
-DATA_FILE = (BASE_DIR / "data.json") if (BASE_DIR / "data.json").exists() else BASE_DIR.parent / "data.json"
+# Integrated app uses the root data.json, matching shared GitHub persistence.
+# A standalone monitor without root data keeps its local fallback.
+DATA_FILE = (BASE_DIR.parent / "data.json") if (BASE_DIR.parent / "data.json").exists() else BASE_DIR / "data.json"
 
 ADMIN_EMAIL = "onobrecarlos@gmail.com"
 MASTER_EMAILS = frozenset(("onobrecarlos@gmail.com", "pablin.business@gmail.com", "alertas.kloube@gmail.com"))

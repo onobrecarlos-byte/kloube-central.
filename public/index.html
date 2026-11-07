@@ -455,6 +455,34 @@
 
         <!-- VIEW 5: CONFIGURAÇÕES -->
         <section id="view-settings" class="view-panel">
+            <div class="panel-card" style="margin-bottom:20px;padding:24px">
+                <h3>Conectar IA e automações</h3>
+                <p style="margin:12px 0;color:#cbd5e1">Use sua IA ou ferramenta de automação para consultar o Kloube e registrar operações. Depois de conectar, você faz os pedidos na própria ferramenta.</p>
+                <ol style="padding-left:22px;line-height:1.9;margin:16px 0">
+                    <li><strong>Crie uma conexão:</strong> dê um nome, como “Minha IA de relatórios”, e escolha o que ela poderá fazer.</li>
+                    <li><strong>Copie o token:</strong> ele é a chave de acesso e aparece apenas uma vez.</li>
+                    <li><strong>Configure na ferramenta:</strong> informe o endereço da API abaixo e salve o token no campo de credenciais. A ferramenta precisa aceitar API/HTTP ou OpenAPI.</li>
+                    <li><strong>Faça um pedido:</strong> por exemplo, “Liste as contas suspensas desta semana”. Com permissão de escrita, também pode pedir cadastros.</li>
+                </ol>
+                <div style="padding:14px 16px;border:1px solid #334155;border-radius:10px;margin:16px 0;line-height:1.7">
+                    <strong>Como funciona com várias pessoas?</strong>
+                    <p>Cada usuário vê e revoga apenas as conexões que criou. As lojas e os registros são da equipe: o que uma IA cadastrar aparecerá para todos no Kloube.</p>
+                    <p>Os pedidos e as respostas ficam na ferramenta de IA utilizada, conforme as regras de compartilhamento dela. Eles não são exibidos como conversas no Kloube.</p>
+                </div>
+                <form id="integration-form" style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+                    <input class="search-input" id="integration-name" aria-label="Nome da conexão" placeholder="Ex.: Minha IA de relatórios" maxlength="100" required>
+                    <select class="filter-select" id="integration-scope"><option value="read">Somente consultar e gerar relatórios</option><option value="write">Consultar e cadastrar registros</option></select>
+                    <select class="filter-select" id="integration-days"><option value="90">Validade: 90 dias</option><option value="30">30 dias</option><option value="365">365 dias</option></select>
+                    <button class="btn btn-primary" type="submit">Gerar token</button>
+                </form>
+                <p id="integration-message" role="status"></p>
+                <div id="integration-secret" hidden><p>Copie agora: o token só aparece uma vez. Guarde-o no campo de credenciais da ferramenta.</p><input id="integration-token" readonly class="search-input" style="width:100%"><button class="btn btn-secondary" type="button" id="integration-copy">Copiar token</button><button class="btn btn-secondary" type="button" id="integration-hide">Ocultar token</button></div>
+                <p>Endereço da API: <code id="integration-url"></code></p>
+                <p style="margin:12px 0"><a href="/integration-guide.html" target="_blank" rel="noopener" style="color:#60a5fa">Como conectar e começar a usar →</a></p>
+                <p style="color:#94a3b8;margin-bottom:16px">Na prévia localhost, somente ferramentas com acesso a este computador conseguem se conectar. Para usar uma IA na nuvem, publique a atualização no endereço online do Kloube.</p>
+                <h4>Minhas conexões</h4>
+                <div id="integration-list"></div>
+            </div>
             <div id="master-users-card" class="panel-card" style="display:none;margin-bottom:20px">
                 <div class="panel-card-header"><div><h2 class="panel-card-title">Usuários e acessos</h2><p class="panel-card-subtitle">Administração master de contas do painel.</p></div></div>
                 <div class="settings-content">
@@ -489,7 +517,7 @@
         </section>
         <section id="view-trash" class="view-panel">
             <div class="panel-card">
-                <div class="panel-card-header"><div><h2 class="panel-card-title">Lixeira</h2><p class="panel-card-subtitle">Registros removidos podem ser restaurados. Nenhuma exclusão definitiva.</p></div></div>
+                <div class="panel-card-header"><div><h2 class="panel-card-title">Lixeira</h2><p class="panel-card-subtitle">Registros removidos podem ser restaurados. Somente usuários master podem excluir definitivamente. As ações permanecem no histórico.</p></div></div>
                 <div class="table-responsive"><table class="data-table"><thead><tr><th>Loja</th><th>Motivo</th><th>Data do registro</th><th>Removido em</th><th>Responsável</th><th>Ações</th></tr></thead><tbody id="trash-records-body"></tbody></table></div>
             </div>
             <div class="panel-card" style="margin-top:20px"><div class="panel-card-header"><h2 class="panel-card-title">Histórico de exclusões e restaurações</h2></div><div class="table-responsive"><table class="data-table"><thead><tr><th>Ação</th><th>Loja</th><th>Quando</th><th>Responsável</th></tr></thead><tbody id="trash-audit-body"></tbody></table></div></div>
@@ -766,5 +794,6 @@
     <div id="toast-container" class="toast-container" aria-live="polite"></div>
     <script src="/date-picker.js?v=20261105-exact-day"></script>
     <script src="/app.js?v=kloube-central-1"></script>
+    <script src="/integrations.js?v=1"></script>
 </body>
 </html>
