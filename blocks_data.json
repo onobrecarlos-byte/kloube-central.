@@ -927,7 +927,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-07 10:50:38",
+  "updated_at": "2026-11-07 10:51:16",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -2684,6 +2684,21 @@
       "store_name": "Dr. Dent",
       "at": "2026-11-06 11:13:31",
       "by": "onobrecarlos@gmail.com"
+    }
+  ],
+  "integration_tokens": [
+    {
+      "id": "d963182d389542ab9fd0e3401c884a26",
+      "name": "Codex - Carlos",
+      "owner": "onobrecarlos@gmail.com",
+      "hash": "ba9e82a7177042b26690825e0587f178cf54cb6dad22ba0b9fc6d5046de15f42",
+      "scopes": [
+        "read",
+        "write"
+      ],
+      "created_at": "2026-11-07 10:51:16",
+      "expires_at": 1801835476.328415,
+      "user_version": "5dcd6107954e57741941e5c52b3af8cae35cd47f9656749cb95ad9c80c8e2956"
     }
   ]
 }
