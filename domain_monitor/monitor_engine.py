@@ -480,82 +480,42 @@ def send_email_notification(
     text_body: str,
     settings: dict,
 ) -> tuple[bool, str]:
-    return False, "Envios de e-mail desativados a pedido do usuário."
-    """
-    Sends an email alert to all emails in settings['notify_email']
-    (defaults to onobrecarlos@gmail.com, alertas.kloube@gmail.com).
-    Supports:
-    1. Configured SMTP (Gmail / custom SMTP)
-    2. FormSubmit AJAX endpoint fallback if SMTP is not yet configured
-    """
+    """Send alerts through the configured SMTP server."""
     recipients = parse_email_recipients(settings.get("notify_email") or DEFAULT_EMAIL)
-    recipient_display = ", ".join(recipients)
     smtp_user = (settings.get("smtp_user") or DEFAULT_SMTP_USER).strip()
-    smtp_pass = (settings.get("smtp_pass") or os.environ.get("KLOUBE_SMTP_PASS") or "").strip().replace(" ", "")
+    smtp_pass = "".join((os.environ.get("KLOUBE_SMTP_PASS") or settings.get("smtp_pass") or "").split())
     smtp_host = (settings.get("smtp_host") or "smtp.gmail.com").strip()
-    smtp_port = int(settings.get("smtp_port") or 587)
+    if not smtp_pass:
+        return False, "Configure a senha de aplicativo do remetente nas configurações de e-mail."
 
-    if smtp_user and smtp_pass:
-        try:
-            msg = MIMEMultipart("alternative")
-            msg["Subject"] = subject
-            msg["From"] = f"Kloube Domain Monitor <{smtp_user}>"
-            msg["To"] = recipient_display
+    try:
+        smtp_port = int(settings.get("smtp_port") or 587)
+        if smtp_port == 25:
+            return False, "Use a porta SMTP 587 (STARTTLS) ou 465 (TLS)."
+        message = MIMEMultipart("alternative")
+        message["Subject"] = subject
+        message["From"] = f"Kloube Domain Monitor <{smtp_user}>"
+        message["To"] = ", ".join(recipients)
+        message.attach(MIMEText(text_body, "plain", "utf-8"))
+        message.attach(MIMEText(html_body, "html", "utf-8"))
 
-            msg.attach(MIMEText(text_body, "plain", "utf-8"))
-            msg.attach(MIMEText(html_body, "html", "utf-8"))
-
-            with smtplib.SMTP(smtp_host, smtp_port, timeout=15) as server:
-                server.ehlo()
-                server.starttls()
-                server.login(smtp_user, smtp_pass)
-                server.sendmail(smtp_user, recipients, msg.as_string())
-
-            return True, f"E-mail enviado via SMTP para {recipient_display}"
-        except Exception as e:
-            return False, f"Erro SMTP: {str(e)}"
-
-    # Fallback: try FormSubmit.co AJAX endpoint for each recipient
-    sent_any = False
-    last_msg = "Ative o SMTP nas configurações para envio direto."
-    for addr in recipients:
-        try:
-            payload = json.dumps(
-                {
-                    "_subject": subject,
-                    "_template": "table",
-                    "Alerta": subject,
-                    "Detalhes": text_body,
-                    "Horario": now_iso(),
-                }
-            ).encode("utf-8")
-            req = urllib.request.Request(
-                f"https://formsubmit.co/ajax/{urllib.parse.quote(addr)}",
-                data=payload,
-                headers={
-                    "Content-Type": "application/json",
-                    "Accept": "application/json",
-                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
-                    "Origin": "http://localhost:8765",
-                    "Referer": "http://localhost:8765/",
-                },
-                method="POST",
-            )
-            with urllib.request.urlopen(req, timeout=10) as resp:
-                resp_data = json.loads(resp.read().decode("utf-8", errors="ignore"))
-                if str(resp_data.get("success")).lower() == "true":
-                    sent_any = True
-                else:
-                    last_msg = resp_data.get("message", last_msg)
-        except Exception:
-            pass
-
-    if sent_any:
-        return True, f"E-mail disparado para {recipient_display}"
-    return (
-        False,
-        f"Aviso de e-mail ({recipient_display}): {last_msg}",
-    )
+        context = ssl.create_default_context()
+        if smtp_port == 465:
+            connection = smtplib.SMTP_SSL(smtp_host, smtp_port, timeout=15, context=context)
+        else:
+            connection = smtplib.SMTP(smtp_host, smtp_port, timeout=15)
+        with connection as server:
+            if smtp_port != 465:
+                server.starttls(context=context)
+            server.login(smtp_user, smtp_pass)
+            refused = server.send_message(message, from_addr=smtp_user, to_addrs=recipients)
+        if refused:
+            return False, "O servidor SMTP recusou um ou mais destinatários."
+    except smtplib.SMTPAuthenticationError:
+        return False, "O Gmail recusou a autenticação. Confira a senha de aplicativo do remetente."
+    except (OSError, ValueError):
+        return False, "Falha ao enviar pelo SMTP. Confira servidor, porta e destinatários."
+    return True, f"E-mail enviado via SMTP para {', '.join(recipients)}"
 
 
 def hash_account_password(password: str) -> str:

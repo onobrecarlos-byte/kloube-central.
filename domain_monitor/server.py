@@ -145,6 +145,7 @@ def _build_state_payload(data: dict) -> dict:
     from monitor_bridge import enrich_accounts
     safe_data["domains"] = enrich_accounts(safe_data.get("domains", []))
     settings = dict(safe_data.get("settings") or {})
+    settings.pop("smtp_pass", None)
     settings["check_interval_seconds"] = int(settings.get("check_interval_seconds", 3600))
     safe_data["settings"] = settings
 
@@ -444,7 +445,7 @@ class KloubeHandler(BaseHTTPRequestHandler):
             }
             alert = store.trigger_alert(dummy_domain, dummy_result, force=True)
             return self._send_json(
-                {"ok": True, "alert": alert, "state": store.load()}
+                {"ok": True, "alert": alert, "state": _build_state_payload(store.load())}
             )
 
         if path == "/api/auth/login":
