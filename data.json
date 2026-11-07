@@ -12,6 +12,74 @@
   },
   "domains": [
     {
+      "id": "dom_085bd0375d",
+      "domain": "sleepsakeshop.com",
+      "url": "https://sleepsakeshop.com",
+      "name": "Sleepsake",
+      "expected_redirect": "",
+      "status": "unknown",
+      "status_label": "Aguardando verificação",
+      "reason": "Cadastrado automaticamente com a publicação da loja.",
+      "http_code": null,
+      "final_url": "",
+      "ip_address": "",
+      "response_time_ms": 0,
+      "checked_at": "",
+      "created_at": "2026-11-07 10:49:52",
+      "source": "store_publication"
+    },
+    {
+      "id": "dom_9ce8b39846",
+      "domain": "shopnesti.com",
+      "url": "https://shopnesti.com",
+      "name": "Nesti 2",
+      "expected_redirect": "",
+      "status": "unknown",
+      "status_label": "Aguardando verificação",
+      "reason": "Cadastrado automaticamente com a publicação da loja.",
+      "http_code": null,
+      "final_url": "",
+      "ip_address": "",
+      "response_time_ms": 0,
+      "checked_at": "",
+      "created_at": "2026-11-07 10:49:52",
+      "source": "store_publication"
+    },
+    {
+      "id": "dom_d80bfffce5",
+      "domain": "longwelltitanium.com",
+      "url": "https://longwelltitanium.com",
+      "name": "LongWell",
+      "expected_redirect": "",
+      "status": "unknown",
+      "status_label": "Aguardando verificação",
+      "reason": "Cadastrado automaticamente com a publicação da loja.",
+      "http_code": null,
+      "final_url": "",
+      "ip_address": "",
+      "response_time_ms": 0,
+      "checked_at": "",
+      "created_at": "2026-11-07 10:49:52",
+      "source": "store_publication"
+    },
+    {
+      "id": "dom_cadd8743b2",
+      "domain": "ionixlabs.com",
+      "url": "https://ionixlabs.com",
+      "name": "Ionix Labs",
+      "expected_redirect": "",
+      "status": "unknown",
+      "status_label": "Aguardando verificação",
+      "reason": "Cadastrado automaticamente com a publicação da loja.",
+      "http_code": null,
+      "final_url": "",
+      "ip_address": "",
+      "response_time_ms": 0,
+      "checked_at": "",
+      "created_at": "2026-11-07 10:49:52",
+      "source": "store_publication"
+    },
+    {
       "id": "dom_9c9a6dc329",
       "domain": "reworkgearstore.com",
       "url": "https://reworkgearstore.com",
@@ -628,5 +696,15 @@
     "alertas.kloube@gmail.com": "pbkdf2_sha256$24e8db452649cefeb9fdcffbccd72095$9a45f081db9124298979c23a20ae54cda71542d5cdbd458e66807fde5e94fabc",
     "pablin.business@gmail.com": "pbkdf2_sha256$710c992dd9223fcb4bedcde476f3ce36$7dcb2fd7cb454460c5cb457a18894a21fb39be274f15e21b45cca9a4c0951bbb",
     "onobrecarlos@gmail.com": "pbkdf2_sha256$1ada5a89f88b3088b33e05b917a99a9d$dc4486a5a10f5c82dc900f0189b9b1ca9ac505b3bf4517d13a9b94be6f1fafa5"
-  }
+  },
+  "publication_registrations": [
+    "rec_2a6488ea7b",
+    "rec_35abfc4134",
+    "rec_49740dbb2b",
+    "rec_94e346e82b",
+    "rec_ad994b5d77",
+    "rec_c70f18adaf",
+    "rec_d7e646ff8c",
+    "rec_da54341cdc"
+  ]
 }
