@@ -12,6 +12,25 @@
   },
   "domains": [
     {
+      "id": "dom_14e7fd6f62",
+      "domain": "usenivastore.com",
+      "url": "https://usenivastore.com",
+      "name": "Niva",
+      "expected_redirect": "",
+      "status": "online",
+      "status_label": "Online",
+      "reason": "Direcionamento ativo (200 OK)",
+      "http_code": 200,
+      "final_url": "https://usenivastore.com/",
+      "ip_address": "",
+      "response_time_ms": 0,
+      "checked_at": "2026-11-08 01:09:04",
+      "created_at": "2026-11-08 01:09:04",
+      "source": "store_publication",
+      "operational_active": true,
+      "current_ads_account": "Google Ads 94"
+    },
+    {
       "id": "dom_32b8d65c05",
       "domain": "usesilixwear.com",
       "url": "https://usesilixwear.com",
@@ -800,6 +819,7 @@
     "rec_2a6488ea7b",
     "rec_35abfc4134",
     "rec_49740dbb2b",
+    "rec_6b405c0296",
     "rec_94e346e82b",
     "rec_9906cd734f",
     "rec_ad994b5d77",

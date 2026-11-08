@@ -76,6 +76,18 @@
   },
   "records": [
     {
+      "id": "rec_6b405c0296",
+      "event_type": "store_published",
+      "store_name": "Niva",
+      "domain": "usenivastore.com",
+      "account_number": "Google Ads 94",
+      "inactive_category": "",
+      "reason": "Loja nova publicada",
+      "created_at": "2026-11-08 01:09:04",
+      "month_key": "2026-11",
+      "source": "manual"
+    },
+    {
       "id": "rec_7361a45f34",
       "event_type": "store_reactivated",
       "store_name": "Silix",
@@ -895,7 +907,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-07 22:56:50",
+  "updated_at": "2026-11-08 01:09:04",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -2387,6 +2399,18 @@
       "status_verified_at": "2026-11-07 02:51:31",
       "status_source": "manual",
       "current_ads_account": "Google Ads 90"
+    },
+    "Niva": {
+      "name": "Niva",
+      "current_domain": "usenivastore.com",
+      "domain_swaps_count": 0,
+      "domain_history": [],
+      "publications": [],
+      "suspensions": [],
+      "status": "Ativa",
+      "status_verified_at": "2026-11-08 01:09:04",
+      "status_source": "manual",
+      "current_ads_account": "Google Ads 94"
     }
   },
   "operational_snapshot": {
@@ -2588,6 +2612,12 @@
       "category": "",
       "record_id": "",
       "store_name": "Titanex"
+    },
+    "dom_14e7fd6f62": {
+      "checked_at": "2026-11-08 01:09:04",
+      "category": "",
+      "record_id": "",
+      "store_name": "Niva"
     }
   },
   "deleted_records": [
