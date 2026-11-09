@@ -76,6 +76,18 @@
   },
   "records": [
     {
+      "event_type": "ads_suspended",
+      "store_name": "Kojeva",
+      "domain": "",
+      "account_number": "Google Ads 91",
+      "inactive_category": "",
+      "reason": "Sua conta violou a política sobre Práticas comerciais inaceitáveis: phishing.",
+      "created_at": "2026-11-09 01:02:40",
+      "month_key": "2026-11",
+      "source": "whatsapp_group",
+      "id": "rec_64cfdc0902"
+    },
+    {
       "id": "rec_6b405c0296",
       "event_type": "store_published",
       "store_name": "Niva",
@@ -907,7 +919,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-09 01:02:10",
+  "updated_at": "2026-11-09 01:02:40",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
