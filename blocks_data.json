@@ -907,7 +907,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-08 22:09:51",
+  "updated_at": "2026-11-08 22:11:32",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -1387,8 +1387,8 @@
           "source": "before_user_screenshot_verification"
         }
       ],
-      "status_verified_at": "2026-11-05 12:16:19",
-      "status_source": "user_screenshots_2026-11-05"
+      "status_verified_at": "2026-11-08 22:11:32",
+      "status_source": "manual"
     },
     "Ionix Labs": {
       "name": "Ionix Labs 3",
