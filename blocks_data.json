@@ -943,7 +943,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-09 17:02:12",
+  "updated_at": "2026-11-09 17:02:15",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -2665,6 +2665,12 @@
       "category": "",
       "record_id": "",
       "store_name": "Niva"
+    },
+    "dom_a223f2c1f2": {
+      "checked_at": "2026-11-09 17:01:02",
+      "category": "",
+      "record_id": "",
+      "store_name": "Amua"
     }
   },
   "deleted_records": [
