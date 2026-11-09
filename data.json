@@ -492,6 +492,17 @@
   ],
   "alerts": [
     {
+      "id": "al_1794234664680",
+      "domain": "usekojeva.com",
+      "name": "Kojeva",
+      "reason": "Certificado SSL inválido ou expirado",
+      "timestamp": "2026-11-09 11:30:55",
+      "desktop_sent": false,
+      "email_sent": true,
+      "email_recipient": "onobrecarlos@gmail.com",
+      "email_info": "E-mail enviado via SMTP para onobrecarlos@gmail.com"
+    },
+    {
       "id": "al_1794061394014",
       "domain": "exemplo-teste.com.br",
       "name": "Teste de Alerta Kloube",
