@@ -76,6 +76,18 @@
   },
   "records": [
     {
+      "event_type": "store_published",
+      "store_name": "Kojeva",
+      "domain": "",
+      "account_number": "—",
+      "inactive_category": "",
+      "reason": "Loja publicada",
+      "created_at": "2026-11-09 13:10:11",
+      "month_key": "2026-11",
+      "source": "whatsapp_group",
+      "id": "rec_924cc26b47"
+    },
+    {
       "event_type": "ads_suspended",
       "store_name": "Kojeva",
       "domain": "",
@@ -919,7 +931,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-09 12:19:01",
+  "updated_at": "2026-11-09 13:10:11",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -2362,9 +2374,9 @@
       "domain_history": [],
       "publications": [],
       "suspensions": [],
-      "status": "Inativa",
-      "status_verified_at": "2026-11-09 01:02:10",
-      "status_source": "manual"
+      "status": "Ativa",
+      "status_verified_at": "2026-11-09 13:10:11",
+      "status_source": "whatsapp_group"
     },
     "Rework Gear": {
       "name": "Rework Gear",
