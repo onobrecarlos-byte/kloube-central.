@@ -90,7 +90,7 @@
     {
       "event_type": "ads_suspended",
       "store_name": "Kojeva",
-      "domain": "",
+      "domain": "https://usekojeva.com/",
       "account_number": "Google Ads 91",
       "inactive_category": "",
       "reason": "Sua conta violou a política sobre Práticas comerciais inaceitáveis: phishing.",
@@ -931,7 +931,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-09 13:11:15",
+  "updated_at": "2026-11-09 13:11:46",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
