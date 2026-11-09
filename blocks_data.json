@@ -79,7 +79,7 @@
       "event_type": "store_published",
       "store_name": "Kojeva",
       "domain": "https://trykojevastore.com/",
-      "account_number": "—",
+      "account_number": "Google Ads 95",
       "inactive_category": "",
       "reason": "Loja publicada",
       "created_at": "2026-11-09 13:10:11",
@@ -931,7 +931,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-09 13:10:58",
+  "updated_at": "2026-11-09 13:11:14",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -2369,7 +2369,7 @@
     },
     "KOJEVA": {
       "name": "KOJEVA",
-      "current_domain": "https://usekojeva.com/",
+      "current_domain": "https://trykojevastore.com/",
       "domain_swaps_count": 0,
       "domain_history": [],
       "publications": [],
