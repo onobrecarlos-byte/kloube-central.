@@ -1318,6 +1318,10 @@ document.addEventListener('visibilitychange', () => {
     if (document.visibilityState === 'visible') fetchState();
 });
 
+const mobileMenu = document.getElementById('mobile-menu-toggle');
+mobileMenu.addEventListener('click', () => {
+    mobileMenu.setAttribute('aria-expanded', String(mobileMenu.getAttribute('aria-expanded') !== 'true'));
+});
 document.getElementById('unified-logout').addEventListener('click', () => document.getElementById('btn-logout').click());
 
 async function saveMonitorControls(payload) {

@@ -1356,21 +1356,42 @@ form {
     }
 
     .page-header-actions {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
         width: 100%;
     }
 
+    .page-header-actions .monitor-controls {
+        grid-column: 1 / -1;
+    }
+
     .page-header-actions .btn {
-        flex: 1;
+        min-height: 44px;
+        height: auto;
+        padding: 6px 8px;
+        white-space: normal;
+        text-align: center;
     }
 
     .summary-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
     }
 
     .summary-card {
-        padding: 16px;
-        min-height: 84px;
+        padding: 10px;
+        min-height: 76px;
+        gap: 8px;
+    }
+
+    .summary-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .summary-value {
+        font-size: 20px;
     }
 
     .panel-header {
@@ -1385,18 +1406,22 @@ form {
     }
 
     .segmented-control {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         width: 100%;
-        justify-content: space-between;
     }
 
     .segment-btn {
-        flex: 1;
+        min-height: 40px;
+        height: auto;
+        padding: 6px;
         justify-content: center;
     }
 
     .search-field,
     .search-field input {
         width: 100%;
+        font-size: 16px;
     }
 
     /* Adaptação da tabela para Cards no Mobile sem rolagem horizontal */
@@ -1429,6 +1454,7 @@ form {
     .store-cell,
     .diag-cell {
         max-width: 100%;
+        overflow-wrap: anywhere;
     }
 
     .mobile-row-top {
@@ -1464,12 +1490,6 @@ form {
     }
 
     .form-row-2 {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 480px) {
-    .summary-grid {
         grid-template-columns: 1fr;
     }
 }

@@ -731,10 +731,16 @@ function quickAddRecordForStore(storeName) {
    CONFIGURAÇÃO DE EVENTOS DOM
    ========================================================================== */
 document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenu = document.getElementById('mobile-menu-toggle');
+    mobileMenu.addEventListener('click', () => {
+        mobileMenu.setAttribute('aria-expanded', String(mobileMenu.getAttribute('aria-expanded') !== 'true'));
+    });
+
     // 1. Navegação lateral
     document.querySelectorAll('.sidebar-nav button.nav-item[data-view]').forEach(btn => {
         btn.addEventListener('click', () => {
             const view = btn.getAttribute('data-view');
+            mobileMenu.setAttribute('aria-expanded', 'false');
             switchView(view);
         });
     });

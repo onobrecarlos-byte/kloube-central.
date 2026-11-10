@@ -4,7 +4,6 @@
 .unified-nav{display:flex;align-items:center;gap:12px;padding:12px 14px;margin-bottom:6px;border:0;border-radius:8px;background:transparent;color:#a8bbd1;text-decoration:none;font-size:13px;line-height:1.5;box-sizing:border-box;width:100%;text-align:left;cursor:pointer}.unified-nav.active{background:#1765e8;color:white}.unified-nav:hover{background:#152744;color:white}.unified-nav.active:hover{background:#1765e8}
 .topbar{margin-left:240px}.topbar-left{visibility:hidden}.topbar .container{max-width:none}.main-layout{margin-left:240px;width:calc(100% - 240px);max-width:none;box-sizing:border-box;padding:28px 32px}
 #btn-open-create-account,#btn-header-change-pass,#btn-logout{display:none!important}
-@media(max-width:760px){.unified-sidebar{width:180px;padding:20px 8px}.unified-nav{font-size:12px;padding:10px 8px}.topbar{margin-left:180px}.main-layout{margin-left:180px;width:calc(100% - 180px);padding:20px 14px}}
 
 /* The server validates the shared session before serving this page. */
 #auth-screen{display:none!important}
@@ -99,4 +98,62 @@
 .sidebar .sidebar-brand,.sidebar .sidebar-nav,.sidebar .nav-item {margin:0;box-sizing:border-box}
 .sidebar .nav-item {font-family:inherit;line-height:normal;text-decoration:none}
 .sidebar .brand-logo-badge svg {display:block}
-@media(max-width:768px){.sidebar.unified-sidebar{position:relative;width:100%;height:auto;min-height:auto;border-right:none;border-bottom:1px solid #121C2E}.topbar{margin-left:0}.main-layout{margin-left:0;width:100%}}
+.mobile-menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .sidebar.unified-sidebar {
+        position: relative;
+        width: 100%;
+        min-width: 0;
+        height: auto;
+        min-height: auto;
+        padding: 10px 14px;
+        border-right: none;
+        border-bottom: 1px solid #121C2E;
+    }
+    .sidebar .sidebar-brand {
+        padding: 0;
+    }
+    .mobile-menu-toggle {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+        margin-left: auto;
+        padding: 0 14px;
+        background: #131C2B;
+        border: 1px solid #25334A;
+        border-radius: 8px;
+        color: #FFFFFF;
+        font: inherit;
+        cursor: pointer;
+    }
+    .sidebar .sidebar-nav {
+        display: none;
+        margin-top: 8px;
+        max-height: 65vh;
+        overflow-y: auto;
+    }
+    .sidebar-brand:has(.mobile-menu-toggle[aria-expanded="true"]) + .sidebar-nav {
+        display: flex;
+    }
+    .sidebar .nav-item {
+        min-height: 44px;
+    }
+    .topbar {
+        margin-left: 0;
+    }
+    .topbar-left {
+        display: none;
+    }
+    .topbar .topbar-inner {
+        justify-content: flex-end;
+        min-height: 44px;
+    }
+    .main-layout {
+        margin-left: 0;
+        width: 100%;
+        padding: 16px 12px;
+    }
+}

@@ -78,6 +78,10 @@ body.app-layout {
     padding: 0 8px 24px 8px;
 }
 
+.mobile-menu-toggle {
+    display: none;
+}
+
 .brand-logo-badge {
     width: 32px;
     height: 32px;
@@ -1287,16 +1291,135 @@ body.app-layout {
     }
     .sidebar {
         width: 100%;
+        min-width: 0;
         min-height: auto;
         height: auto;
+        padding: 10px 14px;
         border-right: none;
         border-bottom: 1px solid var(--border-subtle);
     }
+    .sidebar-brand {
+        padding: 0;
+    }
+    .mobile-menu-toggle {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+        margin-left: auto;
+        padding: 0 14px;
+        background: var(--bg-surface);
+        border: 1px solid var(--border-default);
+        border-radius: var(--radius-md);
+        color: var(--text-primary);
+        font: inherit;
+        cursor: pointer;
+    }
+    .sidebar-nav {
+        display: none;
+        margin-top: 8px;
+        max-height: 65vh;
+        overflow-y: auto;
+    }
+    .sidebar-brand:has(.mobile-menu-toggle[aria-expanded="true"]) + .sidebar-nav {
+        display: flex;
+    }
+    .sidebar-nav .nav-item {
+        min-height: 44px;
+    }
     .metrics-bar-card, .attention-cards-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+        margin-bottom: 16px;
+    }
+    .metrics-bar-card {
+        padding: 8px;
+    }
+    .metric-kpi-item, .attention-card {
+        padding: 10px 8px;
+        gap: 8px;
+    }
+    .kpi-icon-box, .attention-card-icon {
+        width: 32px;
+        height: 32px;
+    }
+    .brand-sub-icon {
+        width: 26px;
+        height: 26px;
+    }
+    .kpi-number, .attention-card-val {
+        font-size: 21px;
+    }
+    .kpi-label, .attention-card-label {
+        white-space: normal;
+        font-size: 12px;
     }
     .main-content {
-        padding: 20px 16px;
+        height: auto;
+        padding: 16px 12px;
+        overflow: visible;
+    }
+    .dashboard-header {
+        gap: 10px;
+        margin-bottom: 16px;
+    }
+    .header-title {
+        font-size: 23px;
+    }
+    .header-actions, .panel-card-actions {
+        flex-wrap: wrap;
+        gap: 8px;
+        max-width: 100%;
+    }
+    .header-actions .btn, .calendar-trigger-btn {
+        min-height: 44px;
+    }
+    #calendar-menu {
+        position: fixed;
+        inset: auto 12px 12px;
+        width: auto;
+        max-height: 65vh;
+        max-height: 65dvh;
+        overflow: auto;
+    }
+    .panel-card {
+        padding: 14px;
+    }
+    .search-input {
+        max-width: 100%;
+        font-size: 16px;
+    }
+    .incidents-table-wrapper {
+        overflow-x: auto;
+    }
+    #view-stores .data-table thead {
+        display: none;
+    }
+    #view-stores .data-table tr {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        padding: 12px 0;
+        border-bottom: 1px solid var(--border-subtle);
+    }
+    #view-stores .data-table td {
+        padding: 0;
+        border: 0;
+        max-width: 100%;
+    }
+    #view-stores .data-table td:nth-child(-n+2) {
+        flex-basis: 100%;
+        overflow-wrap: anywhere;
+    }
+    #view-stores .tag-mono {
+        white-space: normal;
+    }
+    #view-stores .data-table td:nth-child(4)::before {
+        content: "Trocas: ";
+    }
+    .drawer-toolbar {
+        flex-wrap: wrap;
     }
 }
 
