@@ -1,6 +1,6 @@
 {
   "settings": {
-    "notify_email": "onobrecarlos@gmail.com",
+    "notify_email": "onobrecarlos@gmail.com, alertas.kloube@gmail.com",
     "desktop_notifications": false,
     "email_notifications": true,
     "check_interval_seconds": 900,
