@@ -991,7 +991,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-10 02:43:01",
+  "updated_at": "2026-11-10 02:43:22",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -2752,6 +2752,12 @@
       "category": "",
       "record_id": "",
       "store_name": "Amua"
+    },
+    "dom_95e04c2f91": {
+      "checked_at": "2026-11-10 02:43:20",
+      "category": "",
+      "record_id": "",
+      "store_name": "Rivanta"
     }
   },
   "deleted_records": [
