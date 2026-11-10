@@ -249,7 +249,7 @@
                 </div>
 
                 <div class="attention-cards-grid">
-                    <button type="button" class="attention-card" data-inspect="active_stores" title="Ver a lista de lojas ativas">
+                    <button type="button" class="attention-card" id="btn-active-stores" title="Ver a lista de lojas ativas">
                         <span class="attention-card-icon kpi-icon-box-green">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                                 <polygon points="5 3 19 12 5 21 5 3"></polygon>
@@ -341,9 +341,10 @@
                 <div class="panel-card-header">
                     <div>
                         <h2 class="panel-card-title">Catálogo de Lojas</h2>
-                        <p class="panel-card-subtitle">Todas as lojas sob acompanhamento, domínios vinculados e trocas de domínio realizadas.</p>
+                        <p class="panel-card-subtitle" id="stores-catalog-subtitle">Todas as lojas sob acompanhamento, domínios vinculados e trocas de domínio realizadas.</p>
                     </div>
                     <div class="panel-card-actions">
+                        <button type="button" id="btn-all-stores" class="btn btn-secondary" style="display:none">Ver todas as lojas</button>
                         <button type="button" id="btn-new-store" class="btn btn-primary">+ Nova loja</button>
                         <input type="search" id="stores-search-input" class="search-input" placeholder="Buscar loja ou domínio..." />
                     </div>
@@ -791,7 +792,7 @@
 
     <div id="toast-container" class="toast-container" aria-live="polite"></div>
     <script src="/date-picker.js?v=20261105-exact-day"></script>
-    <script src="/app.js?v=kloube-central-1"></script>
+    <script src="/app.js?v=kloube-central-2"></script>
     <script src="/integrations.js?v=1"></script>
 </body>
 </html>

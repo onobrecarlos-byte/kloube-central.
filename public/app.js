@@ -10,6 +10,7 @@ const state = {
     activeDrawerSection: null,
     drawerSearch: '',
     storesSearch: '',
+    activeStoresOnly: false,
     historySearch: '',
     historyType: 'all',
     recordsDateFilter: '',
@@ -353,7 +354,7 @@ function renderStoresView() {
         }
     });
 
-    startStores.forEach(st => {
+    if (!state.activeStoresOnly) startStores.forEach(st => {
         const key = (st.store_name || '').toLowerCase();
         if (!seen.has(key)) {
             seen.add(key);
@@ -366,7 +367,7 @@ function renderStoresView() {
         }
     });
 
-    if (s.active_is_current) {
+    if (!state.activeStoresOnly && s.active_is_current) {
         Object.entries(state.storesCatalog).forEach(([name, entry]) => {
             const actualName = entry.name || name;
             const key = actualName.toLowerCase();
@@ -385,6 +386,11 @@ function renderStoresView() {
 
     const tbody = document.getElementById('stores-tbody');
     if (!tbody) return;
+
+    document.getElementById('stores-catalog-subtitle').textContent = state.activeStoresOnly
+        ? (s.active_is_current ? 'Lojas ativas hoje' : 'Lojas ativas no fim do período selecionado')
+        : 'Todas as lojas sob acompanhamento, domínios vinculados e trocas de domínio realizadas.';
+    document.getElementById('btn-all-stores').style.display = state.activeStoresOnly ? '' : 'none';
 
     tbody.innerHTML = filtered.map(st => {
         const isAtiva = st.status === 'ativa';
@@ -669,8 +675,9 @@ function populateDatalist() {
     datalist.innerHTML = Array.from(names).sort().map(nm => `<option value="${escapeHtml(nm)}">`).join('');
 }
 
-function switchView(viewName) {
+function switchView(viewName, { activeStoresOnly = false } = {}) {
     state.currentView = viewName;
+    state.activeStoresOnly = activeStoresOnly;
     document.getElementById('btn-open-add-modal').style.display = viewName === 'settings' ? 'none' : '';
     if (viewName === 'settings') loadMasterUsers();
     const dateControl = document.getElementById('calendar-filter-container');
@@ -741,6 +748,13 @@ document.addEventListener('DOMContentLoaded', () => {
             openDrawer(section);
         });
     });
+
+    document.getElementById('btn-active-stores').addEventListener('click', () => {
+        state.storesSearch = '';
+        document.getElementById('stores-search-input').value = '';
+        switchView('stores', { activeStoresOnly: true });
+    });
+    document.getElementById('btn-all-stores').addEventListener('click', () => switchView('stores'));
 
     // 4. Clique nos 4 Cards de Atenção (Filtra a tabela de incidentes)
     document.querySelectorAll('[data-filter-attention]').forEach(card => {

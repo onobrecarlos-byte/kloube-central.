@@ -657,7 +657,7 @@ body.app-layout {
     border-color: var(--border-strong);
 }
 
-.attention-card[data-inspect] {
+#btn-active-stores {
     font: inherit;
     text-align: left;
 }
