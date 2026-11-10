@@ -76,6 +76,18 @@
   },
   "records": [
     {
+      "id": "rec_5cb6a27149",
+      "event_type": "store_published",
+      "store_name": "Amua",
+      "domain": "useshopamua.com",
+      "account_number": "—",
+      "inactive_category": "",
+      "reason": "Loja nova publicada",
+      "created_at": "2026-11-10 12:00:00",
+      "month_key": "2026-11",
+      "source": "manual"
+    },
+    {
       "id": "rec_9147c63fa0",
       "event_type": "store_published",
       "store_name": "Midi Health",
@@ -979,7 +991,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-10 02:40:43",
+  "updated_at": "2026-11-10 02:41:20",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -2486,13 +2498,13 @@
     },
     "Amua": {
       "name": "Amua",
-      "current_domain": "https://useshopamua.com/",
+      "current_domain": "useshopamua.com",
       "domain_swaps_count": 0,
       "domain_history": [],
       "publications": [],
       "suspensions": [],
       "status": "Ativa",
-      "status_verified_at": "2026-11-09 12:00:00",
+      "status_verified_at": "2026-11-10 12:00:00",
       "status_source": "manual"
     },
     "Rivanta": {
