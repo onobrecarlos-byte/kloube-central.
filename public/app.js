@@ -115,7 +115,7 @@ function renderDashboard() {
     const s = state.monthlySummary;
     if (!s) return;
 
-    // Barra superior de 5 Métricas
+    // Métricas do resumo
     document.getElementById('kpi-start-stores').textContent = s.start_active_stores;
     document.getElementById('kpi-active-stores').textContent = s.end_active_stores;
     document.getElementById('label-active-stores').textContent = s.active_is_current ? 'Ativas hoje' : 'Ativas no fim';
@@ -131,7 +131,7 @@ function renderDashboard() {
     document.getElementById('att-val-affected-stores').textContent = s.ads_suspensions.affected_stores;
 
     // Atualiza estado ativo nos cards de atenção
-    document.querySelectorAll('.attention-card').forEach(card => {
+    document.querySelectorAll('[data-filter-attention]').forEach(card => {
         const filterType = card.getAttribute('data-filter-attention');
         card.classList.toggle('active-filter', state.attentionFilter === filterType);
     });
@@ -734,8 +734,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initDatePicker();
 
-    // 3. Clique nos 5 Cards de Métrica da Barra Superior (Abre Drawer)
-    document.querySelectorAll('.metric-kpi-item').forEach(item => {
+    // 3. Clique nos cartões de métricas (abre o painel de detalhes)
+    document.querySelectorAll('[data-inspect]').forEach(item => {
         item.addEventListener('click', () => {
             const section = item.getAttribute('data-inspect');
             openDrawer(section);
@@ -743,7 +743,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // 4. Clique nos 4 Cards de Atenção (Filtra a tabela de incidentes)
-    document.querySelectorAll('.attention-card').forEach(card => {
+    document.querySelectorAll('[data-filter-attention]').forEach(card => {
         card.addEventListener('click', () => {
             const filterType = card.getAttribute('data-filter-attention');
             if (state.attentionFilter === filterType) {

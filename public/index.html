@@ -174,19 +174,6 @@
                     </div>
                 </div>
 
-                <!-- 2. Ativas hoje -->
-                <div class="metric-kpi-item" data-inspect="active_stores" title="Clique para ver todas as lojas ativas hoje">
-                    <div class="kpi-icon-box kpi-icon-box-green">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                        </svg>
-                    </div>
-                    <div class="kpi-body">
-                        <strong class="kpi-number" id="kpi-active-stores">20</strong>
-                        <span class="kpi-label" id="label-active-stores">Ativas hoje</span>
-                    </div>
-                </div>
-
                 <!-- 3. Inativas no mês -->
                 <div class="metric-kpi-item" data-inspect="inactive_all" title="Clique para ver as lojas inativas">
                     <div class="kpi-icon-box kpi-icon-box-muted">
@@ -261,8 +248,19 @@
                     <span class="alert-text">Há registros que precisam de atenção</span>
                 </div>
 
-                <!-- GRADE COM OS 4 CARDS DE ATENÇÃO -->
-                <div class="attention-cards-grid attention-cards-grid-4">
+                <div class="attention-cards-grid">
+                    <button type="button" class="attention-card" data-inspect="active_stores" title="Ver a lista de lojas ativas">
+                        <span class="attention-card-icon kpi-icon-box-green">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                        </span>
+                        <span class="attention-card-info">
+                            <strong class="attention-card-val" id="kpi-active-stores">20</strong>
+                            <span class="attention-card-label" id="label-active-stores">Ativas hoje</span>
+                        </span>
+                    </button>
+
                     <!-- 1. DMCA -->
                     <div class="attention-card" data-filter-attention="dmca" title="Filtrar incidentes de DMCA">
                         <div class="attention-card-icon">

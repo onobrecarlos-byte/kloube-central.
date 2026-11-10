@@ -488,11 +488,6 @@ body.app-layout {
     white-space: nowrap;
 }
 
-/* Grade de 4 Cards de Atenção */
-.attention-cards-grid-4 {
-    grid-template-columns: repeat(4, 1fr);
-}
-
 .store-clickable-link {
     cursor: pointer;
     color: #FFFFFF;
@@ -660,6 +655,15 @@ body.app-layout {
 .attention-card:hover {
     background-color: var(--bg-surface-hover);
     border-color: var(--border-strong);
+}
+
+.attention-card[data-inspect] {
+    font: inherit;
+    text-align: left;
+}
+
+.attention-card-icon.kpi-icon-box-green {
+    border-radius: var(--radius-md);
 }
 
 .attention-card.active-filter {
