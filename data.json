@@ -563,6 +563,17 @@
   ],
   "alerts": [
     {
+      "id": "al_1794318540053",
+      "domain": "useshopjoinmidi.com",
+      "name": "Midi Health",
+      "reason": "Loja bloqueada ou inativa na plataforma (HTTP 423 · This store is unavailable)",
+      "timestamp": "2026-11-10 10:48:49",
+      "desktop_sent": false,
+      "email_sent": true,
+      "email_recipient": "onobrecarlos@gmail.com",
+      "email_info": "E-mail enviado via SMTP para onobrecarlos@gmail.com"
+    },
+    {
       "id": "al_1794296605731",
       "domain": "useshopamua.com",
       "name": "Amua",
