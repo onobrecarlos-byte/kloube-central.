@@ -76,6 +76,18 @@
   },
   "records": [
     {
+      "id": "rec_9147c63fa0",
+      "event_type": "store_published",
+      "store_name": "Midi Health",
+      "domain": "https://useshopjoinmidi.com/",
+      "account_number": "—",
+      "inactive_category": "",
+      "reason": "Loja nova publicada",
+      "created_at": "2026-11-10 12:00:00",
+      "month_key": "2026-11",
+      "source": "manual"
+    },
+    {
       "id": "rec_e28241ef62",
       "event_type": "store_published",
       "store_name": "Freiluftkind",
@@ -967,7 +979,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-10 02:39:52",
+  "updated_at": "2026-11-10 02:40:43",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -2497,6 +2509,17 @@
     "Freiluftkind": {
       "name": "Freiluftkind",
       "current_domain": "usefreiluftkind.com",
+      "domain_swaps_count": 0,
+      "domain_history": [],
+      "publications": [],
+      "suspensions": [],
+      "status": "Ativa",
+      "status_verified_at": "2026-11-10 12:00:00",
+      "status_source": "manual"
+    },
+    "Midi Health": {
+      "name": "Midi Health",
+      "current_domain": "https://useshopjoinmidi.com/",
       "domain_swaps_count": 0,
       "domain_history": [],
       "publications": [],
