@@ -12,24 +12,6 @@
   },
   "domains": [
     {
-      "id": "dom_0f1c0c41d6",
-      "domain": "useshopjoinmidi.com",
-      "url": "https://useshopjoinmidi.com/",
-      "name": "Midi Health",
-      "expected_redirect": "",
-      "status": "offline",
-      "status_label": "Fora do Ar",
-      "reason": "Loja bloqueada ou inativa na plataforma (HTTP 423 · This store is unavailable)",
-      "http_code": 423,
-      "final_url": "https://useshopjoinmidi.com",
-      "ip_address": "23.227.38.65",
-      "response_time_ms": 179,
-      "checked_at": "2026-11-10 10:48:49",
-      "created_at": "2026-11-10 02:40:45",
-      "source": "store_publication",
-      "page_title": "This store is unavailable"
-    },
-    {
       "id": "dom_3078aa4727",
       "domain": "usefreiluftkind.com",
       "url": "https://usefreiluftkind.com",
