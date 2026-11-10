@@ -270,12 +270,6 @@ function updateCountdownUI() {
             ? 'Atualizando todos os domínios...'
             : `Última consulta: ${lastStr} · Próxima em ${formatCountdownMMSS(rem)} · Sincronização multi-usuário ativa`;
     }
-    if (rem <= 0 && state.domains.length > 0 && !isAutoChecking && !state.loading) {
-        const lastLocalCheck = Number(localStorage.getItem(LAST_AUTO_CHECK_KEY) || 0);
-        if ((Date.now() - lastLocalCheck) >= 60000) {
-            runCheckAll(true);
-        }
-    }
 }
 
 function applyState(data) {
@@ -319,10 +313,8 @@ function getBrasiliaTimeHHMM() {
 
 let sessionAccessTime = getBrasiliaTimeHHMM();
 let isAutoChecking = false;
-const LAST_AUTO_CHECK_KEY = 'kloube_last_auto_check_ts_v1';
-
-async function runCheckAll(silent = false) {
-    if (isAutoChecking || (silent && state.settings.monitoring_paused)) return;
+async function runCheckAll() {
+    if (isAutoChecking) return;
     isAutoChecking = true;
 
     const btn = document.getElementById('btn-check-all');
@@ -335,24 +327,14 @@ async function runCheckAll(silent = false) {
     updateCountdownUI();
 
     try {
-        localStorage.setItem(LAST_AUTO_CHECK_KEY, String(Date.now()));
-        const res = await fetch('/monitoramento/api/check-all', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ silent: Boolean(silent) }),
-        });
+        const res = await fetch('/monitoramento/api/check-all', { method: 'POST' });
         const data = await res.json();
-        if (data.ok) {
-            sessionAccessTime = getBrasiliaTimeHHMM();
-            applyState(data);
-            if (!silent) {
-                showToast('Verificação concluída', 'Todos os domínios foram atualizados e o ciclo de 1h foi reiniciado.', 'success');
-            }
-        }
+        if (!res.ok || !data.ok) throw new Error(data.error);
+        sessionAccessTime = getBrasiliaTimeHHMM();
+        applyState(data);
+        showToast('Verificação concluída', 'Domínios monitorados atualizados.', 'success');
     } catch (_) {
-        if (!silent) {
-            showToast('Erro', 'Falha ao verificar os domínios.', 'error');
-        }
+        showToast('Erro', 'Falha ao verificar os domínios.', 'error');
     } finally {
         isAutoChecking = false;
         if (btn) btn.disabled = false;
@@ -369,11 +351,6 @@ async function fetchState() {
         const data = await res.json();
         if (data.ok) {
             applyState(data);
-            const lastLocalCheck = Number(localStorage.getItem(LAST_AUTO_CHECK_KEY) || 0);
-            const canAutoCheck = (Date.now() - lastLocalCheck) >= 60000;
-            if (data.needs_refresh && canAutoCheck && !isAutoChecking) {
-                runCheckAll(true);
-            }
         }
     } catch (err) {
         state.loading = false;
@@ -875,7 +852,7 @@ window.checkSingleDomain = async function(domainId, btnEl) {
     }
 };
 
-document.getElementById('btn-check-all').addEventListener('click', () => runCheckAll(false));
+document.getElementById('btn-check-all').addEventListener('click', runCheckAll);
 
 // ==========================================
 // Configurações & Teste de Notificação

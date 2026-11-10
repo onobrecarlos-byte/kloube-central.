@@ -15,6 +15,7 @@ from .monitor_engine import (
     BRT_TZ,
     DEFAULT_EMAIL,
     DomainStore,
+    apply_domain_check,
     check_single_domain,
     normalize_domain_input,
     now_iso,
@@ -27,7 +28,7 @@ PORT = int(os.environ.get("KLOUBE_PORT", "8765"))
 store = DomainStore()
 
 
-def verify_and_update_domain(domain_id: str, notify_on_fail: bool = True) -> dict | None:
+def verify_and_update_domain(domain_id: str) -> dict | None:
     data = store.load()
     target = None
     for d in data.get("domains", []):
@@ -38,31 +39,32 @@ def verify_and_update_domain(domain_id: str, notify_on_fail: bool = True) -> dic
     if not target:
         return None
 
-    prev_status = target.get("status", "unknown")
     result = check_single_domain(
         target["domain"], target.get("expected_redirect", "")
     )
 
     # Reload to avoid race conditions
     data = store.load()
-    updated_domain = None
     for d in data.get("domains", []):
         if d["id"] == domain_id:
-            d.update(result)
-            updated_domain = dict(d)
-            break
-    store.save(data)
-
-    # Trigger notification if domain is offline (Fora do Ar)
-    if updated_domain and result["status"] == "offline" and notify_on_fail:
-        # Notify if it just went offline, or was never checked before, or user manually requested check
-        if prev_status != "offline" or prev_status == "unknown":
-            store.trigger_alert(updated_domain, result)
-
-    return updated_domain
+            if _can_apply_check(d, target, result):
+                apply_domain_check(d, result, data.get("alerts", []))
+                store.save(data)
+                if d["status"] == "offline":
+                    store.trigger_alert(dict(d), result)
+            return d
+    return None
 
 
-def verify_all_domains(force_notify: bool = False, include_drafts: bool = False) -> list[dict]:
+def _can_apply_check(current, target, result):
+    return (current["domain"] == target["domain"]
+            and current.get("expected_redirect") == target.get("expected_redirect")
+            and (current.get("status") != "draft" or target.get("status") == "draft")
+            and result["checked_at"] >= (current.get("checked_at") or ""))
+
+
+def verify_all_domains(include_drafts: bool = False) -> list[dict]:
+    started_at = time.time()
     data = store.load()
     all_domains = data.get("domains", [])
     domains = [
@@ -72,7 +74,7 @@ def verify_all_domains(force_notify: bool = False, include_drafts: bool = False)
     if not domains:
         return all_domains
 
-    prev_statuses = {d["id"]: d.get("status", "unknown") for d in domains}
+    targets = {d["id"]: d for d in domains}
 
     def _check(d_item):
         res = check_single_domain(
@@ -94,13 +96,12 @@ def verify_all_domains(force_notify: bool = False, include_drafts: bool = False)
     to_alert = []
     for d in data.get("domains", []):
         res = results_map.get(d["id"])
-        if res:
-            old_st = prev_statuses.get(d["id"], "unknown")
-            d.update(res)
-            if res["status"] == "offline" and (
-                old_st != "offline" or force_notify
-            ):
+        if res and _can_apply_check(d, targets[d["id"]], res):
+            apply_domain_check(d, res, data.get("alerts", []))
+            if res["status"] == "offline":
                 to_alert.append((dict(d), res))
+    if results_map:
+        data["last_full_check_ts"] = max(started_at, data.get("last_full_check_ts", 0))
     store.save(data)
 
     for d_copy, res in to_alert:
@@ -133,7 +134,7 @@ def _should_refresh_domains(data: dict) -> bool:
     if not domains:
         return False
     interval = int(data.get("settings", {}).get("check_interval_seconds", 3600))
-    latest_ts = _get_latest_checked_ts(domains)
+    latest_ts = data.get("last_full_check_ts") or _get_latest_checked_ts(domains)
     if latest_ts <= 0:
         return True
     return (time.time() - latest_ts) >= interval
@@ -155,7 +156,8 @@ def _build_state_payload(data: dict) -> dict:
     ]
     latest_ts = _get_latest_checked_ts(domains)
     interval = int(data.get("settings", {}).get("check_interval_seconds", 3600))
-    next_check_ts = (latest_ts + interval) if latest_ts > 0 else now_epoch
+    last_full_check_ts = data.get("last_full_check_ts") or latest_ts
+    next_check_ts = (last_full_check_ts + interval) if last_full_check_ts > 0 else now_epoch
     remaining_sec = max(0, int(next_check_ts - now_epoch))
 
     return {
@@ -187,10 +189,10 @@ def background_monitor_loop():
             interval = max(60, interval)
             domains = data.get("domains", [])
             if domains:
-                latest_ts = _get_latest_checked_ts(domains)
+                latest_ts = data.get("last_full_check_ts") or _get_latest_checked_ts(domains)
                 elapsed = time.time() - latest_ts if latest_ts > 0 else interval
                 if elapsed >= interval:
-                    verify_all_domains(force_notify=False)
+                    verify_all_domains()
                     time.sleep(interval)
                 else:
                     wait_remaining = max(15, int(interval - elapsed))
@@ -233,7 +235,7 @@ class KloubeHandler(BaseHTTPRequestHandler):
         if path == "/api/cron":
             if store.load().get("settings", {}).get("monitoring_paused", False):
                 return self._send_json(_build_state_payload(store.load()))
-            verify_all_domains(force_notify=False, include_drafts=False)
+            verify_all_domains()
             data = store.load()
             return self._send_json(_build_state_payload(data))
 
@@ -314,7 +316,7 @@ class KloubeHandler(BaseHTTPRequestHandler):
             store.save(data)
 
             # Check immediately and notify if offline
-            updated = verify_and_update_domain(new_id, notify_on_fail=True)
+            updated = verify_and_update_domain(new_id)
             return self._send_json(
                 {"ok": True, "domain": updated, "state": _build_state_payload(store.load())}
             )
@@ -323,27 +325,12 @@ class KloubeHandler(BaseHTTPRequestHandler):
             parts = path.strip("/").split("/")
             if len(parts) == 4:
                 domain_id = parts[2]
-                data = store.load()
-                target = next(
-                    (d for d in data.get("domains", []) if d["id"] == domain_id),
-                    None,
-                )
+                target = verify_and_update_domain(domain_id)
                 if not target:
                     return self._send_json(
                         {"ok": False, "error": "Domínio não encontrado"},
                         status=404,
                     )
-                res = check_single_domain(
-                    target["domain"], target.get("expected_redirect", "")
-                )
-                for d in data.get("domains", []):
-                    if d["id"] == domain_id:
-                        d.update(res)
-                        target = dict(d)
-                        break
-                store.save(data)
-                if res["status"] == "offline":
-                    store.trigger_alert(target, res)
                 return self._send_json(
                     {"ok": True, "domain": target, "state": _build_state_payload(store.load())}
                 )
@@ -363,13 +350,9 @@ class KloubeHandler(BaseHTTPRequestHandler):
                         status=404,
                     )
                 if target.get("status") == "draft":
-                    res = check_single_domain(
-                        target["domain"], target.get("expected_redirect", "")
-                    )
-                    target.update(res)
-                    store.save(data)
-                    if res["status"] == "offline":
-                        store.trigger_alert(dict(target), res)
+                    target = verify_and_update_domain(domain_id)
+                    if target is None:
+                        return self._send_json({"ok": False, "error": "Domínio não encontrado"}, status=404)
                 else:
                     target["status"] = "draft"
                     target["status_label"] = "Rascunho"
@@ -380,14 +363,14 @@ class KloubeHandler(BaseHTTPRequestHandler):
                 )
 
         if path == "/api/activate-drafts":
-            verify_all_domains(force_notify=True, include_drafts=True)
+            verify_all_domains(include_drafts=True)
             return self._send_json(_build_state_payload(store.load()))
 
         if path == "/api/check-all":
             is_silent = bool(body.get("silent", False))
             if is_silent and store.load().get("settings", {}).get("monitoring_paused", False):
                 return self._send_json(_build_state_payload(store.load()))
-            verify_all_domains(force_notify=not is_silent, include_drafts=False)
+            verify_all_domains()
             return self._send_json(_build_state_payload(store.load()))
 
         if path == "/api/monitor-controls":
@@ -549,6 +532,10 @@ class KloubeHandler(BaseHTTPRequestHandler):
                         status=400,
                     )
                 if d["id"] == domain_id:
+                    if d["domain"] != clean_host:
+                        d["status"] = "unknown"
+                        d.pop("outage_id", None)
+                        d.pop("outage_alert_id", None)
                     d["domain"] = clean_host
                     d["url"] = clean_url
                     d["name"] = name or clean_host
@@ -561,7 +548,7 @@ class KloubeHandler(BaseHTTPRequestHandler):
                 )
 
             store.save(data)
-            updated = verify_and_update_domain(domain_id, notify_on_fail=True)
+            updated = verify_and_update_domain(domain_id)
             return self._send_json(
                 {"ok": True, "domain": updated, "state": _build_state_payload(store.load())}
             )

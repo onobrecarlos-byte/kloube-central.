@@ -17,10 +17,11 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Verificar intervalo e pausa; atualizar domínios e registros sem e-mail
+      - name: Verificar domínios e notificar novas quedas
         env:
           GITHUB_TOKEN: ${{ github.token }}
           KLOUBE_GITHUB_REPO: ${{ github.repository }}
           KLOUBE_GITHUB_BRANCH: ${{ github.ref_name }}
           KLOUBE_ENABLE_PC_MONITOR: '0'
+          KLOUBE_SMTP_PASS: ${{ secrets.KLOUBE_SMTP_PASS }}
         run: python check_cli.py

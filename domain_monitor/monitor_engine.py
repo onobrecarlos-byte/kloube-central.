@@ -537,11 +537,25 @@ def matches_account_password(password: str, stored: str) -> bool:
         return False
 
 
+def apply_domain_check(domain: dict, result: dict, alerts: list[dict]):
+    if result["status"] == "online":
+        domain.pop("outage_id", None)
+        domain.pop("outage_alert_id", None)
+    elif result["status"] == "offline" and not domain.get("outage_id"):
+        domain["outage_id"] = secrets.token_hex(12)
+        if domain.get("status") == "offline":
+            previous = next((alert for alert in alerts
+                             if alert.get("domain") == domain["domain"] and alert.get("email_sent")), None)
+            if previous:
+                domain["outage_alert_id"] = previous["id"]
+    domain.update(result)
+
+
 class DomainStore:
     def __init__(self, path: Path = DATA_FILE):
         self.path = path
         self.tmp_path = Path("/tmp/kloube_data.json")
-        self.lock = threading.Lock()
+        self.lock = threading.RLock()
         from shared_github import GitHubFile
         self.shared_file = GitHubFile("data.json")
         self.reset_codes: dict[str, tuple[str, float]] = {}
@@ -845,40 +859,58 @@ class DomainStore:
         self.save(data)
         return True, target_email
 
-    def save(self, data: dict):
+    def save(self, data: dict, *, sync_report: bool = True):
         from shared_github import enabled
         with self.lock:
             if enabled():
                 self.shared_file.save(data)
             else:
                 self._write_raw(json.dumps(data, indent=2, ensure_ascii=False))
-        from monitor_bridge import sync
-        sync(data.get("domains", []))
+        if sync_report:
+            from monitor_bridge import sync
+            sync(data.get("domains", []))
 
     def trigger_alert(self, domain_obj: dict, check_result: dict, force: bool = False):
-        data = self.load()
-        settings = data.get("settings", {})
-        recipient = settings.get("notify_email", DEFAULT_EMAIL)
-
+        from shared_github import StorageConflict
         domain_name = domain_obj.get("domain", "")
         label = domain_obj.get("name") or domain_name
         reason = check_result.get("reason", "Domínio inacessível ou sem direcionamento")
         checked_at = check_result.get("checked_at", now_iso())
 
-        # Evitar envio repetido em menos de 1 hora para o mesmo domínio
-        if not force:
-            interval = max(3600, int(settings.get("check_interval_seconds", 3600)))
-            now_ts = time.time()
-            for existing_alert in data.get("alerts", []):
-                if existing_alert.get("domain", "").lower() == domain_name.lower():
-                    ts_str = existing_alert.get("timestamp", "")
-                    try:
-                        dt = datetime.strptime(ts_str, "%Y-%m-%d %H:%M:%S").replace(tzinfo=BRT_TZ)
-                        if (now_ts - dt.timestamp()) < interval:
-                            return existing_alert
-                    except Exception:
-                        pass
+        alert_entry = {
+            "id": "al_" + secrets.token_hex(12),
+            "domain": domain_name,
+            "name": label,
+            "reason": reason,
+            "timestamp": checked_at,
+            "desktop_sent": False,
+            "email_sent": False,
+            "email_info": "Envio reservado",
+        }
+        # Reserve the outage in shared storage before contacting SMTP.
+        for attempt in range(3):
+            with self.lock:
+                data = self.load()
+                settings = data.get("settings", {})
+                recipient = settings.get("notify_email", DEFAULT_EMAIL)
+                alert_entry["email_recipient"] = recipient
+                if not force:
+                    current = next((domain for domain in data.get("domains", [])
+                                    if domain["id"] == domain_obj.get("id")), None)
+                    if (not current or current.get("status") != "offline"
+                            or current.get("domain") != domain_name
+                            or not current.get("outage_id")
+                            or current["outage_id"] != domain_obj.get("outage_id")
+                            or current.get("outage_alert_id")):
+                        return None
+                    current["outage_alert_id"] = alert_entry["id"]
+                data["alerts"] = [alert_entry, *data.get("alerts", [])][:500]
+                try:
+                    self.save(data, sync_report=False)
                     break
+                except StorageConflict:
+                    if attempt == 2:
+                        raise
 
         title = f"🚨 KLOUBE ALERTA: {domain_name} Fora do Ar!"
         msg_text = (
@@ -922,21 +954,18 @@ class DomainStore:
                 settings=settings,
             )
 
-        alert_entry = {
-            "id": f"al_{int(time.time() * 1000)}",
-            "domain": domain_name,
-            "name": label,
-            "reason": reason,
-            "timestamp": checked_at,
-            "desktop_sent": desktop_sent,
-            "email_sent": email_sent,
-            "email_recipient": recipient,
-            "email_info": email_info,
-        }
-
-        data = self.load()
-        alerts = data.get("alerts", [])
-        alerts.insert(0, alert_entry)
-        data["alerts"] = alerts[:500]
-        self.save(data)
+        alert_entry.update(desktop_sent=desktop_sent, email_sent=email_sent, email_info=email_info)
+        for attempt in range(3):
+            with self.lock:
+                data = self.load()
+                saved = next((alert for alert in data.get("alerts", []) if alert["id"] == alert_entry["id"]), None)
+                if saved is None:
+                    break
+                saved.update(alert_entry)
+                try:
+                    self.save(data, sync_report=False)
+                    break
+                except StorageConflict:
+                    if attempt == 2:
+                        raise
         return alert_entry

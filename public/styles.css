@@ -1327,6 +1327,22 @@ body.app-layout {
     }
     .sidebar-brand:has(.mobile-menu-toggle[aria-expanded="true"]) + .sidebar-nav {
         display: flex;
+        min-height: 0;
+        max-height: none;
+        overscroll-behavior: contain;
+    }
+    .sidebar:has(.mobile-menu-toggle[aria-expanded="true"]) {
+        position: fixed;
+        inset: 0;
+        height: 100%;
+        height: 100dvh;
+        z-index: 2500;
+        padding-bottom: max(10px, env(safe-area-inset-bottom));
+    }
+    html:has(.mobile-menu-toggle[aria-expanded="true"]),
+    body:has(.mobile-menu-toggle[aria-expanded="true"]) {
+        overflow: hidden;
+        overscroll-behavior: none;
     }
     .sidebar-nav .nav-item {
         min-height: 44px;
