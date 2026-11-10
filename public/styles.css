@@ -78,7 +78,7 @@ body.app-layout {
     padding: 0 8px 24px 8px;
 }
 
-.mobile-menu-toggle {
+.mobile-menu-toggle, .mobile-back-btn {
     display: none;
 }
 
@@ -1301,11 +1301,10 @@ body.app-layout {
     .sidebar-brand {
         padding: 0;
     }
-    .mobile-menu-toggle {
+    .mobile-menu-toggle, .mobile-back-btn:not([hidden]) {
         display: inline-flex;
         align-items: center;
         min-height: 44px;
-        margin-left: auto;
         padding: 0 14px;
         background: var(--bg-surface);
         border: 1px solid var(--border-default);
@@ -1313,6 +1312,12 @@ body.app-layout {
         color: var(--text-primary);
         font: inherit;
         cursor: pointer;
+    }
+    .mobile-menu-toggle {
+        margin-left: auto;
+    }
+    .mobile-back-btn {
+        gap: 6px;
     }
     .sidebar-nav {
         display: none;

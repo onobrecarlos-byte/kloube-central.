@@ -675,9 +675,20 @@ function populateDatalist() {
     datalist.innerHTML = Array.from(names).sort().map(nm => `<option value="${escapeHtml(nm)}">`).join('');
 }
 
-function switchView(viewName, { activeStoresOnly = false } = {}) {
+const previousPage = new URL(document.referrer || location.href);
+const cameFromMonitor = previousPage.origin === location.origin && previousPage.pathname === '/monitoramento/';
+
+function switchView(viewName, { activeStoresOnly = false, updateHistory = true } = {}) {
+    if (updateHistory && (state.currentView !== viewName || state.activeStoresOnly !== activeStoresOnly)) {
+        const url = new URL(location.href);
+        url.searchParams.set('view', viewName);
+        if (activeStoresOnly) url.searchParams.set('active', '1');
+        else url.searchParams.delete('active');
+        history.pushState({ ...history.state, kloubeBack: true }, '', url);
+    }
     state.currentView = viewName;
     state.activeStoresOnly = activeStoresOnly;
+    document.getElementById('mobile-back-btn').hidden = viewName === 'summary' && !history.state?.kloubeBack && !cameFromMonitor;
     document.getElementById('btn-open-add-modal').style.display = viewName === 'settings' ? 'none' : '';
     if (viewName === 'settings') loadMasterUsers();
     const dateControl = document.getElementById('calendar-filter-container');
@@ -734,6 +745,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileMenu = document.getElementById('mobile-menu-toggle');
     mobileMenu.addEventListener('click', () => {
         mobileMenu.setAttribute('aria-expanded', String(mobileMenu.getAttribute('aria-expanded') !== 'true'));
+    });
+    const restoreView = () => {
+        const params = new URLSearchParams(location.search);
+        const requestedView = params.get('view');
+        const view = ['summary','stores','incidents','records','settings','trash'].includes(requestedView) ? requestedView : 'summary';
+        mobileMenu.setAttribute('aria-expanded', 'false');
+        if (state.activeDrawerSection) closeDrawer();
+        switchView(view, { activeStoresOnly: view === 'stores' && params.get('active') === '1', updateHistory: false });
+    };
+    window.addEventListener('popstate', restoreView);
+    document.getElementById('mobile-back-btn').addEventListener('click', () => {
+        if (history.state?.kloubeBack || cameFromMonitor) history.back();
+        else location.replace('/?view=summary');
     });
 
     // 1. Navegação lateral
@@ -1205,8 +1229,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    const requestedView = new URLSearchParams(location.search).get('view');
-    if (['summary','stores','incidents','records','settings','trash'].includes(requestedView)) switchView(requestedView);
+    restoreView();
 
     // Carregamento inicial e sincronização em tempo real
     fetchState();

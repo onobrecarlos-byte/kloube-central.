@@ -1322,6 +1322,11 @@ const mobileMenu = document.getElementById('mobile-menu-toggle');
 mobileMenu.addEventListener('click', () => {
     mobileMenu.setAttribute('aria-expanded', String(mobileMenu.getAttribute('aria-expanded') !== 'true'));
 });
+document.getElementById('mobile-back-btn').addEventListener('click', () => {
+    const previousPage = new URL(document.referrer || location.href);
+    if (previousPage.origin === location.origin && previousPage.pathname === '/') history.back();
+    else location.replace('/?view=summary');
+});
 document.getElementById('unified-logout').addEventListener('click', () => document.getElementById('btn-logout').click());
 
 async function saveMonitorControls(payload) {

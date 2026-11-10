@@ -98,7 +98,7 @@
 .sidebar .sidebar-brand,.sidebar .sidebar-nav,.sidebar .nav-item {margin:0;box-sizing:border-box}
 .sidebar .nav-item {font-family:inherit;line-height:normal;text-decoration:none}
 .sidebar .brand-logo-badge svg {display:block}
-.mobile-menu-toggle {
+.mobile-menu-toggle, .mobile-back-btn {
     display: none;
 }
 
@@ -116,11 +116,10 @@
     .sidebar .sidebar-brand {
         padding: 0;
     }
-    .mobile-menu-toggle {
+    .mobile-menu-toggle, .mobile-back-btn {
         display: inline-flex;
         align-items: center;
         min-height: 44px;
-        margin-left: auto;
         padding: 0 14px;
         background: #131C2B;
         border: 1px solid #25334A;
@@ -128,6 +127,12 @@
         color: #FFFFFF;
         font: inherit;
         cursor: pointer;
+    }
+    .mobile-menu-toggle {
+        margin-left: auto;
+    }
+    .mobile-back-btn {
+        gap: 6px;
     }
     .sidebar .sidebar-nav {
         display: none;
