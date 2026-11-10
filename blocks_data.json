@@ -80,7 +80,7 @@
       "event_type": "store_inactive",
       "store_name": "Amua",
       "domain": "useshopamua.com",
-      "account_number": "—",
+      "account_number": "Google Ads 96",
       "inactive_category": "dmca",
       "reason": "DMCA",
       "created_at": "2026-11-10 04:43:06",
@@ -94,7 +94,7 @@
       "event_type": "store_inactive",
       "store_name": "Midi Health",
       "domain": "useshopjoinmidi.com",
-      "account_number": "—",
+      "account_number": "Google Ads 97",
       "inactive_category": "dmca",
       "reason": "DMCA",
       "created_at": "2026-11-10 04:43:05",
@@ -111,7 +111,7 @@
       "account_number": "Google Ads 96",
       "inactive_category": "",
       "reason": "Loja nova publicada",
-      "created_at": "2026-11-10 12:00:00",
+      "created_at": "2026-11-10 00:00:00",
       "month_key": "2026-11",
       "source": "manual"
     },
@@ -120,10 +120,10 @@
       "event_type": "store_published",
       "store_name": "Midi Health",
       "domain": "https://useshopjoinmidi.com/",
-      "account_number": "Gooogle Ads 97",
+      "account_number": "Google Ads 97",
       "inactive_category": "",
       "reason": "Loja nova publicada",
-      "created_at": "2026-11-10 12:00:00",
+      "created_at": "2026-11-10 00:00:00",
       "month_key": "2026-11",
       "source": "manual"
     },
@@ -2531,9 +2531,9 @@
       "domain_history": [],
       "publications": [],
       "suspensions": [],
-      "status": "Ativa",
-      "status_verified_at": "2026-11-10 12:00:00",
-      "status_source": "manual"
+      "status": "Inativa",
+      "status_verified_at": "2026-11-10 04:43:06",
+      "status_source": "domain_monitor"
     },
     "Rivanta": {
       "name": "Rivanta",
@@ -2564,9 +2564,9 @@
       "domain_history": [],
       "publications": [],
       "suspensions": [],
-      "status": "Ativa",
-      "status_verified_at": "2026-11-10 12:00:00",
-      "status_source": "manual"
+      "status": "Inativa",
+      "status_verified_at": "2026-11-10 04:43:05",
+      "status_source": "domain_monitor"
     }
   },
   "operational_snapshot": {
