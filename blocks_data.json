@@ -76,6 +76,18 @@
   },
   "records": [
     {
+      "id": "rec_83314ade40",
+      "event_type": "store_published",
+      "store_name": "Rivanta",
+      "domain": "https://rivantashop.com/",
+      "account_number": "—",
+      "inactive_category": "",
+      "reason": "Loja nova publicada",
+      "created_at": "2026-11-10 12:00:00",
+      "month_key": "2026-11",
+      "source": "manual"
+    },
+    {
       "id": "rec_86a0a8e5bb",
       "event_type": "store_published",
       "store_name": "Amua",
@@ -943,7 +955,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-10 02:32:56",
+  "updated_at": "2026-11-10 02:39:10",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -2457,6 +2469,17 @@
       "suspensions": [],
       "status": "Ativa",
       "status_verified_at": "2026-11-09 12:00:00",
+      "status_source": "manual"
+    },
+    "Rivanta": {
+      "name": "Rivanta",
+      "current_domain": "https://rivantashop.com/",
+      "domain_swaps_count": 0,
+      "domain_history": [],
+      "publications": [],
+      "suspensions": [],
+      "status": "Ativa",
+      "status_verified_at": "2026-11-10 12:00:00",
       "status_source": "manual"
     }
   },
