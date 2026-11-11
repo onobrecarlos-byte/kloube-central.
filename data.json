@@ -12,6 +12,23 @@
   },
   "domains": [
     {
+      "id": "dom_11f51b8eaf",
+      "domain": "useavulea.com",
+      "url": "https://useavulea.com",
+      "name": "Avulea",
+      "expected_redirect": "",
+      "status": "unknown",
+      "status_label": "Aguardando verificação",
+      "reason": "Cadastrado automaticamente com a publicação da loja.",
+      "http_code": null,
+      "final_url": "",
+      "ip_address": "",
+      "response_time_ms": 0,
+      "checked_at": "",
+      "created_at": "2026-11-11 03:13:29",
+      "source": "store_publication"
+    },
+    {
       "id": "dom_90e21fcc4a",
       "domain": "usenuclever.com",
       "url": "https://usenuclever.com",
@@ -950,6 +967,7 @@
     "rec_6b405c0296",
     "rec_83314ade40",
     "rec_86a0a8e5bb",
+    "rec_8a1981ec67",
     "rec_9147c63fa0",
     "rec_924cc26b47",
     "rec_94e346e82b",
