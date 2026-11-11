@@ -1089,7 +1089,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-11 03:15:59",
+  "updated_at": "2026-11-11 03:16:05",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -2929,6 +2929,18 @@
       "category": "",
       "record_id": "",
       "store_name": "ShinDefender"
+    },
+    "dom_dd8feb0677": {
+      "checked_at": "2026-11-11 03:16:03",
+      "category": "",
+      "record_id": "",
+      "store_name": "Auria"
+    },
+    "dom_11f51b8eaf": {
+      "checked_at": "2026-11-11 03:16:01",
+      "category": "",
+      "record_id": "",
+      "store_name": "Avulea"
     }
   },
   "deleted_records": [
