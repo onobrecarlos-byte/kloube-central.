@@ -1019,7 +1019,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-11 03:07:24",
+  "updated_at": "2026-11-11 03:12:33",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -3024,6 +3024,19 @@
       ],
       "created_at": "2026-11-07 10:51:16",
       "expires_at": 1801835476.328415,
+      "user_version": "5dcd6107954e57741941e5c52b3af8cae35cd47f9656749cb95ad9c80c8e2956"
+    },
+    {
+      "id": "658a93b8f3f74015964652f817c1daa9",
+      "name": "Codex - Carlos 1",
+      "owner": "onobrecarlos@gmail.com",
+      "hash": "669da2f0a57b9c20a51c6a8fd4117f2a87f03305509eab25bc3810d190228bc5",
+      "scopes": [
+        "read",
+        "write"
+      ],
+      "created_at": "2026-11-11 03:12:33",
+      "expires_at": 1802153553.466713,
       "user_version": "5dcd6107954e57741941e5c52b3af8cae35cd47f9656749cb95ad9c80c8e2956"
     }
   ]
