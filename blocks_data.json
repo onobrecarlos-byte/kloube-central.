@@ -1089,7 +1089,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-11 03:16:09",
+  "updated_at": "2026-11-11 03:16:13",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -2947,6 +2947,12 @@
       "category": "",
       "record_id": "",
       "store_name": "Tradesman Nutrition"
+    },
+    "dom_90e21fcc4a": {
+      "checked_at": "2026-11-11 03:16:12",
+      "category": "",
+      "record_id": "",
+      "store_name": "Nuclever Italia"
     }
   },
   "deleted_records": [
