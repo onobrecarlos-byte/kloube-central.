@@ -340,7 +340,8 @@
       "page_title": "This store is unavailable",
       "operational_active": true,
       "current_ads_account": "Google Ads 68",
-      "outage_id": "f2ce1907ee1c3837b9922e06"
+      "outage_id": "f2ce1907ee1c3837b9922e06",
+      "outage_alert_id": "al_20c2ebb803513b0bca2eec46"
     },
     {
       "id": "dom_krakatoa",
@@ -601,6 +602,17 @@
     }
   ],
   "alerts": [
+    {
+      "id": "al_20c2ebb803513b0bca2eec46",
+      "domain": "sleepsakeco.com",
+      "name": "Sleepsake 2",
+      "reason": "Loja bloqueada ou inativa na plataforma (HTTP 423 · This store is unavailable)",
+      "timestamp": "2026-11-11 19:39:33",
+      "desktop_sent": false,
+      "email_sent": false,
+      "email_info": "Envio reservado",
+      "email_recipient": "onobrecarlos@gmail.com, alertas.kloube@gmail.com"
+    },
     {
       "id": "al_1794318542990",
       "domain": "useshopamua.com",
