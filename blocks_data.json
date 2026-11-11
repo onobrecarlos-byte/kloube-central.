@@ -1089,7 +1089,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-11 03:13:34",
+  "updated_at": "2026-11-11 03:15:59",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -2923,6 +2923,12 @@
       "category": "dmca",
       "record_id": "rec_a4d0684939",
       "store_name": "Midi Health"
+    },
+    "dom_d1c4b6d9e7": {
+      "checked_at": "2026-11-11 03:15:56",
+      "category": "",
+      "record_id": "",
+      "store_name": "ShinDefender"
     }
   },
   "deleted_records": [
