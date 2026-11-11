@@ -76,6 +76,20 @@
   },
   "records": [
     {
+      "id": "rec_79d520a328",
+      "event_type": "ads_suspended",
+      "store_name": "KOJEVA",
+      "domain": "https://trykojevastore.com/",
+      "account_number": "Google Ads 95",
+      "inactive_category": "",
+      "reason": "",
+      "created_at": "2026-11-10 00:00:00",
+      "month_key": "2026-11",
+      "source": "integration",
+      "created_by": "onobrecarlos@gmail.com",
+      "integration_id": "658a93b8f3f74015964652f817c1daa9"
+    },
+    {
       "id": "rec_bc073f5a05",
       "event_type": "store_published",
       "store_name": "Tradesman Nutrition",
@@ -1089,7 +1103,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-11 03:38:08",
+  "updated_at": "2026-11-11 03:39:19",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -3285,6 +3299,25 @@
         "inactive_category": "",
         "reason": "Google Ads 105 - BRL",
         "created_at": "2026-11-11 00:00:00",
+        "month_key": "2026-11",
+        "source": "integration",
+        "created_by": "onobrecarlos@gmail.com",
+        "integration_id": "658a93b8f3f74015964652f817c1daa9"
+      }
+    },
+    {
+      "token_id": "658a93b8f3f74015964652f817c1daa9",
+      "key": "kojeva-ads-suspended-95-20261110",
+      "body_hash": "dfa8cf6c3506f7af138cda0dc4535b3ac87b3a3d2a6ea719d7d90efd5f2ddf0e",
+      "record": {
+        "id": "rec_79d520a328",
+        "event_type": "ads_suspended",
+        "store_name": "KOJEVA",
+        "domain": "https://trykojevastore.com/",
+        "account_number": "Google Ads 95",
+        "inactive_category": "",
+        "reason": "",
+        "created_at": "2026-11-10 00:00:00",
         "month_key": "2026-11",
         "source": "integration",
         "created_by": "onobrecarlos@gmail.com",
