@@ -1089,7 +1089,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-11 03:16:13",
+  "updated_at": "2026-11-11 03:38:08",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -2532,9 +2532,9 @@
       "domain_history": [],
       "publications": [],
       "suspensions": [],
-      "status": "Ativa",
-      "status_verified_at": "2026-11-09 13:10:11",
-      "status_source": "whatsapp_group"
+      "status": "Inativa",
+      "status_verified_at": "2026-11-11 03:38:08",
+      "status_source": "manual"
     },
     "Rework Gear": {
       "name": "Rework Gear",
