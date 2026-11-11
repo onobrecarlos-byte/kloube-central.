@@ -76,6 +76,20 @@
   },
   "records": [
     {
+      "id": "rec_1a281b2458",
+      "event_type": "store_published",
+      "store_name": "Auria",
+      "domain": "getaurialight.com",
+      "account_number": "—",
+      "inactive_category": "",
+      "reason": "Google Ads 104 - BRL",
+      "created_at": "2026-11-11 00:00:00",
+      "month_key": "2026-11",
+      "source": "integration",
+      "created_by": "onobrecarlos@gmail.com",
+      "integration_id": "658a93b8f3f74015964652f817c1daa9"
+    },
+    {
       "id": "rec_8a1981ec67",
       "event_type": "store_published",
       "store_name": "Avulea",
@@ -1061,7 +1075,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-11 03:13:27",
+  "updated_at": "2026-11-11 03:13:30",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -2642,6 +2656,17 @@
       "status": "Ativa",
       "status_verified_at": "2026-11-11 00:00:00",
       "status_source": "integration"
+    },
+    "Auria": {
+      "name": "Auria",
+      "current_domain": "getaurialight.com",
+      "domain_swaps_count": 0,
+      "domain_history": [],
+      "publications": [],
+      "suspensions": [],
+      "status": "Ativa",
+      "status_verified_at": "2026-11-11 00:00:00",
+      "status_source": "integration"
     }
   },
   "operational_snapshot": {
@@ -3166,6 +3191,25 @@
         "account_number": "—",
         "inactive_category": "",
         "reason": "Google Ads 103 - USD",
+        "created_at": "2026-11-11 00:00:00",
+        "month_key": "2026-11",
+        "source": "integration",
+        "created_by": "onobrecarlos@gmail.com",
+        "integration_id": "658a93b8f3f74015964652f817c1daa9"
+      }
+    },
+    {
+      "token_id": "658a93b8f3f74015964652f817c1daa9",
+      "key": "publication-20261111-getaurialight.com",
+      "body_hash": "f68ad28fea4c78725f1a721adf91cca7981ca7757cb98ed24e6940094fb4e64c",
+      "record": {
+        "id": "rec_1a281b2458",
+        "event_type": "store_published",
+        "store_name": "Auria",
+        "domain": "getaurialight.com",
+        "account_number": "—",
+        "inactive_category": "",
+        "reason": "Google Ads 104 - BRL",
         "created_at": "2026-11-11 00:00:00",
         "month_key": "2026-11",
         "source": "integration",
