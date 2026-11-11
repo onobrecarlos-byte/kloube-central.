@@ -150,7 +150,7 @@
       "event_type": "store_published",
       "store_name": "ShinDefender",
       "domain": "useshindefender.com",
-      "account_number": "—",
+      "account_number": "Google Ads 100",
       "inactive_category": "",
       "reason": "Google Ads 100 - USD",
       "created_at": "2026-11-11 00:00:00",
@@ -1103,7 +1103,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-11 03:41:37",
+  "updated_at": "2026-11-11 03:41:52",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
