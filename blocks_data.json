@@ -1089,7 +1089,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-11 03:16:05",
+  "updated_at": "2026-11-11 03:16:09",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -2941,6 +2941,12 @@
       "category": "",
       "record_id": "",
       "store_name": "Avulea"
+    },
+    "dom_bd2322cf95": {
+      "checked_at": "2026-11-11 03:16:06",
+      "category": "",
+      "record_id": "",
+      "store_name": "Tradesman Nutrition"
     }
   },
   "deleted_records": [
