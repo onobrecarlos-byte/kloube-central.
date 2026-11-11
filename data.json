@@ -272,23 +272,6 @@
       "page_title": "Rework Gear"
     },
     {
-      "id": "dom_6c22b475bf",
-      "domain": "trykojevastore.com",
-      "url": "https://trykojevastore.com/",
-      "name": "Kojeva",
-      "expected_redirect": "",
-      "status": "online",
-      "status_label": "Ativo",
-      "reason": "Direcionamento ativo (200 OK)",
-      "http_code": 200,
-      "final_url": "https://trykojevastore.com",
-      "ip_address": "23.227.38.65",
-      "response_time_ms": 227,
-      "checked_at": "2026-11-11 10:30:02",
-      "created_at": "2026-11-06 11:24:12",
-      "page_title": "Kojeva"
-    },
-    {
       "id": "dom_dedfadd507",
       "domain": "honeycloudzshop.com",
       "url": "https://honeycloudzshop.com/",
