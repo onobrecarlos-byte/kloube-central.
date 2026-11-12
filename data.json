@@ -48,26 +48,6 @@
       "page_title": "Auria"
     },
     {
-      "id": "dom_11f51b8eaf",
-      "domain": "useavulea.com",
-      "url": "https://useavulea.com",
-      "name": "Avulea",
-      "expected_redirect": "",
-      "status": "offline",
-      "status_label": "Fora do Ar",
-      "reason": "Certificado SSL inválido ou expirado",
-      "http_code": 409,
-      "final_url": "",
-      "ip_address": "23.227.38.65",
-      "response_time_ms": 0,
-      "checked_at": "2026-11-12 11:34:06",
-      "created_at": "2026-11-11 03:13:29",
-      "source": "store_publication",
-      "page_title": "",
-      "outage_id": "c6379fb3a134686cd8060105",
-      "outage_alert_id": "al_a405dcf1ef281d0f439a9fe6"
-    },
-    {
       "id": "dom_90e21fcc4a",
       "domain": "usenuclever.com",
       "url": "https://usenuclever.com",
