@@ -323,27 +323,6 @@
       "page_title": "Softari"
     },
     {
-      "id": "dom_21f5cdb565",
-      "domain": "sleepsakeco.com",
-      "url": "https://sleepsakeco.com/",
-      "name": "Sleepsake 2",
-      "expected_redirect": "",
-      "status": "offline",
-      "status_label": "Fora do Ar",
-      "reason": "Loja bloqueada ou inativa na plataforma (HTTP 423 · This store is unavailable)",
-      "http_code": 423,
-      "final_url": "https://sleepsakeco.com",
-      "ip_address": "23.227.38.65",
-      "response_time_ms": 117,
-      "checked_at": "2026-11-12 02:13:09",
-      "created_at": "2026-11-04 15:59:21",
-      "page_title": "This store is unavailable",
-      "operational_active": true,
-      "current_ads_account": "Google Ads 68",
-      "outage_id": "f2ce1907ee1c3837b9922e06",
-      "outage_alert_id": "al_20c2ebb803513b0bca2eec46"
-    },
-    {
       "id": "dom_krakatoa",
       "domain": "usekrakatoaus.com",
       "url": "https://usekrakatoaus.com/",
