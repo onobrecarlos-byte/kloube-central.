@@ -1256,7 +1256,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-12 12:09:42",
+  "updated_at": "2026-11-12 12:09:49",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -3209,6 +3209,12 @@
       "category": "",
       "record_id": "",
       "store_name": "Nesty"
+    },
+    "dom_8e4867e63c": {
+      "checked_at": "2026-11-12 12:09:46",
+      "category": "",
+      "record_id": "",
+      "store_name": "KLYNE"
     }
   },
   "deleted_records": [
