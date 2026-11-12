@@ -345,11 +345,11 @@
     },
     {
       "id": "dom_krakatoa",
-      "domain": "wearkrakatoa.com",
-      "url": "https://wearkrakatoa.com",
+      "domain": "usekrakatoaus.com",
+      "url": "https://usekrakatoaus.com/",
       "name": "Krakota Underwear",
       "expected_redirect": "",
-      "status": "offline",
+      "status": "unknown",
       "status_label": "Fora do Ar",
       "reason": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)",
       "http_code": null,
@@ -358,9 +358,7 @@
       "response_time_ms": 0,
       "checked_at": "2026-11-11 23:29:14",
       "created_at": "2026-10-30 11:16:20",
-      "page_title": "",
-      "outage_id": "05ed56e8fab318f7106b97d3",
-      "outage_alert_id": "al_0d4060d2b375a11d712557e4"
+      "page_title": ""
     },
     {
       "id": "dom_lushessence",
