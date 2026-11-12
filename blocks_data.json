@@ -76,6 +76,20 @@
   },
   "records": [
     {
+      "id": "rec_300a7e6809",
+      "event_type": "store_published",
+      "store_name": "Alessio",
+      "domain": "getalessiounderwear.com",
+      "account_number": "—",
+      "inactive_category": "",
+      "reason": "",
+      "created_at": "2026-11-12 11:52:16",
+      "month_key": "2026-11",
+      "source": "integration",
+      "created_by": "onobrecarlos@gmail.com",
+      "integration_id": "9901b1e0bb5245678f82f26d862b4d7e"
+    },
+    {
       "id": "rec_f98e7cc90e",
       "event_type": "store_published",
       "store_name": "Nesty",
@@ -1200,7 +1214,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-12 11:52:12",
+  "updated_at": "2026-11-12 11:52:16",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -2858,6 +2872,17 @@
       "status": "Ativa",
       "status_verified_at": "2026-11-12 11:52:12",
       "status_source": "integration"
+    },
+    "Alessio": {
+      "name": "Alessio",
+      "current_domain": "getalessiounderwear.com",
+      "domain_swaps_count": 0,
+      "domain_history": [],
+      "publications": [],
+      "suspensions": [],
+      "status": "Ativa",
+      "status_verified_at": "2026-11-12 11:52:16",
+      "status_source": "integration"
     }
   },
   "operational_snapshot": {
@@ -3561,6 +3586,25 @@
         "inactive_category": "",
         "reason": "",
         "created_at": "2026-11-12 11:52:12",
+        "month_key": "2026-11",
+        "source": "integration",
+        "created_by": "onobrecarlos@gmail.com",
+        "integration_id": "9901b1e0bb5245678f82f26d862b4d7e"
+      }
+    },
+    {
+      "token_id": "9901b1e0bb5245678f82f26d862b4d7e",
+      "key": "codex-store-published-2026-11-12-getalessiounderwear.com",
+      "body_hash": "720cdab2914867cd70ae629500e74597960768ff3a5c2befa32a7d772ef9f9f0",
+      "record": {
+        "id": "rec_300a7e6809",
+        "event_type": "store_published",
+        "store_name": "Alessio",
+        "domain": "getalessiounderwear.com",
+        "account_number": "—",
+        "inactive_category": "",
+        "reason": "",
+        "created_at": "2026-11-12 11:52:16",
         "month_key": "2026-11",
         "source": "integration",
         "created_by": "onobrecarlos@gmail.com",
