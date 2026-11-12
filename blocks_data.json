@@ -1256,7 +1256,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-12 12:09:39",
+  "updated_at": "2026-11-12 12:09:42",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -3203,6 +3203,12 @@
       "category": "",
       "record_id": "",
       "store_name": "Lunara Comfort"
+    },
+    "dom_463a05f031": {
+      "checked_at": "2026-11-12 12:09:40",
+      "category": "",
+      "record_id": "",
+      "store_name": "Nesty"
     }
   },
   "deleted_records": [
