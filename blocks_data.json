@@ -1256,7 +1256,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-12 12:10:00",
+  "updated_at": "2026-11-12 12:10:03",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -3221,6 +3221,12 @@
       "category": "",
       "record_id": "",
       "store_name": "Thermafits"
+    },
+    "dom_4226922196": {
+      "checked_at": "2026-11-12 12:10:01",
+      "category": "",
+      "record_id": "",
+      "store_name": "Inolyo"
     }
   },
   "deleted_records": [
