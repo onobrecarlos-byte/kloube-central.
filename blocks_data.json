@@ -1256,7 +1256,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-12 12:10:03",
+  "updated_at": "2026-11-12 12:10:06",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -3227,6 +3227,12 @@
       "category": "",
       "record_id": "",
       "store_name": "Inolyo"
+    },
+    "dom_8c991a3a85": {
+      "checked_at": "2026-11-12 12:10:04",
+      "category": "",
+      "record_id": "",
+      "store_name": "Alessio"
     }
   },
   "deleted_records": [
