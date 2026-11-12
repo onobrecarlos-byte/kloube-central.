@@ -76,6 +76,20 @@
   },
   "records": [
     {
+      "id": "rec_a8c5b3a80d",
+      "event_type": "store_published",
+      "store_name": "Avulea",
+      "domain": "avuleastore.com",
+      "account_number": "—",
+      "inactive_category": "",
+      "reason": "Troca de domínio da loja existente e inclusão no monitoramento.",
+      "created_at": "2026-11-12 11:54:22",
+      "month_key": "2026-11",
+      "source": "integration",
+      "created_by": "onobrecarlos@gmail.com",
+      "integration_id": "9901b1e0bb5245678f82f26d862b4d7e"
+    },
+    {
       "id": "rec_cb74948eb6",
       "event_type": "store_published",
       "store_name": "Lunara Comfort",
@@ -1228,7 +1242,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-12 11:52:19",
+  "updated_at": "2026-11-12 11:54:22",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -2801,13 +2815,13 @@
     },
     "Avulea": {
       "name": "Avulea",
-      "current_domain": "useavulea.com",
+      "current_domain": "avuleastore.com",
       "domain_swaps_count": 0,
       "domain_history": [],
       "publications": [],
       "suspensions": [],
       "status": "Ativa",
-      "status_verified_at": "2026-11-11 00:00:00",
+      "status_verified_at": "2026-11-12 11:54:22",
       "status_source": "integration"
     },
     "Auria": {
@@ -3649,6 +3663,25 @@
         "inactive_category": "",
         "reason": "",
         "created_at": "2026-11-12 11:52:19",
+        "month_key": "2026-11",
+        "source": "integration",
+        "created_by": "onobrecarlos@gmail.com",
+        "integration_id": "9901b1e0bb5245678f82f26d862b4d7e"
+      }
+    },
+    {
+      "token_id": "9901b1e0bb5245678f82f26d862b4d7e",
+      "key": "codex-avulea-monitor-avuleastore-com-2026-11-12",
+      "body_hash": "3abb02ea9e6b0ce52d6345b23eaa0346e60af13212f636b2843b57f3ecd2f35f",
+      "record": {
+        "id": "rec_a8c5b3a80d",
+        "event_type": "store_published",
+        "store_name": "Avulea",
+        "domain": "avuleastore.com",
+        "account_number": "—",
+        "inactive_category": "",
+        "reason": "Troca de domínio da loja existente e inclusão no monitoramento.",
+        "created_at": "2026-11-12 11:54:22",
         "month_key": "2026-11",
         "source": "integration",
         "created_by": "onobrecarlos@gmail.com",
