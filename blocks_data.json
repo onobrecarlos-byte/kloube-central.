@@ -1256,7 +1256,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-12 12:10:06",
+  "updated_at": "2026-11-12 12:12:45",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -2744,9 +2744,9 @@
       "domain_history": [],
       "publications": [],
       "suspensions": [],
-      "status": "Ativa",
-      "status_verified_at": "2026-11-07 02:51:31",
-      "status_source": "manual",
+      "status": "Inativa",
+      "status_verified_at": "2026-11-12 12:12:42",
+      "status_source": "integration",
       "current_ads_account": "Google Ads 90"
     },
     "Niva": {
@@ -3764,6 +3764,14 @@
       "domain": "avuleastore.com",
       "status": "Inativa",
       "at": "2026-11-12 12:07:01",
+      "by": "onobrecarlos@gmail.com",
+      "integration_id": "9901b1e0bb5245678f82f26d862b4d7e"
+    },
+    {
+      "store_name": "Silix",
+      "domain": "usesilixwear.com",
+      "status": "Inativa",
+      "at": "2026-11-12 12:12:42",
       "by": "onobrecarlos@gmail.com",
       "integration_id": "9901b1e0bb5245678f82f26d862b4d7e"
     }
