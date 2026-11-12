@@ -1132,7 +1132,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-11 23:51:12",
+  "updated_at": "2026-11-11 23:51:59",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -2060,7 +2060,7 @@
       "name": "Krakatoa",
       "current_domain": "wearkrakatoa.com",
       "domain_swaps_count": 0,
-      "status": "Inativa",
+      "status": "Ativa",
       "domain_history": [
         {
           "domain": "wearkrakatoa.com",
@@ -2084,8 +2084,8 @@
           "source": "before_user_screenshot_verification"
         }
       ],
-      "status_verified_at": "2026-11-11 23:29:14",
-      "status_source": "domain_monitor"
+      "status_verified_at": "2026-11-11 23:51:59",
+      "status_source": "manual"
     },
     "VivaCuerpo": {
       "name": "VivaCuerpo",
