@@ -359,7 +359,8 @@
       "checked_at": "2026-11-11 23:29:14",
       "created_at": "2026-10-30 11:16:20",
       "page_title": "",
-      "outage_id": "05ed56e8fab318f7106b97d3"
+      "outage_id": "05ed56e8fab318f7106b97d3",
+      "outage_alert_id": "al_0d4060d2b375a11d712557e4"
     },
     {
       "id": "dom_lushessence",
@@ -603,6 +604,17 @@
     }
   ],
   "alerts": [
+    {
+      "id": "al_0d4060d2b375a11d712557e4",
+      "domain": "wearkrakatoa.com",
+      "name": "Krakota Underwear",
+      "reason": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)",
+      "timestamp": "2026-11-11 23:29:14",
+      "desktop_sent": false,
+      "email_sent": false,
+      "email_info": "Envio reservado",
+      "email_recipient": "onobrecarlos@gmail.com, alertas.kloube@gmail.com"
+    },
     {
       "id": "al_20c2ebb803513b0bca2eec46",
       "domain": "sleepsakeco.com",
