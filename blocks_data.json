@@ -1256,7 +1256,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-12 12:09:49",
+  "updated_at": "2026-11-12 12:10:00",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -3215,6 +3215,12 @@
       "category": "",
       "record_id": "",
       "store_name": "KLYNE"
+    },
+    "dom_948bf81dd8": {
+      "checked_at": "2026-11-12 12:09:58",
+      "category": "",
+      "record_id": "",
+      "store_name": "Thermafits"
     }
   },
   "deleted_records": [
