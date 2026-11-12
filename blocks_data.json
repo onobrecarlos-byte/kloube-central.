@@ -1144,7 +1144,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-12 11:50:35",
+  "updated_at": "2026-11-12 11:50:53",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -3261,6 +3261,19 @@
       "expires_at": 1802153553.466713,
       "user_version": "5dcd6107954e57741941e5c52b3af8cae35cd47f9656749cb95ad9c80c8e2956",
       "revoked_at": "2026-11-12 11:50:33"
+    },
+    {
+      "id": "9901b1e0bb5245678f82f26d862b4d7e",
+      "name": "Carlos",
+      "owner": "onobrecarlos@gmail.com",
+      "hash": "cd81c7d45468fbff973956ed5b8c5603b2355d05ed37d1978de2fc0d58e5a87b",
+      "scopes": [
+        "write",
+        "read"
+      ],
+      "created_at": "2026-11-12 11:50:53",
+      "expires_at": 1802271053.575583,
+      "user_version": "5dcd6107954e57741941e5c52b3af8cae35cd47f9656749cb95ad9c80c8e2956"
     }
   ],
   "integration_requests": [
