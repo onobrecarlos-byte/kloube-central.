@@ -76,6 +76,20 @@
   },
   "records": [
     {
+      "id": "rec_239c29f257",
+      "event_type": "store_inactive",
+      "store_name": "Krakatoa",
+      "domain": "wearkrakatoa.com",
+      "account_number": "—",
+      "inactive_category": "domain_down",
+      "reason": "Correção de status confirmada. O domínio antigo já constava como fora do ar.",
+      "created_at": "2026-11-12 12:07:23",
+      "month_key": "2026-11",
+      "source": "integration",
+      "created_by": "onobrecarlos@gmail.com",
+      "integration_id": "9901b1e0bb5245678f82f26d862b4d7e"
+    },
+    {
       "id": "rec_a8c5b3a80d",
       "event_type": "store_published",
       "store_name": "Avulea",
@@ -1242,7 +1256,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-12 12:07:02",
+  "updated_at": "2026-11-12 12:07:23",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -2170,7 +2184,7 @@
       "name": "Krakatoa",
       "current_domain": "wearkrakatoa.com",
       "domain_swaps_count": 0,
-      "status": "Ativa",
+      "status": "Inativa",
       "domain_history": [
         {
           "domain": "wearkrakatoa.com",
@@ -2194,8 +2208,8 @@
           "source": "before_user_screenshot_verification"
         }
       ],
-      "status_verified_at": "2026-11-11 23:51:59",
-      "status_source": "manual"
+      "status_verified_at": "2026-11-12 12:07:23",
+      "status_source": "integration"
     },
     "VivaCuerpo": {
       "name": "VivaCuerpo",
@@ -3682,6 +3696,25 @@
         "inactive_category": "",
         "reason": "Troca de domínio da loja existente e inclusão no monitoramento.",
         "created_at": "2026-11-12 11:54:22",
+        "month_key": "2026-11",
+        "source": "integration",
+        "created_by": "onobrecarlos@gmail.com",
+        "integration_id": "9901b1e0bb5245678f82f26d862b4d7e"
+      }
+    },
+    {
+      "token_id": "9901b1e0bb5245678f82f26d862b4d7e",
+      "key": "codex-inactivate-wearkrakatoa-2026-11-12",
+      "body_hash": "29ed5ee6cc69085d7190c91125af8043bdb80b1d2921130ddac037e3afd1fe14",
+      "record": {
+        "id": "rec_239c29f257",
+        "event_type": "store_inactive",
+        "store_name": "Krakatoa",
+        "domain": "wearkrakatoa.com",
+        "account_number": "—",
+        "inactive_category": "domain_down",
+        "reason": "Correção de status confirmada. O domínio antigo já constava como fora do ar.",
+        "created_at": "2026-11-12 12:07:23",
         "month_key": "2026-11",
         "source": "integration",
         "created_by": "onobrecarlos@gmail.com",
