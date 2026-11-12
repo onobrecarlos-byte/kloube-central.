@@ -76,6 +76,20 @@
   },
   "records": [
     {
+      "id": "rec_f98e7cc90e",
+      "event_type": "store_published",
+      "store_name": "Nesty",
+      "domain": "usenesty.com",
+      "account_number": "—",
+      "inactive_category": "",
+      "reason": "",
+      "created_at": "2026-11-12 11:52:12",
+      "month_key": "2026-11",
+      "source": "integration",
+      "created_by": "onobrecarlos@gmail.com",
+      "integration_id": "9901b1e0bb5245678f82f26d862b4d7e"
+    },
+    {
       "id": "rec_9f1ddd51c5",
       "event_type": "store_published",
       "store_name": "KLYNE",
@@ -1186,7 +1200,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-12 11:52:09",
+  "updated_at": "2026-11-12 11:52:12",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -2833,6 +2847,17 @@
       "status": "Ativa",
       "status_verified_at": "2026-11-12 11:52:09",
       "status_source": "integration"
+    },
+    "Nesty": {
+      "name": "Nesty",
+      "current_domain": "usenesty.com",
+      "domain_swaps_count": 0,
+      "domain_history": [],
+      "publications": [],
+      "suspensions": [],
+      "status": "Ativa",
+      "status_verified_at": "2026-11-12 11:52:12",
+      "status_source": "integration"
     }
   },
   "operational_snapshot": {
@@ -3517,6 +3542,25 @@
         "inactive_category": "",
         "reason": "",
         "created_at": "2026-11-12 11:52:09",
+        "month_key": "2026-11",
+        "source": "integration",
+        "created_by": "onobrecarlos@gmail.com",
+        "integration_id": "9901b1e0bb5245678f82f26d862b4d7e"
+      }
+    },
+    {
+      "token_id": "9901b1e0bb5245678f82f26d862b4d7e",
+      "key": "codex-store-published-2026-11-12-usenesty.com",
+      "body_hash": "dcd5b6e4da7e2d98b1fdda21dc4b413e380cb1a0169b0f930da4ae4002afbd84",
+      "record": {
+        "id": "rec_f98e7cc90e",
+        "event_type": "store_published",
+        "store_name": "Nesty",
+        "domain": "usenesty.com",
+        "account_number": "—",
+        "inactive_category": "",
+        "reason": "",
+        "created_at": "2026-11-12 11:52:12",
         "month_key": "2026-11",
         "source": "integration",
         "created_by": "onobrecarlos@gmail.com",
