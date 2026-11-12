@@ -1256,7 +1256,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-12 12:07:23",
+  "updated_at": "2026-11-12 12:09:39",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -2971,10 +2971,10 @@
       "store_name": "Dr. Dent"
     },
     "dom_krakatoa": {
-      "checked_at": "2026-11-11 23:51:11",
+      "checked_at": "2026-11-12 11:34:10",
       "category": "",
       "record_id": "",
-      "store_name": "Krakatoa"
+      "store_name": "Krakota"
     },
     "dom_lushessence": {
       "checked_at": "2026-11-12 11:34:10",
@@ -3197,6 +3197,12 @@
       "category": "",
       "record_id": "",
       "store_name": "Nuclever Italia"
+    },
+    "dom_a7308e5093": {
+      "checked_at": "2026-11-12 12:09:36",
+      "category": "",
+      "record_id": "",
+      "store_name": "Lunara Comfort"
     }
   },
   "deleted_records": [
