@@ -590,8 +590,8 @@
       "reason": "Certificado SSL inválido ou expirado",
       "timestamp": "2026-11-12 11:34:06",
       "desktop_sent": false,
-      "email_sent": false,
-      "email_info": "Envio reservado",
+      "email_sent": true,
+      "email_info": "E-mail enviado via SMTP para onobrecarlos@gmail.com, alertas.kloube@gmail.com",
       "email_recipient": "onobrecarlos@gmail.com, alertas.kloube@gmail.com"
     },
     {
