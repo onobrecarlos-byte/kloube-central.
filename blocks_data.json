@@ -87,7 +87,8 @@
       "month_key": "2026-11",
       "source": "domain_monitor",
       "monitor_domain_id": "dom_krakatoa",
-      "monitor_diagnostic": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)"
+      "monitor_diagnostic": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)",
+      "monitor_closed_at": "2026-11-11 23:51:11"
     },
     {
       "id": "rec_3a715302a5",
@@ -1131,7 +1132,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-11 23:29:20",
+  "updated_at": "2026-11-11 23:51:12",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -2769,9 +2770,9 @@
       "store_name": "Dr. Dent"
     },
     "dom_krakatoa": {
-      "checked_at": "2026-11-11 23:29:14",
-      "category": "domain_down",
-      "record_id": "rec_7d2918d066",
+      "checked_at": "2026-11-11 23:51:11",
+      "category": "",
+      "record_id": "",
       "store_name": "Krakatoa"
     },
     "dom_lushessence": {
