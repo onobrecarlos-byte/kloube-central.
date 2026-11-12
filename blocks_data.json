@@ -1242,7 +1242,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-12 11:54:22",
+  "updated_at": "2026-11-12 12:07:02",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -2820,8 +2820,8 @@
       "domain_history": [],
       "publications": [],
       "suspensions": [],
-      "status": "Ativa",
-      "status_verified_at": "2026-11-12 11:54:22",
+      "status": "Inativa",
+      "status_verified_at": "2026-11-12 12:07:01",
       "status_source": "integration"
     },
     "Auria": {
@@ -3687,6 +3687,16 @@
         "created_by": "onobrecarlos@gmail.com",
         "integration_id": "9901b1e0bb5245678f82f26d862b4d7e"
       }
+    }
+  ],
+  "store_edit_audit": [
+    {
+      "store_name": "Avulea",
+      "domain": "avuleastore.com",
+      "status": "Inativa",
+      "at": "2026-11-12 12:07:01",
+      "by": "onobrecarlos@gmail.com",
+      "integration_id": "9901b1e0bb5245678f82f26d862b4d7e"
     }
   ]
 }
