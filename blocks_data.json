@@ -76,6 +76,18 @@
   },
   "records": [
     {
+      "id": "rec_4e4e7172c7",
+      "event_type": "store_reactivated",
+      "store_name": "Krakota",
+      "domain": "https://usekrakatoaus.com/",
+      "account_number": "—",
+      "inactive_category": "",
+      "reason": "Loja reativada",
+      "created_at": "2016-11-11 12:00:00",
+      "month_key": "2016-11",
+      "source": "manual"
+    },
+    {
       "id": "rec_7d2918d066",
       "event_type": "store_inactive",
       "store_name": "Krakatoa",
@@ -1132,7 +1144,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-11 23:51:59",
+  "updated_at": "2026-11-11 23:52:41",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -2735,6 +2747,17 @@
       "status": "Ativa",
       "status_verified_at": "2026-11-11 00:00:00",
       "status_source": "integration"
+    },
+    "Krakota": {
+      "name": "Krakota",
+      "current_domain": "https://usekrakatoaus.com/",
+      "domain_swaps_count": 0,
+      "domain_history": [],
+      "publications": [],
+      "suspensions": [],
+      "status": "Ativa",
+      "status_verified_at": "2016-11-11 12:00:00",
+      "status_source": "manual"
     }
   },
   "operational_snapshot": {
