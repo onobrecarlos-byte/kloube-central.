@@ -76,6 +76,20 @@
   },
   "records": [
     {
+      "id": "rec_cb74948eb6",
+      "event_type": "store_published",
+      "store_name": "Lunara Comfort",
+      "domain": "wearlunaracomfort.com",
+      "account_number": "—",
+      "inactive_category": "",
+      "reason": "",
+      "created_at": "2026-11-12 11:52:19",
+      "month_key": "2026-11",
+      "source": "integration",
+      "created_by": "onobrecarlos@gmail.com",
+      "integration_id": "9901b1e0bb5245678f82f26d862b4d7e"
+    },
+    {
       "id": "rec_300a7e6809",
       "event_type": "store_published",
       "store_name": "Alessio",
@@ -1214,7 +1228,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-12 11:52:16",
+  "updated_at": "2026-11-12 11:52:19",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -2883,6 +2897,17 @@
       "status": "Ativa",
       "status_verified_at": "2026-11-12 11:52:16",
       "status_source": "integration"
+    },
+    "Lunara Comfort": {
+      "name": "Lunara Comfort",
+      "current_domain": "wearlunaracomfort.com",
+      "domain_swaps_count": 0,
+      "domain_history": [],
+      "publications": [],
+      "suspensions": [],
+      "status": "Ativa",
+      "status_verified_at": "2026-11-12 11:52:19",
+      "status_source": "integration"
     }
   },
   "operational_snapshot": {
@@ -3605,6 +3630,25 @@
         "inactive_category": "",
         "reason": "",
         "created_at": "2026-11-12 11:52:16",
+        "month_key": "2026-11",
+        "source": "integration",
+        "created_by": "onobrecarlos@gmail.com",
+        "integration_id": "9901b1e0bb5245678f82f26d862b4d7e"
+      }
+    },
+    {
+      "token_id": "9901b1e0bb5245678f82f26d862b4d7e",
+      "key": "codex-store-published-2026-11-12-wearlunaracomfort.com",
+      "body_hash": "3c394a12c5fd6b5be6c14b12e3eaadc33c4a1a3ed4ce42c21e44c941864d75b8",
+      "record": {
+        "id": "rec_cb74948eb6",
+        "event_type": "store_published",
+        "store_name": "Lunara Comfort",
+        "domain": "wearlunaracomfort.com",
+        "account_number": "—",
+        "inactive_category": "",
+        "reason": "",
+        "created_at": "2026-11-12 11:52:19",
         "month_key": "2026-11",
         "source": "integration",
         "created_by": "onobrecarlos@gmail.com",
