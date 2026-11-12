@@ -64,7 +64,8 @@
       "created_at": "2026-11-11 03:13:29",
       "source": "store_publication",
       "page_title": "",
-      "outage_id": "c6379fb3a134686cd8060105"
+      "outage_id": "c6379fb3a134686cd8060105",
+      "outage_alert_id": "al_a405dcf1ef281d0f439a9fe6"
     },
     {
       "id": "dom_90e21fcc4a",
@@ -582,6 +583,17 @@
     }
   ],
   "alerts": [
+    {
+      "id": "al_a405dcf1ef281d0f439a9fe6",
+      "domain": "useavulea.com",
+      "name": "Avulea",
+      "reason": "Certificado SSL inválido ou expirado",
+      "timestamp": "2026-11-12 11:34:06",
+      "desktop_sent": false,
+      "email_sent": false,
+      "email_info": "Envio reservado",
+      "email_recipient": "onobrecarlos@gmail.com, alertas.kloube@gmail.com"
+    },
     {
       "id": "al_0d4060d2b375a11d712557e4",
       "domain": "wearkrakatoa.com",
