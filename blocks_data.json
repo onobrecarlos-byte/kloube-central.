@@ -1452,7 +1452,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-13 21:45:45",
+  "updated_at": "2026-11-13 21:45:51",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -3519,6 +3519,12 @@
       "category": "",
       "record_id": "",
       "store_name": "Tekko"
+    },
+    "dom_49f861f0c9": {
+      "checked_at": "2026-11-13 21:45:49",
+      "category": "",
+      "record_id": "",
+      "store_name": "Cozily Shop"
     }
   },
   "deleted_records": [
