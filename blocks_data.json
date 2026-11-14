@@ -76,6 +76,20 @@
   },
   "records": [
     {
+      "id": "rec_76bdec3eba",
+      "event_type": "store_published",
+      "store_name": "Arlaya",
+      "domain": "usearlaya.com",
+      "account_number": "—",
+      "inactive_category": "",
+      "reason": "Google Ads 115 - USD",
+      "created_at": "2026-11-13 00:00:00",
+      "month_key": "2026-11",
+      "source": "integration",
+      "created_by": "onobrecarlos@gmail.com",
+      "integration_id": "6188c66037ac43b2a03522b7e9b78e36"
+    },
+    {
       "id": "rec_3be1a6dfd8",
       "event_type": "store_published",
       "store_name": "Avalore",
@@ -1312,7 +1326,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-13 21:38:08",
+  "updated_at": "2026-11-13 21:38:11",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -3025,6 +3039,17 @@
       "status": "Ativa",
       "status_verified_at": "2026-11-13 00:00:00",
       "status_source": "integration"
+    },
+    "Arlaya": {
+      "name": "Arlaya",
+      "current_domain": "usearlaya.com",
+      "domain_swaps_count": 0,
+      "domain_history": [],
+      "publications": [],
+      "suspensions": [],
+      "status": "Ativa",
+      "status_verified_at": "2026-11-13 00:00:00",
+      "status_source": "integration"
     }
   },
   "operational_snapshot": {
@@ -3909,6 +3934,25 @@
         "account_number": "—",
         "inactive_category": "",
         "reason": "Google Ads 117 - USD",
+        "created_at": "2026-11-13 00:00:00",
+        "month_key": "2026-11",
+        "source": "integration",
+        "created_by": "onobrecarlos@gmail.com",
+        "integration_id": "6188c66037ac43b2a03522b7e9b78e36"
+      }
+    },
+    {
+      "token_id": "6188c66037ac43b2a03522b7e9b78e36",
+      "key": "kloube-2026-11-13-store_published-usearlaya.com",
+      "body_hash": "ec3399f80958f9e9869e64149ba6070efbc204e3809db5fc145a6de5b424c6b1",
+      "record": {
+        "id": "rec_76bdec3eba",
+        "event_type": "store_published",
+        "store_name": "Arlaya",
+        "domain": "usearlaya.com",
+        "account_number": "—",
+        "inactive_category": "",
+        "reason": "Google Ads 115 - USD",
         "created_at": "2026-11-13 00:00:00",
         "month_key": "2026-11",
         "source": "integration",
