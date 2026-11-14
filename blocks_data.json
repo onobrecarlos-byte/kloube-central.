@@ -76,6 +76,20 @@
   },
   "records": [
     {
+      "id": "rec_d94535715e",
+      "event_type": "store_published",
+      "store_name": "Tekko",
+      "domain": "thetekkoshop.com",
+      "account_number": "—",
+      "inactive_category": "",
+      "reason": "Google Ads 112 - BRL",
+      "created_at": "2026-11-13 00:00:00",
+      "month_key": "2026-11",
+      "source": "integration",
+      "created_by": "onobrecarlos@gmail.com",
+      "integration_id": "6188c66037ac43b2a03522b7e9b78e36"
+    },
+    {
       "id": "rec_76bdec3eba",
       "event_type": "store_published",
       "store_name": "Arlaya",
@@ -1326,7 +1340,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-13 21:38:11",
+  "updated_at": "2026-11-13 21:38:15",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -3050,6 +3064,17 @@
       "status": "Ativa",
       "status_verified_at": "2026-11-13 00:00:00",
       "status_source": "integration"
+    },
+    "Tekko": {
+      "name": "Tekko",
+      "current_domain": "thetekkoshop.com",
+      "domain_swaps_count": 0,
+      "domain_history": [],
+      "publications": [],
+      "suspensions": [],
+      "status": "Ativa",
+      "status_verified_at": "2026-11-13 00:00:00",
+      "status_source": "integration"
     }
   },
   "operational_snapshot": {
@@ -3953,6 +3978,25 @@
         "account_number": "—",
         "inactive_category": "",
         "reason": "Google Ads 115 - USD",
+        "created_at": "2026-11-13 00:00:00",
+        "month_key": "2026-11",
+        "source": "integration",
+        "created_by": "onobrecarlos@gmail.com",
+        "integration_id": "6188c66037ac43b2a03522b7e9b78e36"
+      }
+    },
+    {
+      "token_id": "6188c66037ac43b2a03522b7e9b78e36",
+      "key": "kloube-2026-11-13-store_published-thetekkoshop.com",
+      "body_hash": "4c05917efeb788bf20af54b751eac8108329e4a55b6a72cd92b5c7b43345651a",
+      "record": {
+        "id": "rec_d94535715e",
+        "event_type": "store_published",
+        "store_name": "Tekko",
+        "domain": "thetekkoshop.com",
+        "account_number": "—",
+        "inactive_category": "",
+        "reason": "Google Ads 112 - BRL",
         "created_at": "2026-11-13 00:00:00",
         "month_key": "2026-11",
         "source": "integration",
