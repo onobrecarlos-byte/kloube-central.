@@ -76,6 +76,20 @@
   },
   "records": [
     {
+      "id": "rec_ac0d143797",
+      "event_type": "store_published",
+      "store_name": "Langwell 2",
+      "domain": "uselangwell.com",
+      "account_number": "—",
+      "inactive_category": "",
+      "reason": "Google Ads 120 - USD",
+      "created_at": "2026-11-13 00:00:00",
+      "month_key": "2026-11",
+      "source": "integration",
+      "created_by": "onobrecarlos@gmail.com",
+      "integration_id": "6188c66037ac43b2a03522b7e9b78e36"
+    },
+    {
       "id": "rec_081ec467ea",
       "event_type": "store_inactive",
       "store_name": "Krakota",
@@ -1270,7 +1284,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-13 21:27:22",
+  "updated_at": "2026-11-13 21:38:00",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -2950,6 +2964,17 @@
       "status": "Ativa",
       "status_verified_at": "2026-11-12 11:52:19",
       "status_source": "integration"
+    },
+    "Langwell 2": {
+      "name": "Langwell 2",
+      "current_domain": "uselangwell.com",
+      "domain_swaps_count": 0,
+      "domain_history": [],
+      "publications": [],
+      "suspensions": [],
+      "status": "Ativa",
+      "status_verified_at": "2026-11-13 00:00:00",
+      "status_source": "integration"
     }
   },
   "operational_snapshot": {
@@ -3782,6 +3807,25 @@
         "source": "integration",
         "created_by": "onobrecarlos@gmail.com",
         "integration_id": "9901b1e0bb5245678f82f26d862b4d7e"
+      }
+    },
+    {
+      "token_id": "6188c66037ac43b2a03522b7e9b78e36",
+      "key": "kloube-2026-11-13-store_published-uselangwell.com",
+      "body_hash": "6cc8fae84f22de445e5b21e9cd8361ebb8bd4e98d0684f9e08f9f02133d0b414",
+      "record": {
+        "id": "rec_ac0d143797",
+        "event_type": "store_published",
+        "store_name": "Langwell 2",
+        "domain": "uselangwell.com",
+        "account_number": "—",
+        "inactive_category": "",
+        "reason": "Google Ads 120 - USD",
+        "created_at": "2026-11-13 00:00:00",
+        "month_key": "2026-11",
+        "source": "integration",
+        "created_by": "onobrecarlos@gmail.com",
+        "integration_id": "6188c66037ac43b2a03522b7e9b78e36"
       }
     }
   ],
