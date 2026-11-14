@@ -76,6 +76,20 @@
   },
   "records": [
     {
+      "id": "rec_85bfda784e",
+      "event_type": "store_published",
+      "store_name": "Cozily Shop",
+      "domain": "usecozilyshop.com",
+      "account_number": "—",
+      "inactive_category": "",
+      "reason": "Google Ads 116 - USD",
+      "created_at": "2026-11-13 00:00:00",
+      "month_key": "2026-11",
+      "source": "integration",
+      "created_by": "onobrecarlos@gmail.com",
+      "integration_id": "6188c66037ac43b2a03522b7e9b78e36"
+    },
+    {
       "id": "rec_ac0d143797",
       "event_type": "store_published",
       "store_name": "Langwell 2",
@@ -1284,7 +1298,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-13 21:38:00",
+  "updated_at": "2026-11-13 21:38:04",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -2975,6 +2989,17 @@
       "status": "Ativa",
       "status_verified_at": "2026-11-13 00:00:00",
       "status_source": "integration"
+    },
+    "Cozily Shop": {
+      "name": "Cozily Shop",
+      "current_domain": "usecozilyshop.com",
+      "domain_swaps_count": 0,
+      "domain_history": [],
+      "publications": [],
+      "suspensions": [],
+      "status": "Ativa",
+      "status_verified_at": "2026-11-13 00:00:00",
+      "status_source": "integration"
     }
   },
   "operational_snapshot": {
@@ -3821,6 +3846,25 @@
         "account_number": "—",
         "inactive_category": "",
         "reason": "Google Ads 120 - USD",
+        "created_at": "2026-11-13 00:00:00",
+        "month_key": "2026-11",
+        "source": "integration",
+        "created_by": "onobrecarlos@gmail.com",
+        "integration_id": "6188c66037ac43b2a03522b7e9b78e36"
+      }
+    },
+    {
+      "token_id": "6188c66037ac43b2a03522b7e9b78e36",
+      "key": "kloube-2026-11-13-store_published-usecozilyshop.com",
+      "body_hash": "6c2f72a8cd56905233ef03a0b8b4a3389867853632f0dcf636ddd9da768cf21f",
+      "record": {
+        "id": "rec_85bfda784e",
+        "event_type": "store_published",
+        "store_name": "Cozily Shop",
+        "domain": "usecozilyshop.com",
+        "account_number": "—",
+        "inactive_category": "",
+        "reason": "Google Ads 116 - USD",
         "created_at": "2026-11-13 00:00:00",
         "month_key": "2026-11",
         "source": "integration",
