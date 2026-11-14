@@ -76,6 +76,20 @@
   },
   "records": [
     {
+      "id": "rec_44012de5d6",
+      "event_type": "store_published",
+      "store_name": "Thermafits",
+      "domain": "usethermafits.com",
+      "account_number": "—",
+      "inactive_category": "",
+      "reason": "Google Ads 90 - USD",
+      "created_at": "2026-11-11 00:00:00",
+      "month_key": "2026-11",
+      "source": "integration",
+      "created_by": "onobrecarlos@gmail.com",
+      "integration_id": "6188c66037ac43b2a03522b7e9b78e36"
+    },
+    {
       "id": "rec_637743a991",
       "event_type": "store_published",
       "store_name": "Alessio",
@@ -1382,7 +1396,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-13 21:38:25",
+  "updated_at": "2026-11-13 21:38:29",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -4107,6 +4121,25 @@
         "account_number": "—",
         "inactive_category": "",
         "reason": "Google Ads 111 - BRL",
+        "created_at": "2026-11-11 00:00:00",
+        "month_key": "2026-11",
+        "source": "integration",
+        "created_by": "onobrecarlos@gmail.com",
+        "integration_id": "6188c66037ac43b2a03522b7e9b78e36"
+      }
+    },
+    {
+      "token_id": "6188c66037ac43b2a03522b7e9b78e36",
+      "key": "kloube-2026-11-11-store_published-usethermafits.com",
+      "body_hash": "0b802fcbc7fa5987c1aea3a215ff7523b0ea48846db6c325d281430c187e0eea",
+      "record": {
+        "id": "rec_44012de5d6",
+        "event_type": "store_published",
+        "store_name": "Thermafits",
+        "domain": "usethermafits.com",
+        "account_number": "—",
+        "inactive_category": "",
+        "reason": "Google Ads 90 - USD",
         "created_at": "2026-11-11 00:00:00",
         "month_key": "2026-11",
         "source": "integration",
