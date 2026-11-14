@@ -12,6 +12,23 @@
   },
   "domains": [
     {
+      "id": "dom_e45a8e48cc",
+      "domain": "sleepsanestore.com",
+      "url": "https://sleepsanestore.com",
+      "name": "SleepSane 3",
+      "expected_redirect": "",
+      "status": "unknown",
+      "status_label": "Aguardando verificação",
+      "reason": "Cadastrado automaticamente com a publicação da loja.",
+      "http_code": null,
+      "final_url": "",
+      "ip_address": "",
+      "response_time_ms": 0,
+      "checked_at": "",
+      "created_at": "2026-11-13 21:38:19",
+      "source": "store_publication"
+    },
+    {
       "id": "dom_7df395ac9e",
       "domain": "thetekkoshop.com",
       "url": "https://thetekkoshop.com",
@@ -1214,6 +1231,7 @@
     "rec_d94535715e",
     "rec_da54341cdc",
     "rec_e28241ef62",
+    "rec_eb02b966d9",
     "rec_f98e7cc90e"
   ],
   "last_full_check_ts": 1794605764.7767887
