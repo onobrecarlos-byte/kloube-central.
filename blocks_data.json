@@ -1424,7 +1424,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-13 21:39:41",
+  "updated_at": "2026-11-13 21:39:43",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -3473,6 +3473,12 @@
       "category": "",
       "record_id": "",
       "store_name": "SleepSane 3"
+    },
+    "dom_b2fe4a3ab9": {
+      "checked_at": "2026-11-13 21:39:41",
+      "category": "",
+      "record_id": "",
+      "store_name": "Avalore"
     }
   },
   "deleted_records": [
