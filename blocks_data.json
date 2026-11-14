@@ -1424,7 +1424,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-13 21:38:36",
+  "updated_at": "2026-11-13 21:39:16",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -3080,7 +3080,7 @@
       "publications": [],
       "suspensions": [],
       "status": "Ativa",
-      "status_verified_at": "2026-11-12 11:52:12",
+      "status_verified_at": "2026-11-13 21:39:15",
       "status_source": "integration"
     },
     "Alessio": {
@@ -4230,6 +4230,14 @@
       "at": "2026-11-12 12:12:42",
       "by": "onobrecarlos@gmail.com",
       "integration_id": "9901b1e0bb5245678f82f26d862b4d7e"
+    },
+    {
+      "store_name": "Nesty",
+      "domain": "usenesty.com",
+      "status": "Ativa",
+      "at": "2026-11-13 21:39:15",
+      "by": "onobrecarlos@gmail.com",
+      "integration_id": "6188c66037ac43b2a03522b7e9b78e36"
     }
   ]
 }
