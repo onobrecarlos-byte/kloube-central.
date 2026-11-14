@@ -1424,7 +1424,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-13 21:39:43",
+  "updated_at": "2026-11-13 21:39:46",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -3479,6 +3479,12 @@
       "category": "",
       "record_id": "",
       "store_name": "Avalore"
+    },
+    "dom_7ce2b8de13": {
+      "checked_at": "2026-11-13 21:39:44",
+      "category": "",
+      "record_id": "",
+      "store_name": "Langwell 2"
     }
   },
   "deleted_records": [
