@@ -1452,7 +1452,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-13 21:45:51",
+  "updated_at": "2026-11-13 21:45:56",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -3525,6 +3525,12 @@
       "category": "",
       "record_id": "",
       "store_name": "Cozily Shop"
+    },
+    "dom_7dce884f06": {
+      "checked_at": "2026-11-13 21:45:54",
+      "category": "",
+      "record_id": "",
+      "store_name": "Arlaya"
     }
   },
   "deleted_records": [
