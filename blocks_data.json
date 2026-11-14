@@ -1452,7 +1452,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-13 21:42:26",
+  "updated_at": "2026-11-13 21:45:39",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -3513,6 +3513,12 @@
       "category": "",
       "record_id": "",
       "store_name": "Langwell 2"
+    },
+    "dom_7df395ac9e": {
+      "checked_at": "2026-11-13 21:45:37",
+      "category": "",
+      "record_id": "",
+      "store_name": "Tekko"
     }
   },
   "deleted_records": [
