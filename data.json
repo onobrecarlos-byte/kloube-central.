@@ -301,26 +301,6 @@
       "page_title": "Nuclever"
     },
     {
-      "id": "dom_d1c4b6d9e7",
-      "domain": "useshindefender.com",
-      "url": "https://useshindefender.com",
-      "name": "ShinDefender",
-      "expected_redirect": "",
-      "status": "offline",
-      "status_label": "Fora do Ar",
-      "reason": "Certificado SSL inválido ou expirado",
-      "http_code": 409,
-      "final_url": "",
-      "ip_address": "23.227.38.65",
-      "response_time_ms": 0,
-      "checked_at": "2026-11-15 11:19:19",
-      "created_at": "2026-11-11 03:13:23",
-      "source": "store_publication",
-      "page_title": "",
-      "outage_id": "5c995d8ce19258ce573eb34c",
-      "outage_alert_id": "al_e4ec6f0660c13b21e0157957"
-    },
-    {
       "id": "dom_3078aa4727",
       "domain": "usefreiluftkind.com",
       "url": "https://usefreiluftkind.com",
