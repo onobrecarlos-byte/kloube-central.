@@ -1578,7 +1578,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-16 09:58:29",
+  "updated_at": "2026-11-16 09:58:31",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -2698,7 +2698,8 @@
         }
       ],
       "status_verified_at": "2026-11-16 09:32:36",
-      "status_source": "integration"
+      "status_source": "integration",
+      "current_ads_account": "Google Ads 62"
     },
     "Sondur Travel": {
       "name": "Sondur Travel",
