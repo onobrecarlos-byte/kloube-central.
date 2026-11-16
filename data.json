@@ -121,11 +121,11 @@
     },
     {
       "id": "dom_c875d5c8d6",
-      "domain": "uselunasperiodco.com",
-      "url": "https://uselunasperiodco.com",
+      "domain": "wearlunas.com",
+      "url": "https://wearlunas.com/",
       "name": "Lunã",
       "expected_redirect": "",
-      "status": "offline",
+      "status": "unknown",
       "status_label": "Fora do Ar",
       "reason": "Certificado SSL inválido ou expirado",
       "http_code": 409,
@@ -135,9 +135,7 @@
       "checked_at": "2026-11-16 14:18:40",
       "created_at": "2026-11-16 09:45:24",
       "source": "store_publication",
-      "page_title": "",
-      "outage_id": "c3bbf9cd059f8a346d53489f",
-      "outage_alert_id": "al_a321043600bc9d810992d9c4"
+      "page_title": ""
     },
     {
       "id": "dom_f8a25f0846",
