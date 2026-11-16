@@ -76,6 +76,34 @@
   },
   "records": [
     {
+      "id": "rec_b7279dbf8b",
+      "event_type": "store_inactive",
+      "store_name": "ShinDefender",
+      "domain": "shindefenderco.com",
+      "account_number": "Google Ads 127",
+      "inactive_category": "ads_block",
+      "reason": "Práticas comerciais inaceitáveis: phishing. Segundo bloqueio.",
+      "created_at": "2026-11-16 10:16:58",
+      "month_key": "2026-11",
+      "source": "integration",
+      "created_by": "onobrecarlos@gmail.com",
+      "integration_id": "3657725dd84d45aebc6007d5bb38a220"
+    },
+    {
+      "id": "rec_637e3e718f",
+      "event_type": "ads_suspended",
+      "store_name": "ShinDefender",
+      "domain": "shindefenderco.com",
+      "account_number": "Google Ads 127",
+      "inactive_category": "",
+      "reason": "Práticas comerciais inaceitáveis: phishing. Segundo bloqueio.",
+      "created_at": "2026-11-16 10:16:58",
+      "month_key": "2026-11",
+      "source": "integration",
+      "created_by": "onobrecarlos@gmail.com",
+      "integration_id": "3657725dd84d45aebc6007d5bb38a220"
+    },
+    {
       "id": "rec_5bc268c469",
       "event_type": "store_inactive",
       "store_name": "Orlivia",
@@ -1606,7 +1634,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-16 14:24:01",
+  "updated_at": "2026-11-16 14:24:04",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -3164,8 +3192,8 @@
       "domain_history": [],
       "publications": [],
       "suspensions": [],
-      "status": "Ativa",
-      "status_verified_at": "2026-11-15 14:45:40",
+      "status": "Inativa",
+      "status_verified_at": "2026-11-16 10:16:58",
       "status_source": "integration",
       "current_ads_account": "Google Ads 127"
     },
@@ -4770,6 +4798,25 @@
         "inactive_category": "",
         "reason": "Práticas comerciais inaceitáveis: phishing. Segundo bloqueio.",
         "created_at": "2026-11-16 10:14:17",
+        "month_key": "2026-11",
+        "source": "integration",
+        "created_by": "onobrecarlos@gmail.com",
+        "integration_id": "3657725dd84d45aebc6007d5bb38a220"
+      }
+    },
+    {
+      "token_id": "3657725dd84d45aebc6007d5bb38a220",
+      "key": "susp-20261116-shindefender-127",
+      "body_hash": "4c6b3613efd889c37fe421616bba80174a4f202913692c263704798945c6cdbf",
+      "record": {
+        "id": "rec_637e3e718f",
+        "event_type": "ads_suspended",
+        "store_name": "ShinDefender",
+        "domain": "shindefenderco.com",
+        "account_number": "Google Ads 127",
+        "inactive_category": "",
+        "reason": "Práticas comerciais inaceitáveis: phishing. Segundo bloqueio.",
+        "created_at": "2026-11-16 10:16:58",
         "month_key": "2026-11",
         "source": "integration",
         "created_by": "onobrecarlos@gmail.com",
