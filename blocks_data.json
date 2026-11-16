@@ -76,6 +76,20 @@
   },
   "records": [
     {
+      "id": "rec_4b3f14601e",
+      "event_type": "store_published",
+      "store_name": "Snuggi Sandals",
+      "domain": "snuggisandalshop.com",
+      "account_number": "—",
+      "inactive_category": "",
+      "reason": "Republicada após troca de domínio confirmada na conversa. Google Ads 62 no quadro de lojas.",
+      "created_at": "2026-11-16 09:32:36",
+      "month_key": "2026-11",
+      "source": "integration",
+      "created_by": "onobrecarlos@gmail.com",
+      "integration_id": "3657725dd84d45aebc6007d5bb38a220"
+    },
+    {
       "id": "rec_a83e566d94",
       "event_type": "store_published",
       "store_name": "Avulea",
@@ -1564,7 +1578,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-16 09:45:44",
+  "updated_at": "2026-11-16 09:45:48",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -2657,7 +2671,7 @@
     },
     "Snuggi Sandals": {
       "name": "Snuggi Sandals",
-      "current_domain": "getsnuggisandals.com",
+      "current_domain": "snuggisandalshop.com",
       "domain_swaps_count": 0,
       "status": "Ativa",
       "domain_history": [
@@ -2683,8 +2697,8 @@
           "source": "before_user_screenshot_verification"
         }
       ],
-      "status_verified_at": "2026-11-05 12:16:19",
-      "status_source": "user_screenshots_2026-11-05"
+      "status_verified_at": "2026-11-16 09:32:36",
+      "status_source": "integration"
     },
     "Sondur Travel": {
       "name": "Sondur Travel",
@@ -4632,6 +4646,25 @@
         "inactive_category": "",
         "reason": "Republicada após troca de domínio. Google Ads 121 no quadro de lojas.",
         "created_at": "2026-11-13 16:20:30",
+        "month_key": "2026-11",
+        "source": "integration",
+        "created_by": "onobrecarlos@gmail.com",
+        "integration_id": "3657725dd84d45aebc6007d5bb38a220"
+      }
+    },
+    {
+      "token_id": "3657725dd84d45aebc6007d5bb38a220",
+      "key": "whatsapp-2026-11-16-snuggi",
+      "body_hash": "27b9ac22f35dde91fa1e450a33cd61297484e99ae897ad72d3cb39a98e9b54c8",
+      "record": {
+        "id": "rec_4b3f14601e",
+        "event_type": "store_published",
+        "store_name": "Snuggi Sandals",
+        "domain": "snuggisandalshop.com",
+        "account_number": "—",
+        "inactive_category": "",
+        "reason": "Republicada após troca de domínio confirmada na conversa. Google Ads 62 no quadro de lojas.",
+        "created_at": "2026-11-16 09:32:36",
         "month_key": "2026-11",
         "source": "integration",
         "created_by": "onobrecarlos@gmail.com",
