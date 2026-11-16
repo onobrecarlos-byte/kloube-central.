@@ -138,7 +138,8 @@
       "created_at": "2026-11-16 09:45:24",
       "source": "store_publication",
       "page_title": "",
-      "outage_id": "c3bbf9cd059f8a346d53489f"
+      "outage_id": "c3bbf9cd059f8a346d53489f",
+      "outage_alert_id": "al_a321043600bc9d810992d9c4"
     },
     {
       "id": "dom_f8a25f0846",
@@ -875,6 +876,17 @@
     }
   ],
   "alerts": [
+    {
+      "id": "al_a321043600bc9d810992d9c4",
+      "domain": "uselunasperiodco.com",
+      "name": "Lunã",
+      "reason": "Certificado SSL inválido ou expirado",
+      "timestamp": "2026-11-16 14:18:40",
+      "desktop_sent": false,
+      "email_sent": false,
+      "email_info": "Envio reservado",
+      "email_recipient": "onobrecarlos@gmail.com, alertas.kloube@gmail.com"
+    },
     {
       "id": "al_41597336228b8d801ab53612",
       "domain": "wearmasonclothing.com",
