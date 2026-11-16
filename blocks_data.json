@@ -1634,7 +1634,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-16 14:24:11",
+  "updated_at": "2026-11-16 14:24:16",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -3193,7 +3193,7 @@
       "publications": [],
       "suspensions": [],
       "status": "Inativa",
-      "status_verified_at": "2026-11-16 10:16:58",
+      "status_verified_at": "2026-11-16 14:24:14",
       "status_source": "integration",
       "current_ads_account": "Google Ads 127"
     },
@@ -4854,6 +4854,14 @@
       "domain": "orliviashop.com",
       "status": "Inativa",
       "at": "2026-11-16 14:24:06",
+      "by": "onobrecarlos@gmail.com",
+      "integration_id": "3657725dd84d45aebc6007d5bb38a220"
+    },
+    {
+      "store_name": "ShinDefender",
+      "domain": "shindefenderco.com",
+      "status": "Inativa",
+      "at": "2026-11-16 14:24:14",
       "by": "onobrecarlos@gmail.com",
       "integration_id": "3657725dd84d45aebc6007d5bb38a220"
     }
