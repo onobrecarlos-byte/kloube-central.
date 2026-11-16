@@ -1662,7 +1662,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-16 16:16:22",
+  "updated_at": "2026-11-16 16:16:42",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -2726,7 +2726,7 @@
       "name": "EverSock",
       "current_domain": "myeversock.com",
       "domain_swaps_count": 0,
-      "status": "Ativa",
+      "status": "Inativa",
       "domain_history": [
         {
           "domain": "myeversock.com",
@@ -2750,8 +2750,8 @@
           "source": "before_user_screenshot_verification"
         }
       ],
-      "status_verified_at": "2026-11-05 12:16:19",
-      "status_source": "user_screenshots_2026-11-05"
+      "status_verified_at": "2026-11-16 16:16:42",
+      "status_source": "manual"
     },
     "Snuggi Sandals": {
       "name": "Snuggi Sandals",
