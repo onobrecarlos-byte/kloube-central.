@@ -1662,7 +1662,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-16 14:30:07",
+  "updated_at": "2026-11-16 14:30:11",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -3164,9 +3164,9 @@
       "domain_history": [],
       "publications": [],
       "suspensions": [],
-      "status": "Ativa",
-      "status_verified_at": "2026-11-08 01:09:04",
-      "status_source": "manual",
+      "status": "Inativa",
+      "status_verified_at": "2026-11-16 14:30:09",
+      "status_source": "integration",
       "current_ads_account": "Google Ads 94"
     },
     "Amua": {
@@ -4936,6 +4936,14 @@
       "domain": "thetekkoshop.com",
       "status": "Inativa",
       "at": "2026-11-16 14:30:05",
+      "by": "onobrecarlos@gmail.com",
+      "integration_id": "3657725dd84d45aebc6007d5bb38a220"
+    },
+    {
+      "store_name": "Niva",
+      "domain": "usenivastore.com",
+      "status": "Inativa",
+      "at": "2026-11-16 14:30:09",
       "by": "onobrecarlos@gmail.com",
       "integration_id": "3657725dd84d45aebc6007d5bb38a220"
     }
