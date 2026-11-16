@@ -76,6 +76,20 @@
   },
   "records": [
     {
+      "id": "rec_a83e566d94",
+      "event_type": "store_published",
+      "store_name": "Avulea",
+      "domain": "shopavulea.com",
+      "account_number": "—",
+      "inactive_category": "",
+      "reason": "Republicada após troca de domínio. Google Ads 121 no quadro de lojas.",
+      "created_at": "2026-11-13 16:20:30",
+      "month_key": "2026-11",
+      "source": "integration",
+      "created_by": "onobrecarlos@gmail.com",
+      "integration_id": "3657725dd84d45aebc6007d5bb38a220"
+    },
+    {
       "id": "rec_9f1bb89329",
       "event_type": "store_published",
       "store_name": "ShinDefender",
@@ -1550,7 +1564,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-16 09:45:40",
+  "updated_at": "2026-11-16 09:45:44",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -3123,13 +3137,13 @@
     },
     "Avulea": {
       "name": "Avulea",
-      "current_domain": "avuleastore.com",
+      "current_domain": "shopavulea.com",
       "domain_swaps_count": 0,
       "domain_history": [],
       "publications": [],
       "suspensions": [],
-      "status": "Inativa",
-      "status_verified_at": "2026-11-12 12:07:01",
+      "status": "Ativa",
+      "status_verified_at": "2026-11-13 16:20:30",
       "status_source": "integration"
     },
     "Auria": {
@@ -4599,6 +4613,25 @@
         "inactive_category": "",
         "reason": "Reativada no Google Ads 127 após troca de domínio, conforme confirmação no WhatsApp.",
         "created_at": "2026-11-15 14:45:40",
+        "month_key": "2026-11",
+        "source": "integration",
+        "created_by": "onobrecarlos@gmail.com",
+        "integration_id": "3657725dd84d45aebc6007d5bb38a220"
+      }
+    },
+    {
+      "token_id": "3657725dd84d45aebc6007d5bb38a220",
+      "key": "whatsapp-2026-11-16-avulea",
+      "body_hash": "d29e9abec2f31cfb2490a6476df6067512ba995bc0e83efb9385033e0b78f3ea",
+      "record": {
+        "id": "rec_a83e566d94",
+        "event_type": "store_published",
+        "store_name": "Avulea",
+        "domain": "shopavulea.com",
+        "account_number": "—",
+        "inactive_category": "",
+        "reason": "Republicada após troca de domínio. Google Ads 121 no quadro de lojas.",
+        "created_at": "2026-11-13 16:20:30",
         "month_key": "2026-11",
         "source": "integration",
         "created_by": "onobrecarlos@gmail.com",
