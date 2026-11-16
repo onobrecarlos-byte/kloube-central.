@@ -2,6 +2,7 @@
 import hashlib
 import hmac
 import json
+import re
 import secrets
 import uuid
 from datetime import datetime, timedelta
@@ -133,6 +134,7 @@ def dispatch(handler, method):
                 return reply({'ok': True, 'token': token, 'connection': public_token(item)}, 201)
 
             allowed = {('/api/v1/stores', 'GET'): 'read', ('/api/v1/stores/update', 'POST'): 'write', ('/api/v1/reports', 'GET'): 'read',
+                       ('/api/v1/stores/ads-account', 'POST'): 'write',
                        ('/api/v1/records', 'GET'): 'read', ('/api/v1/records', 'POST'): 'write',
                        ('/api/v1/openapi.json', 'GET'): 'read'}
             scope = allowed.get((path, method))
@@ -144,6 +146,29 @@ def dispatch(handler, method):
                 return reply({'ok': False, 'error': 'Token inválido, expirado ou sem permissão.'}, 401)
             if path.endswith('/openapi.json'):
                 return reply(openapi())
+            if path == '/api/v1/stores/ads-account':
+                body = handler._read_json()
+                if not isinstance(body, dict):
+                    raise ValueError('Envie um objeto JSON.')
+                name = text(body, 'store_name', True, 200)
+                domain = text(body, 'domain', True, 500)
+                raw_account = text(body, 'account_number', True, 100)
+                account = server.normalize_google_ads_account(raw_account)
+                if not re.fullmatch(r'Google Ads [0-9]{1,4}|[0-9]{3}-[0-9]{3}-[0-9]{4}', account):
+                    raise ValueError('Informe um número de conta Google Ads válido.')
+                monitor_host = server.monitor_bridge.host(domain)
+                if not monitor_host:
+                    raise ValueError('Informe um domínio válido.')
+                entry = next((value for key, value in data.get('stores_catalog', {}).items()
+                              if key.casefold() == name.casefold()), None)
+                if entry is None:
+                    return reply({'ok': False, 'error': 'Loja não encontrada.'}, 404)
+                if server.monitor_bridge.host(entry.get('current_domain', '')) != monitor_host:
+                    return reply({'ok': False, 'error': 'O domínio informado difere do domínio atual da loja.'}, 409)
+                if entry.get('current_ads_account') != account:
+                    entry['current_ads_account'] = account
+                    server.store.save(data)
+                return reply({'ok': True, 'store': entry})
             if path == '/api/v1/stores/update':
                 body = handler._read_json()
                 if not isinstance(body, dict):raise ValueError('Envie um objeto JSON.')
@@ -253,6 +278,16 @@ def openapi():
                 'inactive_category': {'type': 'string', 'enum': ['dmca', 'ads_block', 'domain_down']},
                 'also_mark_store_inactive': {'type': 'boolean', 'default': False}}}}}},
         'responses': {'201': {'description': 'Registro criado.'}, '200': {'description': 'Operação já processada.'}}}
+    account_fields = ('store_name', 'domain', 'account_number')
+    paths['/api/v1/stores/ads-account'] = {'post': {
+        'operationId': 'set_store_ads_account',
+        'summary': 'Vincular a conta Google Ads atual ao cadastro da loja.',
+        'requestBody': {'required': True, 'content': {'application/json': {'schema': {
+            'type': 'object', 'required': list(account_fields),
+            'properties': {field: {'type': 'string'} for field in account_fields}}}}},
+        'responses': {'200': {'description': 'Conta atual atualizada.'},
+                      '409': {'description': 'O domínio informado difere do domínio atual.'}},
+    }}
     return {'openapi': '3.0.3', 'info': {'title': 'Kloube Automation API', 'version': '1.0.0'},
             'security': [{'bearerAuth': []}], 'components': {'securitySchemes': {
                 'bearerAuth': {'type': 'http', 'scheme': 'bearer'}}}, 'paths': paths}
