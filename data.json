@@ -577,16 +577,16 @@
       "url": "https://snuggisandalshop.com/",
       "name": "Snuggi Sandals",
       "expected_redirect": "",
-      "status": "unknown",
+      "status": "online",
       "status_label": "Ativo",
-      "reason": "Direcionamento ativo (200 OK · Proteção Anti-Bot 429)",
+      "reason": "Direcionamento ativo (200 OK)",
       "http_code": 200,
-      "final_url": "https://getsnuggisandals.com",
+      "final_url": "https://snuggisandalshop.com",
       "ip_address": "23.227.38.65",
-      "response_time_ms": 99,
-      "checked_at": "2026-11-16 06:31:07",
+      "response_time_ms": 360,
+      "checked_at": "2026-11-16 09:35:11",
       "created_at": "2026-10-30 11:16:20",
-      "page_title": "getsnuggisandals.com"
+      "page_title": "Snuggi Sandals"
     },
     {
       "id": "dom_graceease",
