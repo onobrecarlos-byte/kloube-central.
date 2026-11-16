@@ -1452,7 +1452,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-16 09:35:12",
+  "updated_at": "2026-11-16 09:35:33",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -3785,7 +3785,8 @@
       ],
       "created_at": "2026-11-12 11:50:53",
       "expires_at": 1802271053.575583,
-      "user_version": "5dcd6107954e57741941e5c52b3af8cae35cd47f9656749cb95ad9c80c8e2956"
+      "user_version": "5dcd6107954e57741941e5c52b3af8cae35cd47f9656749cb95ad9c80c8e2956",
+      "revoked_at": "2026-11-16 09:35:33"
     },
     {
       "id": "6188c66037ac43b2a03522b7e9b78e36",
