@@ -76,6 +76,20 @@
   },
   "records": [
     {
+      "id": "rec_9f2d52fa58",
+      "event_type": "store_published",
+      "store_name": "Lunara Comfort",
+      "domain": "shoplunaracomfort.com",
+      "account_number": "—",
+      "inactive_category": "",
+      "reason": "Reativada no Google Ads 114 após troca de domínio, conforme confirmação no WhatsApp.",
+      "created_at": "2026-11-15 14:45:40",
+      "month_key": "2026-11",
+      "source": "integration",
+      "created_by": "onobrecarlos@gmail.com",
+      "integration_id": "3657725dd84d45aebc6007d5bb38a220"
+    },
+    {
       "id": "rec_80cf7ef446",
       "event_type": "store_published",
       "store_name": "Mason",
@@ -1522,7 +1536,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-16 09:45:33",
+  "updated_at": "2026-11-16 09:45:37",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -3194,13 +3208,13 @@
     },
     "Lunara Comfort": {
       "name": "Lunara Comfort",
-      "current_domain": "wearlunaracomfort.com",
+      "current_domain": "shoplunaracomfort.com",
       "domain_swaps_count": 0,
       "domain_history": [],
       "publications": [],
       "suspensions": [],
       "status": "Ativa",
-      "status_verified_at": "2026-11-12 11:52:19",
+      "status_verified_at": "2026-11-15 14:45:40",
       "status_source": "integration"
     },
     "Langwell 2": {
@@ -4532,6 +4546,25 @@
         "account_number": "—",
         "inactive_category": "",
         "reason": "Reativada no Google Ads 97 após troca de domínio, conforme confirmação no WhatsApp.",
+        "created_at": "2026-11-15 14:45:40",
+        "month_key": "2026-11",
+        "source": "integration",
+        "created_by": "onobrecarlos@gmail.com",
+        "integration_id": "3657725dd84d45aebc6007d5bb38a220"
+      }
+    },
+    {
+      "token_id": "3657725dd84d45aebc6007d5bb38a220",
+      "key": "whatsapp-2026-11-16-lunara",
+      "body_hash": "074950c6e86495513a5e7c7dc2b50851a46f031e123a7e0cce32c28ce6ed66d0",
+      "record": {
+        "id": "rec_9f2d52fa58",
+        "event_type": "store_published",
+        "store_name": "Lunara Comfort",
+        "domain": "shoplunaracomfort.com",
+        "account_number": "—",
+        "inactive_category": "",
+        "reason": "Reativada no Google Ads 114 após troca de domínio, conforme confirmação no WhatsApp.",
         "created_at": "2026-11-15 14:45:40",
         "month_key": "2026-11",
         "source": "integration",
