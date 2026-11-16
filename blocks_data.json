@@ -76,6 +76,20 @@
   },
   "records": [
     {
+      "id": "rec_a17e2b43d3",
+      "event_type": "store_published",
+      "store_name": "Orlivia",
+      "domain": "orliviashop.com",
+      "account_number": "—",
+      "inactive_category": "",
+      "reason": "Reativada no Google Ads 128 em 15/11 após troca de domínio. Publicação anterior confirmada em 14/11 no Google Ads 126.",
+      "created_at": "2026-11-15 14:45:40",
+      "month_key": "2026-11",
+      "source": "integration",
+      "created_by": "onobrecarlos@gmail.com",
+      "integration_id": "3657725dd84d45aebc6007d5bb38a220"
+    },
+    {
       "id": "rec_150dc4741d",
       "event_type": "store_published",
       "store_name": "Help 'Em Up",
@@ -1494,7 +1508,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-16 09:45:26",
+  "updated_at": "2026-11-16 09:45:30",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -3273,6 +3287,17 @@
       "status": "Ativa",
       "status_verified_at": "2026-11-14 00:10:53",
       "status_source": "integration"
+    },
+    "Orlivia": {
+      "name": "Orlivia",
+      "current_domain": "orliviashop.com",
+      "domain_swaps_count": 0,
+      "domain_history": [],
+      "publications": [],
+      "suspensions": [],
+      "status": "Ativa",
+      "status_verified_at": "2026-11-15 14:45:40",
+      "status_source": "integration"
     }
   },
   "operational_snapshot": {
@@ -4456,6 +4481,25 @@
         "inactive_category": "",
         "reason": "Publicada no Google Ads 125, conforme confirmação no WhatsApp.",
         "created_at": "2026-11-14 00:10:53",
+        "month_key": "2026-11",
+        "source": "integration",
+        "created_by": "onobrecarlos@gmail.com",
+        "integration_id": "3657725dd84d45aebc6007d5bb38a220"
+      }
+    },
+    {
+      "token_id": "3657725dd84d45aebc6007d5bb38a220",
+      "key": "whatsapp-2026-11-16-orlivia",
+      "body_hash": "aaea635f0e703f21a1b6f684b0b5fa766c59b2c0bf8dba4bd0394b3369b12830",
+      "record": {
+        "id": "rec_a17e2b43d3",
+        "event_type": "store_published",
+        "store_name": "Orlivia",
+        "domain": "orliviashop.com",
+        "account_number": "—",
+        "inactive_category": "",
+        "reason": "Reativada no Google Ads 128 em 15/11 após troca de domínio. Publicação anterior confirmada em 14/11 no Google Ads 126.",
+        "created_at": "2026-11-15 14:45:40",
         "month_key": "2026-11",
         "source": "integration",
         "created_by": "onobrecarlos@gmail.com",
