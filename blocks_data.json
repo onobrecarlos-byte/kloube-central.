@@ -1662,7 +1662,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-16 14:26:54",
+  "updated_at": "2026-11-16 14:30:07",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -3399,8 +3399,8 @@
       "domain_history": [],
       "publications": [],
       "suspensions": [],
-      "status": "Ativa",
-      "status_verified_at": "2026-11-13 00:00:00",
+      "status": "Inativa",
+      "status_verified_at": "2026-11-16 14:30:05",
       "status_source": "integration"
     },
     "SleepSane 3": {
@@ -4928,6 +4928,14 @@
       "domain": "shindefenderco.com",
       "status": "Inativa",
       "at": "2026-11-16 14:24:14",
+      "by": "onobrecarlos@gmail.com",
+      "integration_id": "3657725dd84d45aebc6007d5bb38a220"
+    },
+    {
+      "store_name": "Tekko",
+      "domain": "thetekkoshop.com",
+      "status": "Inativa",
+      "at": "2026-11-16 14:30:05",
       "by": "onobrecarlos@gmail.com",
       "integration_id": "3657725dd84d45aebc6007d5bb38a220"
     }
