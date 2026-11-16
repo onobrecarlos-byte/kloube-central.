@@ -1578,7 +1578,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-16 09:51:59",
+  "updated_at": "2026-11-16 09:58:15",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -3334,7 +3334,8 @@
       "suspensions": [],
       "status": "Ativa",
       "status_verified_at": "2026-11-14 00:10:53",
-      "status_source": "integration"
+      "status_source": "integration",
+      "current_ads_account": "Google Ads 122"
     },
     "Lunã": {
       "name": "Lunã",
