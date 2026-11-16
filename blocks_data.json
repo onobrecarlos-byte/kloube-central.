@@ -76,6 +76,20 @@
   },
   "records": [
     {
+      "id": "rec_8876f57f78",
+      "event_type": "store_reactivated",
+      "store_name": "Mason",
+      "domain": "masnshop.com",
+      "account_number": "—",
+      "inactive_category": "",
+      "reason": "Reativação e publicação confirmadas em 16/11. Horário não informado.",
+      "created_at": "2026-11-16 00:00:00",
+      "month_key": "2026-11",
+      "source": "integration",
+      "created_by": "onobrecarlos@gmail.com",
+      "integration_id": "3657725dd84d45aebc6007d5bb38a220"
+    },
+    {
       "id": "rec_b7279dbf8b",
       "event_type": "store_inactive",
       "store_name": "ShinDefender",
@@ -1634,7 +1648,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-16 14:24:16",
+  "updated_at": "2026-11-16 14:24:18",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -3095,13 +3109,13 @@
     },
     "Mason": {
       "name": "Mason",
-      "current_domain": "wearmasonclothing.com",
+      "current_domain": "masnshop.com",
       "domain_swaps_count": 0,
       "domain_history": [],
       "publications": [],
       "suspensions": [],
       "status": "Ativa",
-      "status_verified_at": "2026-11-15 14:45:40",
+      "status_verified_at": "2026-11-16 00:00:00",
       "status_source": "integration",
       "current_ads_account": "Google Ads 97"
     },
@@ -4817,6 +4831,25 @@
         "inactive_category": "",
         "reason": "Práticas comerciais inaceitáveis: phishing. Segundo bloqueio.",
         "created_at": "2026-11-16 10:16:58",
+        "month_key": "2026-11",
+        "source": "integration",
+        "created_by": "onobrecarlos@gmail.com",
+        "integration_id": "3657725dd84d45aebc6007d5bb38a220"
+      }
+    },
+    {
+      "token_id": "3657725dd84d45aebc6007d5bb38a220",
+      "key": "react-20261116-mason-masnshop",
+      "body_hash": "2b405a9bee993fb7aeb0c447ef9c6202c2ec9221dcc5050f12ea70d5af590a52",
+      "record": {
+        "id": "rec_8876f57f78",
+        "event_type": "store_reactivated",
+        "store_name": "Mason",
+        "domain": "masnshop.com",
+        "account_number": "—",
+        "inactive_category": "",
+        "reason": "Reativação e publicação confirmadas em 16/11. Horário não informado.",
+        "created_at": "2026-11-16 00:00:00",
         "month_key": "2026-11",
         "source": "integration",
         "created_by": "onobrecarlos@gmail.com",
