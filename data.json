@@ -13,11 +13,11 @@
   "domains": [
     {
       "id": "dom_fb4e32578a",
-      "domain": "www.krakatostore.com‬",
-      "url": "https://www.krakatostore.com‬",
+      "domain": "krakatostore.com",
+      "url": "https://krakatostore.com/",
       "name": "krakatoa",
       "expected_redirect": "",
-      "status": "checking",
+      "status": "unknown",
       "status_label": "Verificando...",
       "reason": "Conferindo apontamento e direcionamento...",
       "http_code": null,
