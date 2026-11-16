@@ -76,6 +76,20 @@
   },
   "records": [
     {
+      "id": "rec_80cf7ef446",
+      "event_type": "store_published",
+      "store_name": "Mason",
+      "domain": "wearmasonclothing.com",
+      "account_number": "—",
+      "inactive_category": "",
+      "reason": "Reativada no Google Ads 97 após troca de domínio, conforme confirmação no WhatsApp.",
+      "created_at": "2026-11-15 14:45:40",
+      "month_key": "2026-11",
+      "source": "integration",
+      "created_by": "onobrecarlos@gmail.com",
+      "integration_id": "3657725dd84d45aebc6007d5bb38a220"
+    },
+    {
       "id": "rec_a17e2b43d3",
       "event_type": "store_published",
       "store_name": "Orlivia",
@@ -1508,7 +1522,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-16 09:45:30",
+  "updated_at": "2026-11-16 09:45:33",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -2968,14 +2982,14 @@
     },
     "Mason": {
       "name": "Mason",
-      "current_domain": "https://usemasonclothing.com/",
+      "current_domain": "wearmasonclothing.com",
       "domain_swaps_count": 0,
       "domain_history": [],
       "publications": [],
       "suspensions": [],
       "status": "Ativa",
-      "status_verified_at": "2026-11-06 12:00:00",
-      "status_source": "manual"
+      "status_verified_at": "2026-11-15 14:45:40",
+      "status_source": "integration"
     },
     "Titanex": {
       "name": "Titanex",
@@ -4499,6 +4513,25 @@
         "account_number": "—",
         "inactive_category": "",
         "reason": "Reativada no Google Ads 128 em 15/11 após troca de domínio. Publicação anterior confirmada em 14/11 no Google Ads 126.",
+        "created_at": "2026-11-15 14:45:40",
+        "month_key": "2026-11",
+        "source": "integration",
+        "created_by": "onobrecarlos@gmail.com",
+        "integration_id": "3657725dd84d45aebc6007d5bb38a220"
+      }
+    },
+    {
+      "token_id": "3657725dd84d45aebc6007d5bb38a220",
+      "key": "whatsapp-2026-11-16-mason",
+      "body_hash": "a0fb0d13a97673130b66e9a4d2bcab17bdfde3c9a3e7fa4065ae84e3ec4ae976",
+      "record": {
+        "id": "rec_80cf7ef446",
+        "event_type": "store_published",
+        "store_name": "Mason",
+        "domain": "wearmasonclothing.com",
+        "account_number": "—",
+        "inactive_category": "",
+        "reason": "Reativada no Google Ads 97 após troca de domínio, conforme confirmação no WhatsApp.",
         "created_at": "2026-11-15 14:45:40",
         "month_key": "2026-11",
         "source": "integration",
