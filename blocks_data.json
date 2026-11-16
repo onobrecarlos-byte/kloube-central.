@@ -1578,7 +1578,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-16 09:58:23",
+  "updated_at": "2026-11-16 09:58:25",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -3258,7 +3258,8 @@
       "suspensions": [],
       "status": "Ativa",
       "status_verified_at": "2026-11-15 14:45:40",
-      "status_source": "integration"
+      "status_source": "integration",
+      "current_ads_account": "Google Ads 114"
     },
     "Langwell 2": {
       "name": "Langwell 2",
