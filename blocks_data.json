@@ -76,6 +76,20 @@
   },
   "records": [
     {
+      "id": "rec_9f1bb89329",
+      "event_type": "store_published",
+      "store_name": "ShinDefender",
+      "domain": "shindefenderco.com",
+      "account_number": "—",
+      "inactive_category": "",
+      "reason": "Reativada no Google Ads 127 após troca de domínio, conforme confirmação no WhatsApp.",
+      "created_at": "2026-11-15 14:45:40",
+      "month_key": "2026-11",
+      "source": "integration",
+      "created_by": "onobrecarlos@gmail.com",
+      "integration_id": "3657725dd84d45aebc6007d5bb38a220"
+    },
+    {
       "id": "rec_9f2d52fa58",
       "event_type": "store_published",
       "store_name": "Lunara Comfort",
@@ -1536,7 +1550,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-16 09:45:37",
+  "updated_at": "2026-11-16 09:45:40",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -3087,13 +3101,13 @@
     },
     "ShinDefender": {
       "name": "ShinDefender",
-      "current_domain": "useshindefender.com",
+      "current_domain": "shindefenderco.com",
       "domain_swaps_count": 0,
       "domain_history": [],
       "publications": [],
       "suspensions": [],
       "status": "Ativa",
-      "status_verified_at": "2026-11-11 00:00:00",
+      "status_verified_at": "2026-11-15 14:45:40",
       "status_source": "integration"
     },
     "Nuclever Italia": {
@@ -4565,6 +4579,25 @@
         "account_number": "—",
         "inactive_category": "",
         "reason": "Reativada no Google Ads 114 após troca de domínio, conforme confirmação no WhatsApp.",
+        "created_at": "2026-11-15 14:45:40",
+        "month_key": "2026-11",
+        "source": "integration",
+        "created_by": "onobrecarlos@gmail.com",
+        "integration_id": "3657725dd84d45aebc6007d5bb38a220"
+      }
+    },
+    {
+      "token_id": "3657725dd84d45aebc6007d5bb38a220",
+      "key": "whatsapp-2026-11-16-shindefender",
+      "body_hash": "9f891280a387a247e7233be412fb06b92515da6f0b324754d7a63cb60bc2bed1",
+      "record": {
+        "id": "rec_9f1bb89329",
+        "event_type": "store_published",
+        "store_name": "ShinDefender",
+        "domain": "shindefenderco.com",
+        "account_number": "—",
+        "inactive_category": "",
+        "reason": "Reativada no Google Ads 127 após troca de domínio, conforme confirmação no WhatsApp.",
         "created_at": "2026-11-15 14:45:40",
         "month_key": "2026-11",
         "source": "integration",
