@@ -721,23 +721,6 @@
       "page_title": "Belluna"
     },
     {
-      "id": "dom_eversock",
-      "domain": "myeversock.com",
-      "url": "https://myeversock.com",
-      "name": "EverSock",
-      "expected_redirect": "",
-      "status": "online",
-      "status_label": "Ativo",
-      "reason": "Direcionamento ativo (200 OK)",
-      "http_code": 200,
-      "final_url": "https://myeversock.com",
-      "ip_address": "23.227.38.65",
-      "response_time_ms": 252,
-      "checked_at": "2026-11-16 18:01:56",
-      "created_at": "2026-10-30 11:16:20",
-      "page_title": "EverSock"
-    },
-    {
       "id": "dom_snuggi",
       "domain": "snuggisandalshop.com",
       "url": "https://snuggisandalshop.com/",
