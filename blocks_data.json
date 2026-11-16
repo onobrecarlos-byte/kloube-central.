@@ -76,6 +76,20 @@
   },
   "records": [
     {
+      "id": "rec_b94f5f5cba",
+      "event_type": "store_published",
+      "store_name": "Lunã",
+      "domain": "uselunasperiodco.com",
+      "account_number": "—",
+      "inactive_category": "",
+      "reason": "Publicada no Google Ads 124, conforme confirmação no WhatsApp.",
+      "created_at": "2026-11-14 00:10:53",
+      "month_key": "2026-11",
+      "source": "integration",
+      "created_by": "onobrecarlos@gmail.com",
+      "integration_id": "3657725dd84d45aebc6007d5bb38a220"
+    },
+    {
       "id": "rec_5e993423a8",
       "event_type": "store_published",
       "store_name": "Worthy Always",
@@ -1466,7 +1480,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-16 09:45:19",
+  "updated_at": "2026-11-16 09:45:23",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -3223,6 +3237,17 @@
       "status": "Ativa",
       "status_verified_at": "2026-11-14 00:10:53",
       "status_source": "integration"
+    },
+    "Lunã": {
+      "name": "Lunã",
+      "current_domain": "uselunasperiodco.com",
+      "domain_swaps_count": 0,
+      "domain_history": [],
+      "publications": [],
+      "suspensions": [],
+      "status": "Ativa",
+      "status_verified_at": "2026-11-14 00:10:53",
+      "status_source": "integration"
     }
   },
   "operational_snapshot": {
@@ -4367,6 +4392,25 @@
         "account_number": "—",
         "inactive_category": "",
         "reason": "Publicada no Google Ads 122, conforme confirmação no WhatsApp.",
+        "created_at": "2026-11-14 00:10:53",
+        "month_key": "2026-11",
+        "source": "integration",
+        "created_by": "onobrecarlos@gmail.com",
+        "integration_id": "3657725dd84d45aebc6007d5bb38a220"
+      }
+    },
+    {
+      "token_id": "3657725dd84d45aebc6007d5bb38a220",
+      "key": "whatsapp-2026-11-16-luna",
+      "body_hash": "7f728628a801a011a9b64d37706c6cc9c265bfb1a96bb03514f2248ec7933e62",
+      "record": {
+        "id": "rec_b94f5f5cba",
+        "event_type": "store_published",
+        "store_name": "Lunã",
+        "domain": "uselunasperiodco.com",
+        "account_number": "—",
+        "inactive_category": "",
+        "reason": "Publicada no Google Ads 124, conforme confirmação no WhatsApp.",
         "created_at": "2026-11-14 00:10:53",
         "month_key": "2026-11",
         "source": "integration",
