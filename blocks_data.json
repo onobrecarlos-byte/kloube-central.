@@ -76,6 +76,20 @@
   },
   "records": [
     {
+      "id": "rec_77503442a4",
+      "event_type": "store_reactivated",
+      "store_name": "Lunã",
+      "domain": "wearlunas.com",
+      "account_number": "—",
+      "inactive_category": "",
+      "reason": "Reativação e publicação confirmadas em 16/11. Horário não informado.",
+      "created_at": "2026-11-16 00:00:00",
+      "month_key": "2026-11",
+      "source": "integration",
+      "created_by": "onobrecarlos@gmail.com",
+      "integration_id": "3657725dd84d45aebc6007d5bb38a220"
+    },
+    {
       "id": "rec_8876f57f78",
       "event_type": "store_reactivated",
       "store_name": "Mason",
@@ -1648,7 +1662,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-16 14:24:18",
+  "updated_at": "2026-11-16 14:24:20",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -3415,13 +3429,13 @@
     },
     "Lunã": {
       "name": "Lunã",
-      "current_domain": "uselunasperiodco.com",
+      "current_domain": "wearlunas.com",
       "domain_swaps_count": 0,
       "domain_history": [],
       "publications": [],
       "suspensions": [],
       "status": "Ativa",
-      "status_verified_at": "2026-11-14 00:10:53",
+      "status_verified_at": "2026-11-16 00:00:00",
       "status_source": "integration",
       "current_ads_account": "Google Ads 124"
     },
@@ -4846,6 +4860,25 @@
         "event_type": "store_reactivated",
         "store_name": "Mason",
         "domain": "masnshop.com",
+        "account_number": "—",
+        "inactive_category": "",
+        "reason": "Reativação e publicação confirmadas em 16/11. Horário não informado.",
+        "created_at": "2026-11-16 00:00:00",
+        "month_key": "2026-11",
+        "source": "integration",
+        "created_by": "onobrecarlos@gmail.com",
+        "integration_id": "3657725dd84d45aebc6007d5bb38a220"
+      }
+    },
+    {
+      "token_id": "3657725dd84d45aebc6007d5bb38a220",
+      "key": "react-20261116-luna-wearlunas",
+      "body_hash": "ebccdca25447645f7d239b2b4aa47368c4177a724ea099918f2b82c23f8bd5a3",
+      "record": {
+        "id": "rec_77503442a4",
+        "event_type": "store_reactivated",
+        "store_name": "Lunã",
+        "domain": "wearlunas.com",
         "account_number": "—",
         "inactive_category": "",
         "reason": "Reativação e publicação confirmadas em 16/11. Horário não informado.",
