@@ -12,25 +12,6 @@
   },
   "domains": [
     {
-      "id": "dom_fb4e32578a",
-      "domain": "krakatostore.com",
-      "url": "https://krakatostore.com/",
-      "name": "krakatoa",
-      "expected_redirect": "",
-      "status": "offline",
-      "status_label": "Fora do Ar",
-      "reason": "Loja bloqueada ou inativa na plataforma (HTTP 423 · This store is unavailable)",
-      "http_code": 423,
-      "final_url": "https://krakatostore.com",
-      "ip_address": "23.227.38.65",
-      "response_time_ms": 269,
-      "checked_at": "2026-11-17 01:50:35",
-      "created_at": "2026-11-16 16:35:59",
-      "outage_id": "676e807b496d97d49fe21768",
-      "page_title": "This store is unavailable",
-      "outage_alert_id": "al_879468d1c86316faaf04a63a"
-    },
-    {
       "id": "dom_d076fefd04",
       "domain": "shopavulea.com",
       "url": "https://shopavulea.com",
