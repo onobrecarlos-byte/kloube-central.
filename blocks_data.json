@@ -87,7 +87,8 @@
       "month_key": "2026-11",
       "source": "domain_monitor",
       "monitor_domain_id": "dom_snuggi",
-      "monitor_diagnostic": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)"
+      "monitor_diagnostic": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)",
+      "monitor_closed_at": "2026-11-17 19:00:41"
     },
     {
       "id": "rec_eb62b62aa8",
@@ -1705,7 +1706,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-17 18:13:14",
+  "updated_at": "2026-11-17 19:00:43",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -2798,7 +2799,7 @@
     },
     "Snuggi Sandals": {
       "name": "Snuggi Sandals",
-      "current_domain": "snuggisandalshop.com",
+      "current_domain": "snuggistore.com",
       "domain_swaps_count": 0,
       "status": "Inativa",
       "domain_history": [
@@ -3576,9 +3577,9 @@
       "store_name": "EverSock"
     },
     "dom_snuggi": {
-      "checked_at": "2026-11-17 18:13:10",
-      "category": "domain_down",
-      "record_id": "rec_05795ef652",
+      "checked_at": "2026-11-17 19:00:41",
+      "category": "",
+      "record_id": "",
       "store_name": "Snuggi Sandals"
     },
     "dom_graceease": {
