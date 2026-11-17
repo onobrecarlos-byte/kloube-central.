@@ -703,11 +703,11 @@
     },
     {
       "id": "dom_snuggi",
-      "domain": "snuggisandalshop.com",
-      "url": "https://snuggisandalshop.com/",
+      "domain": "snuggistore.com",
+      "url": "https://snuggistore.com/",
       "name": "Snuggi Sandals",
       "expected_redirect": "",
-      "status": "offline",
+      "status": "unknown",
       "status_label": "Fora do Ar",
       "reason": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)",
       "http_code": null,
@@ -716,9 +716,7 @@
       "response_time_ms": 0,
       "checked_at": "2026-11-17 10:56:36",
       "created_at": "2026-10-30 11:16:20",
-      "page_title": "",
-      "outage_id": "73f9ca9a874fc0bdb1b781df",
-      "outage_alert_id": "al_8eb8d1d6dc9a2f5c68a5bdda"
+      "page_title": ""
     },
     {
       "id": "dom_graceease",
