@@ -76,6 +76,20 @@
   },
   "records": [
     {
+      "id": "rec_319f250260",
+      "event_type": "ads_suspended",
+      "store_name": "Lunã",
+      "domain": "",
+      "account_number": "Google Ads 123",
+      "inactive_category": "",
+      "reason": "Práticas comerciais inaceitáveis: phishing (motivo informado pelo Google Ads)",
+      "created_at": "2026-11-18 13:52:51",
+      "month_key": "2026-11",
+      "source": "integration",
+      "created_by": "onobrecarlos@gmail.com",
+      "integration_id": "a57a2d5c7513477d93053dd2bf3ddb3e"
+    },
+    {
       "id": "rec_2b713ed020",
       "event_type": "ads_suspended",
       "store_name": "Mason",
@@ -1762,7 +1776,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-18 13:52:49",
+  "updated_at": "2026-11-18 13:52:51",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -5040,6 +5054,25 @@
         "inactive_category": "",
         "reason": "Práticas comerciais inaceitáveis: phishing (motivo informado pelo Google Ads)",
         "created_at": "2026-11-17 00:00:00",
+        "month_key": "2026-11",
+        "source": "integration",
+        "created_by": "onobrecarlos@gmail.com",
+        "integration_id": "a57a2d5c7513477d93053dd2bf3ddb3e"
+      }
+    },
+    {
+      "token_id": "a57a2d5c7513477d93053dd2bf3ddb3e",
+      "key": "kloube-ads-suspended-123",
+      "body_hash": "5a7992ebfec0cdf42ec2bc734a1bae978bcb906c656ad8e6a6ed65acd90d4fa2",
+      "record": {
+        "id": "rec_319f250260",
+        "event_type": "ads_suspended",
+        "store_name": "Lunã",
+        "domain": "",
+        "account_number": "Google Ads 123",
+        "inactive_category": "",
+        "reason": "Práticas comerciais inaceitáveis: phishing (motivo informado pelo Google Ads)",
+        "created_at": "2026-11-18 13:52:51",
         "month_key": "2026-11",
         "source": "integration",
         "created_by": "onobrecarlos@gmail.com",
