@@ -1903,7 +1903,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-18 14:01:13",
+  "updated_at": "2026-11-18 14:01:16",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -3785,7 +3785,8 @@
       "suspensions": [],
       "status": "Ativa",
       "status_verified_at": "2026-11-18 00:00:00",
-      "status_source": "integration"
+      "status_source": "integration",
+      "current_ads_account": "Google Ads 137"
     },
     "Vivélan": {
       "name": "Vivélan",
