@@ -211,24 +211,6 @@
       "operational_active": false
     },
     {
-      "id": "dom_6e3ed94497",
-      "domain": "masnshop.com",
-      "url": "https://masnshop.com/",
-      "name": "Mason",
-      "expected_redirect": "",
-      "status": "online",
-      "status_label": "Ativo",
-      "reason": "Direcionamento ativo (200 OK)",
-      "http_code": 200,
-      "final_url": "https://masnshop.com",
-      "ip_address": "23.227.38.65",
-      "response_time_ms": 169,
-      "checked_at": "2026-11-18 14:08:24",
-      "created_at": "2026-11-16 09:45:34",
-      "source": "store_publication",
-      "page_title": "MASON"
-    },
-    {
       "id": "dom_0b5904a5ba",
       "domain": "orliviashop.com",
       "url": "https://orliviashop.com",
