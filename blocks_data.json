@@ -76,6 +76,20 @@
   },
   "records": [
     {
+      "id": "rec_f189d275a8",
+      "event_type": "store_published",
+      "store_name": "Giovasa",
+      "domain": "getgiovasa.com",
+      "account_number": "—",
+      "inactive_category": "",
+      "reason": "Publicação informada pelo usuário em 18/11. Domínio e conta conferidos com a lista aprovada.",
+      "created_at": "2026-11-18 00:00:00",
+      "month_key": "2026-11",
+      "source": "integration",
+      "created_by": "onobrecarlos@gmail.com",
+      "integration_id": "a57a2d5c7513477d93053dd2bf3ddb3e"
+    },
+    {
       "id": "rec_242e1e15c7",
       "event_type": "store_published",
       "store_name": "Lumilight",
@@ -1833,7 +1847,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-18 14:00:15",
+  "updated_at": "2026-11-18 14:00:19",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -3677,6 +3691,17 @@
       "status": "Ativa",
       "status_verified_at": "2026-11-18 00:00:00",
       "status_source": "integration"
+    },
+    "Giovasa": {
+      "name": "Giovasa",
+      "current_domain": "getgiovasa.com",
+      "domain_swaps_count": 0,
+      "domain_history": [],
+      "publications": [],
+      "suspensions": [],
+      "status": "Ativa",
+      "status_verified_at": "2026-11-18 00:00:00",
+      "status_source": "integration"
     }
   },
   "operational_snapshot": {
@@ -5246,6 +5271,25 @@
         "event_type": "store_published",
         "store_name": "Lumilight",
         "domain": "mylumilight.com",
+        "account_number": "—",
+        "inactive_category": "",
+        "reason": "Publicação informada pelo usuário em 18/11. Domínio e conta conferidos com a lista aprovada.",
+        "created_at": "2026-11-18 00:00:00",
+        "month_key": "2026-11",
+        "source": "integration",
+        "created_by": "onobrecarlos@gmail.com",
+        "integration_id": "a57a2d5c7513477d93053dd2bf3ddb3e"
+      }
+    },
+    {
+      "token_id": "a57a2d5c7513477d93053dd2bf3ddb3e",
+      "key": "kloube-notion-2026-11-18-store_published-Giovasa",
+      "body_hash": "9d5197d42a6485f1bbd0ea2db129fbc419078b0f2e9db7f9f14a06c653a3b818",
+      "record": {
+        "id": "rec_f189d275a8",
+        "event_type": "store_published",
+        "store_name": "Giovasa",
+        "domain": "getgiovasa.com",
         "account_number": "—",
         "inactive_category": "",
         "reason": "Publicação informada pelo usuário em 18/11. Domínio e conta conferidos com a lista aprovada.",
