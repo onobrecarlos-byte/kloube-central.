@@ -502,24 +502,6 @@
       "page_title": "Auria"
     },
     {
-      "id": "dom_90e21fcc4a",
-      "domain": "usenuclever.com",
-      "url": "https://usenuclever.com",
-      "name": "Nuclever Italia",
-      "expected_redirect": "",
-      "status": "online",
-      "status_label": "Ativo",
-      "reason": "Direcionamento ativo (200 OK)",
-      "http_code": 200,
-      "final_url": "https://usenuclever.com",
-      "ip_address": "23.227.38.65",
-      "response_time_ms": 238,
-      "checked_at": "2026-11-18 14:08:27",
-      "created_at": "2026-11-11 03:13:26",
-      "source": "store_publication",
-      "page_title": "Nuclever"
-    },
-    {
       "id": "dom_3078aa4727",
       "domain": "usefreiluftkind.com",
       "url": "https://usefreiluftkind.com",
