@@ -248,24 +248,6 @@
       "page_title": "Help 'Em Up"
     },
     {
-      "id": "dom_c875d5c8d6",
-      "domain": "wearlunas.com",
-      "url": "https://wearlunas.com/",
-      "name": "Lunã",
-      "expected_redirect": "",
-      "status": "online",
-      "status_label": "Ativo",
-      "reason": "Direcionamento ativo (200 OK)",
-      "http_code": 200,
-      "final_url": "https://wearlunas.com",
-      "ip_address": "23.227.38.65",
-      "response_time_ms": 362,
-      "checked_at": "2026-11-18 14:08:24",
-      "created_at": "2026-11-16 09:45:24",
-      "source": "store_publication",
-      "page_title": "Lunã"
-    },
-    {
       "id": "dom_f8a25f0846",
       "domain": "useworthyalways.com",
       "url": "https://useworthyalways.com",
