@@ -12,6 +12,23 @@
   },
   "domains": [
     {
+      "id": "dom_b6cdff7a60",
+      "domain": "melloreliefshop.com",
+      "url": "https://melloreliefshop.com",
+      "name": "Mello",
+      "expected_redirect": "",
+      "status": "unknown",
+      "status_label": "Aguardando verificação",
+      "reason": "Cadastrado automaticamente com a publicação da loja.",
+      "http_code": null,
+      "final_url": "",
+      "ip_address": "",
+      "response_time_ms": 0,
+      "checked_at": "",
+      "created_at": "2026-11-18 14:00:24",
+      "source": "store_publication"
+    },
+    {
       "id": "dom_31591d171b",
       "domain": "getgiovasa.com",
       "url": "https://getgiovasa.com",
@@ -1455,6 +1472,7 @@
     "rec_6ffb34e39e",
     "rec_76bdec3eba",
     "rec_80cf7ef446",
+    "rec_80e57b6dc1",
     "rec_83314ade40",
     "rec_85bfda784e",
     "rec_86a0a8e5bb",
