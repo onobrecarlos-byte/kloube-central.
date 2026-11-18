@@ -1903,7 +1903,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-18 14:25:29",
+  "updated_at": "2026-11-18 14:25:37",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -3473,9 +3473,9 @@
       "domain_history": [],
       "publications": [],
       "suspensions": [],
-      "status": "Ativa",
-      "status_verified_at": "2026-11-11 00:00:00",
-      "status_source": "integration"
+      "status": "Inativa",
+      "status_verified_at": "2026-11-18 14:25:37",
+      "status_source": "manual"
     },
     "Avulea": {
       "name": "Avulea",
