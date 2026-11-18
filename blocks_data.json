@@ -76,6 +76,20 @@
   },
   "records": [
     {
+      "id": "rec_80e57b6dc1",
+      "event_type": "store_published",
+      "store_name": "Mello",
+      "domain": "melloreliefshop.com",
+      "account_number": "—",
+      "inactive_category": "",
+      "reason": "Publicação informada pelo usuário em 18/11. Domínio e conta conferidos com a lista aprovada.",
+      "created_at": "2026-11-18 00:00:00",
+      "month_key": "2026-11",
+      "source": "integration",
+      "created_by": "onobrecarlos@gmail.com",
+      "integration_id": "a57a2d5c7513477d93053dd2bf3ddb3e"
+    },
+    {
       "id": "rec_f189d275a8",
       "event_type": "store_published",
       "store_name": "Giovasa",
@@ -1847,7 +1861,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-18 14:00:19",
+  "updated_at": "2026-11-18 14:00:23",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -3702,6 +3716,17 @@
       "status": "Ativa",
       "status_verified_at": "2026-11-18 00:00:00",
       "status_source": "integration"
+    },
+    "Mello": {
+      "name": "Mello",
+      "current_domain": "melloreliefshop.com",
+      "domain_swaps_count": 0,
+      "domain_history": [],
+      "publications": [],
+      "suspensions": [],
+      "status": "Ativa",
+      "status_verified_at": "2026-11-18 00:00:00",
+      "status_source": "integration"
     }
   },
   "operational_snapshot": {
@@ -5290,6 +5315,25 @@
         "event_type": "store_published",
         "store_name": "Giovasa",
         "domain": "getgiovasa.com",
+        "account_number": "—",
+        "inactive_category": "",
+        "reason": "Publicação informada pelo usuário em 18/11. Domínio e conta conferidos com a lista aprovada.",
+        "created_at": "2026-11-18 00:00:00",
+        "month_key": "2026-11",
+        "source": "integration",
+        "created_by": "onobrecarlos@gmail.com",
+        "integration_id": "a57a2d5c7513477d93053dd2bf3ddb3e"
+      }
+    },
+    {
+      "token_id": "a57a2d5c7513477d93053dd2bf3ddb3e",
+      "key": "kloube-notion-2026-11-18-store_published-Mello",
+      "body_hash": "7ad2d81ee02dbfba5bcd7d9390c41ce953cea4f23483e2922225ad67bb32cd42",
+      "record": {
+        "id": "rec_80e57b6dc1",
+        "event_type": "store_published",
+        "store_name": "Mello",
+        "domain": "melloreliefshop.com",
         "account_number": "—",
         "inactive_category": "",
         "reason": "Publicação informada pelo usuário em 18/11. Domínio e conta conferidos com a lista aprovada.",
