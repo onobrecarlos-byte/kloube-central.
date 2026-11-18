@@ -76,6 +76,20 @@
   },
   "records": [
     {
+      "id": "rec_6ffb34e39e",
+      "event_type": "store_published",
+      "store_name": "Krakota 2",
+      "domain": "krakawear.com",
+      "account_number": "—",
+      "inactive_category": "",
+      "reason": "Publicação informada pelo usuário em 18/11. Domínio e conta conferidos com a lista aprovada.",
+      "created_at": "2026-11-18 00:00:00",
+      "month_key": "2026-11",
+      "source": "integration",
+      "created_by": "onobrecarlos@gmail.com",
+      "integration_id": "a57a2d5c7513477d93053dd2bf3ddb3e"
+    },
+    {
       "id": "rec_319f250260",
       "event_type": "ads_suspended",
       "store_name": "Lunã",
@@ -1777,7 +1791,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-18 13:56:57",
+  "updated_at": "2026-11-18 14:00:01",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -3577,6 +3591,17 @@
       "status_verified_at": "2026-11-16 14:24:06",
       "status_source": "integration",
       "current_ads_account": "Google Ads 128"
+    },
+    "Krakota 2": {
+      "name": "Krakota 2",
+      "current_domain": "krakawear.com",
+      "domain_swaps_count": 0,
+      "domain_history": [],
+      "publications": [],
+      "suspensions": [],
+      "status": "Ativa",
+      "status_verified_at": "2026-11-18 00:00:00",
+      "status_source": "integration"
     }
   },
   "operational_snapshot": {
@@ -5074,6 +5099,25 @@
         "inactive_category": "",
         "reason": "Práticas comerciais inaceitáveis: phishing (motivo informado pelo Google Ads)",
         "created_at": "2026-11-18 13:52:51",
+        "month_key": "2026-11",
+        "source": "integration",
+        "created_by": "onobrecarlos@gmail.com",
+        "integration_id": "a57a2d5c7513477d93053dd2bf3ddb3e"
+      }
+    },
+    {
+      "token_id": "a57a2d5c7513477d93053dd2bf3ddb3e",
+      "key": "kloube-notion-2026-11-18-store_published-Krakota2",
+      "body_hash": "47bf6ac6f655d8e05526ed7b8675c98909409f0f4f019647cd133aa05c8e4b77",
+      "record": {
+        "id": "rec_6ffb34e39e",
+        "event_type": "store_published",
+        "store_name": "Krakota 2",
+        "domain": "krakawear.com",
+        "account_number": "—",
+        "inactive_category": "",
+        "reason": "Publicação informada pelo usuário em 18/11. Domínio e conta conferidos com a lista aprovada.",
+        "created_at": "2026-11-18 00:00:00",
         "month_key": "2026-11",
         "source": "integration",
         "created_by": "onobrecarlos@gmail.com",
