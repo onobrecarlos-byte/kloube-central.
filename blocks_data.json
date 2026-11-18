@@ -76,6 +76,34 @@
   },
   "records": [
     {
+      "id": "rec_3de8a0fa22",
+      "event_type": "store_inactive",
+      "store_name": "Lunara Comfort",
+      "domain": "",
+      "account_number": "Google Ads 102",
+      "inactive_category": "ads_block",
+      "reason": "Práticas comerciais inaceitáveis: phishing (motivo informado pelo Google Ads)",
+      "created_at": "2026-11-18 13:52:29",
+      "month_key": "2026-11",
+      "source": "integration",
+      "created_by": "onobrecarlos@gmail.com",
+      "integration_id": "a57a2d5c7513477d93053dd2bf3ddb3e"
+    },
+    {
+      "id": "rec_1f79de68ca",
+      "event_type": "ads_suspended",
+      "store_name": "Lunara Comfort",
+      "domain": "",
+      "account_number": "Google Ads 102",
+      "inactive_category": "",
+      "reason": "Práticas comerciais inaceitáveis: phishing (motivo informado pelo Google Ads)",
+      "created_at": "2026-11-18 13:52:29",
+      "month_key": "2026-11",
+      "source": "integration",
+      "created_by": "onobrecarlos@gmail.com",
+      "integration_id": "a57a2d5c7513477d93053dd2bf3ddb3e"
+    },
+    {
       "id": "rec_af92dc86a8",
       "event_type": "store_inactive",
       "store_name": "Nesty",
@@ -1720,7 +1748,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-18 13:39:12",
+  "updated_at": "2026-11-18 13:52:29",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -3401,8 +3429,8 @@
       "domain_history": [],
       "publications": [],
       "suspensions": [],
-      "status": "Ativa",
-      "status_verified_at": "2026-11-15 14:45:40",
+      "status": "Inativa",
+      "status_verified_at": "2026-11-18 13:52:29",
       "status_source": "integration",
       "current_ads_account": "Google Ads 114"
     },
@@ -4964,6 +4992,25 @@
         "source": "integration",
         "created_by": "onobrecarlos@gmail.com",
         "integration_id": "3657725dd84d45aebc6007d5bb38a220"
+      }
+    },
+    {
+      "token_id": "a57a2d5c7513477d93053dd2bf3ddb3e",
+      "key": "kloube-2026-11-18-ads_suspended-102",
+      "body_hash": "1155ad0ffb3279321d02a3f5a4eb9baad8ebfe1cd46e087ec5eae9f8505dca6f",
+      "record": {
+        "id": "rec_1f79de68ca",
+        "event_type": "ads_suspended",
+        "store_name": "Lunara Comfort",
+        "domain": "",
+        "account_number": "Google Ads 102",
+        "inactive_category": "",
+        "reason": "Práticas comerciais inaceitáveis: phishing (motivo informado pelo Google Ads)",
+        "created_at": "2026-11-18 13:52:29",
+        "month_key": "2026-11",
+        "source": "integration",
+        "created_by": "onobrecarlos@gmail.com",
+        "integration_id": "a57a2d5c7513477d93053dd2bf3ddb3e"
       }
     }
   ],
