@@ -1903,7 +1903,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-18 14:25:20",
+  "updated_at": "2026-11-18 14:25:29",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -3675,9 +3675,9 @@
       "domain_history": [],
       "publications": [],
       "suspensions": [],
-      "status": "Ativa",
-      "status_verified_at": "2026-11-16 00:00:00",
-      "status_source": "integration",
+      "status": "Inativa",
+      "status_verified_at": "2026-11-18 14:25:29",
+      "status_source": "manual",
       "current_ads_account": "Google Ads 124"
     },
     "Help 'Em Up": {
