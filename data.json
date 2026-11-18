@@ -12,6 +12,23 @@
   },
   "domains": [
     {
+      "id": "dom_cfc658ce66",
+      "domain": "getcraftiva.com",
+      "url": "https://getcraftiva.com",
+      "name": "Craftiva",
+      "expected_redirect": "",
+      "status": "unknown",
+      "status_label": "Aguardando verificação",
+      "reason": "Cadastrado automaticamente com a publicação da loja.",
+      "http_code": null,
+      "final_url": "",
+      "ip_address": "",
+      "response_time_ms": 0,
+      "checked_at": "",
+      "created_at": "2026-11-18 14:00:12",
+      "source": "store_publication"
+    },
+    {
       "id": "dom_b83f893e25",
       "domain": "shoppaperflight.com",
       "url": "https://shoppaperflight.com",
@@ -1383,6 +1400,7 @@
     "rec_0b87b8eb42",
     "rec_0cd319ecc5",
     "rec_150dc4741d",
+    "rec_15472000a3",
     "rec_1a281b2458",
     "rec_1dd3bd66a6",
     "rec_2a6488ea7b",
