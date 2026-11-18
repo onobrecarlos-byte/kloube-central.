@@ -76,6 +76,20 @@
   },
   "records": [
     {
+      "id": "rec_2b713ed020",
+      "event_type": "ads_suspended",
+      "store_name": "Mason",
+      "domain": "",
+      "account_number": "Google Ads 129",
+      "inactive_category": "",
+      "reason": "Práticas comerciais inaceitáveis: phishing (motivo informado pelo Google Ads)",
+      "created_at": "2026-11-17 00:00:00",
+      "month_key": "2026-11",
+      "source": "integration",
+      "created_by": "onobrecarlos@gmail.com",
+      "integration_id": "a57a2d5c7513477d93053dd2bf3ddb3e"
+    },
+    {
       "id": "rec_3de8a0fa22",
       "event_type": "store_inactive",
       "store_name": "Lunara Comfort",
@@ -1748,7 +1762,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-18 13:52:29",
+  "updated_at": "2026-11-18 13:52:49",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -5007,6 +5021,25 @@
         "inactive_category": "",
         "reason": "Práticas comerciais inaceitáveis: phishing (motivo informado pelo Google Ads)",
         "created_at": "2026-11-18 13:52:29",
+        "month_key": "2026-11",
+        "source": "integration",
+        "created_by": "onobrecarlos@gmail.com",
+        "integration_id": "a57a2d5c7513477d93053dd2bf3ddb3e"
+      }
+    },
+    {
+      "token_id": "a57a2d5c7513477d93053dd2bf3ddb3e",
+      "key": "kloube-ads-suspended-129",
+      "body_hash": "dd07181e3e08eb18660b24890a2f4be7c8904592dd8e6164423f6414268c7390",
+      "record": {
+        "id": "rec_2b713ed020",
+        "event_type": "ads_suspended",
+        "store_name": "Mason",
+        "domain": "",
+        "account_number": "Google Ads 129",
+        "inactive_category": "",
+        "reason": "Práticas comerciais inaceitáveis: phishing (motivo informado pelo Google Ads)",
+        "created_at": "2026-11-17 00:00:00",
         "month_key": "2026-11",
         "source": "integration",
         "created_by": "onobrecarlos@gmail.com",
