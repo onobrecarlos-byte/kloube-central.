@@ -76,6 +76,20 @@
   },
   "records": [
     {
+      "id": "rec_2bbfea606d",
+      "event_type": "store_published",
+      "store_name": "NoorViper",
+      "domain": "getnoorviper.com",
+      "account_number": "—",
+      "inactive_category": "",
+      "reason": "Publicação informada pelo usuário em 18/11. Domínio e conta conferidos com a lista aprovada.",
+      "created_at": "2026-11-18 00:00:00",
+      "month_key": "2026-11",
+      "source": "integration",
+      "created_by": "onobrecarlos@gmail.com",
+      "integration_id": "a57a2d5c7513477d93053dd2bf3ddb3e"
+    },
+    {
       "id": "rec_80e57b6dc1",
       "event_type": "store_published",
       "store_name": "Mello",
@@ -1861,7 +1875,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-18 14:00:23",
+  "updated_at": "2026-11-18 14:00:27",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -3727,6 +3741,17 @@
       "status": "Ativa",
       "status_verified_at": "2026-11-18 00:00:00",
       "status_source": "integration"
+    },
+    "NoorViper": {
+      "name": "NoorViper",
+      "current_domain": "getnoorviper.com",
+      "domain_swaps_count": 0,
+      "domain_history": [],
+      "publications": [],
+      "suspensions": [],
+      "status": "Ativa",
+      "status_verified_at": "2026-11-18 00:00:00",
+      "status_source": "integration"
     }
   },
   "operational_snapshot": {
@@ -5334,6 +5359,25 @@
         "event_type": "store_published",
         "store_name": "Mello",
         "domain": "melloreliefshop.com",
+        "account_number": "—",
+        "inactive_category": "",
+        "reason": "Publicação informada pelo usuário em 18/11. Domínio e conta conferidos com a lista aprovada.",
+        "created_at": "2026-11-18 00:00:00",
+        "month_key": "2026-11",
+        "source": "integration",
+        "created_by": "onobrecarlos@gmail.com",
+        "integration_id": "a57a2d5c7513477d93053dd2bf3ddb3e"
+      }
+    },
+    {
+      "token_id": "a57a2d5c7513477d93053dd2bf3ddb3e",
+      "key": "kloube-notion-2026-11-18-store_published-NoorViper",
+      "body_hash": "25ffa616003340a99d1d46d47029a56fd135e0bfc3450abad5b6a2813df88631",
+      "record": {
+        "id": "rec_2bbfea606d",
+        "event_type": "store_published",
+        "store_name": "NoorViper",
+        "domain": "getnoorviper.com",
         "account_number": "—",
         "inactive_category": "",
         "reason": "Publicação informada pelo usuário em 18/11. Domínio e conta conferidos com a lista aprovada.",
