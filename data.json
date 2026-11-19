@@ -655,25 +655,6 @@
       "operational_active": false
     },
     {
-      "id": "dom_9c9a6dc329",
-      "domain": "reworkgearstore.com",
-      "url": "https://reworkgearstore.com",
-      "name": "Rework Gear",
-      "expected_redirect": "",
-      "status": "offline",
-      "status_label": "Fora do Ar",
-      "reason": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)",
-      "http_code": null,
-      "final_url": "",
-      "ip_address": "",
-      "response_time_ms": 0,
-      "checked_at": "2026-11-19 10:00:17",
-      "created_at": "2026-11-06 11:24:52",
-      "page_title": "",
-      "outage_id": "aa9710b37d293ff2aa09733d",
-      "outage_alert_id": "al_9f65baaae5b09bcbf5896422"
-    },
-    {
       "id": "dom_dedfadd507",
       "domain": "honeycloudzshop.com",
       "url": "https://honeycloudzshop.com/",
