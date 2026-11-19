@@ -76,6 +76,20 @@
   },
   "records": [
     {
+      "id": "rec_51c28fbb6b",
+      "event_type": "store_published",
+      "store_name": "Outdoors Nordic",
+      "domain": "getoutdoorsnordic.com",
+      "account_number": "—",
+      "inactive_category": "",
+      "reason": "Publicação confirmada em 19/11/2026. Google Ads 140.",
+      "created_at": "2026-11-19 00:42:45",
+      "month_key": "2026-11",
+      "source": "integration",
+      "created_by": "onobrecarlos@gmail.com",
+      "integration_id": "f95957c761e345fea687b7f21d853c74"
+    },
+    {
       "id": "rec_aa79284147",
       "event_type": "store_published",
       "store_name": "Avernio",
@@ -2016,7 +2030,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-19 17:22:46",
+  "updated_at": "2026-11-19 17:22:49",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -3957,6 +3971,17 @@
       "status": "Ativa",
       "status_verified_at": "2026-11-19 00:42:45",
       "status_source": "integration"
+    },
+    "Outdoors Nordic": {
+      "name": "Outdoors Nordic",
+      "current_domain": "getoutdoorsnordic.com",
+      "domain_swaps_count": 0,
+      "domain_history": [],
+      "publications": [],
+      "suspensions": [],
+      "status": "Ativa",
+      "status_verified_at": "2026-11-19 00:42:45",
+      "status_source": "integration"
     }
   },
   "operational_snapshot": {
@@ -5824,6 +5849,25 @@
         "account_number": "—",
         "inactive_category": "",
         "reason": "Publicação confirmada em 19/11/2026. Google Ads 141.",
+        "created_at": "2026-11-19 00:42:45",
+        "month_key": "2026-11",
+        "source": "integration",
+        "created_by": "onobrecarlos@gmail.com",
+        "integration_id": "f95957c761e345fea687b7f21d853c74"
+      }
+    },
+    {
+      "token_id": "f95957c761e345fea687b7f21d853c74",
+      "key": "2026-11-19-notion-reconcile-store_published-Outdoors-Nordic",
+      "body_hash": "e30b200dffeab451f3e403f742bde88724d23d01c69490eb064e801962d6cf83",
+      "record": {
+        "id": "rec_51c28fbb6b",
+        "event_type": "store_published",
+        "store_name": "Outdoors Nordic",
+        "domain": "getoutdoorsnordic.com",
+        "account_number": "—",
+        "inactive_category": "",
+        "reason": "Publicação confirmada em 19/11/2026. Google Ads 140.",
         "created_at": "2026-11-19 00:42:45",
         "month_key": "2026-11",
         "source": "integration",
