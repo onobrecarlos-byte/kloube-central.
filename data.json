@@ -82,7 +82,8 @@
       "created_at": "2026-11-18 14:00:24",
       "source": "store_publication",
       "page_title": "",
-      "outage_id": "a3365cd5075a8782319b293b"
+      "outage_id": "a3365cd5075a8782319b293b",
+      "outage_alert_id": "al_3c3e8d98a251c5414cadad46"
     },
     {
       "id": "dom_31591d171b",
@@ -897,6 +898,17 @@
     }
   ],
   "alerts": [
+    {
+      "id": "al_3c3e8d98a251c5414cadad46",
+      "domain": "melloreliefshop.com",
+      "name": "Mello",
+      "reason": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)",
+      "timestamp": "2026-11-19 14:32:22",
+      "desktop_sent": false,
+      "email_sent": false,
+      "email_info": "Envio reservado",
+      "email_recipient": "onobrecarlos@gmail.com, alertas.kloube@gmail.com"
+    },
     {
       "id": "al_1a059f2c9a784343266b234b",
       "domain": "usesngsands.com",
