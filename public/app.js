@@ -154,8 +154,11 @@ function renderSummaryActiveStores(stores) {
     document.getElementById('summary-active-stores-empty').hidden = stores.length > 0;
     tbody.innerHTML = stores.map(store => `
         <tr>
-            <td><button type="button" class="btn btn-inspect-store store-clickable-link"
-                data-store-name="${escapeHtml(store.store_name)}">${escapeHtml(store.store_name)}</button></td>
+            <td><button type="button" class="summary-store-link btn-inspect-store store-name-bold store-clickable-link"
+                data-store-name="${escapeHtml(store.store_name)}">
+                <img src="/assets/icon-shopify-green.png" class="incident-row-icon" alt="" />
+                <span>${escapeHtml(store.store_name)}</span>
+            </button></td>
             <td>${escapeHtml(displayDomain(store.domain) || '—')}</td>
             <td><span class="badge-pill badge-success">Ativa</span></td>
         </tr>

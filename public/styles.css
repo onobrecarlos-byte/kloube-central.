@@ -775,6 +775,20 @@ body.app-layout {
     font-size: 14.5px;
 }
 
+.summary-store-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    text-align: left;
+}
+
+.summary-store-link .incident-row-icon {
+    flex-shrink: 0;
+}
+
 .incident-type-text {
     padding: 0;
     border: 0;
