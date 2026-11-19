@@ -12,6 +12,23 @@
   },
   "domains": [
     {
+      "id": "dom_7af1d37d4a",
+      "domain": "getoutdoorsnordic.com",
+      "url": "https://getoutdoorsnordic.com",
+      "name": "Outdoors Nordic",
+      "expected_redirect": "",
+      "status": "unknown",
+      "status_label": "Aguardando verificação",
+      "reason": "Cadastrado automaticamente com a publicação da loja.",
+      "http_code": null,
+      "final_url": "",
+      "ip_address": "",
+      "response_time_ms": 0,
+      "checked_at": "",
+      "created_at": "2026-11-19 17:22:51",
+      "source": "store_publication"
+    },
+    {
       "id": "dom_fe83f6df67",
       "domain": "getavernio.com",
       "url": "https://getavernio.com",
@@ -1516,6 +1533,7 @@
     "rec_44012de5d6",
     "rec_49740dbb2b",
     "rec_4b3f14601e",
+    "rec_51c28fbb6b",
     "rec_525d8d2360",
     "rec_5cb6a27149",
     "rec_5e993423a8",
