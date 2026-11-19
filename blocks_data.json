@@ -2086,7 +2086,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-19 17:24:02",
+  "updated_at": "2026-11-19 17:24:04",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -4028,7 +4028,8 @@
       "suspensions": [],
       "status": "Ativa",
       "status_verified_at": "2026-11-19 00:42:45",
-      "status_source": "integration"
+      "status_source": "integration",
+      "current_ads_account": "Google Ads 141"
     },
     "Outdoors Nordic": {
       "name": "Outdoors Nordic",
