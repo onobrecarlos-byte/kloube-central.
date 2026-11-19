@@ -76,6 +76,20 @@
   },
   "records": [
     {
+      "id": "rec_a14a9f83aa",
+      "event_type": "store_inactive",
+      "store_name": "Softari",
+      "domain": "shopsoftari.com",
+      "account_number": "—",
+      "inactive_category": "dmca",
+      "reason": "DMCA. Anúncios da conta Google Ads 45 pausados às 15h23.",
+      "created_at": "2026-11-19 15:21:22",
+      "month_key": "2026-11",
+      "source": "integration",
+      "created_by": "onobrecarlos@gmail.com",
+      "integration_id": "a995fdeec5cf461ebe45dcf7d01eb249"
+    },
+    {
       "id": "rec_5bbb434856",
       "event_type": "ads_suspended",
       "store_name": "Mason 2",
@@ -1960,7 +1974,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-19 15:32:15",
+  "updated_at": "2026-11-19 15:32:17",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -2584,7 +2598,7 @@
       "name": "Softari",
       "current_domain": "shopsoftari.com",
       "domain_swaps_count": 1,
-      "status": "Ativa",
+      "status": "Inativa",
       "domain_history": [
         {
           "domain": "shopsoftari.com",
@@ -2619,8 +2633,8 @@
           "source": "before_user_screenshot_verification"
         }
       ],
-      "status_verified_at": "2026-11-05 12:16:19",
-      "status_source": "user_screenshots_2026-11-05"
+      "status_verified_at": "2026-11-19 15:21:22",
+      "status_source": "integration"
     },
     "Scarlette": {
       "name": "Scarlette",
@@ -5622,6 +5636,25 @@
         "inactive_category": "",
         "reason": "Práticas comerciais inaceitáveis: phishing (motivo informado pelo Google Ads). 23 Adv.",
         "created_at": "2026-11-19 10:14:51",
+        "month_key": "2026-11",
+        "source": "integration",
+        "created_by": "onobrecarlos@gmail.com",
+        "integration_id": "a995fdeec5cf461ebe45dcf7d01eb249"
+      }
+    },
+    {
+      "token_id": "a995fdeec5cf461ebe45dcf7d01eb249",
+      "key": "wa-20261119-softari-dmca",
+      "body_hash": "f39bd5fc2bb14a610db862eed97351eb080e50ffa97e984d21ead804f9985613",
+      "record": {
+        "id": "rec_a14a9f83aa",
+        "event_type": "store_inactive",
+        "store_name": "Softari",
+        "domain": "shopsoftari.com",
+        "account_number": "—",
+        "inactive_category": "dmca",
+        "reason": "DMCA. Anúncios da conta Google Ads 45 pausados às 15h23.",
+        "created_at": "2026-11-19 15:21:22",
         "month_key": "2026-11",
         "source": "integration",
         "created_by": "onobrecarlos@gmail.com",
