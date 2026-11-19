@@ -135,6 +135,8 @@ def dispatch(handler, method):
 
             allowed = {('/api/v1/stores', 'GET'): 'read', ('/api/v1/stores/update', 'POST'): 'write', ('/api/v1/reports', 'GET'): 'read',
                        ('/api/v1/stores/ads-account', 'POST'): 'write',
+                       ('/api/v1/excluded-stores', 'GET'): 'read',
+                       ('/api/v1/excluded-stores', 'POST'): 'write',
                        ('/api/v1/records', 'GET'): 'read', ('/api/v1/records', 'POST'): 'write',
                        ('/api/v1/openapi.json', 'GET'): 'read'}
             scope = allowed.get((path, method))
@@ -146,6 +148,25 @@ def dispatch(handler, method):
                 return reply({'ok': False, 'error': 'Token inválido, expirado ou sem permissão.'}, 401)
             if path.endswith('/openapi.json'):
                 return reply(openapi())
+            if path == '/api/v1/excluded-stores':
+                if method == 'GET':
+                    return reply({'ok': True, 'stores': data.get('excluded_stores', [])})
+                body = handler._read_json()
+                stores = body.get('stores') if isinstance(body, dict) else None
+                if not isinstance(stores, list) or len(stores) > 1000:
+                    raise ValueError('Informe a lista de lojas excluídas.')
+                rows = {}
+                for entry in stores:
+                    if not isinstance(entry, dict):
+                        raise ValueError('Loja inválida.')
+                    name = text(entry, 'store_name', True, 200)
+                    status = text(entry, 'status', True)
+                    if status not in ('Não Validadas', 'Bloqueios Constantes Ads'):
+                        raise ValueError('Classificação inválida.')
+                    rows[name.casefold()] = {'store_name': name, 'status': status}
+                data['excluded_stores'] = sorted(rows.values(), key=lambda row: row['store_name'].casefold())
+                server.store.save(data)
+                return reply({'ok': True, 'stores': data['excluded_stores']})
             if path == '/api/v1/stores/ads-account':
                 body = handler._read_json()
                 if not isinstance(body, dict):
@@ -288,6 +309,17 @@ def openapi():
         'responses': {'200': {'description': 'Conta atual atualizada.'},
                       '409': {'description': 'O domínio informado difere do domínio atual.'}},
     }}
+    paths['/api/v1/excluded-stores'] = {
+        'get': {'operationId': 'get_excluded_stores',
+                'responses': {'200': {'description': 'Classificações atuais do resumo.'}}},
+        'post': {'operationId': 'replace_excluded_stores', 'description': 'Substituir a lista do resumo.',
+                 'requestBody': {'required': True, 'content': {'application/json': {'schema': {
+                     'type': 'object', 'required': ['stores'], 'properties': {'stores': {
+                         'type': 'array', 'items': {'type': 'object', 'required': ['store_name', 'status'],
+                         'properties': {'store_name': {'type': 'string'}, 'status': {
+                             'type': 'string', 'enum': ['Não Validadas', 'Bloqueios Constantes Ads']}}}}}}}},
+                 'responses': {'200': {'description': 'Classificações salvas.'}}},
+    }
     return {'openapi': '3.0.3', 'info': {'title': 'Kloube Automation API', 'version': '1.0.0'},
             'security': [{'bearerAuth': []}], 'components': {'securitySchemes': {
                 'bearerAuth': {'type': 'http', 'scheme': 'bearer'}}}, 'paths': paths}
