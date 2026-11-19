@@ -259,33 +259,30 @@
                         </span>
                         <span class="attention-card-info">
                             <strong class="attention-card-val" id="kpi-active-stores">20</strong>
-                            <span class="attention-card-label" id="label-active-stores">Ativas hoje</span>
+                            <span class="attention-card-label" id="label-active-stores">Lojas ativas</span>
                         </span>
                     </button>
 
-                    <!-- 1. DMCA -->
-                    <div class="attention-card" data-filter-attention="dmca" title="Filtrar incidentes de DMCA">
+                    <div class="attention-card" data-filter-attention="affected_stores" title="Filtrar lojas excluídas">
                         <div class="attention-card-icon">
-                            <img src="/assets/icon-shopify-red.png" alt="DMCA" class="brand-sub-icon" />
+                            <img src="/assets/icon-shopify-green.png" alt="Lojas excluídas" class="brand-sub-icon" />
                         </div>
                         <div class="attention-card-info">
-                            <strong class="attention-card-val" id="att-val-dmca">1</strong>
-                            <span class="attention-card-label">DMCA</span>
+                            <strong class="attention-card-val" id="att-val-affected-stores">2</strong>
+                            <span class="attention-card-label">Lojas excluídas</span>
                         </div>
                     </div>
 
-                    <!-- 2. Contas suspensas -->
                     <div class="attention-card" data-filter-attention="ads_suspended" title="Filtrar contas Google Ads suspensas">
                         <div class="attention-card-icon">
                             <img src="/assets/icon-google-ads.png" alt="Google Ads" class="brand-sub-icon" />
                         </div>
                         <div class="attention-card-info">
                             <strong class="attention-card-val" id="att-val-accounts-suspended">2</strong>
-                            <span class="attention-card-label">Contas suspensas</span>
+                            <span class="attention-card-label">Conta suspensa</span>
                         </div>
                     </div>
 
-                    <!-- 3. Domínio fora do ar -->
                     <div class="attention-card" data-filter-attention="domain_down" title="Filtrar domínios fora do ar">
                         <div class="attention-card-icon icon-globe-box">
                             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -296,18 +293,17 @@
                         </div>
                         <div class="attention-card-info">
                             <strong class="attention-card-val" id="att-val-domain-down">0</strong>
-                            <span class="attention-card-label">Domínio fora do ar</span>
+                            <span class="attention-card-label">Domínios fora do ar</span>
                         </div>
                     </div>
 
-                    <!-- 4. Lojas afetadas -->
-                    <div class="attention-card" data-filter-attention="affected_stores" title="Filtrar lojas afetadas">
+                    <div class="attention-card" data-filter-attention="dmca" title="Filtrar incidentes de DMCA">
                         <div class="attention-card-icon">
-                            <img src="/assets/icon-shopify-green.png" alt="Lojas Afetadas" class="brand-sub-icon" />
+                            <img src="/assets/icon-shopify-red.png" alt="DMCA" class="brand-sub-icon" />
                         </div>
                         <div class="attention-card-info">
-                            <strong class="attention-card-val" id="att-val-affected-stores">2</strong>
-                            <span class="attention-card-label">Lojas afetadas</span>
+                            <strong class="attention-card-val" id="att-val-dmca">1</strong>
+                            <span class="attention-card-label">DMCA</span>
                         </div>
                     </div>
                 </div>

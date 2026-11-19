@@ -119,13 +119,13 @@ function renderDashboard() {
     // Métricas do resumo
     document.getElementById('kpi-start-stores').textContent = s.start_active_stores;
     document.getElementById('kpi-active-stores').textContent = s.end_active_stores;
-    document.getElementById('label-active-stores').textContent = s.active_is_current ? 'Ativas hoje' : 'Ativas no fim';
+    document.getElementById('label-active-stores').textContent = s.active_is_current ? 'Lojas ativas' : 'Lojas ativas no fim';
     document.getElementById('kpi-inactive-stores').textContent = s.total_inactive;
     document.getElementById('kpi-total-stores').textContent = s.total_registered;
     document.getElementById('kpi-published-stores').textContent = s.published_stores_count;
     document.getElementById('kpi-reactivated-stores').textContent = s.reactivated_stores_count || 0;
 
-    // 4 Cards de Atenção (DMCA, Contas suspensas, Domínio fora do ar, Lojas afetadas)
+    // Contadores dos cartões de atenção
     document.getElementById('att-val-dmca').textContent = s.inactive_reasons.dmca;
     document.getElementById('att-val-accounts-suspended').textContent = s.ads_suspensions.total_accounts;
     document.getElementById('att-val-domain-down').textContent = s.inactive_reasons.domain_down;
