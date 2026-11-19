@@ -2086,7 +2086,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-19 17:23:51",
+  "updated_at": "2026-11-19 17:23:57",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -3740,14 +3740,14 @@
     },
     "Nesty": {
       "name": "Nesty",
-      "current_domain": "usenesty.com",
+      "current_domain": "nstyshop.com",
       "domain_swaps_count": 0,
       "domain_history": [],
       "publications": [],
       "suspensions": [],
-      "status": "Inativa",
-      "status_verified_at": "2026-11-18 09:17:02",
-      "status_source": "domain_monitor"
+      "status": "Ativa",
+      "status_verified_at": "2026-11-19 17:23:55",
+      "status_source": "integration"
     },
     "Alessio": {
       "name": "Alessio",
@@ -6086,6 +6086,14 @@
       "at": "2026-11-16 14:30:09",
       "by": "onobrecarlos@gmail.com",
       "integration_id": "3657725dd84d45aebc6007d5bb38a220"
+    },
+    {
+      "store_name": "Nesty",
+      "domain": "nstyshop.com",
+      "status": "Ativa",
+      "at": "2026-11-19 17:23:55",
+      "by": "onobrecarlos@gmail.com",
+      "integration_id": "f95957c761e345fea687b7f21d853c74"
     }
   ]
 }
