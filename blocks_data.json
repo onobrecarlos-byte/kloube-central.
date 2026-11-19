@@ -76,6 +76,20 @@
   },
   "records": [
     {
+      "id": "rec_035d1c628b",
+      "event_type": "store_published",
+      "store_name": "Buckley Belts",
+      "domain": "usebuckleybelts.com",
+      "account_number": "—",
+      "inactive_category": "",
+      "reason": "Publicação confirmada em 14/11/2026. Google Ads 96.",
+      "created_at": "2026-11-14 00:31:49",
+      "month_key": "2026-11",
+      "source": "integration",
+      "created_by": "onobrecarlos@gmail.com",
+      "integration_id": "f95957c761e345fea687b7f21d853c74"
+    },
+    {
       "id": "rec_c44a537ea6",
       "event_type": "store_reactivated",
       "store_name": "Rework Gear",
@@ -2072,7 +2086,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-19 17:22:59",
+  "updated_at": "2026-11-19 17:23:51",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -4035,6 +4049,17 @@
       "status": "Inativa",
       "status_verified_at": "2026-11-19 10:14:51",
       "status_source": "integration"
+    },
+    "Buckley Belts": {
+      "name": "Buckley Belts",
+      "current_domain": "usebuckleybelts.com",
+      "domain_swaps_count": 0,
+      "domain_history": [],
+      "publications": [],
+      "suspensions": [],
+      "status": "Ativa",
+      "status_verified_at": "2026-11-14 00:31:49",
+      "status_source": "integration"
     }
   },
   "operational_snapshot": {
@@ -5979,6 +6004,25 @@
         "inactive_category": "",
         "reason": "Republicação confirmada após troca de domínio.",
         "created_at": "2026-11-19 09:47:04",
+        "month_key": "2026-11",
+        "source": "integration",
+        "created_by": "onobrecarlos@gmail.com",
+        "integration_id": "f95957c761e345fea687b7f21d853c74"
+      }
+    },
+    {
+      "token_id": "f95957c761e345fea687b7f21d853c74",
+      "key": "2026-11-14-notion-reconcile-store-published-Buckley-Belts",
+      "body_hash": "a79e0d69c4ba5507ac8fa5ad6d050ed02a113e37a4b17c1c441bf06fc73646a9",
+      "record": {
+        "id": "rec_035d1c628b",
+        "event_type": "store_published",
+        "store_name": "Buckley Belts",
+        "domain": "usebuckleybelts.com",
+        "account_number": "—",
+        "inactive_category": "",
+        "reason": "Publicação confirmada em 14/11/2026. Google Ads 96.",
+        "created_at": "2026-11-14 00:31:49",
         "month_key": "2026-11",
         "source": "integration",
         "created_by": "onobrecarlos@gmail.com",
