@@ -138,7 +138,28 @@ function renderDashboard() {
     });
 
     // Renderiza a Tabela de Incidentes
-    renderIncidentsTable();
+    const showActiveStores = state.attentionFilter === 'active_stores';
+    document.getElementById('btn-active-stores').setAttribute('aria-pressed', String(showActiveStores));
+    document.getElementById('summary-incidents').hidden = showActiveStores;
+    document.getElementById('summary-active-stores').hidden = !showActiveStores;
+    if (showActiveStores) {
+        renderSummaryActiveStores(s.details?.active_stores || []);
+    } else {
+        renderIncidentsTable();
+    }
+}
+
+function renderSummaryActiveStores(stores) {
+    const tbody = document.getElementById('summary-active-stores-tbody');
+    document.getElementById('summary-active-stores-empty').hidden = stores.length > 0;
+    tbody.innerHTML = stores.map(store => `
+        <tr>
+            <td><button type="button" class="btn btn-inspect-store store-clickable-link"
+                data-store-name="${escapeHtml(store.store_name)}">${escapeHtml(store.store_name)}</button></td>
+            <td>${escapeHtml(displayDomain(store.domain) || '—')}</td>
+            <td><span class="badge-pill badge-success">Ativa</span></td>
+        </tr>
+    `).join('');
 }
 
 function renderIncidentType(item, defaultLabel = item.tipo) {
@@ -813,14 +834,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    document.getElementById('btn-active-stores').addEventListener('click', () => {
-        state.storesSearch = '';
-        document.getElementById('stores-search-input').value = '';
-        switchView('stores', { activeStoresOnly: true });
-    });
     document.getElementById('btn-all-stores').addEventListener('click', () => switchView('stores'));
 
-    // 4. Clique nos 4 Cards de Atenção (Filtra a tabela de incidentes)
+    // Atualiza a tabela abaixo dos cartões de atenção.
     document.querySelectorAll('[data-filter-attention]').forEach(card => {
         card.addEventListener('click', () => {
             const filterType = card.getAttribute('data-filter-attention');

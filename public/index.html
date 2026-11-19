@@ -251,7 +251,7 @@
                 </div>
 
                 <div class="attention-cards-grid">
-                    <button type="button" class="attention-card" id="btn-active-stores" title="Ver a lista de lojas ativas">
+                    <button type="button" class="attention-card" id="btn-active-stores" data-filter-attention="active_stores" aria-controls="summary-active-stores" aria-pressed="false" title="Ver a lista de lojas ativas">
                         <span class="attention-card-icon kpi-icon-box-green">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                                 <polygon points="5 3 19 12 5 21 5 3"></polygon>
@@ -308,8 +308,7 @@
                     </div>
                 </div>
 
-                <!-- TABELA DE INCIDENTES (EXATA DO LAYOUT) -->
-                <div class="incidents-table-wrapper">
+                <div class="incidents-table-wrapper" id="summary-incidents">
                     <table class="incidents-table">
                         <thead>
                             <tr>
@@ -328,6 +327,22 @@
 
                     <div id="incidents-empty" class="table-empty-box" style="display:none;">
                         <p>Nenhum incidente registrado para este período.</p>
+                    </div>
+                </div>
+
+                <div class="incidents-table-wrapper" id="summary-active-stores" hidden>
+                    <table class="incidents-table" aria-label="Lojas ativas">
+                        <thead>
+                            <tr>
+                                <th scope="col">Loja</th>
+                                <th scope="col">Domínio</th>
+                                <th scope="col" style="width: 160px;">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="summary-active-stores-tbody"></tbody>
+                    </table>
+                    <div id="summary-active-stores-empty" class="table-empty-box" hidden>
+                        <p>Nenhuma loja ativa para este período.</p>
                     </div>
                 </div>
             </div>
@@ -790,7 +805,7 @@
 
     <div id="toast-container" class="toast-container" aria-live="polite"></div>
     <script src="/date-picker.js?v=20261105-exact-day"></script>
-    <script src="/app.js?v=incident-type-1"></script>
+    <script src="/app.js?v=summary-active-stores-1"></script>
     <script src="/integrations.js?v=1"></script>
 </body>
 </html>
