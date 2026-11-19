@@ -670,7 +670,8 @@
       "checked_at": "2026-11-19 07:10:58",
       "created_at": "2026-11-06 11:24:52",
       "page_title": "",
-      "outage_id": "aa9710b37d293ff2aa09733d"
+      "outage_id": "aa9710b37d293ff2aa09733d",
+      "outage_alert_id": "al_9f65baaae5b09bcbf5896422"
     },
     {
       "id": "dom_dedfadd507",
@@ -931,6 +932,17 @@
     }
   ],
   "alerts": [
+    {
+      "id": "al_9f65baaae5b09bcbf5896422",
+      "domain": "reworkgearstore.com",
+      "name": "Rework Gear",
+      "reason": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)",
+      "timestamp": "2026-11-19 07:10:58",
+      "desktop_sent": false,
+      "email_sent": false,
+      "email_info": "Envio reservado",
+      "email_recipient": "onobrecarlos@gmail.com, alertas.kloube@gmail.com"
+    },
     {
       "id": "al_87949efa2e5c3427dd4f7717",
       "domain": "usenesty.com",
