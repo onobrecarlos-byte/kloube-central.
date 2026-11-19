@@ -2100,7 +2100,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-19 18:13:20",
+  "updated_at": "2026-11-19 18:32:30",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -6169,6 +6169,124 @@
       "at": "2026-11-19 17:23:55",
       "by": "onobrecarlos@gmail.com",
       "integration_id": "f95957c761e345fea687b7f21d853c74"
+    }
+  ],
+  "excluded_stores": [
+    {
+      "store_name": "Blushe",
+      "status": "Bloqueios Constantes Ads"
+    },
+    {
+      "store_name": "Body & Bra 2",
+      "status": "Bloqueios Constantes Ads"
+    },
+    {
+      "store_name": "Dogs Hood 2",
+      "status": "Bloqueios Constantes Ads"
+    },
+    {
+      "store_name": "Dogshood",
+      "status": "Bloqueios Constantes Ads"
+    },
+    {
+      "store_name": "DR.DENT",
+      "status": "Não Validadas"
+    },
+    {
+      "store_name": "EverSock",
+      "status": "Não Validadas"
+    },
+    {
+      "store_name": "Evolv",
+      "status": "Bloqueios Constantes Ads"
+    },
+    {
+      "store_name": "Halo Ring",
+      "status": "Bloqueios Constantes Ads"
+    },
+    {
+      "store_name": "Havie",
+      "status": "Bloqueios Constantes Ads"
+    },
+    {
+      "store_name": "Kojeva",
+      "status": "Bloqueios Constantes Ads"
+    },
+    {
+      "store_name": "Langwell 2",
+      "status": "Bloqueios Constantes Ads"
+    },
+    {
+      "store_name": "Luhxe",
+      "status": "Não Validadas"
+    },
+    {
+      "store_name": "Lunara Comfort",
+      "status": "Bloqueios Constantes Ads"
+    },
+    {
+      "store_name": "Lunã",
+      "status": "Bloqueios Constantes Ads"
+    },
+    {
+      "store_name": "Maggie's Tanks",
+      "status": "Bloqueios Constantes Ads"
+    },
+    {
+      "store_name": "MASON",
+      "status": "Bloqueios Constantes Ads"
+    },
+    {
+      "store_name": "Meeloy",
+      "status": "Não Validadas"
+    },
+    {
+      "store_name": "Mielle",
+      "status": "Não Validadas"
+    },
+    {
+      "store_name": "NORTH ALPINE",
+      "status": "Bloqueios Constantes Ads"
+    },
+    {
+      "store_name": "Nuclever Italia",
+      "status": "Não Validadas"
+    },
+    {
+      "store_name": "Orlivia",
+      "status": "Não Validadas"
+    },
+    {
+      "store_name": "ORTHORA FOOTWEAR",
+      "status": "Bloqueios Constantes Ads"
+    },
+    {
+      "store_name": "PestPro",
+      "status": "Não Validadas"
+    },
+    {
+      "store_name": "Pilloway",
+      "status": "Não Validadas"
+    },
+    {
+      "store_name": "PuppyPad",
+      "status": "Não Validadas"
+    },
+    {
+      "store_name": "ShinDefender",
+      "status": "Não Validadas"
+    },
+    {
+      "store_name": "Silix",
+      "status": "Não Validadas"
+    },
+    {
+      "store_name": "Soya Paris",
+      "status": "Bloqueios Constantes Ads"
+    },
+    {
+      "store_name": "Titanox",
+      "status": "Bloqueios Constantes Ads"
     }
   ]
 }
