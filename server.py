@@ -1045,7 +1045,6 @@ def compute_summary_with_details(data: dict, month_key: str, period_filter: str 
             "affected_stores": ads_stores_count,
         },
         "attention_incidents": attention_incidents,
-        "excluded_stores": data.get("excluded_stores", []),
         "details": {
             "start_stores": start_stores_items,
             "active_stores": active_stores_items,
