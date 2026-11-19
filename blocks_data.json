@@ -76,6 +76,20 @@
   },
   "records": [
     {
+      "id": "rec_7fcf870e16",
+      "event_type": "store_published",
+      "store_name": "Vittasa",
+      "domain": "vittasashop.com",
+      "account_number": "—",
+      "inactive_category": "",
+      "reason": "Publicação confirmada em 19/11/2026. Google Ads 143.",
+      "created_at": "2026-11-19 00:42:45",
+      "month_key": "2026-11",
+      "source": "integration",
+      "created_by": "onobrecarlos@gmail.com",
+      "integration_id": "f95957c761e345fea687b7f21d853c74"
+    },
+    {
       "id": "rec_a14a9f83aa",
       "event_type": "store_inactive",
       "store_name": "Softari",
@@ -1974,7 +1988,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-19 17:22:01",
+  "updated_at": "2026-11-19 17:22:39",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -3882,6 +3896,17 @@
       "status_verified_at": "2026-11-18 00:00:00",
       "status_source": "integration",
       "current_ads_account": "Google Ads 139"
+    },
+    "Vittasa": {
+      "name": "Vittasa",
+      "current_domain": "vittasashop.com",
+      "domain_swaps_count": 0,
+      "domain_history": [],
+      "publications": [],
+      "suspensions": [],
+      "status": "Ativa",
+      "status_verified_at": "2026-11-19 00:42:45",
+      "status_source": "integration"
     }
   },
   "operational_snapshot": {
@@ -5697,6 +5722,25 @@
         "source": "integration",
         "created_by": "onobrecarlos@gmail.com",
         "integration_id": "a995fdeec5cf461ebe45dcf7d01eb249"
+      }
+    },
+    {
+      "token_id": "f95957c761e345fea687b7f21d853c74",
+      "key": "2026-11-19-notion-reconcile-store_published-Vittasa",
+      "body_hash": "2288e64494ef300f8a3dd0acd20cccdff2efdfd4b6daae96a374fc09b82bf400",
+      "record": {
+        "id": "rec_7fcf870e16",
+        "event_type": "store_published",
+        "store_name": "Vittasa",
+        "domain": "vittasashop.com",
+        "account_number": "—",
+        "inactive_category": "",
+        "reason": "Publicação confirmada em 19/11/2026. Google Ads 143.",
+        "created_at": "2026-11-19 00:42:45",
+        "month_key": "2026-11",
+        "source": "integration",
+        "created_by": "onobrecarlos@gmail.com",
+        "integration_id": "f95957c761e345fea687b7f21d853c74"
       }
     }
   ],
