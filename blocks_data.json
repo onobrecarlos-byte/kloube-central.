@@ -76,6 +76,20 @@
   },
   "records": [
     {
+      "id": "rec_c44a537ea6",
+      "event_type": "store_reactivated",
+      "store_name": "Rework Gear",
+      "domain": "reworkgearco.com",
+      "account_number": "—",
+      "inactive_category": "",
+      "reason": "Republicação confirmada após troca de domínio.",
+      "created_at": "2026-11-19 09:47:04",
+      "month_key": "2026-11",
+      "source": "integration",
+      "created_by": "onobrecarlos@gmail.com",
+      "integration_id": "f95957c761e345fea687b7f21d853c74"
+    },
+    {
       "id": "rec_1e88ccaaf5",
       "event_type": "store_inactive",
       "store_name": "Mason 2",
@@ -2058,7 +2072,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-19 17:22:56",
+  "updated_at": "2026-11-19 17:22:59",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -3508,14 +3522,14 @@
     },
     "Rework Gear": {
       "name": "Rework Gear",
-      "current_domain": "reworkgearstore.com",
+      "current_domain": "reworkgearco.com",
       "domain_swaps_count": 0,
       "domain_history": [],
       "publications": [],
       "suspensions": [],
-      "status": "Inativa",
-      "status_verified_at": "2026-11-19 07:10:58",
-      "status_source": "domain_monitor"
+      "status": "Ativa",
+      "status_verified_at": "2026-11-19 09:47:04",
+      "status_source": "integration"
     },
     "Mason": {
       "name": "Mason",
@@ -5946,6 +5960,25 @@
         "inactive_category": "ads_block",
         "reason": "Google Ads 69 suspensa (phishing). Retomada sem confirmação.",
         "created_at": "2026-11-19 10:14:51",
+        "month_key": "2026-11",
+        "source": "integration",
+        "created_by": "onobrecarlos@gmail.com",
+        "integration_id": "f95957c761e345fea687b7f21d853c74"
+      }
+    },
+    {
+      "token_id": "f95957c761e345fea687b7f21d853c74",
+      "key": "2026-11-19-notion-reconcile-store_reactivated-Rework-Gear",
+      "body_hash": "532e82d10a8e7d87481e3d293d43109491849ba7bfe2056bf74fbd9376957960",
+      "record": {
+        "id": "rec_c44a537ea6",
+        "event_type": "store_reactivated",
+        "store_name": "Rework Gear",
+        "domain": "reworkgearco.com",
+        "account_number": "—",
+        "inactive_category": "",
+        "reason": "Republicação confirmada após troca de domínio.",
+        "created_at": "2026-11-19 09:47:04",
         "month_key": "2026-11",
         "source": "integration",
         "created_by": "onobrecarlos@gmail.com",
