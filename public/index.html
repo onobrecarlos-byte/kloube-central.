@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css?v=summary-active-stores-2" />
+    <link rel="stylesheet" href="/styles.css?v=dashboard-icons-1" />
     <link rel="stylesheet" href="/date-picker.css?v=20261105">
 </head>
 <body class="app-layout">
@@ -252,10 +252,8 @@
 
                 <div class="attention-cards-grid">
                     <button type="button" class="attention-card" id="btn-active-stores" data-filter-attention="active_stores" aria-controls="summary-active-stores" aria-pressed="false" title="Ver a lista de lojas ativas">
-                        <span class="attention-card-icon kpi-icon-box-green">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                            </svg>
+                        <span class="attention-card-icon">
+                            <img src="/assets/dashboard-active-stores.png" alt="" />
                         </span>
                         <span class="attention-card-info">
                             <strong class="attention-card-val" id="kpi-active-stores">20</strong>
@@ -265,7 +263,7 @@
 
                     <div class="attention-card" data-filter-attention="affected_stores" title="Filtrar lojas excluídas">
                         <div class="attention-card-icon">
-                            <img src="/assets/icon-shopify-green.png" alt="Lojas excluídas" class="brand-sub-icon" />
+                            <img src="/assets/dashboard-excluded-stores.png" alt="" />
                         </div>
                         <div class="attention-card-info">
                             <strong class="attention-card-val" id="att-val-affected-stores">2</strong>
@@ -275,7 +273,7 @@
 
                     <div class="attention-card" data-filter-attention="ads_suspended" title="Filtrar contas Google Ads suspensas">
                         <div class="attention-card-icon">
-                            <img src="/assets/icon-google-ads.png" alt="Google Ads" class="brand-sub-icon" />
+                            <img src="/assets/dashboard-suspended-account.png" alt="" />
                         </div>
                         <div class="attention-card-info">
                             <strong class="attention-card-val" id="att-val-accounts-suspended">2</strong>
@@ -284,12 +282,8 @@
                     </div>
 
                     <div class="attention-card" data-filter-attention="domain_down" title="Filtrar domínios fora do ar">
-                        <div class="attention-card-icon icon-globe-box">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <line x1="2" y1="12" x2="22" y2="12"></line>
-                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                            </svg>
+                        <div class="attention-card-icon">
+                            <img src="/assets/dashboard-domain-offline.png" alt="" />
                         </div>
                         <div class="attention-card-info">
                             <strong class="attention-card-val" id="att-val-domain-down">0</strong>
@@ -299,7 +293,7 @@
 
                     <div class="attention-card" data-filter-attention="dmca" title="Filtrar incidentes de DMCA">
                         <div class="attention-card-icon">
-                            <img src="/assets/icon-shopify-red.png" alt="DMCA" class="brand-sub-icon" />
+                            <img src="/assets/dashboard-dmca.png" alt="" />
                         </div>
                         <div class="attention-card-info">
                             <strong class="attention-card-val" id="att-val-dmca">1</strong>

@@ -666,10 +666,6 @@ body.app-layout {
     text-align: left;
 }
 
-.attention-card-icon.kpi-icon-box-green {
-    border-radius: var(--radius-md);
-}
-
 .attention-card.active-filter {
     border-color: var(--accent-blue);
     background-color: var(--bg-surface-hover);
@@ -685,16 +681,11 @@ body.app-layout {
     flex-shrink: 0;
 }
 
-.brand-sub-icon {
-    width: 32px;
-    height: 32px;
+.attention-card-icon img {
+    width: 145%;
+    height: 145%;
+    flex-shrink: 0;
     object-fit: contain;
-}
-
-.icon-globe-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .attention-card-info {
@@ -1387,10 +1378,6 @@ body.app-layout {
     .kpi-icon-box, .attention-card-icon {
         width: 32px;
         height: 32px;
-    }
-    .brand-sub-icon {
-        width: 26px;
-        height: 26px;
     }
     .kpi-number, .attention-card-val {
         font-size: 21px;
