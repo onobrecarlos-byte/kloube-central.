@@ -141,6 +141,40 @@ function renderDashboard() {
     renderIncidentsTable();
 }
 
+function renderIncidentType(item, defaultLabel = item.tipo) {
+    const label = escapeHtml(item.type_note || defaultLabel);
+    if (!item.id) return label;
+    return `<button type="button" class="incident-type-text btn-edit-incident-type"
+        data-id="${escapeHtml(item.id)}" data-note="${escapeHtml(item.type_note)}"
+        title="Editar tipo ou observação">${label} <span aria-hidden="true">✎</span></button>`;
+}
+
+async function editIncidentType(button) {
+    const previous = button.dataset.note;
+    const value = prompt('Tipo ou observação. Deixe em branco para voltar ao tipo original.', previous);
+    if (value === null || value.trim() === previous) return;
+
+    button.disabled = true;
+    try {
+        const response = await fetch('/api/records/update', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ id: button.dataset.id, type_note: value }),
+        });
+        const data = await response.json();
+        if (!data.ok) {
+            alert(data.error || 'Não foi possível salvar a observação.');
+            return;
+        }
+        await fetchState();
+        showToast('Observação salva', '');
+    } catch {
+        alert('Falha na comunicação com o servidor.');
+    } finally {
+        button.disabled = false;
+    }
+}
+
 function renderIncidentsTable() {
     const s = state.monthlySummary;
     if (!s) return;
@@ -194,7 +228,7 @@ function renderIncidentsTable() {
                         ${escapeHtml(item.store_name)}
                     </strong>
                 </td>
-                <td><span class="incident-type-text">${escapeHtml(item.tipo)}</span></td>
+                <td>${renderIncidentType(item)}</td>
                 <td><span class="badge-pill ${badgeClass}">${escapeHtml(item.status)}</span></td>
                 <td><span class="date-text-muted">${escapeHtml(item.registered_at)}</span></td>
                 <td style="text-align:right;">
@@ -449,7 +483,7 @@ function renderIncidentsView() {
                     </strong>
                 </td>
                 <td>${item.account_number && item.account_number !== '—' ? `<span class="tag-mono">${escapeHtml(item.account_number)}</span>` : '—'}</td>
-                <td style="color:#CBD5E1;">${escapeHtml(item.incident_category === 'dmca' ? 'DMCA' : (['ads_block', 'ads_suspended'].includes(item.incident_category) ? 'Suspensão do Google' : item.tipo))}</td>
+                <td style="color:#CBD5E1;">${renderIncidentType(item, item.incident_category === 'dmca' ? 'DMCA' : (['ads_block', 'ads_suspended'].includes(item.incident_category) ? 'Suspensão do Google' : item.tipo))}</td>
                 <td><span class="date-text-muted">${escapeHtml(item.registered_at)}</span></td>
                 <td>
                     <button type="button" class="btn btn-secondary btn-sm btn-inspect-store" style="padding:3px 8px;font-size:11.5px;" data-store-name="${escapeHtml(item.store_name)}">Ver histórico</button>
@@ -1215,6 +1249,12 @@ document.addEventListener('DOMContentLoaded', () => {
             if (sName) {
                 openStoreDetail(sName);
             }
+            return;
+        }
+
+        const incidentTypeButton = e.target.closest('.btn-edit-incident-type');
+        if (incidentTypeButton) {
+            editIncidentType(incidentTypeButton);
             return;
         }
 

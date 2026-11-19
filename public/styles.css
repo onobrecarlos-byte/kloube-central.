@@ -776,7 +776,18 @@ body.app-layout {
 }
 
 .incident-type-text {
+    padding: 0;
+    border: 0;
+    background: transparent;
     color: #CBD5E1;
+    font: inherit;
+    text-align: left;
+    overflow-wrap: anywhere;
+    cursor: pointer;
+}
+
+.incident-type-text:hover {
+    text-decoration: underline;
 }
 
 /* Badges de Status */

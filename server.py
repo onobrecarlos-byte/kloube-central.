@@ -956,6 +956,7 @@ def compute_summary_with_details(data: dict, month_key: str, period_filter: str 
             "store_name": normalize_store_name(r.get("store_name", "Loja")),
             "domain": r.get("domain", ""),
             "tipo": tipo,
+            "type_note": r.get("type_note", ""),
             "incident_category": cat or "inactive",
             "icon": icon,
             "status": "Loja inativa",
@@ -991,6 +992,7 @@ def compute_summary_with_details(data: dict, month_key: str, period_filter: str 
                 "store_name": st_name or "Loja",
                 "domain": r.get("domain", ""),
                 "tipo": "Conta suspensa",
+                "type_note": r.get("type_note", ""),
                 "incident_category": "ads_suspended",
                 "icon": "google_ads",
                 "status": status_label,
@@ -1008,6 +1010,11 @@ def compute_summary_with_details(data: dict, month_key: str, period_filter: str 
             if _name_words(incident.get("store_name", "")) in current_active_names:
                 incident["status"] = "Ativa hoje · histórico"
                 incident["status_type"] = "success"
+
+    historical_notes = data.get("historical_incident_notes", {})
+    for incident in attention_incidents:
+        if incident["id"] in historical_notes:
+            incident["type_note"] = historical_notes[incident["id"]]
 
     attention_incidents.sort(key=lambda x: x.get("raw_date", ""), reverse=True)
 
@@ -1655,7 +1662,21 @@ class BlocksHandler(BaseHTTPRequestHandler):
             rec_id = (body.get("id") or "").strip()
             if not rec_id:
                 return self._send_json({"ok": False, "error": "ID ausente"}, status=400)
+            if "type_note" in body and not isinstance(body["type_note"], str):
+                return self._send_json({"ok": False, "error": "Observação inválida"}, status=400)
             data = store.load()
+            if rec_id.startswith("oct_") and "type_note" in body:
+                historical = compute_summary_with_details(data, "2026-10")["attention_incidents"]
+                if not any(item["id"] == rec_id for item in historical):
+                    return self._send_json({"ok": False, "error": "Registro não encontrado"}, status=404)
+                notes = data.setdefault("historical_incident_notes", {})
+                note = body["type_note"].strip()
+                if note:
+                    notes[rec_id] = note
+                else:
+                    notes.pop(rec_id, None)
+                store.save(data)
+                return self._send_json({"ok": True})
             records = data.get("records", [])
             found = False
             for r in records:
@@ -1672,6 +1693,8 @@ class BlocksHandler(BaseHTTPRequestHandler):
                         r["inactive_category"] = body["inactive_category"]
                     if "reason" in body:
                         r["reason"] = body["reason"]
+                    if "type_note" in body:
+                        r["type_note"] = body["type_note"].strip()
                     if "created_at" in body and body["created_at"]:
                         r["created_at"] = body["created_at"]
                         r["month_key"] = body["created_at"][:7]
