@@ -88,7 +88,7 @@
       "source": "domain_monitor",
       "monitor_domain_id": "dom_b6cdff7a60",
       "monitor_diagnostic": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)",
-      "type_note": "teste"
+      "type_note": "Teste"
     },
     {
       "id": "rec_7511d6042c",
@@ -1946,7 +1946,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-19 14:46:43",
+  "updated_at": "2026-11-19 14:46:53",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
