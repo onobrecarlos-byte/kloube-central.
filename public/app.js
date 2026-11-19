@@ -129,7 +129,7 @@ function renderDashboard() {
     document.getElementById('att-val-dmca').textContent = s.inactive_reasons.dmca;
     document.getElementById('att-val-accounts-suspended').textContent = s.ads_suspensions.total_accounts;
     document.getElementById('att-val-domain-down').textContent = s.inactive_reasons.domain_down;
-    document.getElementById('att-val-affected-stores').textContent = s.ads_suspensions.affected_stores;
+    document.getElementById('att-val-affected-stores').textContent = (s.excluded_stores || []).length;
 
     // Atualiza estado ativo nos cards de atenção
     document.querySelectorAll('[data-filter-attention]').forEach(card => {
@@ -213,7 +213,12 @@ function renderIncidentsTable() {
     } else if (state.attentionFilter === 'ads_suspended') {
         filtered = allIncidents.filter(x => x.incident_category === 'ads_suspended' || x.incident_category === 'ads_block');
     } else if (state.attentionFilter === 'affected_stores') {
-        filtered = allIncidents.filter(x => x.incident_category === 'ads_suspended' || x.incident_category === 'ads_block');
+        filtered = (s.excluded_stores || []).map(store => ({
+            ...store,
+            tipo: 'Classificação no Notion',
+            registered_at: '—',
+            icon: 'shopify_green',
+        }));
     }
 
     const tbody = document.getElementById('incidents-tbody');
