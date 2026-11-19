@@ -76,6 +76,20 @@
   },
   "records": [
     {
+      "id": "rec_5bbb434856",
+      "event_type": "ads_suspended",
+      "store_name": "Mason 2",
+      "domain": "",
+      "account_number": "Google Ads 69",
+      "inactive_category": "",
+      "reason": "Práticas comerciais inaceitáveis: phishing (motivo informado pelo Google Ads). 23 Adv.",
+      "created_at": "2026-11-19 10:14:51",
+      "month_key": "2026-11",
+      "source": "integration",
+      "created_by": "onobrecarlos@gmail.com",
+      "integration_id": "a995fdeec5cf461ebe45dcf7d01eb249"
+    },
+    {
       "id": "rec_0c87404126",
       "event_type": "store_inactive",
       "store_name": "Mello",
@@ -1946,7 +1960,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-19 15:27:22",
+  "updated_at": "2026-11-19 15:32:15",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -5593,6 +5607,25 @@
         "source": "integration",
         "created_by": "onobrecarlos@gmail.com",
         "integration_id": "a57a2d5c7513477d93053dd2bf3ddb3e"
+      }
+    },
+    {
+      "token_id": "a995fdeec5cf461ebe45dcf7d01eb249",
+      "key": "wa-20261119-mason2-ads69-suspension",
+      "body_hash": "2b0ae87e91408ce85e3051c6a4748bf886356c3411ab12c13c8292ebd5541426",
+      "record": {
+        "id": "rec_5bbb434856",
+        "event_type": "ads_suspended",
+        "store_name": "Mason 2",
+        "domain": "",
+        "account_number": "Google Ads 69",
+        "inactive_category": "",
+        "reason": "Práticas comerciais inaceitáveis: phishing (motivo informado pelo Google Ads). 23 Adv.",
+        "created_at": "2026-11-19 10:14:51",
+        "month_key": "2026-11",
+        "source": "integration",
+        "created_by": "onobrecarlos@gmail.com",
+        "integration_id": "a995fdeec5cf461ebe45dcf7d01eb249"
       }
     }
   ],
