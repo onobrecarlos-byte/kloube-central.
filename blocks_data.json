@@ -76,6 +76,20 @@
   },
   "records": [
     {
+      "id": "rec_db2aac39ea",
+      "event_type": "store_published",
+      "store_name": "Titanox Italia",
+      "domain": "usetitanoxofficial.com",
+      "account_number": "—",
+      "inactive_category": "",
+      "reason": "Loja publicada para teste",
+      "created_at": "2026-11-19 00:00:00",
+      "month_key": "2026-11",
+      "source": "integration",
+      "created_by": "onobrecarlos@gmail.com",
+      "integration_id": "36e6e3d5666440cfaad8845f38bec5c2"
+    },
+    {
       "id": "rec_5f296d191c",
       "event_type": "store_published",
       "store_name": "Hanae Korea",
@@ -2198,7 +2212,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-20 10:03:20",
+  "updated_at": "2026-11-20 10:03:22",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -4215,6 +4229,17 @@
       "status_verified_at": "2026-11-19 00:00:00",
       "status_source": "integration",
       "current_ads_account": "Google Ads 149"
+    },
+    "Titanox Italia": {
+      "name": "Titanox Italia",
+      "current_domain": "usetitanoxofficial.com",
+      "domain_swaps_count": 0,
+      "domain_history": [],
+      "publications": [],
+      "suspensions": [],
+      "status": "Ativa",
+      "status_verified_at": "2026-11-19 00:00:00",
+      "status_source": "integration"
     }
   },
   "operational_snapshot": {
@@ -6318,6 +6343,25 @@
         "event_type": "store_published",
         "store_name": "Hanae Korea",
         "domain": "usehanaekorea.com",
+        "account_number": "—",
+        "inactive_category": "",
+        "reason": "Loja publicada para teste",
+        "created_at": "2026-11-19 00:00:00",
+        "month_key": "2026-11",
+        "source": "integration",
+        "created_by": "onobrecarlos@gmail.com",
+        "integration_id": "36e6e3d5666440cfaad8845f38bec5c2"
+      }
+    },
+    {
+      "token_id": "36e6e3d5666440cfaad8845f38bec5c2",
+      "key": "store-published-2026-11-19-usetitanoxofficial.com-150",
+      "body_hash": "12464160ddfa13125476d9e20ec9fafe1b8dcc625a43c6db688e356d8c8dcb39",
+      "record": {
+        "id": "rec_db2aac39ea",
+        "event_type": "store_published",
+        "store_name": "Titanox Italia",
+        "domain": "usetitanoxofficial.com",
         "account_number": "—",
         "inactive_category": "",
         "reason": "Loja publicada para teste",
