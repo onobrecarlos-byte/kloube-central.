@@ -2130,7 +2130,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-20 09:54:39",
+  "updated_at": "2026-11-20 09:54:55",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -4070,9 +4070,9 @@
       "domain_history": [],
       "publications": [],
       "suspensions": [],
-      "status": "Inativa",
-      "status_verified_at": "2026-11-20 05:34:31",
-      "status_source": "domain_monitor",
+      "status": "Ativa",
+      "status_verified_at": "2026-11-20 09:54:55",
+      "status_source": "manual",
       "current_ads_account": "Google Ads 141"
     },
     "Outdoors Nordic": {
