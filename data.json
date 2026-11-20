@@ -69,11 +69,11 @@
     },
     {
       "id": "dom_fe83f6df67",
-      "domain": "getavernio.com",
-      "url": "https://getavernio.com",
+      "domain": "useavernio.com",
+      "url": "https://useavernio.com/",
       "name": "Avernio",
       "expected_redirect": "",
-      "status": "offline",
+      "status": "unknown",
       "status_label": "Fora do Ar",
       "reason": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)",
       "http_code": null,
@@ -83,9 +83,7 @@
       "checked_at": "2026-11-20 05:34:31",
       "created_at": "2026-11-19 17:22:47",
       "source": "store_publication",
-      "page_title": "",
-      "outage_id": "c3b8cc07f872c58be6d86ed3",
-      "outage_alert_id": "al_00c23e3021f83ddb2e27246e"
+      "page_title": ""
     },
     {
       "id": "dom_a99cfc6693",
