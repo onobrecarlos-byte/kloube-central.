@@ -111,7 +111,8 @@
       "month_key": "2026-11",
       "source": "domain_monitor",
       "monitor_domain_id": "dom_32c5a64e9d",
-      "monitor_diagnostic": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)"
+      "monitor_diagnostic": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)",
+      "monitor_closed_at": "2026-11-20 19:37:57"
     },
     {
       "id": "rec_6dcc27e1da",
@@ -2294,7 +2295,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-20 19:17:34",
+  "updated_at": "2026-11-20 19:37:59",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -4772,9 +4773,9 @@
       "store_name": "PaperFlight"
     },
     "dom_32c5a64e9d": {
-      "checked_at": "2026-11-20 19:17:27",
-      "category": "domain_down",
-      "record_id": "rec_c309e29fda",
+      "checked_at": "2026-11-20 19:37:57",
+      "category": "",
+      "record_id": "",
       "store_name": "Krakota 2"
     },
     "dom_a2529c4b9a": {
