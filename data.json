@@ -12,6 +12,23 @@
   },
   "domains": [
     {
+      "id": "dom_585a26d2b9",
+      "domain": "usehanaekorea.com",
+      "url": "https://usehanaekorea.com",
+      "name": "Hanae Korea",
+      "expected_redirect": "",
+      "status": "unknown",
+      "status_label": "Aguardando verificação",
+      "reason": "Cadastrado automaticamente com a publicação da loja.",
+      "http_code": null,
+      "final_url": "",
+      "ip_address": "",
+      "response_time_ms": 0,
+      "checked_at": "",
+      "created_at": "2026-11-20 10:03:18",
+      "source": "store_publication"
+    },
+    {
       "id": "dom_a7d30d19aa",
       "domain": "usepeakflex.com",
       "url": "https://usepeakflex.com",
@@ -1616,6 +1633,7 @@
     "rec_525d8d2360",
     "rec_5cb6a27149",
     "rec_5e993423a8",
+    "rec_5f296d191c",
     "rec_5fd38e2b65",
     "rec_60abadc81e",
     "rec_637743a991",
