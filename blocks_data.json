@@ -76,6 +76,20 @@
   },
   "records": [
     {
+      "id": "rec_bba17f8edb",
+      "event_type": "store_published",
+      "store_name": "Softari 3",
+      "domain": "softarico.com",
+      "account_number": "—",
+      "inactive_category": "",
+      "reason": "Loja publicada para teste",
+      "created_at": "2026-11-19 00:00:00",
+      "month_key": "2026-11",
+      "source": "integration",
+      "created_by": "onobrecarlos@gmail.com",
+      "integration_id": "36e6e3d5666440cfaad8845f38bec5c2"
+    },
+    {
       "id": "rec_0c3a49b37a",
       "event_type": "store_reactivated",
       "store_name": "Avernio",
@@ -2142,7 +2156,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-20 09:58:59",
+  "updated_at": "2026-11-20 10:02:59",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -4122,6 +4136,17 @@
       "status_verified_at": "2026-11-14 00:31:49",
       "status_source": "integration",
       "current_ads_account": "Google Ads 96"
+    },
+    "Softari 3": {
+      "name": "Softari 3",
+      "current_domain": "softarico.com",
+      "domain_swaps_count": 0,
+      "domain_history": [],
+      "publications": [],
+      "suspensions": [],
+      "status": "Ativa",
+      "status_verified_at": "2026-11-19 00:00:00",
+      "status_source": "integration"
     }
   },
   "operational_snapshot": {
@@ -6157,6 +6182,25 @@
         "source": "integration",
         "created_by": "onobrecarlos@gmail.com",
         "integration_id": "f95957c761e345fea687b7f21d853c74"
+      }
+    },
+    {
+      "token_id": "36e6e3d5666440cfaad8845f38bec5c2",
+      "key": "store-published-2026-11-19-softarico.com-146",
+      "body_hash": "19f683f13e744f3a0cbef6e3fb13e1b15f5340728ef2027330a490b2343b6656",
+      "record": {
+        "id": "rec_bba17f8edb",
+        "event_type": "store_published",
+        "store_name": "Softari 3",
+        "domain": "softarico.com",
+        "account_number": "—",
+        "inactive_category": "",
+        "reason": "Loja publicada para teste",
+        "created_at": "2026-11-19 00:00:00",
+        "month_key": "2026-11",
+        "source": "integration",
+        "created_by": "onobrecarlos@gmail.com",
+        "integration_id": "36e6e3d5666440cfaad8845f38bec5c2"
       }
     }
   ],
