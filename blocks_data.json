@@ -101,7 +101,8 @@
       "month_key": "2026-11",
       "source": "domain_monitor",
       "monitor_domain_id": "dom_b6cdff7a60",
-      "monitor_diagnostic": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)"
+      "monitor_diagnostic": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)",
+      "monitor_closed_at": "2026-11-20 14:20:17"
     },
     {
       "id": "rec_d4477d5d54",
@@ -2269,7 +2270,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-20 14:15:01",
+  "updated_at": "2026-11-20 14:20:19",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -4717,9 +4718,9 @@
       "store_name": "NoorViper"
     },
     "dom_b6cdff7a60": {
-      "checked_at": "2026-11-20 14:14:48",
-      "category": "domain_down",
-      "record_id": "rec_6dcc27e1da",
+      "checked_at": "2026-11-20 14:20:17",
+      "category": "",
+      "record_id": "",
       "store_name": "Mello"
     },
     "dom_31591d171b": {
