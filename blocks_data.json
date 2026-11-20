@@ -101,7 +101,8 @@
       "month_key": "2026-11",
       "source": "domain_monitor",
       "monitor_domain_id": "dom_13357374ba",
-      "monitor_diagnostic": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)"
+      "monitor_diagnostic": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)",
+      "monitor_closed_at": "2026-11-20 10:13:27"
     },
     {
       "id": "rec_9d2f3b527e",
@@ -2254,7 +2255,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-20 10:11:54",
+  "updated_at": "2026-11-20 10:13:29",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -4118,7 +4119,7 @@
     },
     "Mello": {
       "name": "Mello",
-      "current_domain": "melloreliefshop.com",
+      "current_domain": "melloofficial.com",
       "domain_swaps_count": 0,
       "domain_history": [],
       "publications": [],
@@ -4780,9 +4781,9 @@
       "store_name": "Nord Body"
     },
     "dom_13357374ba": {
-      "checked_at": "2026-11-20 10:11:43",
-      "category": "domain_down",
-      "record_id": "rec_d4477d5d54",
+      "checked_at": "2026-11-20 10:13:27",
+      "category": "",
+      "record_id": "",
       "store_name": "Titanox Italia"
     },
     "dom_585a26d2b9": {
