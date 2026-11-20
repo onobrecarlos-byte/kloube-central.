@@ -87,7 +87,8 @@
       "month_key": "2026-11",
       "source": "domain_monitor",
       "monitor_domain_id": "dom_fe83f6df67",
-      "monitor_diagnostic": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)"
+      "monitor_diagnostic": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)",
+      "monitor_closed_at": "2026-11-20 09:54:37"
     },
     {
       "id": "rec_7c61c5a00e",
@@ -2129,7 +2130,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-20 05:34:40",
+  "updated_at": "2026-11-20 09:54:39",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -4570,9 +4571,9 @@
       "store_name": "Outdoors Nordic"
     },
     "dom_fe83f6df67": {
-      "checked_at": "2026-11-20 05:34:31",
-      "category": "domain_down",
-      "record_id": "rec_a28e7cd772",
+      "checked_at": "2026-11-20 09:54:37",
+      "category": "",
+      "record_id": "",
       "store_name": "Avernio"
     },
     "dom_a99cfc6693": {
