@@ -249,11 +249,11 @@
     },
     {
       "id": "dom_b6cdff7a60",
-      "domain": "mymelloshop.com",
-      "url": "https://mymelloshop.com/",
+      "domain": "mllstore.com",
+      "url": "https://mllstore.com/",
       "name": "Mello",
       "expected_redirect": "",
-      "status": "offline",
+      "status": "unknown",
       "status_label": "Fora do Ar",
       "reason": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)",
       "http_code": null,
@@ -263,9 +263,7 @@
       "checked_at": "2026-11-21 18:59:53",
       "created_at": "2026-11-18 14:00:24",
       "source": "store_publication",
-      "page_title": "",
-      "outage_id": "3302cf56c0dac3b70f93212e",
-      "outage_alert_id": "al_1d4c59f2db92b614ab7e1cc8"
+      "page_title": ""
     },
     {
       "id": "dom_31591d171b",
