@@ -250,6 +250,10 @@ function renderIncidentsTable() {
         }));
     }
 
+    const accountsOnly = state.attentionFilter === 'ads_suspended';
+    document.getElementById('incidents-entity-heading').textContent = accountsOnly ? 'Conta' : 'Loja';
+    document.getElementById('incidents-type-heading').hidden = accountsOnly;
+
     const tbody = document.getElementById('incidents-tbody');
     const emptyBox = document.getElementById('incidents-empty');
 
@@ -276,6 +280,10 @@ function renderIncidentsTable() {
             `;
         }
 
+        const suspendedAccount = ['ads_suspended', 'ads_block'].includes(item.incident_category);
+        const account = String(item.account_number || '').replace(/^Google\s*Ads\s*/i, '').trim();
+        const entityLabel = suspendedAccount ? (account && account !== '—' ? account : 'Conta não informada') : item.store_name;
+
         const badgeClass = item.status_type === 'danger' ? 'badge-danger' : (item.status_type === 'success' ? 'badge-success' : 'badge-warning');
 
         return `
@@ -286,7 +294,7 @@ function renderIncidentsTable() {
                         ${escapeHtml(item.store_name)}
                     </strong>
                 </td>
-                <td>${renderIncidentType(item)}</td>
+                ${accountsOnly ? '' : `<td>${suspendedAccount ? '' : renderIncidentType(item)}</td>`}
                 <td>${item.incident_category === 'domain_down' ? '' : `<span class="badge-pill ${badgeClass}">${escapeHtml(item.status)}</span>`}</td>
                 <td><span class="date-text-muted">${escapeHtml(item.registered_at)}</span></td>
                 <td style="text-align:right;">
