@@ -10,6 +10,7 @@ const state = {
     activeDrawerSection: null,
     drawerSearch: '',
     storesSearch: '',
+    storesStatus: 'all',
     activeStoresOnly: false,
     historySearch: '',
     historyType: 'all',
@@ -449,6 +450,7 @@ function renderStoresView() {
 
     const q = state.storesSearch.toLowerCase();
     const filtered = list.filter(it => {
+        if (state.storesStatus !== 'all' && it.status !== state.storesStatus) return false;
         if (!q) return true;
         return it.name.toLowerCase().includes(q) || it.domain.toLowerCase().includes(q);
     });
@@ -456,6 +458,8 @@ function renderStoresView() {
     const tbody = document.getElementById('stores-tbody');
     if (!tbody) return;
 
+    document.getElementById('stores-catalog-count').textContent = '(' + filtered.length + ' de ' + list.length + ')';
+    document.getElementById('stores-status-filter').value = state.storesStatus;
     document.getElementById('stores-catalog-subtitle').textContent = state.activeStoresOnly
         ? (s.active_is_current ? 'Lojas ativas hoje' : 'Lojas ativas no fim do período selecionado')
         : 'Todas as lojas sob acompanhamento, domínios vinculados e trocas de domínio realizadas.';
@@ -757,6 +761,7 @@ function switchView(viewName, { activeStoresOnly = false, updateHistory = true }
     }
     state.currentView = viewName;
     state.activeStoresOnly = activeStoresOnly;
+    state.storesStatus = activeStoresOnly ? 'ativa' : 'all';
     document.getElementById('mobile-back-btn').hidden = viewName === 'summary' && !history.state?.kloubeBack && !cameFromMonitor;
     document.getElementById('btn-open-add-modal').style.display = viewName === 'settings' ? 'none' : '';
     if (viewName === 'settings') loadMasterUsers();
@@ -1069,6 +1074,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Busca nas lojas
+    document.getElementById('stores-status-filter').addEventListener('change', (event) => {
+        state.storesStatus = event.target.value;
+        state.activeStoresOnly = false;
+        renderStoresView();
+    });
+
     const storesSearch = document.getElementById('stores-search-input');
     if (storesSearch) {
         storesSearch.addEventListener('input', (e) => {
