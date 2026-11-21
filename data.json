@@ -262,7 +262,8 @@
       "created_at": "2026-11-18 14:00:24",
       "source": "store_publication",
       "page_title": "",
-      "outage_id": "3302cf56c0dac3b70f93212e"
+      "outage_id": "3302cf56c0dac3b70f93212e",
+      "outage_alert_id": "al_1d4c59f2db92b614ab7e1cc8"
     },
     {
       "id": "dom_31591d171b",
@@ -1176,6 +1177,17 @@
     }
   ],
   "alerts": [
+    {
+      "id": "al_1d4c59f2db92b614ab7e1cc8",
+      "domain": "mymelloshop.com",
+      "name": "Mello",
+      "reason": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)",
+      "timestamp": "2026-11-21 09:26:17",
+      "desktop_sent": false,
+      "email_sent": false,
+      "email_info": "Envio reservado",
+      "email_recipient": "onobrecarlos@gmail.com, alertas.kloube@gmail.com"
+    },
     {
       "id": "al_9ac04681edda1aec6f9bbd6a",
       "domain": "krkatoashop.com",
