@@ -164,6 +164,7 @@ function renderSummaryActiveStores(stores, offline = false) {
     document.querySelector('#summary-active-stores-empty p').textContent = offline
         ? 'Nenhum domínio fora do ar na última verificação.'
         : 'Nenhuma loja ativa para este período.';
+    document.querySelector('#summary-active-stores thead th:last-child').hidden = offline;
     const tbody = document.getElementById('summary-active-stores-tbody');
     document.getElementById('summary-active-stores-empty').hidden = stores.length > 0;
     tbody.innerHTML = stores.map(store => `
@@ -174,7 +175,7 @@ function renderSummaryActiveStores(stores, offline = false) {
                 <span>${escapeHtml(store.store_name)}</span>
             </button></td>
             <td>${renderDomainLink(store.domain)}</td>
-            <td><span class="badge-pill ${offline ? 'badge-danger' : 'badge-success'}">${offline ? 'Fora do ar' : 'Ativa'}</span></td>
+            ${offline ? '' : '<td><span class="badge-pill badge-success">Ativa</span></td>'}
         </tr>
     `).join('');
 }
@@ -195,7 +196,7 @@ function renderIncidentType(item, defaultLabel = item.tipo) {
     const label = escapeHtml(item.type_note || defaultLabel);
     const domain = item.incident_category === 'domain_down' && item.domain
         ? '<br>' + renderDomainLink(item.domain) : '';
-    if (!item.id) return label + domain;
+    if (!item.id || item.incident_category === 'dmca') return label + domain;
     return `<button type="button" class="incident-type-text btn-edit-incident-type"
         data-id="${escapeHtml(item.id)}" data-note="${escapeHtml(item.type_note)}"
         title="Editar tipo ou observação">${label} <span aria-hidden="true">✎</span></button>${domain}`;
@@ -286,7 +287,7 @@ function renderIncidentsTable() {
                     </strong>
                 </td>
                 <td>${renderIncidentType(item)}</td>
-                <td><span class="badge-pill ${badgeClass}">${escapeHtml(item.status)}</span></td>
+                <td>${item.incident_category === 'domain_down' ? '' : `<span class="badge-pill ${badgeClass}">${escapeHtml(item.status)}</span>`}</td>
                 <td><span class="date-text-muted">${escapeHtml(item.registered_at)}</span></td>
                 <td style="text-align:right;">
                     ${item.id && !item.id.startsWith('oct_') ? `<button type="button" class="icon-btn-del" onclick="deleteRecord('${escapeHtml(item.id)}')" title="Excluir">&#10005;</button>` : ''}
