@@ -146,17 +146,24 @@ function renderDashboard() {
 
     // Renderiza a Tabela de Incidentes
     const showActiveStores = state.attentionFilter === 'active_stores';
+    const showOfflineDomains = state.attentionFilter === 'domains_to_treat';
+    const showStoreTable = showActiveStores || showOfflineDomains;
+    document.getElementById('btn-domains-to-treat').setAttribute('aria-pressed', String(showOfflineDomains));
     document.getElementById('btn-active-stores').setAttribute('aria-pressed', String(showActiveStores));
-    document.getElementById('summary-incidents').hidden = showActiveStores;
-    document.getElementById('summary-active-stores').hidden = !showActiveStores;
-    if (showActiveStores) {
-        renderSummaryActiveStores(s.details?.active_stores || []);
+    document.getElementById('summary-incidents').hidden = showStoreTable;
+    document.getElementById('summary-active-stores').hidden = !showStoreTable;
+    if (showStoreTable) {
+        renderSummaryActiveStores(s.details?.[showOfflineDomains ? 'domains_to_treat' : 'active_stores'] || [], showOfflineDomains);
     } else {
         renderIncidentsTable();
     }
 }
 
-function renderSummaryActiveStores(stores) {
+function renderSummaryActiveStores(stores, offline = false) {
+    document.querySelector('#summary-active-stores table').setAttribute('aria-label', offline ? 'Domínios a Serem Tratados' : 'Lojas ativas');
+    document.querySelector('#summary-active-stores-empty p').textContent = offline
+        ? 'Nenhum domínio fora do ar na última verificação.'
+        : 'Nenhuma loja ativa para este período.';
     const tbody = document.getElementById('summary-active-stores-tbody');
     document.getElementById('summary-active-stores-empty').hidden = stores.length > 0;
     tbody.innerHTML = stores.map(store => `
@@ -166,18 +173,32 @@ function renderSummaryActiveStores(stores) {
                 <img src="/assets/icon-shopify-green.png" class="incident-row-icon" alt="" />
                 <span>${escapeHtml(store.store_name)}</span>
             </button></td>
-            <td>${escapeHtml(displayDomain(store.domain) || '—')}</td>
-            <td><span class="badge-pill badge-success">Ativa</span></td>
+            <td>${renderDomainLink(store.domain)}</td>
+            <td><span class="badge-pill ${offline ? 'badge-danger' : 'badge-success'}">${offline ? 'Fora do ar' : 'Ativa'}</span></td>
         </tr>
     `).join('');
 }
 
+function renderDomainLink(value) {
+    const domain = displayDomain(value);
+    if (!domain || domain === '—') return '—';
+    try {
+        const url = new URL(domain);
+        if (!['http:', 'https:'].includes(url.protocol)) return escapeHtml(domain);
+        return '<a href="' + escapeHtml(url.href) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(domain) + '</a>';
+    } catch {
+        return escapeHtml(domain);
+    }
+}
+
 function renderIncidentType(item, defaultLabel = item.tipo) {
     const label = escapeHtml(item.type_note || defaultLabel);
-    if (!item.id) return label;
+    const domain = item.incident_category === 'domain_down' && item.domain
+        ? '<br>' + renderDomainLink(item.domain) : '';
+    if (!item.id) return label + domain;
     return `<button type="button" class="incident-type-text btn-edit-incident-type"
         data-id="${escapeHtml(item.id)}" data-note="${escapeHtml(item.type_note)}"
-        title="Editar tipo ou observação">${label} <span aria-hidden="true">✎</span></button>`;
+        title="Editar tipo ou observação">${label} <span aria-hidden="true">✎</span></button>${domain}`;
 }
 
 async function editIncidentType(button) {
@@ -844,10 +865,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     initDatePicker();
-
-    document.getElementById('btn-domains-to-treat').addEventListener('click', () => {
-        openDrawer('domains_to_treat');
-    });
 
     // 3. Clique nos cartões de métricas (abre o painel de detalhes)
     document.querySelectorAll('[data-inspect]').forEach(item => {
