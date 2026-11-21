@@ -196,7 +196,7 @@ function renderIncidentType(item, defaultLabel = item.tipo) {
     const label = escapeHtml(item.type_note || defaultLabel);
     const domain = item.incident_category === 'domain_down' && item.domain
         ? '<br>' + renderDomainLink(item.domain) : '';
-    if (!item.id || item.incident_category === 'dmca') return label + domain;
+    if (!item.id || ['dmca', 'domain_down'].includes(item.incident_category)) return label + domain;
     return `<button type="button" class="incident-type-text btn-edit-incident-type"
         data-id="${escapeHtml(item.id)}" data-note="${escapeHtml(item.type_note)}"
         title="Editar tipo ou observação">${label} <span aria-hidden="true">✎</span></button>${domain}`;
