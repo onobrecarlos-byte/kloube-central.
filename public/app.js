@@ -548,7 +548,7 @@ function renderIncidentsView() {
                 <td>${iconHtml}</td>
                 <td>
                     <strong class="store-name-bold store-clickable-link btn-inspect-store" data-store-name="${escapeHtml(item.store_name)}" title="Ver detalhes da loja">
-                        ${escapeHtml(entityLabel)}
+                        ${escapeHtml(item.store_name)}
                     </strong>
                 </td>
                 <td>${item.account_number && item.account_number !== '—' ? `<span class="tag-mono">${escapeHtml(item.account_number)}</span>` : '—'}</td>
