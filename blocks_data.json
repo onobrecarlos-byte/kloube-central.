@@ -115,7 +115,8 @@
       "month_key": "2026-11",
       "source": "domain_monitor",
       "monitor_domain_id": "dom_b6cdff7a60",
-      "monitor_diagnostic": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)"
+      "monitor_diagnostic": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)",
+      "monitor_closed_at": "2026-11-21 19:01:21"
     },
     {
       "id": "rec_5d9e4fa23b",
@@ -2351,7 +2352,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-21 19:00:02",
+  "updated_at": "2026-11-21 19:01:23",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -4287,7 +4288,7 @@
     },
     "Avernio": {
       "name": "Avernio",
-      "current_domain": "https://useavernio.com/",
+      "current_domain": "useavernio.com",
       "domain_swaps_count": 0,
       "domain_history": [],
       "publications": [],
@@ -4877,9 +4878,9 @@
       "store_name": "NoorViper"
     },
     "dom_b6cdff7a60": {
-      "checked_at": "2026-11-21 18:59:53",
-      "category": "domain_down",
-      "record_id": "rec_91f477d9cc",
+      "checked_at": "2026-11-21 19:01:21",
+      "category": "",
+      "record_id": "",
       "store_name": "Mello"
     },
     "dom_31591d171b": {
