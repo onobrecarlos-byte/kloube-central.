@@ -282,7 +282,7 @@ function renderIncidentsTable() {
 
         const suspendedAccount = ['ads_suspended', 'ads_block'].includes(item.incident_category);
         const account = String(item.account_number || '').replace(/^Google\s*Ads\s*/i, '').trim();
-        const entityLabel = suspendedAccount ? (account && account !== '—' ? account : 'Conta não informada') : item.store_name;
+        const entityLabel = suspendedAccount ? (account && account !== '—' ? 'Google Ads ' + account : 'Conta não informada') : item.store_name;
 
         const badgeClass = item.status_type === 'danger' ? 'badge-danger' : (item.status_type === 'success' ? 'badge-success' : 'badge-warning');
 
