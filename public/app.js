@@ -32,6 +32,11 @@ const SECTION_LABELS = {
         title: 'Lojas no início do mês',
         subtitle: 'Relação de lojas que iniciaram o período ativas.',
     },
+    domains_to_treat: {
+        eyebrow: 'MONITORAMENTO DE DOMÍNIOS',
+        title: 'Domínios a Serem Tratados',
+        subtitle: 'Domínios marcados como fora do ar na última verificação do monitoramento.',
+    },
     active_stores: {
         eyebrow: 'RESUMO DAS LOJAS',
         title: 'Lojas ativas no período',
@@ -128,6 +133,7 @@ function renderDashboard() {
     // Contadores dos cartões de atenção
     document.getElementById('att-val-dmca').textContent = s.inactive_reasons.dmca;
     document.getElementById('att-val-accounts-suspended').textContent = s.ads_suspensions.total_accounts;
+    document.getElementById('att-val-domains-to-treat').textContent = s.domains_to_treat_count ?? '—';
     document.getElementById('att-val-domain-down').textContent = s.inactive_reasons.domain_down;
     document.getElementById('att-val-affected-stores').textContent = (s.excluded_stores || []).length;
 
@@ -833,6 +839,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     initDatePicker();
+
+    document.getElementById('btn-domains-to-treat').addEventListener('click', () => {
+        openDrawer('domains_to_treat');
+    });
 
     // 3. Clique nos cartões de métricas (abre o painel de detalhes)
     document.querySelectorAll('[data-inspect]').forEach(item => {

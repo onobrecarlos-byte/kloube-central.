@@ -1074,6 +1074,21 @@ def _build_state(month_key: str = "", period_filter: str = "month", day_str: str
         period_filter = "month"
 
     summary = compute_summary_with_details(data, month_key, period_filter, day_str, start_date, end_date)
+    from domain_monitor.server import store as monitor_store
+    monitoring = monitor_store.load()
+    domains_to_treat = [
+        {
+            "store_name": domain.get("name") or domain.get("domain", ""),
+            "domain": domain.get("domain", ""),
+            "reason": domain.get("reason") or "Domínio fora do ar",
+            "created_at": domain.get("checked_at", ""),
+        }
+        for domain in monitoring.get("domains", [])
+        if domain.get("status") == "offline"
+        and domain.get("operational_active") is not False
+    ]
+    summary["domains_to_treat_count"] = len(domains_to_treat)
+    summary["details"]["domains_to_treat"] = domains_to_treat
     return {
         "ok": True,
         "server_time": now_iso(),
