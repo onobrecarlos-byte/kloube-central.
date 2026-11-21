@@ -1468,3 +1468,17 @@ body.app-layout {
 .store-stat-disclosure:not([open])>.store-stat-list{display:none}
 
 .metrics-bar-card{grid-template-columns:repeat(auto-fit,minmax(145px,1fr))}
+
+/* Domain navigation and compact suspended account list. */
+.domain-action { display: inline-flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.domain-action-address { color: #dbeafe; overflow-wrap: anywhere; }
+.domain-open-button, .domain-open-button:visited { display: inline-block; padding: 5px 10px; border: 1px solid #3b82f6; border-radius: 6px; color: #bfdbfe; background: #102440; text-decoration: none; font-size: 12px; white-space: nowrap; }
+.domain-open-button:hover { background: #1e3a5f; color: #fff; }
+.domain-open-button:focus-visible { outline: 2px solid #93c5fd; outline-offset: 3px; }
+.accounts-table-compact { max-width: 760px; }
+.accounts-table-compact .incidents-table { table-layout: auto; }
+.accounts-table-compact .incidents-table th:first-child { width: 70px !important; }
+.accounts-table-compact .incidents-table th:nth-last-child(2) { width: 150px !important; }
+.accounts-table-compact .incidents-table th:last-child { width: 44px !important; }
+.accounts-table-compact .incidents-table td { padding-top: 12px; padding-bottom: 12px; }
+.incidents-table [hidden] { display: none !important; }
