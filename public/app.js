@@ -291,7 +291,7 @@ function renderIncidentsTable() {
                 <td>${iconHtml}</td>
                 <td>
                     <strong class="store-name-bold store-clickable-link btn-inspect-store" data-store-name="${escapeHtml(item.store_name)}" title="Clique para ver os bloqueios e datas de ${escapeHtml(item.store_name)}">
-                        ${escapeHtml(item.store_name)}
+                        ${escapeHtml(entityLabel)}
                     </strong>
                 </td>
                 ${accountsOnly ? '' : `<td>${suspendedAccount ? '' : renderIncidentType(item)}</td>`}
@@ -548,7 +548,7 @@ function renderIncidentsView() {
                 <td>${iconHtml}</td>
                 <td>
                     <strong class="store-name-bold store-clickable-link btn-inspect-store" data-store-name="${escapeHtml(item.store_name)}" title="Ver detalhes da loja">
-                        ${escapeHtml(item.store_name)}
+                        ${escapeHtml(entityLabel)}
                     </strong>
                 </td>
                 <td>${item.account_number && item.account_number !== '—' ? `<span class="tag-mono">${escapeHtml(item.account_number)}</span>` : '—'}</td>
