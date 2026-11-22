@@ -5,5 +5,11 @@
     "server.py": {
       "includeFiles": "{domain_monitor/**,public/**,*.py,*.json}"
     }
-  }
+  },
+  "crons": [
+    {
+      "path": "/api/cron/domain-monitor",
+      "schedule": "*/5 * * * *"
+    }
+  ]
 }
