@@ -27,4 +27,9 @@ jobs:
           KLOUBE_ENABLE_PC_MONITOR: '0'
           NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
           KLOUBE_SMTP_PASS: ${{ secrets.KLOUBE_SMTP_PASS }}
-        run: python check_cli.py
+        run: |
+          if [ -z "$NOTION_API_KEY" ]; then
+            echo "::error::Cadastre NOTION_API_KEY nos Secrets do GitHub Actions."
+            exit 1
+          fi
+          python check_cli.py

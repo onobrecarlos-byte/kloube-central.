@@ -10,7 +10,12 @@ def main():
     if data.get('settings',{}).get('monitoring_paused',False):
         print('Monitoramento pausado; nenhuma consulta executada.');return
     if server.notion_stores.enabled():
-        data = dict(data, domains=monitor._notion_targets(data.get("domains", [])))
+        targets = monitor._notion_targets(data.get("domains", []))
+        print(f"Notion consultado: {len(targets)} domínios elegíveis para monitoramento.")
+        if not targets:
+            print("Nenhum domínio ativo para verificar.")
+            return
+        data = dict(data, domains=targets)
     if not monitor._should_refresh_domains(data):
         print('Intervalo ainda não venceu; nenhuma consulta executada.');return
     monitor.verify_all_domains()
