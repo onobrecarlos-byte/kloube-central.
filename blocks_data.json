@@ -87,7 +87,8 @@
       "month_key": "2026-11",
       "source": "domain_monitor",
       "monitor_domain_id": "dom_463a05f031",
-      "monitor_diagnostic": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)"
+      "monitor_diagnostic": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)",
+      "monitor_closed_at": "2026-11-22 11:31:41"
     },
     {
       "id": "rec_0e17487df9",
@@ -2382,7 +2383,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-22 10:45:53",
+  "updated_at": "2026-11-22 11:31:42",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -4770,9 +4771,9 @@
       "store_name": "Lunara Comfort"
     },
     "dom_463a05f031": {
-      "checked_at": "2026-11-22 10:45:46",
-      "category": "domain_down",
-      "record_id": "rec_850f45fd3f",
+      "checked_at": "2026-11-22 11:31:41",
+      "category": "",
+      "record_id": "",
       "store_name": "Nesty"
     },
     "dom_8e4867e63c": {
