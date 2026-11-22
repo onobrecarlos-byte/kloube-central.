@@ -2384,7 +2384,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-22 17:44:29",
+  "updated_at": "2026-11-22 17:47:05",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -4404,14 +4404,14 @@
     },
     "Titanox Italia": {
       "name": "Titanox Italia",
-      "current_domain": "usetitanoxofficial.com",
+      "current_domain": "usetitanoxufficiale.com",
       "domain_swaps_count": 0,
       "domain_history": [],
       "publications": [],
       "suspensions": [],
-      "status": "Inativa",
-      "status_verified_at": "2026-11-20 10:11:43",
-      "status_source": "domain_monitor",
+      "status": "Ativa",
+      "status_verified_at": "2026-11-22 17:47:03",
+      "status_source": "integration",
       "current_ads_account": "Google Ads 150"
     },
     "Nord Body": {
@@ -6798,6 +6798,14 @@
       "at": "2026-11-19 17:23:55",
       "by": "onobrecarlos@gmail.com",
       "integration_id": "f95957c761e345fea687b7f21d853c74"
+    },
+    {
+      "store_name": "Titanox Italia",
+      "domain": "usetitanoxufficiale.com",
+      "status": "Ativa",
+      "at": "2026-11-22 17:47:03",
+      "by": "onobrecarlos@gmail.com",
+      "integration_id": "bedbdb9421d64916b8149145dfcbf38e"
     }
   ],
   "excluded_stores": [
