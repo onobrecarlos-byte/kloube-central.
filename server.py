@@ -871,10 +871,18 @@ def compute_summary_with_details(data: dict, month_key: str, period_filter: str 
         end_active_count = len(active_stores_items)
 
     notion_status = None
-    if active_is_current and notion_stores.enabled():
+    excluded_stores = data.get("excluded_stores", [])
+    if notion_stores.enabled():
         snapshot, stale = notion_stores.snapshot(allow_stale=True)
         notion_status = {"stale": stale, "checked_at": snapshot["checked_at"] if snapshot else None}
         if snapshot is not None:
+            excluded_stores = [
+                {"store_name": row["name"], "domain": row["domain"],
+                 "type_note": row["status"], "status": "Excluída", "status_type": "danger"}
+                for row in snapshot["rows"]
+                if row["name"] and row["status"] in notion_stores.EXCLUDED_STATUSES
+            ]
+        if active_is_current and snapshot is not None:
             active_stores_items = [
                 {"store_name": row["name"], "domain": row["domain"], "notion_id": row["id"],
                  "detail": row["status"], "domain_swaps_count": 0}
@@ -1059,7 +1067,7 @@ def compute_summary_with_details(data: dict, month_key: str, period_filter: str 
             "affected_stores": ads_stores_count,
         },
         "attention_incidents": attention_incidents,
-        "excluded_stores": data.get("excluded_stores", []),
+        "excluded_stores": excluded_stores,
         "details": {
             "start_stores": start_stores_items,
             "active_stores": active_stores_items,
@@ -1091,7 +1099,7 @@ def _build_state(month_key: str = "", period_filter: str = "month", day_str: str
     from domain_monitor.server import store as monitor_store
     monitoring = monitor_store.load()
     monitor_domains = monitoring.get("domains", [])
-    if summary.get("notion_status"):
+    if summary.get("notion_status") and summary["active_is_current"]:
         active_hosts = {
             monitor_bridge.host(row["domain"]) for row in summary["details"]["active_stores"]
             if row["domain"] and row.get("notion_id")

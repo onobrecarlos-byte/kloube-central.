@@ -15,6 +15,14 @@ ACTIVE_STATUSES = {
     "Faturando 500$ - 1.000$/dia",
     "Faturando 1.000$ - 2.000$/dia",
 }
+EXCLUDED_STATUSES = {
+    "Não Validadas",
+    "Bloqueios Constantes Ads",
+    "DMCA",
+    "Outros Problemas",
+    "Payments Restrita",
+    "Lojas Restritas - Pós Forms",
+}
 _last_snapshot = None
 
 
