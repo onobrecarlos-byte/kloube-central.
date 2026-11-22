@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/monitoramento/styles.css?v=kloube-mobile-1" />
     <link rel="stylesheet" href="/monitoramento/unified-sidebar.css?v=kloube-mobile-3">
+    <link rel="stylesheet" href="/kloube-theme.css?v=1">
 </head>
 <body><aside class="sidebar unified-sidebar" id="sidebar">
         <div class="sidebar-brand">
@@ -249,7 +250,7 @@
                 <div class="monitor-controls">
                     <label for="monitor-interval" style="color:#94a3b8;font-size:12px">Verificar a cada</label>
                     <select id="monitor-interval" aria-label="Intervalo de verificação">
-                        <option value="900">15 minutos</option><option value="1800">30 minutos</option><option value="3600" selected>1 hora</option>
+                        <option value="300" selected>5 minutos</option><option value="900">15 minutos</option><option value="1800">30 minutos</option><option value="3600">1 hora</option>
                     </select>
                     <button type="button" id="btn-toggle-monitor" class="btn btn-secondary">Pausar verificação</button>
                 </div>
@@ -322,7 +323,7 @@
                 </div>
                 <div class="summary-content">
                     <span class="summary-label">Próxima verificação</span>
-                    <strong class="summary-value" id="stat-interval">60m 00s</strong>
+                    <strong class="summary-value" id="stat-interval">—</strong>
                 </div>
             </div>
         </section>
@@ -420,7 +421,7 @@
                 <span class="status-dot status-dot-green" aria-hidden="true"></span>
                 <span id="monitor-running-label">Verificação automática ativa</span>
                 <span class="footer-sep" aria-hidden="true">|</span>
-                <span id="footer-next-check" class="footer-muted">Intervalo configurado: 1 h</span>
+                <span id="footer-next-check" class="footer-muted">Carregando intervalo…</span>
             </div>
             <div class="footer-right">
                 <button type="button" id="btn-test-alert" class="link-btn" style="display:none">
@@ -570,7 +571,7 @@
                     <div class="form-field">
                         <label for="set-interval">Intervalo de verificação</label>
                         <select id="set-interval">
-                            <option value="900">A cada 15 minutos</option><option value="1800">A cada 30 minutos</option><option value="3600" selected>A cada 1 hora</option>
+                            <option value="300" selected>A cada 5 minutos</option><option value="900">A cada 15 minutos</option><option value="1800">A cada 30 minutos</option><option value="3600">A cada 1 hora</option>
                         </select>
                         <span class="field-help">Verificação automática a cada 1h ou ao clicar em "Verificar agora".</span>
                     </div>
@@ -666,6 +667,6 @@
     <!-- Container de Toasts -->
     <div id="toast-container" class="toast-container" aria-live="polite"></div>
 
-    <script src="/monitoramento/app.js?v=kloube-mobile-3"></script>
+    <script src="/monitoramento/app.js?v=monitor-5min"></script>
 </body>
 </html>

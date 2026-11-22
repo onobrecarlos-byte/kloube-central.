@@ -162,7 +162,7 @@ def _should_refresh_domains(data: dict) -> bool:
     ]
     if not domains:
         return False
-    interval = int(data.get("settings", {}).get("check_interval_seconds", 3600))
+    interval = int(data.get("settings", {}).get("check_interval_seconds", 300))
     latest_ts = data.get("last_full_check_ts") or _get_latest_checked_ts(domains)
     if latest_ts <= 0:
         return True
@@ -179,7 +179,7 @@ def _build_state_payload(data: dict) -> dict:
         safe_data["notion_status"] = {"stale": stale, "checked_at": snapshot["checked_at"] if snapshot else None}
     settings = dict(safe_data.get("settings") or {})
     settings.pop("smtp_pass", None)
-    settings["check_interval_seconds"] = int(settings.get("check_interval_seconds", 3600))
+    settings["check_interval_seconds"] = int(settings.get("check_interval_seconds", 300))
     safe_data["settings"] = settings
 
     now_epoch = time.time()
@@ -187,7 +187,7 @@ def _build_state_payload(data: dict) -> dict:
         d for d in safe_data.get("domains", []) if d.get("status") != "draft"
     ]
     latest_ts = _get_latest_checked_ts(domains)
-    interval = int(data.get("settings", {}).get("check_interval_seconds", 3600))
+    interval = int(data.get("settings", {}).get("check_interval_seconds", 300))
     last_full_check_ts = data.get("last_full_check_ts") or latest_ts
     next_check_ts = (last_full_check_ts + interval) if last_full_check_ts > 0 else now_epoch
     remaining_sec = max(0, int(next_check_ts - now_epoch))
@@ -213,7 +213,7 @@ def background_monitor_loop():
         try:
             data = store.load()
             interval = int(
-                data.get("settings", {}).get("check_interval_seconds", 3600)
+                data.get("settings", {}).get("check_interval_seconds", 300)
             )
             if data.get("settings", {}).get("monitoring_paused", False):
                 time.sleep(5)
@@ -409,11 +409,11 @@ class KloubeHandler(BaseHTTPRequestHandler):
             data = store.load()
             settings = data.setdefault("settings", {})
             try:
-                interval = int(body.get("check_interval_seconds", settings.get("check_interval_seconds", 3600)))
+                interval = int(body.get("check_interval_seconds", settings.get("check_interval_seconds", 300)))
             except (TypeError, ValueError):
                 return self._send_json({"ok": False, "error": "Intervalo inválido."}, status=400)
-            if interval not in (900, 1800, 3600):
-                return self._send_json({"ok": False, "error": "Escolha 15 minutos, 30 minutos ou 1 hora."}, status=400)
+            if interval not in (300, 900, 1800, 3600):
+                return self._send_json({"ok": False, "error": "Escolha 5 minutos, 15 minutos, 30 minutos ou 1 hora."}, status=400)
             if "monitoring_paused" in body and not isinstance(body["monitoring_paused"], bool):
                 return self._send_json({"ok": False, "error": "Estado de pausa inválido."}, status=400)
             settings["check_interval_seconds"] = interval
@@ -433,8 +433,8 @@ class KloubeHandler(BaseHTTPRequestHandler):
             settings["email_notifications"] = bool(
                 body.get("email_notifications", True)
             )
-            settings["check_interval_seconds"] = int(body.get("check_interval_seconds", settings.get("check_interval_seconds", 3600)))
-            if settings["check_interval_seconds"] not in (900, 1800, 3600):
+            settings["check_interval_seconds"] = int(body.get("check_interval_seconds", settings.get("check_interval_seconds", 300)))
+            if settings["check_interval_seconds"] not in (300, 900, 1800, 3600):
                 return self._send_json({"ok": False, "error": "Intervalo inválido."}, status=400)
             settings["smtp_host"] = (
                 body.get("smtp_host") or "smtp.gmail.com"

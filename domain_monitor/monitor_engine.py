@@ -695,7 +695,7 @@ class DomainStore:
                     "notify_email": DEFAULT_EMAIL,
                     "desktop_notifications": False,
                     "email_notifications": True,
-                    "check_interval_seconds": 1800,
+                    "check_interval_seconds": 300,
                     "smtp_host": "smtp.gmail.com",
                     "smtp_port": 587,
                     "smtp_user": DEFAULT_SMTP_USER,

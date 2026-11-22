@@ -4,7 +4,7 @@ const state = {
         notify_email: 'onobrecarlos@gmail.com, alertas.kloube@gmail.com',
         desktop_notifications: true,
         email_notifications: true,
-        check_interval_seconds: 3600,
+        check_interval_seconds: 300,
         smtp_user: 'growthnobre@gmail.com',
         smtp_pass: '',
     },
@@ -90,7 +90,7 @@ function formatPtDate(raw) {
  * Formata o intervalo real configurado em segundos
  */
 function formatIntervalCompact(seconds) {
-    const sec = Number(seconds || 3600);
+    const sec = Number(seconds || 300);
     const min = Math.max(1, Math.round(sec / 60));
     if (min >= 60 && min % 60 === 0) {
         const h = min / 60;
@@ -234,7 +234,7 @@ let nextCheckEpochSec = 0;
 let lastCheckedEpochSec = 0;
 
 function getRemainingCheckSeconds() {
-    if (!nextCheckEpochSec) return 3600;
+    if (!nextCheckEpochSec) return 300;
     const nowServerSec = (Date.now() + serverClockOffsetMs) / 1000;
     return Math.max(0, Math.ceil(nextCheckEpochSec - nowServerSec));
 }
@@ -243,7 +243,7 @@ function updateCountdownUI() {
     const pauseButton = document.getElementById('btn-toggle-monitor');
     const intervalPicker = document.getElementById('monitor-interval');
     if (pauseButton) pauseButton.textContent = state.settings.monitoring_paused ? 'Retomar verificação' : 'Pausar verificação';
-    if (intervalPicker && document.activeElement !== intervalPicker) intervalPicker.value = String(state.settings.check_interval_seconds || 3600);
+    if (intervalPicker && document.activeElement !== intervalPicker) intervalPicker.value = String(state.settings.check_interval_seconds || 300);
     const runningLabel = document.getElementById('monitor-running-label');
     if (runningLabel) runningLabel.textContent = state.settings.monitoring_paused ? 'Verificação automática pausada' : 'Verificação automática ativa';
     if (state.settings.monitoring_paused) {
@@ -291,7 +291,7 @@ function applyState(data) {
     if (typeof data.next_check_ts === 'number' && data.next_check_ts > 0) {
         nextCheckEpochSec = data.next_check_ts;
     } else if (lastCheckedEpochSec > 0) {
-        nextCheckEpochSec = lastCheckedEpochSec + Number(state.settings.check_interval_seconds || 3600);
+        nextCheckEpochSec = lastCheckedEpochSec + Number(state.settings.check_interval_seconds || 300);
     }
     renderAll();
     updateCountdownUI();
@@ -860,11 +860,11 @@ document.getElementById('btn-check-all').addEventListener('click', runCheckAll);
 document.getElementById('btn-open-settings').addEventListener('click', () => {
     document.getElementById('set-email').value = state.settings.notify_email || 'onobrecarlos@gmail.com, alertas.kloube@gmail.com';
     const intervalSelect = document.getElementById('set-interval');
-    const currentSec = String(state.settings.check_interval_seconds || 3600);
+    const currentSec = String(state.settings.check_interval_seconds || 300);
     if ([...intervalSelect.options].some(o => o.value === currentSec)) {
         intervalSelect.value = currentSec;
     } else {
-        intervalSelect.value = '3600';
+        intervalSelect.value = '300';
     }
     document.getElementById('set-desktop').checked = state.settings.desktop_notifications !== false;
     document.getElementById('set-email-toggle').checked = state.settings.email_notifications !== false;
@@ -883,7 +883,7 @@ document.getElementById('settings-form').addEventListener('submit', async (e) =>
 
     const payload = {
         notify_email: document.getElementById('set-email').value.trim() || 'onobrecarlos@gmail.com, alertas.kloube@gmail.com',
-        check_interval_seconds: Number(document.getElementById('set-interval').value || 3600),
+        check_interval_seconds: Number(document.getElementById('set-interval').value || 300),
         desktop_notifications: document.getElementById('set-desktop').checked,
         email_notifications: document.getElementById('set-email-toggle').checked,
         smtp_user: document.getElementById('set-smtp-user').value.trim() || 'growthnobre@gmail.com',

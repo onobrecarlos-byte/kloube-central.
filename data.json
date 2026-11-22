@@ -3,7 +3,7 @@
     "notify_email": "onobrecarlos@gmail.com, alertas.kloube@gmail.com",
     "desktop_notifications": false,
     "email_notifications": true,
-    "check_interval_seconds": 900,
+    "check_interval_seconds": 300,
     "smtp_host": "smtp.gmail.com",
     "smtp_port": 587,
     "smtp_user": "growthnobre@gmail.com",
