@@ -2384,7 +2384,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-22 17:47:16",
+  "updated_at": "2026-11-22 17:47:20",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -4089,8 +4089,8 @@
       "domain_history": [],
       "publications": [],
       "suspensions": [],
-      "status": "Ativa",
-      "status_verified_at": "2026-11-13 00:00:00",
+      "status": "Inativa",
+      "status_verified_at": "2026-11-22 17:47:18",
       "status_source": "integration"
     },
     "Avalore": {
@@ -6828,6 +6828,14 @@
       "domain": "useklyne.com",
       "status": "Inativa",
       "at": "2026-11-22 17:47:15",
+      "by": "onobrecarlos@gmail.com",
+      "integration_id": "bedbdb9421d64916b8149145dfcbf38e"
+    },
+    {
+      "store_name": "Cozily Shop",
+      "domain": "usecozilyshop.com",
+      "status": "Inativa",
+      "at": "2026-11-22 17:47:18",
       "by": "onobrecarlos@gmail.com",
       "integration_id": "bedbdb9421d64916b8149145dfcbf38e"
     }
