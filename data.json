@@ -991,11 +991,11 @@
     },
     {
       "id": "dom_vivacuerpo",
-      "domain": "vivacuerpomx.com",
-      "url": "https://vivacuerpomx.com",
+      "domain": "vivacuerpoficial.com",
+      "url": "https://vivacuerpoficial.com/",
       "name": "VivaCuerpo México",
       "expected_redirect": "",
-      "status": "offline",
+      "status": "unknown",
       "status_label": "Fora do Ar",
       "reason": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)",
       "http_code": null,
@@ -1004,9 +1004,7 @@
       "response_time_ms": 0,
       "checked_at": "2026-11-21 22:42:49",
       "created_at": "2026-10-30 11:16:20",
-      "page_title": "",
-      "outage_id": "0910ca3be0bf9454d9571f3c",
-      "outage_alert_id": "al_a149d6beff2794225b7bca8a"
+      "page_title": ""
     },
     {
       "id": "dom_sondur",
