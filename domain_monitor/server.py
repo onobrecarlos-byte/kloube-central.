@@ -11,6 +11,8 @@ from datetime import datetime
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
+import notion_stores
+
 from .monitor_engine import (
     BRT_TZ,
     DEFAULT_EMAIL,
@@ -28,10 +30,33 @@ PORT = int(os.environ.get("KLOUBE_PORT", "8765"))
 store = DomainStore()
 
 
+def _notion_targets(existing):
+    current, _ = notion_stores.snapshot()
+    return notion_stores.monitor_roster(existing, current)
+
+
+def _reconcile_targets(data):
+    targets = _notion_targets(data.get("domains", []))
+    if notion_stores.enabled():
+        by_id = {row["id"]: row for row in data.get("domains", [])}
+        by_id.update((row["id"], row) for row in targets)
+        data["domains"] = list(by_id.values())
+    return targets
+
+
+def _save_verified(data, targets):
+    if notion_stores.enabled():
+        from monitor_bridge import sync
+        store.save(data, sync_report=False)
+        sync(targets)
+    else:
+        store.save(data)
+
+
 def verify_and_update_domain(domain_id: str) -> dict | None:
     data = store.load()
     target = None
-    for d in data.get("domains", []):
+    for d in _notion_targets(data.get("domains", [])):
         if d["id"] == domain_id:
             target = d
             break
@@ -45,11 +70,12 @@ def verify_and_update_domain(domain_id: str) -> dict | None:
 
     # Reload to avoid race conditions
     data = store.load()
-    for d in data.get("domains", []):
+    targets = _reconcile_targets(data)
+    for d in targets:
         if d["id"] == domain_id:
             if _can_apply_check(d, target, result):
                 apply_domain_check(d, result, data.get("alerts", []))
-                store.save(data)
+                _save_verified(data, [d])
                 if d["status"] == "offline":
                     store.trigger_alert(dict(d), result)
             return d
@@ -66,7 +92,7 @@ def _can_apply_check(current, target, result):
 def verify_all_domains(include_drafts: bool = False) -> list[dict]:
     started_at = time.time()
     data = store.load()
-    all_domains = data.get("domains", [])
+    all_domains = _notion_targets(data.get("domains", []))
     domains = [
         d for d in all_domains
         if include_drafts or d.get("status") != "draft"
@@ -94,20 +120,23 @@ def verify_all_domains(include_drafts: bool = False) -> list[dict]:
 
     data = store.load()
     to_alert = []
-    for d in data.get("domains", []):
+    updated = []
+    active_targets = _reconcile_targets(data)
+    for d in active_targets:
         res = results_map.get(d["id"])
         if res and _can_apply_check(d, targets[d["id"]], res):
             apply_domain_check(d, res, data.get("alerts", []))
+            updated.append(d)
             if res["status"] == "offline":
                 to_alert.append((dict(d), res))
-    if results_map:
+    if updated:
         data["last_full_check_ts"] = max(started_at, data.get("last_full_check_ts", 0))
-    store.save(data)
+    _save_verified(data, updated)
 
     for d_copy, res in to_alert:
         store.trigger_alert(d_copy, res)
 
-    return data.get("domains", [])
+    return active_targets
 
 
 def _get_latest_checked_ts(domains: list[dict]) -> float:
@@ -144,7 +173,10 @@ def _build_state_payload(data: dict) -> dict:
     accounts = list(data.get("users", {}).keys())
     safe_data = {k: v for k, v in data.items() if k != "users"}
     from monitor_bridge import enrich_accounts
-    safe_data["domains"] = enrich_accounts(safe_data.get("domains", []))
+    snapshot, stale = notion_stores.snapshot(allow_stale=True)
+    safe_data["domains"] = enrich_accounts(notion_stores.monitor_roster(safe_data.get("domains", []), snapshot))
+    if notion_stores.enabled():
+        safe_data["notion_status"] = {"stale": stale, "checked_at": snapshot["checked_at"] if snapshot else None}
     settings = dict(safe_data.get("settings") or {})
     settings.pop("smtp_pass", None)
     settings["check_interval_seconds"] = int(settings.get("check_interval_seconds", 3600))

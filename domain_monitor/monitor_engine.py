@@ -866,7 +866,8 @@ class DomainStore:
                 self.shared_file.save(data)
             else:
                 self._write_raw(json.dumps(data, indent=2, ensure_ascii=False))
-        if sync_report:
+        from notion_stores import enabled as notion_enabled
+        if sync_report and not notion_enabled():
             from monitor_bridge import sync
             sync(data.get("domains", []))
 

@@ -577,6 +577,7 @@ class BlocksStore:
 
 store = BlocksStore()
 import monitor_bridge
+import notion_stores
 monitor_bridge.configure(store, normalize_store_name)
 
 
@@ -869,6 +870,18 @@ def compute_summary_with_details(data: dict, month_key: str, period_filter: str 
         ]
         end_active_count = len(active_stores_items)
 
+    notion_status = None
+    if active_is_current and notion_stores.enabled():
+        snapshot, stale = notion_stores.snapshot(allow_stale=True)
+        notion_status = {"stale": stale, "checked_at": snapshot["checked_at"] if snapshot else None}
+        if snapshot is not None:
+            active_stores_items = [
+                {"store_name": row["name"], "domain": row["domain"], "notion_id": row["id"],
+                 "detail": row["status"], "domain_swaps_count": 0}
+                for row in snapshot["rows"] if row["active"] and row["name"]
+            ]
+            end_active_count = len(active_stores_items)
+
     # Group Ads suspensions by store
     affected_map = {}
     for r in ads_records:
@@ -1029,6 +1042,7 @@ def compute_summary_with_details(data: dict, month_key: str, period_filter: str 
         "start_active_stores": start_count,
         "end_active_stores": end_active_count,
         "active_is_current": active_is_current,
+        "notion_status": notion_status,
         "operational_verified_at": data.get("operational_snapshot", {}).get("verified_at", ""),
         "active_label": "Lojas ativas no momento atual" if is_current_month else "Lojas ativas no fim do mês",
         "published_stores_count": published_count,
@@ -1076,6 +1090,14 @@ def _build_state(month_key: str = "", period_filter: str = "month", day_str: str
     summary = compute_summary_with_details(data, month_key, period_filter, day_str, start_date, end_date)
     from domain_monitor.server import store as monitor_store
     monitoring = monitor_store.load()
+    monitor_domains = monitoring.get("domains", [])
+    if summary.get("notion_status"):
+        active_hosts = {
+            monitor_bridge.host(row["domain"]) for row in summary["details"]["active_stores"]
+            if row["domain"] and row.get("notion_id")
+        }
+        monitor_domains = [domain for domain in monitor_domains
+                           if monitor_bridge.host(domain.get("domain")) in active_hosts]
     domains_to_treat = [
         {
             "store_name": domain.get("name") or domain.get("domain", ""),
@@ -1083,7 +1105,7 @@ def _build_state(month_key: str = "", period_filter: str = "month", day_str: str
             "reason": domain.get("reason") or "Domínio fora do ar",
             "created_at": domain.get("checked_at", ""),
         }
-        for domain in monitoring.get("domains", [])
+        for domain in monitor_domains
         if domain.get("status") == "offline"
         and domain.get("operational_active") is not False
     ]
@@ -1118,7 +1140,7 @@ class BlocksHandler(BaseHTTPRequestHandler):
         if self.path.startswith("?"):
             self.path = "/" + self.path
         try:
-            if method == "GET" and path == "/monitoramento/api/state":
+            if method == "GET" and path == "/monitoramento/api/state" and not notion_stores.enabled():
                 monitor_bridge.sync_publications(store.load())
             # Bind the existing handler so all of its helper methods and login routes remain unchanged.
             self.__class__ = KloubeHandler
@@ -1129,7 +1151,7 @@ class BlocksHandler(BaseHTTPRequestHandler):
                 handler()
         except StorageConflict as exc:
             self._send_json({"ok": False, "error": str(exc)}, status=409)
-        except (StorageUnavailable, OSError) as exc:
+        except (StorageUnavailable, OSError, notion_stores.NotionUnavailable) as exc:
             self._send_json({"ok": False, "error": str(exc)}, status=503)
         finally:
             self.__class__, self.path = original_class, original_path

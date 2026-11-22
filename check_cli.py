@@ -4,10 +4,13 @@ import server  # Configures the report store and automatic incident bridge.
 from domain_monitor import server as monitor
 
 def main():
-    server.monitor_bridge.register_publications(server.store.load())
+    if not server.notion_stores.enabled():
+        server.monitor_bridge.register_publications(server.store.load())
     data=monitor.store.load()
     if data.get('settings',{}).get('monitoring_paused',False):
         print('Monitoramento pausado; nenhuma consulta executada.');return
+    if server.notion_stores.enabled():
+        data = dict(data, domains=monitor._notion_targets(data.get("domains", [])))
     if not monitor._should_refresh_domains(data):
         print('Intervalo ainda não venceu; nenhuma consulta executada.');return
     monitor.verify_all_domains()

@@ -25,5 +25,6 @@ jobs:
           KLOUBE_GITHUB_REPO: ${{ github.repository }}
           KLOUBE_GITHUB_BRANCH: ${{ github.ref_name }}
           KLOUBE_ENABLE_PC_MONITOR: '0'
+          NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
           KLOUBE_SMTP_PASS: ${{ secrets.KLOUBE_SMTP_PASS }}
         run: python check_cli.py
