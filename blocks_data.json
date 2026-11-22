@@ -2384,7 +2384,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-22 17:47:24",
+  "updated_at": "2026-11-22 17:47:27",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -4111,8 +4111,8 @@
       "domain_history": [],
       "publications": [],
       "suspensions": [],
-      "status": "Ativa",
-      "status_verified_at": "2026-11-13 00:00:00",
+      "status": "Inativa",
+      "status_verified_at": "2026-11-22 17:47:26",
       "status_source": "integration"
     },
     "Tekko": {
@@ -6844,6 +6844,14 @@
       "domain": "useavalorejewelry.com",
       "status": "Inativa",
       "at": "2026-11-22 17:47:22",
+      "by": "onobrecarlos@gmail.com",
+      "integration_id": "bedbdb9421d64916b8149145dfcbf38e"
+    },
+    {
+      "store_name": "Arlaya",
+      "domain": "usearlaya.com",
+      "status": "Inativa",
+      "at": "2026-11-22 17:47:26",
       "by": "onobrecarlos@gmail.com",
       "integration_id": "bedbdb9421d64916b8149145dfcbf38e"
     }
