@@ -87,7 +87,8 @@
       "month_key": "2026-11",
       "source": "domain_monitor",
       "monitor_domain_id": "dom_vivacuerpo",
-      "monitor_diagnostic": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)"
+      "monitor_diagnostic": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)",
+      "monitor_closed_at": "2026-11-21 22:43:08"
     },
     {
       "id": "rec_1ed54a1940",
@@ -2367,7 +2368,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-21 22:42:52",
+  "updated_at": "2026-11-21 22:43:10",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -4593,9 +4594,9 @@
       "store_name": "Donnea Milano"
     },
     "dom_vivacuerpo": {
-      "checked_at": "2026-11-21 22:42:49",
-      "category": "domain_down",
-      "record_id": "rec_0e17487df9",
+      "checked_at": "2026-11-21 22:43:08",
+      "category": "",
+      "record_id": "",
       "store_name": "VivaCuerpo"
     },
     "dom_sondur": {
