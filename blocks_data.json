@@ -2384,7 +2384,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-22 17:47:05",
+  "updated_at": "2026-11-22 17:47:08",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -4320,14 +4320,14 @@
     },
     "Avernio": {
       "name": "Avernio",
-      "current_domain": "useavernio.com",
+      "current_domain": "shopavernio.com",
       "domain_swaps_count": 0,
       "domain_history": [],
       "publications": [],
       "suspensions": [],
-      "status": "Inativa",
-      "status_verified_at": "2026-11-21 18:59:52",
-      "status_source": "domain_monitor",
+      "status": "Ativa",
+      "status_verified_at": "2026-11-22 17:47:07",
+      "status_source": "integration",
       "current_ads_account": "Google Ads 141"
     },
     "Outdoors Nordic": {
@@ -6804,6 +6804,14 @@
       "domain": "usetitanoxufficiale.com",
       "status": "Ativa",
       "at": "2026-11-22 17:47:03",
+      "by": "onobrecarlos@gmail.com",
+      "integration_id": "bedbdb9421d64916b8149145dfcbf38e"
+    },
+    {
+      "store_name": "Avernio",
+      "domain": "shopavernio.com",
+      "status": "Ativa",
+      "at": "2026-11-22 17:47:07",
       "by": "onobrecarlos@gmail.com",
       "integration_id": "bedbdb9421d64916b8149145dfcbf38e"
     }
