@@ -124,7 +124,11 @@ function renderDashboard() {
 
     // Métricas do resumo
     document.getElementById('kpi-start-stores').textContent = s.start_active_stores;
-    document.getElementById('kpi-active-stores').textContent = s.end_active_stores;
+    const activeKpi = document.getElementById('kpi-active-stores');
+    activeKpi.textContent = s.notion_status?.stale && !s.notion_status.checked_at ? '—' : s.end_active_stores;
+    activeKpi.title = s.notion_status?.stale
+        ? 'Notion indisponível. Dados ao vivo indisponíveis.'
+        : s.notion_status ? 'Fonte: quadro Anúncios no Notion' : '';
     document.getElementById('label-active-stores').textContent = s.active_is_current ? 'Lojas ativas' : 'Lojas ativas no fim';
     document.getElementById('kpi-inactive-stores').textContent = s.total_inactive;
     document.getElementById('kpi-total-stores').textContent = s.total_registered;
