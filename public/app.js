@@ -646,24 +646,28 @@ function renderRecordsView() {
    DRAWER / INSPECTOR LATERAL
    ========================================================================== */
 function openDrawer(sectionKey) {
+    if (state.activeDrawerSection === sectionKey) {
+        closeDrawer();
+        return;
+    }
     state.activeDrawerSection = sectionKey;
-    const meta = SECTION_LABELS[sectionKey] || { eyebrow: 'DETALHES', title: 'Detalhes', subtitle: '' };
-
-    document.getElementById('drawer-eyebrow').textContent = meta.eyebrow;
+    const meta = SECTION_LABELS[sectionKey];
     document.getElementById('drawer-title').textContent = meta.title;
     document.getElementById('drawer-subtitle').textContent = meta.subtitle;
     document.getElementById('drawer-search').value = '';
     state.drawerSearch = '';
-
+    document.querySelectorAll('[data-inspect]').forEach(card => {
+        card.setAttribute('aria-pressed', String(card.dataset.inspect === sectionKey));
+    });
+    const panel = document.getElementById('inspector-drawer');
+    panel.hidden = false;
     renderDrawerItems();
-
-    document.getElementById('inspector-overlay').style.display = 'block';
-    document.getElementById('inspector-drawer').style.display = 'flex';
+    panel.scrollIntoView({block: 'nearest'});
 }
 
 function closeDrawer() {
-    document.getElementById('inspector-overlay').style.display = 'none';
-    document.getElementById('inspector-drawer').style.display = 'none';
+    document.getElementById('inspector-drawer').hidden = true;
+    document.querySelector('[data-inspect][aria-pressed="true"]')?.setAttribute('aria-pressed', 'false');
     state.activeDrawerSection = null;
 }
 
@@ -687,46 +691,37 @@ function renderDrawerItems() {
     document.getElementById('drawer-counter').textContent = `${items.length} ${items.length === 1 ? 'item' : 'itens'}`;
     const listEl = document.getElementById('drawer-items-list');
 
-    if (items.length === 0) {
-        listEl.innerHTML = `<div class="table-empty-box"><p>Nenhum item registrado neste indicador.</p></div>`;
-        return;
-    }
+    const empty = document.getElementById('drawer-items-empty');
+    empty.hidden = items.length !== 0;
+    empty.textContent = q ? 'Nenhuma loja corresponde ao filtro.' : 'Nenhum item neste indicador.';
 
-    listEl.innerHTML = items.map((it, idx) => {
-        const title = it.store_name || `Item ${idx + 1}`;
-        let sub = it.detail || it.reason || '';
-        if (it.domain && !sub.includes(it.domain)) {
-            sub = `${it.domain} · ${sub}`;
-        }
-        if (it.created_at) {
-            sub = `${sub} (${formatPtDate(it.created_at)})`;
-        }
+    const [status, badge] = {
+        start_stores: ['Ativa no início', 'badge-success'],
+        inactive_all: ['Inativa', 'badge-danger'],
+        registered_all: ['Registrada', 'badge-neutral'],
+        published_stores: ['Publicada', 'badge-success'],
+        reactivated_stores: ['Reativada', 'badge-success'],
+    }[state.activeDrawerSection];
 
-        let rightBadge = '';
-        if (it.account_number && it.account_number !== '—') {
-            rightBadge = `<span class="tag-mono">${escapeHtml(it.account_number)}</span>`;
-        } else if (it.count) {
-            rightBadge = `<span class="tag-mono">${it.count} contas</span>`;
-        }
-
-        let delBtn = '';
-        if (it.id && !it.id.startsWith('oct_')) {
-            delBtn = `<button type="button" class="icon-btn-del" onclick="deleteRecord('${escapeHtml(it.id)}')" title="Excluir">&#10005;</button>`;
-        }
-
-        return `
-            <div class="drawer-item">
-                <div>
-                    <span class="drawer-item-title store-clickable-link btn-inspect-store" data-store-name="${escapeHtml(title)}" title="Clique para ver o histórico de ${escapeHtml(title)}">${idx + 1}. ${escapeHtml(title)}</span>
-                    <span class="drawer-item-sub">${escapeHtml(sub)}</span>
-                </div>
-                <div style="display:flex;align-items:center;gap:8px;">
-                    ${rightBadge}
-                    <button type="button" class="btn btn-secondary btn-sm btn-inspect-store" style="padding:3px 8px;font-size:11px;" data-store-name="${escapeHtml(title)}">Ver histórico</button>
-                    ${delBtn}
-                </div>
-            </div>
-        `;
+    listEl.innerHTML = items.map(it => {
+        const store = it.store_name || 'Loja sem nome';
+        const note = it.reason || it.detail || '—';
+        const domain = displayDomain(it.domain);
+        const account = it.account_number && it.account_number !== '—'
+            ? `<span class="tag-mono">${escapeHtml(it.account_number)}</span>` : '';
+        const remove = it.id && !it.id.startsWith('oct_')
+            ? `<button type="button" class="icon-btn-del" onclick="deleteRecord('${escapeHtml(it.id)}')" aria-label="Excluir registro">&#10005;</button>` : '';
+        return `<tr>
+            <td><img src="/assets/icon-shopify-green.png" class="incident-row-icon" alt="" /></td>
+            <td>
+                <button type="button" class="summary-store-link store-name-bold btn-inspect-store" data-store-name="${escapeHtml(store)}">${escapeHtml(store)}</button>
+                ${domain ? `<span class="metric-domain">${escapeHtml(domain)}</span>` : ''}
+            </td>
+            <td>${escapeHtml(note)}${account ? `<br>${account}` : ''}</td>
+            <td><span class="badge-pill ${badge}">${status}</span></td>
+            <td><span class="date-text-muted">${escapeHtml(it.created_at ? formatPtDate(it.created_at) : '—')}</span></td>
+            <td>${remove}</td>
+        </tr>`;
     }).join('');
 }
 
@@ -907,7 +902,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 5. Drawer controles
     document.getElementById('btn-close-drawer').addEventListener('click', closeDrawer);
-    document.getElementById('inspector-overlay').addEventListener('click', closeDrawer);
     document.getElementById('drawer-search').addEventListener('input', (e) => {
         state.drawerSearch = e.target.value;
         renderDrawerItems();

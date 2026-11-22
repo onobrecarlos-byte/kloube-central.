@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles.css?v=compact-tables-6" />
     <link rel="stylesheet" href="/date-picker.css?v=20261105">
-    <link rel="stylesheet" href="/kloube-theme.css?v=1">
+    <link rel="stylesheet" href="/kloube-theme.css?v=2">
 </head>
 <body class="app-layout">
     <!-- BARRA LATERAL (SIDEBAR KLOUBE) -->
@@ -162,78 +162,106 @@
             <!-- LINHA 1: BARRA DE MÉTRICAS PRINCIPAIS (5 CARDS) -->
             <div class="metrics-bar-card">
                 <!-- 1. No início do mês -->
-                <div class="metric-kpi-item" data-inspect="start_stores" title="Clique para ver as lojas que iniciaram o mês">
-                    <div class="kpi-icon-box kpi-icon-box-muted">
+                <button type="button" aria-controls="inspector-drawer" aria-pressed="false" class="metric-kpi-item" data-inspect="start_stores" title="Clique para ver as lojas que iniciaram o mês">
+                    <span class="kpi-icon-box kpi-icon-box-muted">
                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
                             <line x1="16" y1="2" x2="16" y2="6"></line>
                             <line x1="8" y1="2" x2="8" y2="6"></line>
                             <line x1="3" y1="10" x2="21" y2="10"></line>
                         </svg>
-                    </div>
-                    <div class="kpi-body">
+                    </span>
+                    <span class="kpi-body">
                         <strong class="kpi-number" id="kpi-start-stores">21</strong>
                         <span class="kpi-label">No início do mês</span>
-                    </div>
-                </div>
+                    </span>
+                </button>
 
                 <!-- 3. Inativas no mês -->
-                <div class="metric-kpi-item" data-inspect="inactive_all" title="Clique para ver as lojas inativas">
-                    <div class="kpi-icon-box kpi-icon-box-muted">
+                <button type="button" aria-controls="inspector-drawer" aria-pressed="false" class="metric-kpi-item" data-inspect="inactive_all" title="Clique para ver as lojas inativas">
+                    <span class="kpi-icon-box kpi-icon-box-muted">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                             <line x1="10" y1="6" x2="10" y2="18"></line>
                             <line x1="14" y1="6" x2="14" y2="18"></line>
                         </svg>
-                    </div>
-                    <div class="kpi-body">
+                    </span>
+                    <span class="kpi-body">
                         <strong class="kpi-number" id="kpi-inactive-stores">2</strong>
                         <span class="kpi-label">Inativas no mês</span>
-                    </div>
-                </div>
+                    </span>
+                </button>
 
                 <!-- 4. Total de lojas -->
-                <div class="metric-kpi-item" data-inspect="registered_all" title="Clique para ver o total registrado">
-                    <div class="kpi-icon-box kpi-icon-box-muted">
+                <button type="button" aria-controls="inspector-drawer" aria-pressed="false" class="metric-kpi-item" data-inspect="registered_all" title="Clique para ver o total registrado">
+                    <span class="kpi-icon-box kpi-icon-box-muted">
                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
                             <rect x="7" y="13" width="10" height="9"></rect>
                         </svg>
-                    </div>
-                    <div class="kpi-body">
+                    </span>
+                    <span class="kpi-body">
                         <strong class="kpi-number" id="kpi-total-stores">21</strong>
                         <span class="kpi-label">Total de lojas</span>
-                    </div>
-                </div>
+                    </span>
+                </button>
 
                 <!-- 5. Lojas novas -->
-                <div class="metric-kpi-item" data-inspect="published_stores" title="Clique para ver lojas novas">
-                    <div class="kpi-icon-box kpi-icon-box-muted">
+                <button type="button" aria-controls="inspector-drawer" aria-pressed="false" class="metric-kpi-item" data-inspect="published_stores" title="Clique para ver lojas novas">
+                    <span class="kpi-icon-box kpi-icon-box-muted">
                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                             <polyline points="17 8 12 3 7 8"></polyline>
                             <line x1="12" y1="3" x2="12" y2="15"></line>
                         </svg>
-                    </div>
-                    <div class="kpi-body">
+                    </span>
+                    <span class="kpi-body">
                         <strong class="kpi-number" id="kpi-published-stores">0</strong>
                         <span class="kpi-label">Lojas novas</span>
-                    </div>
-                </div>
+                    </span>
+                </button>
                 <!-- 5. Reativadas -->
-                <div class="metric-kpi-item" data-inspect="reactivated_stores" title="Clique para ver lojas reativadas">
-                    <div class="kpi-icon-box kpi-icon-box-muted">
+                <button type="button" aria-controls="inspector-drawer" aria-pressed="false" class="metric-kpi-item" data-inspect="reactivated_stores" title="Clique para ver lojas reativadas">
+                    <span class="kpi-icon-box kpi-icon-box-muted">
                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                             <polyline points="17 8 12 3 7 8"></polyline>
                             <line x1="12" y1="3" x2="12" y2="15"></line>
                         </svg>
-                    </div>
-                    <div class="kpi-body">
+                    </span>
+                    <span class="kpi-body">
                         <strong class="kpi-number" id="kpi-reactivated-stores">0</strong>
                         <span class="kpi-label">Reativadas</span>
-                    </div>
-                </div>
+                    </span>
+                </button>
             </div>
+
+            <section id="inspector-drawer" class="panel-card metric-details" aria-labelledby="drawer-title" hidden>
+                <div class="panel-card-header">
+                    <div>
+                        <h2 class="panel-card-title" id="drawer-title"></h2>
+                        <p class="panel-card-subtitle" id="drawer-subtitle"></p>
+                    </div>
+                    <button type="button" class="btn btn-secondary" id="btn-close-drawer">Fechar</button>
+                </div>
+                <div class="metric-details-toolbar">
+                    <input type="search" id="drawer-search" class="search-input" aria-label="Filtrar lojas deste indicador" placeholder="Filtrar lojas..." />
+                    <span class="drawer-counter" id="drawer-counter" aria-live="polite"></span>
+                </div>
+                <div class="incidents-table-wrapper">
+                    <table class="incidents-table" aria-labelledby="drawer-title">
+                        <thead><tr>
+                            <th scope="col"><span aria-label="Ícone da loja">Loja</span></th>
+                            <th scope="col">Nome e domínio</th>
+                            <th scope="col">Tipo</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Registrado em</th>
+                            <th scope="col">Ações</th>
+                        </tr></thead>
+                        <tbody id="drawer-items-list"></tbody>
+                    </table>
+                    <div id="drawer-items-empty" class="table-empty-box" hidden>Nenhum item neste indicador.</div>
+                </div>
+            </section>
 
             <!-- SEÇÃO: O QUE PRECISA DE ATENÇÃO? -->
             <div class="attention-section">
@@ -546,28 +574,6 @@
         </section>
     </main>
 
-    <!-- DRAWER / INSPECTOR LATERAL (ABRE AO CLICAR EM QUALQUER MÉTRICA OU CARD) -->
-    <div id="inspector-overlay" class="drawer-overlay" style="display:none;"></div>
-    <aside id="inspector-drawer" class="drawer-panel" style="display:none;">
-        <div class="drawer-header">
-            <div>
-                <span class="drawer-eyebrow" id="drawer-eyebrow">DETALHES</span>
-                <h3 class="drawer-title" id="drawer-title">Lojas no início do mês</h3>
-                <p class="drawer-subtitle" id="drawer-subtitle">Relação completa de lojas registradas neste indicador.</p>
-            </div>
-            <button type="button" class="drawer-close-btn" id="btn-close-drawer">&times;</button>
-        </div>
-
-        <div class="drawer-toolbar">
-            <input type="search" id="drawer-search" class="search-input" placeholder="Filtrar nesta lista..." />
-            <span class="drawer-counter" id="drawer-counter">0 itens</span>
-        </div>
-
-        <div class="drawer-list" id="drawer-items-list">
-            <!-- Itens inseridos dinamicamente -->
-        </div>
-    </aside>
-
     <!-- MODAL: NOVO REGISTRO -->
     <div id="add-modal" class="modal-backdrop" style="display:none;" role="dialog" aria-modal="true">
         <div class="modal-dialog">
@@ -815,7 +821,7 @@
 
     <div id="toast-container" class="toast-container" aria-live="polite"></div>
     <script src="/date-picker.js?v=20261105-exact-day"></script>
-    <script src="/app.js?v=compact-tables-6"></script>
+    <script src="/app.js?v=indicadores-tabela"></script>
     <script src="/integrations.js?v=1"></script>
 </body>
 </html>
