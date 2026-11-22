@@ -252,15 +252,17 @@ function updateCountdownUI() {
         return;
     }
     const rem = getRemainingCheckSeconds();
+    const nextText = rem > 0 ? formatCountdownMMSS(rem) : 'Aguardando verificação';
+    const nextDetail = rem > 0 ? `Próxima consulta em ${nextText}` : 'Aguardando o resultado do agendamento';
     const statIntervalEl = document.getElementById('stat-interval');
     if (statIntervalEl) {
-        statIntervalEl.textContent = isAutoChecking ? 'Verificando...' : formatCountdownMMSS(rem);
+        statIntervalEl.textContent = isAutoChecking ? 'Verificando...' : nextText;
     }
     const footerCheck = document.getElementById('footer-next-check');
     if (footerCheck) {
         footerCheck.textContent = isAutoChecking
             ? 'Verificando domínios agora...'
-            : `Ciclo de ${formatIntervalCompact(state.settings.check_interval_seconds)} · Próxima consulta em ${formatCountdownMMSS(rem)}`;
+            : `Ciclo de ${formatIntervalCompact(state.settings.check_interval_seconds)} · ${nextDetail}`;
     }
     const syncEl = document.getElementById('last-sync-text');
     if (syncEl) {
@@ -268,7 +270,7 @@ function updateCountdownUI() {
         const lastStr = latestDomain ? formatPtDate(latestDomain.checked_at) : `às ${sessionAccessTime}`;
         syncEl.textContent = isAutoChecking
             ? 'Atualizando todos os domínios...'
-            : `Última consulta: ${lastStr} · Próxima em ${formatCountdownMMSS(rem)} · Sincronização multi-usuário ativa`;
+            : `Última consulta: ${lastStr} · ${nextDetail} · Sincronização multi-usuário ativa`;
     }
 }
 

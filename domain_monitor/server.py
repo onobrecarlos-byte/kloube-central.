@@ -157,7 +157,15 @@ def _get_latest_checked_ts(domains: list[dict]) -> float:
     return latest_ts
 
 
-def _should_refresh_domains(data: dict) -> bool:
+def _next_check_time(last_check: float, interval: int, *, aligned: bool = False) -> float:
+    if aligned and interval == 300:
+        # Cron can arrive a few seconds earlier than it did in the previous slot.
+        next_slot = (int(last_check) // interval + 1) * interval
+        return max(next_slot, last_check + 240)
+    return last_check + interval
+
+
+def _should_refresh_domains(data: dict, *, aligned: bool = False) -> bool:
     if data.get("settings", {}).get("monitoring_paused", False):
         return False
     domains = [
@@ -169,7 +177,7 @@ def _should_refresh_domains(data: dict) -> bool:
     latest_ts = data.get("last_full_check_ts") or _get_latest_checked_ts(domains)
     if latest_ts <= 0:
         return True
-    return (time.time() - latest_ts) >= interval
+    return time.time() >= _next_check_time(latest_ts, interval, aligned=aligned)
 
 
 def run_scheduled_monitor(*, max_workers: int = 8):
@@ -184,7 +192,7 @@ def run_scheduled_monitor(*, max_workers: int = 8):
         targets = _notion_targets(data.get("domains", []))
         if not targets:
             return {"state": "empty", "eligible": 0, "checked": 0}
-        if not _should_refresh_domains(dict(data, domains=targets)):
+        if not _should_refresh_domains(dict(data, domains=targets), aligned=True):
             return {"state": "not_due", "eligible": len(targets), "checked": 0}
         report = {"state": "checked", "eligible": len(targets), "checked": 0}
         verify_all_domains(report=report, max_workers=max_workers)
@@ -215,7 +223,11 @@ def _build_state_payload(data: dict) -> dict:
     latest_ts = _get_latest_checked_ts(domains)
     interval = int(data.get("settings", {}).get("check_interval_seconds", 300))
     last_full_check_ts = data.get("last_full_check_ts") or latest_ts
-    next_check_ts = (last_full_check_ts + interval) if last_full_check_ts > 0 else now_epoch
+    aligned = bool(os.environ.get("VERCEL") and os.environ.get("CRON_SECRET"))
+    next_check_ts = (
+        _next_check_time(last_full_check_ts, interval, aligned=aligned)
+        if last_full_check_ts > 0 else now_epoch
+    )
     remaining_sec = max(0, int(next_check_ts - now_epoch))
 
     return {
@@ -226,7 +238,7 @@ def _build_state_payload(data: dict) -> dict:
         "last_checked_ts": latest_ts,
         "next_check_ts": next_check_ts,
         "remaining_seconds": remaining_sec,
-        "needs_refresh": _should_refresh_domains(data),
+        "needs_refresh": _should_refresh_domains(dict(data, domains=domains), aligned=aligned),
         "pc_monitor_enabled": os.environ.get("KLOUBE_ENABLE_PC_MONITOR") == "1",
         **safe_data,
     }
