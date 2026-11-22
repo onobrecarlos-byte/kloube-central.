@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import calendar
+import hmac
 import json
 import mimetypes
 import os
@@ -1216,7 +1217,25 @@ class BlocksHandler(BaseHTTPRequestHandler):
         body = self.rfile.read(length).decode("utf-8", errors="ignore")
         return json.loads(body) if body else {}
 
+    def _run_monitor_cron(self):
+        from domain_monitor.server import run_scheduled_monitor
+
+        secret = os.environ.get("CRON_SECRET", "").strip()
+        if not secret:
+            return self._send_json({"ok": False, "error": "Agendamento não configurado."}, status=503)
+        authorization = self.headers.get("Authorization", "")
+        if not hmac.compare_digest(authorization.encode(), f"Bearer {secret}".encode()):
+            return self._send_json({"ok": False, "error": "Não autorizado."}, status=401)
+        try:
+            result = run_scheduled_monitor()
+        except (notion_stores.NotionUnavailable, StorageUnavailable, StorageConflict, OSError):
+            return self._send_json({"ok": False, "error": "Verificação indisponível."}, status=503)
+        print(f"Monitor agendado: {result}", flush=True)
+        return self._send_json({"ok": True, **result})
+
     def do_GET(self):
+        if urllib.parse.urlsplit(self.path).path == "/api/cron/domain-monitor":
+            return self._run_monitor_cron()
         from shared_auth import gate
         if gate(self, "GET"):
             return

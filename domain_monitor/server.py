@@ -28,6 +28,7 @@ PUBLIC_DIR = BASE_DIR / "public"
 PORT = int(os.environ.get("KLOUBE_PORT", "8765"))
 
 store = DomainStore()
+_scheduled_monitor_lock = threading.Lock()
 
 
 def _notion_targets(existing):
@@ -89,7 +90,7 @@ def _can_apply_check(current, target, result):
             and result["checked_at"] >= (current.get("checked_at") or ""))
 
 
-def verify_all_domains(include_drafts: bool = False) -> list[dict]:
+def verify_all_domains(include_drafts: bool = False, *, report=None, max_workers: int = 2) -> list[dict]:
     started_at = time.time()
     data = store.load()
     all_domains = _notion_targets(data.get("domains", []))
@@ -109,7 +110,7 @@ def verify_all_domains(include_drafts: bool = False) -> list[dict]:
         return d_item["id"], res
 
     results_map = {}
-    with concurrent.futures.ThreadPoolExecutor(max_workers=2) as pool:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as pool:
         futures = [pool.submit(_check, d) for d in domains]
         for fut in concurrent.futures.as_completed(futures):
             try:
@@ -131,6 +132,8 @@ def verify_all_domains(include_drafts: bool = False) -> list[dict]:
                 to_alert.append((dict(d), res))
     if updated:
         data["last_full_check_ts"] = max(started_at, data.get("last_full_check_ts", 0))
+    if report is not None:
+        report["checked"] = len(updated)
     _save_verified(data, updated)
 
     for d_copy, res in to_alert:
@@ -167,6 +170,29 @@ def _should_refresh_domains(data: dict) -> bool:
     if latest_ts <= 0:
         return True
     return (time.time() - latest_ts) >= interval
+
+
+def run_scheduled_monitor(*, max_workers: int = 8):
+    if not _scheduled_monitor_lock.acquire(blocking=False):
+        return {"state": "running"}
+    try:
+        if not notion_stores.enabled():
+            raise notion_stores.NotionUnavailable("Agendamento sem integração Notion.")
+        data = store.load()
+        if data.get("settings", {}).get("monitoring_paused", False):
+            return {"state": "paused"}
+        targets = _notion_targets(data.get("domains", []))
+        if not targets:
+            return {"state": "empty", "eligible": 0, "checked": 0}
+        if not _should_refresh_domains(dict(data, domains=targets)):
+            return {"state": "not_due", "eligible": len(targets), "checked": 0}
+        report = {"state": "checked", "eligible": len(targets), "checked": 0}
+        verify_all_domains(report=report, max_workers=max_workers)
+        if report["checked"] == 0:
+            report["state"] = "no_results"
+        return report
+    finally:
+        _scheduled_monitor_lock.release()
 
 
 def _build_state_payload(data: dict) -> dict:
