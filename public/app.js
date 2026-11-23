@@ -20,7 +20,6 @@ const state = {
     monthlySummary: null,
     records: [],
     deletedRecords: [],
-    deletionAudit: [],
     storesCatalog: {},
     knownStores: [],
     whatsappConfig: { target_group_name: 'EQUIPE KLOUBE ECOM', allowed_phones: [] },
@@ -747,7 +746,6 @@ async function fetchState() {
             state.records = data.records || [];
             state.deletedRecords = data.deleted_records || [];
             state.canPurgeTrash = data.can_purge_trash === true;
-            state.deletionAudit = data.deletion_audit || [];
             renderTrash();
             state.storesCatalog = data.stores_catalog || {};
             state.knownStores = data.known_stores || [];
@@ -1395,10 +1393,8 @@ document.getElementById('btn-app-logout').addEventListener('click', async () => 
 
 function renderTrash() {
     const body = document.getElementById('trash-records-body');
-    const audit = document.getElementById('trash-audit-body');
     if (!body || !audit) return;
     body.innerHTML = state.deletedRecords.length ? state.deletedRecords.map(record => `<tr><td>${escapeHtml(record.store_name)}</td><td>${escapeHtml(record.reason || record.event_type)}</td><td>${escapeHtml(formatPtDate(record.created_at))}</td><td>${escapeHtml(formatPtDate(record._deleted_at))}</td><td>${escapeHtml(record._deleted_by)}</td><td><button type="button" class="btn btn-secondary btn-sm" data-restore-id="${escapeHtml(record._trash_id)}">Restaurar</button>${state.canPurgeTrash ? `<button type="button" class="btn btn-secondary btn-sm" style="color:#f87171;margin-left:8px" data-purge-id="${escapeHtml(record._trash_id)}">Excluir definitivamente</button>` : ''}</td></tr>`).join('') : '<tr><td colspan="6" class="table-empty-box">Lixeira vazia.</td></tr>';
-    audit.innerHTML = state.deletionAudit.length ? state.deletionAudit.map(entry => `<tr><td>${escapeHtml(entry.action)}</td><td>${escapeHtml(entry.store_name)}</td><td>${escapeHtml(formatPtDate(entry.at))}</td><td>${escapeHtml(entry.by)}</td></tr>`).join('') : '<tr><td colspan="4" class="table-empty-box">Nenhuma exclusão registrada.</td></tr>';
 }
 document.getElementById('trash-records-body').addEventListener('click', async event => {
     const button = event.target.closest('[data-restore-id], [data-purge-id]');
