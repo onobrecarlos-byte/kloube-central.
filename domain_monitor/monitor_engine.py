@@ -537,6 +537,23 @@ def matches_account_password(password: str, stored: str) -> bool:
         return False
 
 
+def alert_email_key(domain: str) -> str:
+    value = (domain or "").strip()
+    parsed = urllib.parse.urlparse(value if "://" in value else "https://" + value)
+    return (parsed.hostname or "").lower().rstrip(".").removeprefix("www.")
+
+
+def remember_alert_emails(data: dict) -> dict:
+    reservations = data.setdefault("alert_email_reservations", {})
+    for alert in data.get("alerts", []):
+        if not alert.get("email_sent") and alert.get("email_info") != "Envio reservado":
+            continue
+        host = alert_email_key(alert.get("domain", ""))
+        if host and host != "exemplo-teste.com.br":
+            reservations.setdefault(host, alert["id"])
+    return reservations
+
+
 def apply_domain_check(domain: dict, result: dict, alerts: list[dict]):
     if result["status"] == "online":
         domain.pop("outage_id", None)
@@ -905,6 +922,18 @@ class DomainStore:
                             or current.get("outage_alert_id")):
                         return None
                     current["outage_alert_id"] = alert_entry["id"]
+                reservations = remember_alert_emails(data)
+                send_email = force or settings.get("email_notifications", True)
+                if send_email and not force:
+                    host = alert_email_key(domain_name)
+                    if host in reservations:
+                        send_email = False
+                    else:
+                        reservations[host] = alert_entry["id"]
+                alert_entry["email_info"] = "Envio reservado" if send_email else (
+                    "Domínio já notificado ou com envio reservado"
+                    if settings.get("email_notifications", True) else "Desativado"
+                )
                 data["alerts"] = [alert_entry, *data.get("alerts", [])][:500]
                 try:
                     self.save(data, sync_report=False)
@@ -932,8 +961,8 @@ class DomainStore:
             )
 
         email_sent = False
-        email_info = "Desativado"
-        if settings.get("email_notifications", True) or force:
+        email_info = alert_entry["email_info"]
+        if send_email:
             html_body = f"""
             <div style="font-family:Segoe UI,Arial,sans-serif;background:#04091e;color:#ffffff;padding:28px;border-radius:14px;border:1px solid #1e3a8a;">
                 <h2 style="margin:0 0 12px 0;color:#ef4444;">🚨 Alerta de Domínio Fora do Ar — Kloube Monitor</h2>

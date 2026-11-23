@@ -21,6 +21,7 @@ from .monitor_engine import (
     check_single_domain,
     normalize_domain_input,
     now_iso,
+    remember_alert_emails,
 )
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -205,7 +206,7 @@ def run_scheduled_monitor(*, max_workers: int = 8):
 
 def _build_state_payload(data: dict) -> dict:
     accounts = list(data.get("users", {}).keys())
-    safe_data = {k: v for k, v in data.items() if k != "users"}
+    safe_data = {k: v for k, v in data.items() if k not in {"users", "alert_email_reservations"}}
     from monitor_bridge import enrich_accounts
     snapshot, stale = notion_stores.snapshot(allow_stale=True)
     safe_data["domains"] = enrich_accounts(notion_stores.monitor_roster(safe_data.get("domains", []), snapshot))
@@ -555,9 +556,10 @@ class KloubeHandler(BaseHTTPRequestHandler):
 
         if path == "/api/clear-alerts":
             data = store.load()
+            remember_alert_emails(data)
             data["alerts"] = []
             store.save(data)
-            return self._send_json({"ok": True, **store.load()})
+            return self._send_json(_build_state_payload(store.load()))
 
         return self._send_json(
             {"ok": False, "error": "Rota não encontrada"}, status=404
