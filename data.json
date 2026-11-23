@@ -1313,10 +1313,22 @@
       "ip_address": "",
       "response_time_ms": 0,
       "page_title": "",
-      "outage_id": "4c9a8d314ee810be15f0ff7c"
+      "outage_id": "4c9a8d314ee810be15f0ff7c",
+      "outage_alert_id": "al_badf2ba775bb20d3c0667a71"
     }
   ],
   "alerts": [
+    {
+      "id": "al_badf2ba775bb20d3c0667a71",
+      "domain": "breezeclothingco.com",
+      "name": "Breeze 2",
+      "reason": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)",
+      "timestamp": "2026-11-23 09:10:29",
+      "desktop_sent": false,
+      "email_sent": false,
+      "email_info": "Domínio já notificado ou com envio reservado",
+      "email_recipient": "onobrecarlos@gmail.com, alertas.kloube@gmail.com"
+    },
     {
       "id": "al_d47a21b8f44bc8f5aee0a1b4",
       "domain": "snuggico.com",
