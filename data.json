@@ -69,7 +69,8 @@
       "source": "store_publication",
       "page_title": "",
       "notion_page_id": "41e2ea2a-29cb-81a2-ad49-ce527e83abb6",
-      "outage_id": "a15801500180322568cbe356"
+      "outage_id": "a15801500180322568cbe356",
+      "outage_alert_id": "al_d1f26eeda5c9f0f71dede2f4"
     },
     {
       "id": "dom_a7d30d19aa",
@@ -1310,6 +1311,17 @@
     }
   ],
   "alerts": [
+    {
+      "id": "al_d1f26eeda5c9f0f71dede2f4",
+      "domain": "usehanaekorea.com",
+      "name": "Hanae Korea",
+      "reason": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)",
+      "timestamp": "2026-11-23 09:05:27",
+      "desktop_sent": false,
+      "email_sent": false,
+      "email_info": "Domínio já notificado ou com envio reservado",
+      "email_recipient": "onobrecarlos@gmail.com, alertas.kloube@gmail.com"
+    },
     {
       "id": "al_06f63c0a49337a28abc2f93a",
       "domain": "usepeakflex.com",
