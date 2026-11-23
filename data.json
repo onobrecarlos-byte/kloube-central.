@@ -384,7 +384,8 @@
       "source": "store_publication",
       "page_title": "",
       "notion_page_id": "41c2ea2a-29cb-8198-9f1b-c6e91e7d5409",
-      "outage_id": "6c00db4d44bd0fdce5bedad5"
+      "outage_id": "6c00db4d44bd0fdce5bedad5",
+      "outage_alert_id": "al_c37f552055573c3ffbfb23ca"
     },
     {
       "id": "dom_d076fefd04",
@@ -1319,6 +1320,17 @@
     }
   ],
   "alerts": [
+    {
+      "id": "al_c37f552055573c3ffbfb23ca",
+      "domain": "wearkrotakoa.com",
+      "name": "Krakota 2 - Krotakoa Rebranding",
+      "reason": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)",
+      "timestamp": "2026-11-23 09:15:28",
+      "desktop_sent": false,
+      "email_sent": false,
+      "email_info": "Domínio já notificado ou com envio reservado",
+      "email_recipient": "onobrecarlos@gmail.com, alertas.kloube@gmail.com"
+    },
     {
       "id": "al_badf2ba775bb20d3c0667a71",
       "domain": "breezeclothingco.com",
