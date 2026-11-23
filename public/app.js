@@ -738,8 +738,8 @@ async function fetchState() {
         }
 
         const url = `/api/state?${params.toString()}`;
-        const res = await fetch(url, { cache: 'no-store' });
-        if (res.status === 401) { location.replace('/login'); return; }
+        const res = await fetch(url, { cache: 'no-store', signal: AbortSignal.timeout(25000) });
+        if (res.status === 401) { location.replace('/login'); return false; }
         const data = await res.json();
         if (data.ok) {
             state.monthlySummary = data.monthly_summary;
@@ -754,10 +754,12 @@ async function fetchState() {
 
             renderAll();
             populateDatalist();
+            return true;
         }
     } catch (err) {
         console.error('Erro ao sincronizar com servidor:', err);
     }
+    return false;
 }
 
 function renderAll() {
@@ -1343,23 +1345,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
     restoreView();
 
-    // Carregamento inicial e sincronização em tempo real
-    fetchState();
-    checkSyncStatus();
+    const loadingScreen = document.getElementById('dashboard-loading');
+    const loadingMessage = document.getElementById('dashboard-loading-message');
+    const loadingRetry = document.getElementById('dashboard-loading-retry');
+    let loadingDashboard = false;
+
+    async function loadDashboard() {
+        if (loadingDashboard) return;
+        loadingDashboard = true;
+        loadingScreen.hidden = false;
+        loadingScreen.classList.remove('load-failed');
+        loadingRetry.hidden = true;
+        loadingMessage.textContent = 'Carregando a Central Kloube…';
+
+        const loaded = await fetchState();
+        loadingDashboard = false;
+        if (loaded) {
+            loadingScreen.hidden = true;
+            checkSyncStatus();
+        } else {
+            loadingScreen.classList.add('load-failed');
+            loadingMessage.textContent = 'Não foi possível carregar o painel.';
+            loadingRetry.hidden = false;
+        }
+    }
+
+    loadingRetry.addEventListener('click', loadDashboard);
+    loadDashboard();
     setInterval(() => {
+        if (document.hidden || !loadingScreen.hidden) return;
         fetchState();
         checkSyncStatus();
     }, 15000);
 
-    window.addEventListener('focus', () => {
-        fetchState();
-        checkSyncStatus();
+    window.addEventListener('pageshow', event => {
+        if (event.persisted && !document.hidden) loadDashboard();
     });
     document.addEventListener('visibilitychange', () => {
-        if (!document.hidden) {
-            fetchState();
-            checkSyncStatus();
-        }
+        if (!document.hidden) loadDashboard();
     });
 });
 

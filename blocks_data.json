@@ -76,6 +76,42 @@
   },
   "records": [
     {
+      "id": "rec_714f8a56d0",
+      "event_type": "domain_swapped",
+      "store_name": "Nesty",
+      "domain": "thenestyco.com",
+      "account_number": "—",
+      "inactive_category": "",
+      "reason": "Novo domínio: thenestyco.com",
+      "created_at": "2026-11-22 00:00:00",
+      "month_key": "2026-11",
+      "source": "manual"
+    },
+    {
+      "id": "rec_fd7aee1145",
+      "event_type": "domain_swapped",
+      "store_name": "Breeze",
+      "domain": "brzewear.com",
+      "account_number": "—",
+      "inactive_category": "",
+      "reason": "Novo domínio: brzewear.com",
+      "created_at": "2026-11-22 00:00:00",
+      "month_key": "2026-11",
+      "source": "manual"
+    },
+    {
+      "id": "rec_68ecd10d17",
+      "event_type": "domain_swapped",
+      "store_name": "Krakatoa",
+      "domain": "wearkrakotoa.com",
+      "account_number": "—",
+      "inactive_category": "",
+      "reason": "Novo domínio: wearkrakotoa.com",
+      "created_at": "2026-11-22 00:00:00",
+      "month_key": "2026-11",
+      "source": "manual"
+    },
+    {
       "id": "rec_850f45fd3f",
       "event_type": "store_inactive",
       "store_name": "Nesty",
@@ -3080,14 +3116,20 @@
     },
     "Breeze": {
       "name": "Breeze",
-      "current_domain": "breezewearco.com",
-      "domain_swaps_count": 1,
+      "current_domain": "brzewear.com",
+      "domain_swaps_count": 2,
       "status": "Inativa",
       "domain_history": [
         {
+          "domain": "brzewear.com",
+          "date": "2026-11-22",
+          "status": "atual",
+          "reason": "Troca de domínio"
+        },
+        {
           "domain": "breezewearco.com",
           "date": "10/10/2026",
-          "status": "atual",
+          "status": "anterior",
           "reason": "Breeze 2 após queda de domínio"
         },
         {
@@ -3311,14 +3353,20 @@
     },
     "Krakatoa": {
       "name": "Krakatoa",
-      "current_domain": "krakatostore.com",
-      "domain_swaps_count": 0,
+      "current_domain": "wearkrakotoa.com",
+      "domain_swaps_count": 1,
       "status": "Inativa",
       "domain_history": [
         {
+          "domain": "wearkrakotoa.com",
+          "date": "2026-11-22",
+          "status": "atual",
+          "reason": "Troca de domínio"
+        },
+        {
           "domain": "wearkrakatoa.com",
           "date": "27/10/2026",
-          "status": "atual",
+          "status": "anterior",
           "reason": "Domínio original"
         }
       ],
@@ -4040,8 +4088,15 @@
     "Nesty": {
       "name": "Nesty",
       "current_domain": "thenestyco.com",
-      "domain_swaps_count": 0,
-      "domain_history": [],
+      "domain_swaps_count": 1,
+      "domain_history": [
+        {
+          "domain": "thenestyco.com",
+          "date": "2026-11-22",
+          "status": "atual",
+          "reason": "Troca de domínio"
+        }
+      ],
       "publications": [],
       "suspensions": [],
       "status": "Ativa",

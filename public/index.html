@@ -10,9 +10,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles.css?v=compact-tables-6" />
     <link rel="stylesheet" href="/date-picker.css?v=20261105">
-    <link rel="stylesheet" href="/kloube-theme.css?v=4">
+    <link rel="stylesheet" href="/kloube-theme.css?v=5">
 </head>
 <body class="app-layout">
+    <div id="dashboard-loading" class="dashboard-loading">
+        <span class="dashboard-loading-spinner" aria-hidden="true"></span>
+        <p id="dashboard-loading-message" role="status">Carregando a Central Kloube…</p>
+        <button type="button" class="btn btn-primary" id="dashboard-loading-retry" hidden>Tentar novamente</button>
+    </div>
     <!-- BARRA LATERAL (SIDEBAR KLOUBE) -->
     <aside class="sidebar" id="sidebar">
         <div class="sidebar-brand">
@@ -807,7 +812,7 @@
 
     <div id="toast-container" class="toast-container" aria-live="polite"></div>
     <script src="/date-picker.js?v=20261105-exact-day"></script>
-    <script src="/app.js?v=indicadores-abaixo"></script>
+    <script src="/app.js?v=carregamento"></script>
     <script src="/integrations.js?v=1"></script>
 </body>
 </html>
