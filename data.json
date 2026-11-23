@@ -72,7 +72,8 @@
       "source": "store_publication",
       "page_title": "",
       "notion_page_id": "41e2ea2a-29cb-81a2-ad49-ce527e83abb6",
-      "outage_id": "217d5a80fc2d4bf0d2b3ce23"
+      "outage_id": "217d5a80fc2d4bf0d2b3ce23",
+      "outage_alert_id": "al_1673c2ded4db793f8457562a"
     },
     {
       "id": "dom_a7d30d19aa",
@@ -1317,6 +1318,17 @@
     }
   ],
   "alerts": [
+    {
+      "id": "al_1673c2ded4db793f8457562a",
+      "domain": "usehanaekorea.com",
+      "name": "Hanae Korea",
+      "reason": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)",
+      "timestamp": "2026-11-23 08:35:27",
+      "desktop_sent": false,
+      "email_sent": false,
+      "email_info": "Domínio já notificado ou com envio reservado",
+      "email_recipient": "onobrecarlos@gmail.com, alertas.kloube@gmail.com"
+    },
     {
       "id": "al_2b2155a57832029114201d79",
       "domain": "breezeclothingco.com",
