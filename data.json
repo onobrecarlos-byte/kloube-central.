@@ -174,7 +174,8 @@
       "page_title": "",
       "operational_active": true,
       "notion_page_id": "41d2ea2a-29cb-81f0-b300-c9f2239a014f",
-      "outage_id": "256ea56e13b90c76e78e3bf6"
+      "outage_id": "256ea56e13b90c76e78e3bf6",
+      "outage_alert_id": "al_6b7cb88b3854d0e9d21e0562"
     },
     {
       "id": "dom_a99cfc6693",
@@ -1318,6 +1319,17 @@
     }
   ],
   "alerts": [
+    {
+      "id": "al_6b7cb88b3854d0e9d21e0562",
+      "domain": "shopavernio.com",
+      "name": "Avernio",
+      "reason": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)",
+      "timestamp": "2026-11-23 08:15:27",
+      "desktop_sent": false,
+      "email_sent": false,
+      "email_info": "Domínio já notificado ou com envio reservado",
+      "email_recipient": "onobrecarlos@gmail.com, alertas.kloube@gmail.com"
+    },
     {
       "id": "al_5f2b75adc5b8129b00d0976a",
       "domain": "getlireaofficiel.com",
