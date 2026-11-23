@@ -384,7 +384,8 @@
       "source": "store_publication",
       "page_title": "",
       "notion_page_id": "41c2ea2a-29cb-8198-9f1b-c6e91e7d5409",
-      "outage_id": "e19ef838749d7d8c76fac2c8"
+      "outage_id": "e19ef838749d7d8c76fac2c8",
+      "outage_alert_id": "al_8a8ee52fb2c0dc1df1b968f2"
     },
     {
       "id": "dom_d076fefd04",
@@ -1318,6 +1319,17 @@
     }
   ],
   "alerts": [
+    {
+      "id": "al_8a8ee52fb2c0dc1df1b968f2",
+      "domain": "wearkrotakoa.com",
+      "name": "Krakota 2 - Krotakoa Rebranding",
+      "reason": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)",
+      "timestamp": "2026-11-23 08:35:28",
+      "desktop_sent": false,
+      "email_sent": false,
+      "email_info": "Domínio já notificado ou com envio reservado",
+      "email_recipient": "onobrecarlos@gmail.com, alertas.kloube@gmail.com"
+    },
     {
       "id": "al_1673c2ded4db793f8457562a",
       "domain": "usehanaekorea.com",
