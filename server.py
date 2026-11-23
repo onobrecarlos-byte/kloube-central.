@@ -77,6 +77,24 @@ def record_store_name(record):
     return normalize_store_name(record.get("store_name", ""), month or STORE_IDENTITY_CUTOFF)
 
 
+def domain_swap_counts(data):
+    catalog_counts = {}
+    for name, entry in data.get("stores_catalog", {}).items():
+        key = normalize_store_name(entry.get("name") or name).casefold()
+        catalog_counts[key] = max(catalog_counts.get(key, 0), entry.get("domain_swaps_count") or 0)
+
+    recorded_counts = {}
+    for record in data.get("records", []):
+        if record.get("event_type") == "domain_swapped":
+            key = record_store_name(record).casefold()
+            if key:
+                recorded_counts[key] = recorded_counts.get(key, 0) + 1
+
+    # A manual swap can exist in both sources.
+    return {key: max(catalog_counts.get(key, 0), recorded_counts.get(key, 0))
+            for key in catalog_counts.keys() | recorded_counts.keys()}
+
+
 def update_catalog_from_event(data: dict, event: dict):
     """Keep operational status in sync with publications and store closures."""
     event_type = event.get("event_type")
@@ -671,14 +689,10 @@ def compute_summary_with_details(data: dict, month_key: str, period_filter: str 
             return monitor_map[clean.lower()].get("domain", "")
         return ""
 
+    swaps_by_store = domain_swap_counts(data)
+
     def resolve_swaps_count(s_name: str) -> int:
-        clean = (s_name or "").strip()
-        if clean in catalog:
-            return catalog[clean].get("domain_swaps_count", 0)
-        for k, v in catalog.items():
-            if k.lower() == clean.lower():
-                return v.get("domain_swaps_count", 0)
-        return 0
+        return swaps_by_store.get(normalize_store_name(s_name).casefold(), 0)
 
     # Start of month stores list
     start_names = m_cfg.get("start_stores_list")
@@ -864,7 +878,7 @@ def compute_summary_with_details(data: dict, month_key: str, period_filter: str 
         active_stores_items = [
             {"store_name": entry.get("name") or name,
              "domain": entry.get("current_domain", ""),
-             "domain_swaps_count": entry.get("domain_swaps_count", 0),
+             "domain_swaps_count": resolve_swaps_count(entry.get("name") or name),
              "detail": "Ativa na conferência operacional atual"}
             for name, entry in catalog.items()
             if str(entry.get("status", "")).strip().casefold() == "ativa"
@@ -886,7 +900,7 @@ def compute_summary_with_details(data: dict, month_key: str, period_filter: str 
         if active_is_current and snapshot is not None:
             active_stores_items = [
                 {"store_name": row["name"], "domain": row["domain"], "notion_id": row["id"],
-                 "detail": row["status"], "domain_swaps_count": 0}
+                 "detail": row["status"], "domain_swaps_count": resolve_swaps_count(row["name"])}
                 for row in snapshot["rows"] if row["active"] and row["name"]
             ]
             end_active_count = len(active_stores_items)
@@ -1120,6 +1134,7 @@ def _build_state(month_key: str = "", period_filter: str = "month", day_str: str
     ]
     summary["domains_to_treat_count"] = len(domains_to_treat)
     summary["details"]["domains_to_treat"] = domains_to_treat
+    swaps_by_store = domain_swap_counts(data)
     return {
         "ok": True,
         "server_time": now_iso(),
@@ -1131,7 +1146,11 @@ def _build_state(month_key: str = "", period_filter: str = "month", day_str: str
         "monthly_summary": summary,
         "deleted_records": data.get("deleted_records", []),
         "deletion_audit": data.get("deletion_audit", []),
-        "stores_catalog": data.get("stores_catalog", {}),
+        "stores_catalog": {
+            name: dict(entry, domain_swaps_count=swaps_by_store.get(
+                normalize_store_name(entry.get("name") or name).casefold(), 0))
+            for name, entry in data.get("stores_catalog", {}).items()
+        },
         "whatsapp_config": data.get("whatsapp_config", {}),
         "records": [dict(r, store_name=record_store_name(r), display_event_type=publication_type(r, data)) for r in data.get("records", [])],
         "known_stores": store.get_monitor_domains_stores(),
@@ -1445,7 +1464,7 @@ class BlocksHandler(BaseHTTPRequestHandler):
                                 "notes": r.get("reason", "Loja publicada")
                             })
 
-                swaps_cnt = cat_entry.get("domain_swaps_count", 0)
+                swaps_cnt = domain_swap_counts(data).get(norm_name.casefold(), 0)
 
                 return self._send_json({
                     "ok": True,
