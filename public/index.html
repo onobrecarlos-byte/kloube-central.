@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles.css?v=compact-tables-6" />
     <link rel="stylesheet" href="/date-picker.css?v=20261105">
-    <link rel="stylesheet" href="/kloube-theme.css?v=3">
+    <link rel="stylesheet" href="/kloube-theme.css?v=4">
 </head>
 <body class="app-layout">
     <!-- BARRA LATERAL (SIDEBAR KLOUBE) -->
@@ -236,34 +236,6 @@
                 </button>
             </div>
 
-            <section id="inspector-drawer" class="panel-card metric-details" aria-labelledby="drawer-title" hidden>
-                <div class="panel-card-header">
-                    <div>
-                        <h2 class="panel-card-title" id="drawer-title"></h2>
-                        <p class="panel-card-subtitle" id="drawer-subtitle"></p>
-                    </div>
-                    <button type="button" class="btn btn-secondary" id="btn-close-drawer">Fechar</button>
-                </div>
-                <div class="metric-details-toolbar">
-                    <input type="search" id="drawer-search" class="search-input" aria-label="Filtrar lojas deste indicador" placeholder="Filtrar lojas..." />
-                    <span class="drawer-counter" id="drawer-counter" aria-live="polite"></span>
-                </div>
-                <div class="incidents-table-wrapper">
-                    <table class="incidents-table" aria-labelledby="drawer-title">
-                        <thead><tr>
-                            <th scope="col"><span aria-label="Ícone da loja">Loja</span></th>
-                            <th scope="col">Nome e domínio</th>
-                            <th scope="col">Tipo</th>
-                            <th scope="col">Status</th>
-                            <th scope="col">Registrado em</th>
-                            <th scope="col">Ações</th>
-                        </tr></thead>
-                        <tbody id="drawer-items-list"></tbody>
-                    </table>
-                    <div id="drawer-items-empty" class="table-empty-box" hidden>Nenhum item neste indicador.</div>
-                </div>
-            </section>
-
             <div class="attention-section" role="region" aria-label="Status das lojas">
                 <div class="attention-cards-grid">
                     <button type="button" class="attention-card" id="btn-domains-to-treat" data-filter-attention="domains_to_treat" aria-controls="summary-active-stores" aria-pressed="false" title="Ver domínios fora do ar no monitoramento">
@@ -326,6 +298,34 @@
                         </div>
                     </div>
                 </div>
+
+                <section id="inspector-drawer" class="panel-card metric-details" aria-labelledby="drawer-title" hidden>
+                    <div class="panel-card-header">
+                        <div>
+                            <h2 class="panel-card-title" id="drawer-title"></h2>
+                            <p class="panel-card-subtitle" id="drawer-subtitle"></p>
+                        </div>
+                        <button type="button" class="btn btn-secondary" id="btn-close-drawer">Fechar</button>
+                    </div>
+                    <div class="metric-details-toolbar">
+                        <input type="search" id="drawer-search" class="search-input" aria-label="Filtrar lojas deste indicador" placeholder="Filtrar lojas..." />
+                        <span class="drawer-counter" id="drawer-counter" aria-live="polite"></span>
+                    </div>
+                    <div class="incidents-table-wrapper">
+                        <table class="incidents-table" aria-labelledby="drawer-title">
+                            <thead><tr>
+                                <th scope="col"><span aria-label="Ícone da loja">Loja</span></th>
+                                <th scope="col">Nome e domínio</th>
+                                <th scope="col">Tipo</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Registrado em</th>
+                                <th scope="col">Ações</th>
+                            </tr></thead>
+                            <tbody id="drawer-items-list"></tbody>
+                        </table>
+                        <div id="drawer-items-empty" class="table-empty-box" hidden>Nenhum item neste indicador.</div>
+                    </div>
+                </section>
 
                 <div class="incidents-table-wrapper" id="summary-incidents">
                     <table class="incidents-table">
@@ -807,7 +807,7 @@
 
     <div id="toast-container" class="toast-container" aria-live="polite"></div>
     <script src="/date-picker.js?v=20261105-exact-day"></script>
-    <script src="/app.js?v=indicadores-tabela"></script>
+    <script src="/app.js?v=indicadores-abaixo"></script>
     <script src="/integrations.js?v=1"></script>
 </body>
 </html>

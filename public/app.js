@@ -662,7 +662,6 @@ function openDrawer(sectionKey) {
     const panel = document.getElementById('inspector-drawer');
     panel.hidden = false;
     renderDrawerItems();
-    panel.scrollIntoView({block: 'nearest'});
 }
 
 function closeDrawer() {
@@ -890,6 +889,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Atualiza a tabela abaixo dos cartões de atenção.
     document.querySelectorAll('[data-filter-attention]').forEach(card => {
         card.addEventListener('click', () => {
+            if (state.activeDrawerSection) closeDrawer();
             const filterType = card.getAttribute('data-filter-attention');
             if (state.attentionFilter === filterType) {
                 state.attentionFilter = null; // desmarca
