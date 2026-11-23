@@ -29,7 +29,8 @@
       "source": "store_publication",
       "page_title": "",
       "notion_page_id": "41e2ea2a-29cb-8180-92d9-ed9731b089d7",
-      "outage_id": "2d92184da2749d6a6ea10b72"
+      "outage_id": "2d92184da2749d6a6ea10b72",
+      "outage_alert_id": "al_5789867854cc615b6daf3b5a"
     },
     {
       "id": "dom_13357374ba",
@@ -1315,6 +1316,17 @@
     }
   ],
   "alerts": [
+    {
+      "id": "al_5789867854cc615b6daf3b5a",
+      "domain": "usenordbody.com",
+      "name": "NØRD BODY",
+      "reason": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)",
+      "timestamp": "2026-11-23 09:10:27",
+      "desktop_sent": false,
+      "email_sent": false,
+      "email_info": "Domínio já notificado ou com envio reservado",
+      "email_recipient": "onobrecarlos@gmail.com, alertas.kloube@gmail.com"
+    },
     {
       "id": "al_782a60e0c0fa9aeef73578ee",
       "domain": "wearkrotakoa.com",
