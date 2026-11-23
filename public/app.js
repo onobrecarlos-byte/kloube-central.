@@ -1393,7 +1393,7 @@ document.getElementById('btn-app-logout').addEventListener('click', async () => 
 
 function renderTrash() {
     const body = document.getElementById('trash-records-body');
-    if (!body || !audit) return;
+    if (!body) return;
     body.innerHTML = state.deletedRecords.length ? state.deletedRecords.map(record => `<tr><td>${escapeHtml(record.store_name)}</td><td>${escapeHtml(record.reason || record.event_type)}</td><td>${escapeHtml(formatPtDate(record.created_at))}</td><td>${escapeHtml(formatPtDate(record._deleted_at))}</td><td>${escapeHtml(record._deleted_by)}</td><td><button type="button" class="btn btn-secondary btn-sm" data-restore-id="${escapeHtml(record._trash_id)}">Restaurar</button>${state.canPurgeTrash ? `<button type="button" class="btn btn-secondary btn-sm" style="color:#f87171;margin-left:8px" data-purge-id="${escapeHtml(record._trash_id)}">Excluir definitivamente</button>` : ''}</td></tr>`).join('') : '<tr><td colspan="6" class="table-empty-box">Lixeira vazia.</td></tr>';
 }
 document.getElementById('trash-records-body').addEventListener('click', async event => {
