@@ -1059,7 +1059,8 @@
       "response_time_ms": 0,
       "page_title": "",
       "notion_page_id": "4032ea2a-29cb-81e7-9831-d08121de2482",
-      "outage_id": "6d5bd1c36fd2d790d8d06526"
+      "outage_id": "6d5bd1c36fd2d790d8d06526",
+      "outage_alert_id": "al_2845e1070ce7066aeedefdd9"
     },
     {
       "id": "dom_sondur",
@@ -1311,6 +1312,17 @@
     }
   ],
   "alerts": [
+    {
+      "id": "al_2845e1070ce7066aeedefdd9",
+      "domain": "vivacuerpoficial.com",
+      "name": "VivaCuerpo México",
+      "reason": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)",
+      "timestamp": "2026-11-23 04:10:29",
+      "desktop_sent": false,
+      "email_sent": false,
+      "email_info": "Envio reservado",
+      "email_recipient": "onobrecarlos@gmail.com, alertas.kloube@gmail.com"
+    },
     {
       "id": "al_13b8a151ac21f137d483d05b",
       "domain": "wearkrotakoa.com",
