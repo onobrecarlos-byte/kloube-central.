@@ -29,7 +29,8 @@
       "source": "store_publication",
       "page_title": "",
       "notion_page_id": "41e2ea2a-29cb-8180-92d9-ed9731b089d7",
-      "outage_id": "e6d32f82da6b88d114b9eb11"
+      "outage_id": "e6d32f82da6b88d114b9eb11",
+      "outage_alert_id": "al_3bdbfe5d1a6301a323fef9c0"
     },
     {
       "id": "dom_13357374ba",
@@ -1310,6 +1311,17 @@
     }
   ],
   "alerts": [
+    {
+      "id": "al_3bdbfe5d1a6301a323fef9c0",
+      "domain": "usenordbody.com",
+      "name": "NØRD BODY",
+      "reason": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)",
+      "timestamp": "2026-11-23 04:15:27",
+      "desktop_sent": false,
+      "email_sent": false,
+      "email_info": "Envio reservado",
+      "email_recipient": "onobrecarlos@gmail.com, alertas.kloube@gmail.com"
+    },
     {
       "id": "al_158a0dcdcf81a436520a2fc3",
       "domain": "breezeclothingco.com",
