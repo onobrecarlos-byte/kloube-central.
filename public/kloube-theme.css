@@ -210,14 +210,16 @@ body.app-layout {
         flex-shrink: 0;
     }
     .app-layout .main-content { padding: 20px 26px; }
-    #view-summary :is(.metrics-bar-card, .attention-cards-grid) {
+    #view-summary .metrics-bar-card { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    #view-summary :is(.metrics-bar-card, .attention-cards-grid) { gap: 12px; }
+    #view-summary .attention-cards-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 12px;
     }
 }
 
 @media (min-width: 1200px) {
-    #view-summary :is(.metrics-bar-card, .attention-cards-grid) {
+    #view-summary .metrics-bar-card { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    #view-summary .attention-cards-grid {
         grid-template-columns: repeat(5, minmax(0, 1fr));
     }
 }

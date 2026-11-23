@@ -27,7 +27,6 @@ const state = {
 };
 
 const SECTION_LABELS = {
-    reactivated_stores: {eyebrow: 'REATIVAÇÕES', title: 'Reativadas', subtitle: 'Lojas existentes que voltaram ao ar no período selecionado.'},
     start_stores: {
         eyebrow: 'RESUMO DAS LOJAS',
         title: 'Lojas no início do mês',
@@ -133,7 +132,6 @@ function renderDashboard() {
     document.getElementById('kpi-inactive-stores').textContent = s.total_inactive;
     document.getElementById('kpi-total-stores').textContent = s.total_registered;
     document.getElementById('kpi-published-stores').textContent = s.published_stores_count;
-    document.getElementById('kpi-reactivated-stores').textContent = s.reactivated_stores_count || 0;
 
     // Contadores dos cartões de atenção
     document.getElementById('att-val-dmca').textContent = s.inactive_reasons.dmca;
@@ -699,7 +697,6 @@ function renderDrawerItems() {
         inactive_all: ['Inativa', 'badge-danger'],
         registered_all: ['Registrada', 'badge-neutral'],
         published_stores: ['Publicada', 'badge-success'],
-        reactivated_stores: ['Reativada', 'badge-success'],
     }[state.activeDrawerSection];
 
     listEl.innerHTML = items.map(it => {
