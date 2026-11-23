@@ -407,7 +407,8 @@
       "month_key": "2026-11",
       "source": "integration",
       "created_by": "onobrecarlos@gmail.com",
-      "integration_id": "f95957c761e345fea687b7f21d853c74"
+      "integration_id": "f95957c761e345fea687b7f21d853c74",
+      "type_note": "Langwell 2: classificada no Notion por bloqueios recorrentes. A conta 119 tem outra suspensão registrada, e a 120 consta na publicação. Conta deste incidente a confirmar."
     },
     {
       "id": "rec_035d1c628b",
@@ -442,7 +443,7 @@
       "event_type": "store_inactive",
       "store_name": "Mason 2",
       "domain": "usemasyn.com",
-      "account_number": "—",
+      "account_number": "Google Ads 69",
       "inactive_category": "ads_block",
       "reason": "Google Ads 69 suspensa (phishing). Retomada sem confirmação.",
       "created_at": "2026-11-19 10:14:51",
