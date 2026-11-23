@@ -1262,7 +1262,8 @@
       "ip_address": "23.227.38.32",
       "response_time_ms": 204,
       "page_title": "This store is unavailable",
-      "outage_id": "46ee394dd07ed20965b8766b"
+      "outage_id": "46ee394dd07ed20965b8766b",
+      "outage_alert_id": "al_8b22dfd8a2b1dee4ab6b976c"
     },
     {
       "id": "notion_4d1f02404fcfa3c406ed",
@@ -1508,6 +1509,17 @@
     }
   ],
   "alerts": [
+    {
+      "id": "al_8b22dfd8a2b1dee4ab6b976c",
+      "domain": "reworkgearco.com",
+      "name": "Rework Gear",
+      "reason": "Loja bloqueada ou inativa na plataforma (HTTP 423 · This store is unavailable)",
+      "timestamp": "2026-11-23 16:05:29",
+      "desktop_sent": false,
+      "email_sent": false,
+      "email_info": "Envio reservado",
+      "email_recipient": "onobrecarlos@gmail.com, alertas.kloube@gmail.com"
+    },
     {
       "id": "al_6a0a92b86975860caf4011f2",
       "domain": "snuggico.com",
@@ -2984,6 +2996,7 @@
     "wearevolv.com": "al_1793758961752",
     "longwelltitanium.com": "al_1793758959824",
     "libracaseshop.com": "al_1793758958028",
-    "magiestanks.com": "al_1793387905431"
+    "magiestanks.com": "al_1793387905431",
+    "reworkgearco.com": "al_8b22dfd8a2b1dee4ab6b976c"
   }
 }
