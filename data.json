@@ -172,7 +172,8 @@
       "page_title": "",
       "operational_active": true,
       "notion_page_id": "41d2ea2a-29cb-81f0-b300-c9f2239a014f",
-      "outage_id": "d69a5f71f3233709435f9b8c"
+      "outage_id": "d69a5f71f3233709435f9b8c",
+      "outage_alert_id": "al_1f855b05284aad46397f0bed"
     },
     {
       "id": "dom_a99cfc6693",
@@ -1317,6 +1318,17 @@
     }
   ],
   "alerts": [
+    {
+      "id": "al_1f855b05284aad46397f0bed",
+      "domain": "shopavernio.com",
+      "name": "Avernio",
+      "reason": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)",
+      "timestamp": "2026-11-23 09:25:27",
+      "desktop_sent": false,
+      "email_sent": false,
+      "email_info": "Domínio já notificado ou com envio reservado",
+      "email_recipient": "onobrecarlos@gmail.com, alertas.kloube@gmail.com"
+    },
     {
       "id": "al_9859897ef2626d51d56d3df4",
       "domain": "usetitanoxufficiale.com",
