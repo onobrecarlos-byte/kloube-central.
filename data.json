@@ -1242,7 +1242,8 @@
       "response_time_ms": 0,
       "page_title": "",
       "notion_page_id": "41e2ea2a-29cb-8141-aef2-e2b61783e5b4",
-      "outage_id": "e66820c998cd61103c264de5"
+      "outage_id": "e66820c998cd61103c264de5",
+      "outage_alert_id": "al_5f2b75adc5b8129b00d0976a"
     },
     {
       "id": "notion_73b7d4205f88564dfe7c",
@@ -1317,6 +1318,17 @@
     }
   ],
   "alerts": [
+    {
+      "id": "al_5f2b75adc5b8129b00d0976a",
+      "domain": "getlireaofficiel.com",
+      "name": "Liréa",
+      "reason": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)",
+      "timestamp": "2026-11-23 08:15:27",
+      "desktop_sent": false,
+      "email_sent": false,
+      "email_info": "Domínio já notificado ou com envio reservado",
+      "email_recipient": "onobrecarlos@gmail.com, alertas.kloube@gmail.com"
+    },
     {
       "id": "al_d3ba5b6769b981f3ae21c4ea",
       "domain": "usetitanoxufficiale.com",
