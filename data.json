@@ -384,7 +384,8 @@
       "source": "store_publication",
       "page_title": "",
       "notion_page_id": "41c2ea2a-29cb-8198-9f1b-c6e91e7d5409",
-      "outage_id": "040c40cc38dd93e2214bbe7d"
+      "outage_id": "040c40cc38dd93e2214bbe7d",
+      "outage_alert_id": "al_4070ef3f22669f99aa8e789b"
     },
     {
       "id": "dom_d076fefd04",
@@ -1316,6 +1317,17 @@
     }
   ],
   "alerts": [
+    {
+      "id": "al_4070ef3f22669f99aa8e789b",
+      "domain": "wearkrotakoa.com",
+      "name": "Krakota 2 - Krotakoa Rebranding",
+      "reason": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)",
+      "timestamp": "2026-11-23 04:20:28",
+      "desktop_sent": false,
+      "email_sent": false,
+      "email_info": "Envio reservado",
+      "email_recipient": "onobrecarlos@gmail.com, alertas.kloube@gmail.com"
+    },
     {
       "id": "al_d7d5abab74163bf5e3c8b5fc",
       "domain": "shopavernio.com",
