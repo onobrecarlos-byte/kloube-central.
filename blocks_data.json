@@ -2422,7 +2422,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-22 22:42:50",
+  "updated_at": "2026-11-22 22:42:56",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -5119,21 +5119,6 @@
   },
   "deleted_records": [
     {
-      "id": "rec_bca9672ce3",
-      "event_type": "ads_suspended",
-      "store_name": "Rework Gear",
-      "domain": "https://reworkgearstore.com/",
-      "account_number": "Google Ads 92",
-      "inactive_category": "",
-      "reason": "Conta suspensa",
-      "created_at": "2026-11-06 12:00:00",
-      "month_key": "2026-11",
-      "source": "manual",
-      "_deleted_at": "2026-11-06 11:19:13",
-      "_deleted_by": "onobrecarlos@gmail.com",
-      "_trash_id": "trash_3ed5aeb06226"
-    },
-    {
       "id": "rec_fe17120546",
       "event_type": "ads_suspended",
       "store_name": "Rework Gear",
@@ -5165,6 +5150,13 @@
     }
   ],
   "deletion_audit": [
+    {
+      "action": "Excluído definitivamente",
+      "record_id": "rec_bca9672ce3",
+      "store_name": "Rework Gear",
+      "at": "2026-11-22 22:42:56",
+      "by": "onobrecarlos@gmail.com"
+    },
     {
       "action": "Excluído definitivamente",
       "record_id": "rec_54cd9eeed6",
