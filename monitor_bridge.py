@@ -49,6 +49,16 @@ def duplicate_record(records,event):
     name=key(event.get('store_name',''))
     stamp=event.get('created_at','')
     kind=event.get('event_type')
+    monitored_domain = (kind == 'store_inactive'
+                        and event.get('source') == 'domain_monitor'
+                        and event.get('inactive_category') == 'domain_down')
+    hostname = host(event.get('domain', '')) if monitored_domain else ''
+    if hostname:
+        return next((record for record in records
+                     if record.get('event_type') == 'store_inactive'
+                     and record.get('inactive_category') == 'domain_down'
+                     and record.get('created_at', '')[:10] == stamp[:10]
+                     and host(record.get('domain', '')) == hostname), None)
     for record in records:
         if key(record.get('store_name',''))!=name:continue
         oldkind=record.get('event_type')
@@ -90,7 +100,10 @@ def sync(domains):
                        'month_key':stamp[:7],'source':'domain_monitor','monitor_domain_id':domain_id,
                        'monitor_diagnostic':domain.get('reason','')}
                 existing=duplicate_record(data.setdefault('records',[]),event)
-                if existing:record_id=existing['id']
+                if existing:
+                    record_id=existing['id']
+                    if cat=='domain_down' and existing.get('source')=='domain_monitor':
+                        existing.pop('monitor_closed_at',None)
                 else:
                     data['records'].insert(0,event);record_id=event['id']
                 for catalog_name,entry in data.get('stores_catalog',{}).items():
