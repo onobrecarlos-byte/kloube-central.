@@ -473,13 +473,17 @@ function renderStoresView() {
     });
 
     if (!state.activeStoresOnly && s.active_is_current) {
+        const fromNotion = Boolean(s.notion_status?.checked_at);
         Object.entries(state.storesCatalog).forEach(([name, entry]) => {
             const actualName = entry.name || name;
             const key = actualName.toLowerCase();
-            const status = String(entry.status || '').trim().toLowerCase() === 'ativa' ? 'ativa' : 'inativa';
+            const status = !fromNotion && String(entry.status || '').trim().toLowerCase() === 'ativa' ? 'ativa' : 'inativa';
             const existing = list.find(item => item.name.toLowerCase() === key);
-            if (existing) existing.status = status;
-            else list.push({name: actualName, domain: entry.current_domain || '', status, swaps: entry.domain_swaps_count || 0});
+            if (existing) {
+                if (!fromNotion) existing.status = status;
+            } else {
+                list.push({name: actualName, domain: entry.current_domain || '', status, swaps: entry.domain_swaps_count || 0});
+            }
         });
     }
 
