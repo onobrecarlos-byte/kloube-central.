@@ -1296,7 +1296,8 @@
       "ip_address": "23.227.38.74",
       "response_time_ms": 0,
       "page_title": "",
-      "outage_id": "c67bec52f1c652efaffa9000"
+      "outage_id": "c67bec52f1c652efaffa9000",
+      "outage_alert_id": "al_c451ced6cf8ad1fc2dd9fd57"
     },
     {
       "id": "notion_4f234ec2df70f87a235e",
@@ -1319,6 +1320,17 @@
     }
   ],
   "alerts": [
+    {
+      "id": "al_c451ced6cf8ad1fc2dd9fd57",
+      "domain": "snuggico.com",
+      "name": "Snuggi Sandals",
+      "reason": "Falha de conexão: [Errno 16] Device or resource busy",
+      "timestamp": "2026-11-23 08:35:29",
+      "desktop_sent": false,
+      "email_sent": false,
+      "email_info": "Domínio já notificado ou com envio reservado",
+      "email_recipient": "onobrecarlos@gmail.com, alertas.kloube@gmail.com"
+    },
     {
       "id": "al_8a8ee52fb2c0dc1df1b968f2",
       "domain": "wearkrotakoa.com",
