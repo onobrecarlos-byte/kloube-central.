@@ -89,7 +89,8 @@
       "source": "store_publication",
       "page_title": "",
       "notion_page_id": "41e2ea2a-29cb-812e-bb4e-cd636c29931f",
-      "outage_id": "9277bc7648ee2a3ac4721706"
+      "outage_id": "9277bc7648ee2a3ac4721706",
+      "outage_alert_id": "al_06f63c0a49337a28abc2f93a"
     },
     {
       "id": "dom_e8c8777e79",
@@ -1309,6 +1310,17 @@
     }
   ],
   "alerts": [
+    {
+      "id": "al_06f63c0a49337a28abc2f93a",
+      "domain": "usepeakflex.com",
+      "name": "PeakFlex",
+      "reason": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)",
+      "timestamp": "2026-11-23 09:05:27",
+      "desktop_sent": false,
+      "email_sent": false,
+      "email_info": "Domínio já notificado ou com envio reservado",
+      "email_recipient": "onobrecarlos@gmail.com, alertas.kloube@gmail.com"
+    },
     {
       "id": "al_0bc33c301f8975f76d613644",
       "domain": "snuggico.com",
