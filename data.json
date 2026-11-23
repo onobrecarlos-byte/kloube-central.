@@ -1290,7 +1290,8 @@
       "ip_address": "",
       "response_time_ms": 0,
       "page_title": "",
-      "outage_id": "41a8d4b38e9bd238d7d06949"
+      "outage_id": "41a8d4b38e9bd238d7d06949",
+      "outage_alert_id": "al_f17720a651e91a941938a7bc"
     },
     {
       "id": "notion_4f234ec2df70f87a235e",
@@ -1312,6 +1313,17 @@
     }
   ],
   "alerts": [
+    {
+      "id": "al_f17720a651e91a941938a7bc",
+      "domain": "snuggico.com",
+      "name": "Snuggi Sandals",
+      "reason": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)",
+      "timestamp": "2026-11-23 04:10:29",
+      "desktop_sent": false,
+      "email_sent": false,
+      "email_info": "Envio reservado",
+      "email_recipient": "onobrecarlos@gmail.com, alertas.kloube@gmail.com"
+    },
     {
       "id": "al_2845e1070ce7066aeedefdd9",
       "domain": "vivacuerpoficial.com",
