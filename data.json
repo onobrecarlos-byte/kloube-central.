@@ -1976,7 +1976,8 @@
   "users": {
     "alertas.kloube@gmail.com": "pbkdf2_sha256$24e8db452649cefeb9fdcffbccd72095$9a45f081db9124298979c23a20ae54cda71542d5cdbd458e66807fde5e94fabc",
     "pablin.business@gmail.com": "pbkdf2_sha256$710c992dd9223fcb4bedcde476f3ce36$7dcb2fd7cb454460c5cb457a18894a21fb39be274f15e21b45cca9a4c0951bbb",
-    "onobrecarlos@gmail.com": "pbkdf2_sha256$1ada5a89f88b3088b33e05b917a99a9d$dc4486a5a10f5c82dc900f0189b9b1ca9ac505b3bf4517d13a9b94be6f1fafa5"
+    "onobrecarlos@gmail.com": "pbkdf2_sha256$1ada5a89f88b3088b33e05b917a99a9d$dc4486a5a10f5c82dc900f0189b9b1ca9ac505b3bf4517d13a9b94be6f1fafa5",
+    "saamuel.business@gmail.com": "pbkdf2_sha256$e209ad3f6b6b10829182387df9b1785f$a2520cd22479d9af61182a51acaf247a6736b73c8b12346447df4ae1fffa4fab"
   },
   "publication_registrations": [
     "rec_035d1c628b",
@@ -2048,5 +2049,17 @@
     "rec_f7ccbc05ed",
     "rec_f98e7cc90e"
   ],
-  "last_full_check_ts": 1795393226.5265698
+  "last_full_check_ts": 1795393226.5265698,
+  "disabled_users": [],
+  "store_managed_users": [
+    "saamuel.business@gmail.com"
+  ],
+  "user_audit": [
+    {
+      "action": "Usuário criado",
+      "email": "saamuel.business@gmail.com",
+      "by": "onobrecarlos@gmail.com",
+      "at": "2026-11-22 21:22:51"
+    }
+  ]
 }
