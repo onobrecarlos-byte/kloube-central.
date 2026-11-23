@@ -115,7 +115,8 @@
       "month_key": "2026-11",
       "source": "domain_monitor",
       "monitor_domain_id": "dom_13357374ba",
-      "monitor_diagnostic": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)"
+      "monitor_diagnostic": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)",
+      "monitor_closed_at": "2026-11-23 09:20:27"
     },
     {
       "id": "rec_99206139d5",
@@ -129,7 +130,8 @@
       "month_key": "2026-11",
       "source": "domain_monitor",
       "monitor_domain_id": "dom_fe83f6df67",
-      "monitor_diagnostic": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)"
+      "monitor_diagnostic": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)",
+      "monitor_closed_at": "2026-11-23 09:20:28"
     },
     {
       "id": "rec_0afa0b3794",
@@ -143,7 +145,8 @@
       "month_key": "2026-11",
       "source": "domain_monitor",
       "monitor_domain_id": "dom_585a26d2b9",
-      "monitor_diagnostic": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)"
+      "monitor_diagnostic": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)",
+      "monitor_closed_at": "2026-11-23 09:20:27"
     },
     {
       "id": "rec_806e1e1e8f",
@@ -2997,7 +3000,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-23 09:15:33",
+  "updated_at": "2026-11-23 09:20:32",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -5176,7 +5179,7 @@
       "store_name": "Krakota"
     },
     "dom_lushessence": {
-      "checked_at": "2026-11-23 09:15:29",
+      "checked_at": "2026-11-23 09:20:29",
       "category": "",
       "record_id": "",
       "store_name": "Lush Essence"
@@ -5188,13 +5191,13 @@
       "store_name": "Breeze"
     },
     "dom_scarlette": {
-      "checked_at": "2026-11-23 09:15:29",
+      "checked_at": "2026-11-23 09:20:30",
       "category": "",
       "record_id": "",
       "store_name": "Scarlette"
     },
     "dom_belluna": {
-      "checked_at": "2026-11-23 09:15:29",
+      "checked_at": "2026-11-23 09:20:30",
       "category": "",
       "record_id": "",
       "store_name": "Belluna"
@@ -5212,7 +5215,7 @@
       "store_name": "Snuggi Sandals"
     },
     "dom_graceease": {
-      "checked_at": "2026-11-23 09:15:29",
+      "checked_at": "2026-11-23 09:20:29",
       "category": "",
       "record_id": "",
       "store_name": "Grace & Ease"
@@ -5224,7 +5227,7 @@
       "store_name": "Softari"
     },
     "dom_luveon": {
-      "checked_at": "2026-11-23 09:15:29",
+      "checked_at": "2026-11-23 09:20:30",
       "category": "",
       "record_id": "",
       "store_name": "Luveon"
@@ -5236,25 +5239,25 @@
       "store_name": "ParoPet"
     },
     "dom_donnea": {
-      "checked_at": "2026-11-23 09:15:29",
+      "checked_at": "2026-11-23 09:20:30",
       "category": "",
       "record_id": "",
       "store_name": "Donnea Milano"
     },
     "dom_vivacuerpo": {
-      "checked_at": "2026-11-23 09:15:29",
+      "checked_at": "2026-11-23 09:20:29",
       "category": "domain_down",
       "record_id": "rec_3d58f6b6b4",
       "store_name": "VivaCuerpo"
     },
     "dom_sondur": {
-      "checked_at": "2026-11-23 09:15:29",
+      "checked_at": "2026-11-23 09:20:29",
       "category": "",
       "record_id": "",
       "store_name": "Sondur Travel"
     },
     "dom_orrenaturals": {
-      "checked_at": "2026-11-23 09:15:29",
+      "checked_at": "2026-11-23 09:20:29",
       "category": "",
       "record_id": "",
       "store_name": "Orre Naturals"
@@ -5266,7 +5269,7 @@
       "store_name": "SleepSake"
     },
     "dom_ionix2": {
-      "checked_at": "2026-11-23 09:15:29",
+      "checked_at": "2026-11-23 09:20:29",
       "category": "",
       "record_id": "",
       "store_name": "Ionix Labs"
@@ -5290,7 +5293,7 @@
       "store_name": "KOJEVA"
     },
     "dom_dedfadd507": {
-      "checked_at": "2026-11-23 09:15:29",
+      "checked_at": "2026-11-23 09:20:29",
       "category": "",
       "record_id": "",
       "store_name": "HONEY CLOUDZ"
@@ -5332,7 +5335,7 @@
       "store_name": "Silix"
     },
     "dom_9d549ea3a5": {
-      "checked_at": "2026-11-23 09:15:29",
+      "checked_at": "2026-11-23 09:20:29",
       "category": "",
       "record_id": "",
       "store_name": "Titanex"
@@ -5350,13 +5353,13 @@
       "store_name": "Amua"
     },
     "dom_95e04c2f91": {
-      "checked_at": "2026-11-23 09:15:29",
+      "checked_at": "2026-11-23 09:20:29",
       "category": "",
       "record_id": "",
       "store_name": "Rivanta"
     },
     "dom_3078aa4727": {
-      "checked_at": "2026-11-23 09:15:29",
+      "checked_at": "2026-11-23 09:20:29",
       "category": "",
       "record_id": "",
       "store_name": "Freiluftkind"
@@ -5374,7 +5377,7 @@
       "store_name": "ShinDefender"
     },
     "dom_dd8feb0677": {
-      "checked_at": "2026-11-23 09:15:28",
+      "checked_at": "2026-11-23 09:20:29",
       "category": "",
       "record_id": "",
       "store_name": "Auria"
@@ -5386,7 +5389,7 @@
       "store_name": "Avulea"
     },
     "dom_bd2322cf95": {
-      "checked_at": "2026-11-23 09:15:28",
+      "checked_at": "2026-11-23 09:20:29",
       "category": "",
       "record_id": "",
       "store_name": "Tradesman Nutrition"
@@ -5404,7 +5407,7 @@
       "store_name": "Lunara Comfort"
     },
     "dom_463a05f031": {
-      "checked_at": "2026-11-23 09:15:27",
+      "checked_at": "2026-11-23 09:20:28",
       "category": "",
       "record_id": "",
       "store_name": "Nesty"
@@ -5416,25 +5419,25 @@
       "store_name": "KLYNE"
     },
     "dom_948bf81dd8": {
-      "checked_at": "2026-11-23 09:15:28",
+      "checked_at": "2026-11-23 09:20:29",
       "category": "",
       "record_id": "",
       "store_name": "Thermafits"
     },
     "dom_4226922196": {
-      "checked_at": "2026-11-23 09:15:28",
+      "checked_at": "2026-11-23 09:20:29",
       "category": "",
       "record_id": "",
       "store_name": "Inolyo"
     },
     "dom_8c991a3a85": {
-      "checked_at": "2026-11-23 09:15:28",
+      "checked_at": "2026-11-23 09:20:29",
       "category": "",
       "record_id": "",
       "store_name": "Alessio"
     },
     "dom_e45a8e48cc": {
-      "checked_at": "2026-11-23 09:15:28",
+      "checked_at": "2026-11-23 09:20:28",
       "category": "",
       "record_id": "",
       "store_name": "SleepSane 3"
@@ -5470,7 +5473,7 @@
       "store_name": "Arlaya"
     },
     "dom_d076fefd04": {
-      "checked_at": "2026-11-23 09:15:28",
+      "checked_at": "2026-11-23 09:20:29",
       "category": "",
       "record_id": "",
       "store_name": "Avulea"
@@ -5500,7 +5503,7 @@
       "store_name": "Orlivia"
     },
     "dom_f94a7bb2e6": {
-      "checked_at": "2026-11-23 09:15:28",
+      "checked_at": "2026-11-23 09:20:28",
       "category": "",
       "record_id": "",
       "store_name": "Help 'Em Up"
@@ -5512,7 +5515,7 @@
       "store_name": "Lunã"
     },
     "dom_f8a25f0846": {
-      "checked_at": "2026-11-23 09:15:28",
+      "checked_at": "2026-11-23 09:20:28",
       "category": "",
       "record_id": "",
       "store_name": "Worthy Always"
@@ -5524,19 +5527,19 @@
       "store_name": "Krakatoa"
     },
     "dom_d507e83f38": {
-      "checked_at": "2026-11-23 09:15:28",
+      "checked_at": "2026-11-23 09:20:28",
       "category": "",
       "record_id": "",
       "store_name": "LEFAYA"
     },
     "dom_95426abe81": {
-      "checked_at": "2026-11-23 09:15:28",
+      "checked_at": "2026-11-23 09:20:28",
       "category": "",
       "record_id": "",
       "store_name": "Vivélan"
     },
     "dom_d15c877f1b": {
-      "checked_at": "2026-11-23 09:15:28",
+      "checked_at": "2026-11-23 09:20:28",
       "category": "",
       "record_id": "",
       "store_name": "NoorViper"
@@ -5548,25 +5551,25 @@
       "store_name": "Mello"
     },
     "dom_31591d171b": {
-      "checked_at": "2026-11-23 09:15:28",
+      "checked_at": "2026-11-23 09:20:28",
       "category": "",
       "record_id": "",
       "store_name": "Giovasa"
     },
     "dom_592c08daab": {
-      "checked_at": "2026-11-23 09:15:28",
+      "checked_at": "2026-11-23 09:20:28",
       "category": "",
       "record_id": "",
       "store_name": "Lumilight"
     },
     "dom_cfc658ce66": {
-      "checked_at": "2026-11-23 09:15:28",
+      "checked_at": "2026-11-23 09:20:28",
       "category": "",
       "record_id": "",
       "store_name": "Craftiva"
     },
     "dom_b83f893e25": {
-      "checked_at": "2026-11-23 09:15:28",
+      "checked_at": "2026-11-23 09:20:28",
       "category": "",
       "record_id": "",
       "store_name": "PaperFlight"
@@ -5578,7 +5581,7 @@
       "store_name": "Krakota 2"
     },
     "dom_a2529c4b9a": {
-      "checked_at": "2026-11-23 09:15:28",
+      "checked_at": "2026-11-23 09:20:28",
       "category": "",
       "record_id": "",
       "store_name": "Buckley Belts"
@@ -5590,103 +5593,103 @@
       "store_name": "Mason 2"
     },
     "dom_7af1d37d4a": {
-      "checked_at": "2026-11-23 09:15:27",
+      "checked_at": "2026-11-23 09:20:28",
       "category": "",
       "record_id": "",
       "store_name": "Outdoors Nordic"
     },
     "dom_fe83f6df67": {
-      "checked_at": "2026-11-23 09:15:27",
-      "category": "domain_down",
-      "record_id": "rec_99206139d5",
+      "checked_at": "2026-11-23 09:20:28",
+      "category": "",
+      "record_id": "",
       "store_name": "Avernio"
     },
     "dom_a99cfc6693": {
-      "checked_at": "2026-11-23 09:15:27",
+      "checked_at": "2026-11-23 09:20:28",
       "category": "",
       "record_id": "",
       "store_name": "Florelya"
     },
     "dom_c1b0cae3ab": {
-      "checked_at": "2026-11-23 09:15:27",
+      "checked_at": "2026-11-23 09:20:28",
       "category": "",
       "record_id": "",
       "store_name": "Vittasa"
     },
     "dom_a84c6b63b1": {
-      "checked_at": "2026-11-23 09:15:27",
+      "checked_at": "2026-11-23 09:20:28",
       "category": "domain_down",
       "record_id": "rec_f6d0518b22",
       "store_name": "Nord Body"
     },
     "dom_13357374ba": {
-      "checked_at": "2026-11-23 09:15:27",
-      "category": "domain_down",
-      "record_id": "rec_54e1383411",
+      "checked_at": "2026-11-23 09:20:27",
+      "category": "",
+      "record_id": "",
       "store_name": "Titanox Italia"
     },
     "dom_585a26d2b9": {
-      "checked_at": "2026-11-23 09:15:27",
-      "category": "domain_down",
-      "record_id": "rec_0afa0b3794",
+      "checked_at": "2026-11-23 09:20:27",
+      "category": "",
+      "record_id": "",
       "store_name": "Hanae Korea"
     },
     "dom_a7d30d19aa": {
-      "checked_at": "2026-11-23 09:15:27",
+      "checked_at": "2026-11-23 09:20:27",
       "category": "domain_down",
       "record_id": "rec_806e1e1e8f",
       "store_name": "PeakFlex"
     },
     "dom_e8c8777e79": {
-      "checked_at": "2026-11-23 09:15:27",
+      "checked_at": "2026-11-23 09:20:28",
       "category": "domain_down",
       "record_id": "rec_46fd37dca6",
       "store_name": "Softari 3"
     },
     "dom_40706e213e": {
-      "checked_at": "2026-11-23 09:15:27",
+      "checked_at": "2026-11-23 09:20:27",
       "category": "",
       "record_id": "",
       "store_name": "Menvault"
     },
     "dom_d2d777bfc9": {
-      "checked_at": "2026-11-23 09:15:27",
+      "checked_at": "2026-11-23 09:20:27",
       "category": "",
       "record_id": "",
       "store_name": "Stonewall"
     },
     "dom_bd09def7fb": {
-      "checked_at": "2026-11-23 09:15:27",
+      "checked_at": "2026-11-23 09:20:27",
       "category": "",
       "record_id": "",
       "store_name": "Retrocity"
     },
     "dom_50723fc0ec": {
-      "checked_at": "2026-11-23 09:15:27",
+      "checked_at": "2026-11-23 09:20:27",
       "category": "",
       "record_id": "",
       "store_name": "Home Garden Trends"
     },
     "dom_709d5d273a": {
-      "checked_at": "2026-11-23 09:15:27",
+      "checked_at": "2026-11-23 09:20:27",
       "category": "",
       "record_id": "",
       "store_name": "Summoraft"
     },
     "dom_b2cf29bfa9": {
-      "checked_at": "2026-11-23 09:15:27",
+      "checked_at": "2026-11-23 09:20:27",
       "category": "domain_down",
       "record_id": "rec_0b5bf824f6",
       "store_name": "Liréa"
     },
     "notion_73b7d4205f88564dfe7c": {
-      "checked_at": "2026-11-23 09:15:29",
+      "checked_at": "2026-11-23 09:20:29",
       "category": "",
       "record_id": "",
       "store_name": "Rework Gear"
     },
     "notion_2ac267f0a70b124e9440": {
-      "checked_at": "2026-11-23 09:15:29",
+      "checked_at": "2026-11-23 09:20:29",
       "category": "domain_down",
       "record_id": "rec_e7e9a59e8e",
       "store_name": "Snuggi Sandals"
