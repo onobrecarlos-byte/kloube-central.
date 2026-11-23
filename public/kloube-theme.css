@@ -128,3 +128,107 @@ input:not([type="checkbox"], [type="radio"]), select, textarea {
 .metric-details .incidents-table { min-width: 680px; }
 .metric-details .badge-neutral { background: var(--bg-surface-elevated); color: var(--text-secondary); border: 1px solid var(--border-default); }
 .metric-domain { display: block; margin-top: 3px; color: var(--text-muted); font-size: 12px; overflow-wrap: anywhere; }
+
+/* Central Kloube dashboard */
+body.app-layout {
+    --bg-canvas: #070b14;
+    --bg-sidebar: #0b1020;
+    --bg-surface: #10182a;
+    --bg-surface-hover: #142139;
+    --bg-surface-elevated: #121d31;
+    --bg-row-hover: #121d31;
+    --border-default: #22314d;
+    --border-subtle: #19263c;
+    --text-primary: #f7faff;
+    --text-secondary: #afc0d9;
+    --accent-blue: #2f6bff;
+    --accent-blue-hover: #3b7bff;
+}
+
+.app-layout .header-title, .app-layout .brand-logo-text {
+    font-family: 'Plus Jakarta Sans', Inter, sans-serif;
+}
+
+.app-layout .dashboard-header {
+    align-items: flex-start;
+    margin-bottom: 22px;
+}
+
+.app-layout .header-title { font-size: clamp(25px, 2.5vw, 32px); }
+.summary-subtitle { display: none; margin: 6px 0 0; font-size: 14px; }
+.main-content:has(#view-summary.active) .summary-subtitle { display: block; }
+
+.app-layout .nav-item.active { background: var(--accent-blue); }
+.app-layout .calendar-trigger-btn { background: transparent; border-color: var(--border-default); }
+
+#view-summary .metrics-bar-card {
+    background: transparent;
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+#view-summary .metric-kpi-item { min-height: 82px; }
+#view-summary .attention-section { margin-top: 24px; }
+#view-summary .attention-card { min-height: 70px; }
+#view-summary .metric-kpi-item, #view-summary .attention-card { padding: 12px 14px; }
+#view-summary .kpi-icon-box, #view-summary .attention-card-icon {
+    width: 42px;
+    height: 42px;
+    flex-basis: 42px;
+    background: #0e213d;
+}
+#view-summary .kpi-icon-box svg { color: #4096ff; }
+#view-summary .attention-card-icon img { width: 100%; height: 100%; object-fit: contain; }
+#view-summary :is(.kpi-number, .attention-card-val) { font-variant-numeric: tabular-nums; }
+#view-summary :is(.kpi-label, .attention-card-label) { font-size: 12px; overflow-wrap: normal; }
+#view-summary .incidents-table-wrapper { background: var(--bg-canvas); }
+#view-summary .incidents-table { min-width: 670px; background: var(--bg-canvas); }
+#view-summary .incidents-table th { height: 36px; background: var(--bg-surface-elevated); }
+#view-summary .incidents-table td { height: 44px; }
+#view-summary .badge-pill.badge-danger {
+    background: #521c25;
+    border-color: #71313a;
+    color: #ffd4d9;
+}
+
+@media (min-width: 769px) {
+    .app-layout .sidebar {
+        width: 214px;
+        min-width: 214px;
+        background:
+            radial-gradient(ellipse 300px 146px at 117% calc(100% - 54px), transparent 89%, #2f6bff65 90%, transparent 91%),
+            radial-gradient(ellipse 190px 120px at 0% 85%, #1549b048, transparent 78%),
+            var(--bg-sidebar);
+    }
+    .app-layout #btn-app-logout {
+        margin-top: auto;
+        border-top: 1px solid var(--border-subtle);
+        border-radius: 0 0 var(--radius-button) var(--radius-button);
+        flex-shrink: 0;
+    }
+    .app-layout .main-content { padding: 20px 26px; }
+    #view-summary :is(.metrics-bar-card, .attention-cards-grid) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+    }
+}
+
+@media (min-width: 1200px) {
+    #view-summary :is(.metrics-bar-card, .attention-cards-grid) {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    #view-summary :is(.metrics-bar-card, .attention-cards-grid) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+    #view-summary .metric-kpi-item, #view-summary .attention-card { padding: 10px; gap: 8px; }
+    #view-summary .kpi-icon-box, #view-summary .attention-card-icon {
+        width: 32px;
+        height: 32px;
+        flex-basis: 32px;
+    }
+}
