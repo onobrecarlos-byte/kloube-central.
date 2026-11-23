@@ -1236,7 +1236,8 @@
       "response_time_ms": 0,
       "page_title": "",
       "notion_page_id": "41e2ea2a-29cb-8141-aef2-e2b61783e5b4",
-      "outage_id": "3d83876d5a140ee667b932e9"
+      "outage_id": "3d83876d5a140ee667b932e9",
+      "outage_alert_id": "al_fe19b377b8f55844c4e33e99"
     },
     {
       "id": "notion_73b7d4205f88564dfe7c",
@@ -1310,6 +1311,17 @@
     }
   ],
   "alerts": [
+    {
+      "id": "al_fe19b377b8f55844c4e33e99",
+      "domain": "getlireaofficiel.com",
+      "name": "Liréa",
+      "reason": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)",
+      "timestamp": "2026-11-23 08:25:27",
+      "desktop_sent": false,
+      "email_sent": false,
+      "email_info": "Domínio já notificado ou com envio reservado",
+      "email_recipient": "onobrecarlos@gmail.com, alertas.kloube@gmail.com"
+    },
     {
       "id": "al_25f4e4df055c93ab99682b6a",
       "domain": "snuggico.com",
