@@ -93,7 +93,8 @@
       "source": "store_publication",
       "page_title": "",
       "notion_page_id": "41e2ea2a-29cb-812e-bb4e-cd636c29931f",
-      "outage_id": "0cb76d0ead76e1cd718ab528"
+      "outage_id": "0cb76d0ead76e1cd718ab528",
+      "outage_alert_id": "al_289b8fc0afd51ec3f75d25d9"
     },
     {
       "id": "dom_e8c8777e79",
@@ -1319,6 +1320,17 @@
     }
   ],
   "alerts": [
+    {
+      "id": "al_289b8fc0afd51ec3f75d25d9",
+      "domain": "usepeakflex.com",
+      "name": "PeakFlex",
+      "reason": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)",
+      "timestamp": "2026-11-23 09:30:27",
+      "desktop_sent": false,
+      "email_sent": false,
+      "email_info": "Domínio já notificado ou com envio reservado",
+      "email_recipient": "onobrecarlos@gmail.com, alertas.kloube@gmail.com"
+    },
     {
       "id": "al_1f855b05284aad46397f0bed",
       "domain": "shopavernio.com",
