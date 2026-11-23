@@ -93,7 +93,8 @@
       "source": "store_publication",
       "page_title": "",
       "notion_page_id": "41e2ea2a-29cb-812e-bb4e-cd636c29931f",
-      "outage_id": "68477cec63f24d2105a368c2"
+      "outage_id": "68477cec63f24d2105a368c2",
+      "outage_alert_id": "al_1c126eb9941036a14b32b347"
     },
     {
       "id": "dom_e8c8777e79",
@@ -1314,6 +1315,17 @@
     }
   ],
   "alerts": [
+    {
+      "id": "al_1c126eb9941036a14b32b347",
+      "domain": "usepeakflex.com",
+      "name": "PeakFlex",
+      "reason": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)",
+      "timestamp": "2026-11-23 04:20:27",
+      "desktop_sent": false,
+      "email_sent": false,
+      "email_info": "Envio reservado",
+      "email_recipient": "onobrecarlos@gmail.com, alertas.kloube@gmail.com"
+    },
     {
       "id": "al_7d0eba6a8cd7c7a072496d80",
       "domain": "softarico.com",
