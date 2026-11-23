@@ -71,7 +71,8 @@
       "source": "store_publication",
       "page_title": "",
       "notion_page_id": "41e2ea2a-29cb-81a2-ad49-ce527e83abb6",
-      "outage_id": "55eed57fb955d6c6a462aa9e"
+      "outage_id": "55eed57fb955d6c6a462aa9e",
+      "outage_alert_id": "al_eb3e0d2de59211366db8aa8b"
     },
     {
       "id": "dom_a7d30d19aa",
@@ -1315,6 +1316,17 @@
     }
   ],
   "alerts": [
+    {
+      "id": "al_eb3e0d2de59211366db8aa8b",
+      "domain": "usehanaekorea.com",
+      "name": "Hanae Korea",
+      "reason": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)",
+      "timestamp": "2026-11-23 09:25:27",
+      "desktop_sent": false,
+      "email_sent": false,
+      "email_info": "Domínio já notificado ou com envio reservado",
+      "email_recipient": "onobrecarlos@gmail.com, alertas.kloube@gmail.com"
+    },
     {
       "id": "al_c37f552055573c3ffbfb23ca",
       "domain": "wearkrotakoa.com",
