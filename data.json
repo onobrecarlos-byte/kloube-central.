@@ -69,7 +69,8 @@
       "source": "store_publication",
       "page_title": "",
       "notion_page_id": "41e2ea2a-29cb-81a2-ad49-ce527e83abb6",
-      "outage_id": "c750907ebb74f1dd7a0ee016"
+      "outage_id": "c750907ebb74f1dd7a0ee016",
+      "outage_alert_id": "al_06a427078ece7f6a2351bca7"
     },
     {
       "id": "dom_a7d30d19aa",
@@ -1307,6 +1308,17 @@
     }
   ],
   "alerts": [
+    {
+      "id": "al_06a427078ece7f6a2351bca7",
+      "domain": "usehanaekorea.com",
+      "name": "Hanae Korea",
+      "reason": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)",
+      "timestamp": "2026-11-23 04:10:27",
+      "desktop_sent": false,
+      "email_sent": false,
+      "email_info": "Envio reservado",
+      "email_recipient": "onobrecarlos@gmail.com, alertas.kloube@gmail.com"
+    },
     {
       "id": "al_139f000b5655b8bf6be34b35",
       "domain": "getlireaofficiel.com",
