@@ -2422,7 +2422,7 @@
       "source": "whatsapp_import"
     }
   ],
-  "updated_at": "2026-11-22 22:40:32",
+  "updated_at": "2026-11-22 22:42:35",
   "stores_catalog": {
     "Maggie's Tanks": {
       "name": "Maggie's Tanks",
@@ -5119,23 +5119,6 @@
   },
   "deleted_records": [
     {
-      "id": "rec_8c888c3a02",
-      "event_type": "store_inactive",
-      "store_name": "Nesti 2",
-      "domain": "shopnesti.com",
-      "account_number": "—",
-      "inactive_category": "domain_down",
-      "reason": "Domínio fora do ar",
-      "created_at": "2026-11-07 10:49:55",
-      "month_key": "2026-11",
-      "source": "domain_monitor",
-      "monitor_domain_id": "dom_9ce8b39846",
-      "monitor_diagnostic": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)",
-      "_deleted_at": "2026-11-07 11:16:53",
-      "_deleted_by": "onobrecarlos@gmail.com",
-      "_trash_id": "trash_02482e8c913a"
-    },
-    {
       "id": "rec_15180dffb9",
       "event_type": "store_inactive",
       "store_name": "Ionix Labs",
@@ -5265,6 +5248,13 @@
     }
   ],
   "deletion_audit": [
+    {
+      "action": "Excluído definitivamente",
+      "record_id": "rec_8c888c3a02",
+      "store_name": "Nesti 2",
+      "at": "2026-11-22 22:42:35",
+      "by": "onobrecarlos@gmail.com"
+    },
     {
       "action": "Movido para a lixeira",
       "record_id": "rec_8c888c3a02",
