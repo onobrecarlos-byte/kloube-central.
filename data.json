@@ -1294,7 +1294,8 @@
       "ip_address": "",
       "response_time_ms": 0,
       "page_title": "",
-      "outage_id": "8be633d2c883f226493e2019"
+      "outage_id": "8be633d2c883f226493e2019",
+      "outage_alert_id": "al_d47a21b8f44bc8f5aee0a1b4"
     },
     {
       "id": "notion_4f234ec2df70f87a235e",
@@ -1316,6 +1317,17 @@
     }
   ],
   "alerts": [
+    {
+      "id": "al_d47a21b8f44bc8f5aee0a1b4",
+      "domain": "snuggico.com",
+      "name": "Snuggi Sandals",
+      "reason": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)",
+      "timestamp": "2026-11-23 09:10:29",
+      "desktop_sent": false,
+      "email_sent": false,
+      "email_info": "Domínio já notificado ou com envio reservado",
+      "email_recipient": "onobrecarlos@gmail.com, alertas.kloube@gmail.com"
+    },
     {
       "id": "al_5789867854cc615b6daf3b5a",
       "domain": "usenordbody.com",
