@@ -83,10 +83,11 @@ def create_event(data, body, actor, token_id):
 
 def dispatch(handler, method):
     path = urlparse(handler.path).path
-    if not (path.startswith('/api/v1/') or path in ('/api/integrations', '/api/integrations/revoke')):
+    if not (path.startswith('/api/v1/') or path in ('/api/integrations', '/api/integrations/revoke', '/api/integrations/delete')):
         return False
     import server
     from shared_auth import current_user, send, user_version
+    from domain_monitor.monitor_engine import MASTER_EMAILS
     def reply(payload, status=200):
         send(handler, payload, status)
         return True
@@ -103,18 +104,25 @@ def dispatch(handler, method):
                 if not owner:
                     return reply({'ok': False, 'error': 'Faça login.'}, 401)
                 items = data.setdefault('integration_tokens', [])
+                can_delete = owner.casefold() in MASTER_EMAILS
                 if method == 'GET' and path == '/api/integrations':
-                    return reply({'ok': True, 'tokens': [public_token(x) for x in items if x['owner'] == owner]})
+                    return reply({'ok': True, 'can_delete': can_delete, 'tokens': [public_token(x) for x in items if x['owner'] == owner]})
                 if method != 'POST':
                     return reply({'ok': False, 'error': 'Método não permitido.'}, 405)
                 body = handler._read_json()
                 if not isinstance(body, dict):
                     raise ValueError('Envie um objeto JSON.')
-                if path.endswith('/revoke'):
+                if path in ('/api/integrations/revoke', '/api/integrations/delete'):
+                    deleting = path.endswith('/delete')
+                    if deleting and not can_delete:
+                        return reply({'ok': False, 'error': 'Somente usuários master podem excluir conexões.'}, 403)
                     item = next((x for x in items if x['owner'] == owner and x['id'] == body.get('id')), None)
                     if not item:
                         return reply({'ok': False, 'error': 'Conexão não encontrada.'}, 404)
-                    item['revoked_at'] = server.now_iso()
+                    if deleting:
+                        items.remove(item)
+                    else:
+                        item['revoked_at'] = server.now_iso()
                     server.store.save(data)
                     return reply({'ok': True})
                 name = text(body, 'name', True, 100)

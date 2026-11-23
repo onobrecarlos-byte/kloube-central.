@@ -28,6 +28,26 @@
                     };
                     row.append(button);
                 }
+                if (data.can_delete) {
+                    const button = document.createElement('button');
+                    button.type = 'button';
+                    button.className = 'btn btn-secondary';
+                    button.textContent = 'Excluir';
+                    button.style.marginInlineStart = '8px';
+                    button.onclick = async () => {
+                        if (!confirm(`Excluir a conexão “${token.name}” permanentemente? A chave deixará de funcionar.`)) return;
+                        button.disabled = true;
+                        try {
+                            await request('/api/integrations/delete', {id:token.id});
+                            await load();
+                            message('Conexão excluída.');
+                        } catch (error) {
+                            message(error.message);
+                            button.disabled = false;
+                        }
+                    };
+                    row.append(button);
+                }
                 list.append(row);
             });
         } catch(error) { message(error.message); }
