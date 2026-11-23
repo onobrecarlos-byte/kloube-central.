@@ -114,7 +114,8 @@
       "source": "store_publication",
       "page_title": "",
       "notion_page_id": "41e2ea2a-29cb-81ae-94d1-ea83486cd33d",
-      "outage_id": "ad1af997d774b3c36d98085c"
+      "outage_id": "ad1af997d774b3c36d98085c",
+      "outage_alert_id": "al_d49737392d10f19a8642f64b"
     },
     {
       "id": "dom_a2529c4b9a",
@@ -1316,6 +1317,17 @@
     }
   ],
   "alerts": [
+    {
+      "id": "al_d49737392d10f19a8642f64b",
+      "domain": "softarico.com",
+      "name": "Softari 3",
+      "reason": "DNS não encontrado ou sem apontamento ativo (NXDOMAIN)",
+      "timestamp": "2026-11-23 08:45:28",
+      "desktop_sent": false,
+      "email_sent": false,
+      "email_info": "Domínio já notificado ou com envio reservado",
+      "email_recipient": "onobrecarlos@gmail.com, alertas.kloube@gmail.com"
+    },
     {
       "id": "al_f6b5b5b3f6e1c35939d870ce",
       "domain": "usenordbody.com",
