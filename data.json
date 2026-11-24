@@ -1248,9 +1248,9 @@
     },
     {
       "id": "notion_73b7d4205f88564dfe7c",
-      "domain": "reworkgearco.com",
-      "url": "https://reworkgearco.com",
-      "status": "offline",
+      "domain": "reworkgearshop.com,",
+      "url": "https://reworkgearshop.com,",
+      "status": "unknown",
       "status_label": "Fora do Ar",
       "checked_at": "2026-11-23 16:05:29",
       "created_at": "2026-11-22T21:27:01.950656+00:00",
@@ -1262,8 +1262,7 @@
       "ip_address": "23.227.38.32",
       "response_time_ms": 204,
       "page_title": "This store is unavailable",
-      "outage_id": "46ee394dd07ed20965b8766b",
-      "outage_alert_id": "al_8b22dfd8a2b1dee4ab6b976c"
+      "expected_redirect": ""
     },
     {
       "id": "notion_4d1f02404fcfa3c406ed",
